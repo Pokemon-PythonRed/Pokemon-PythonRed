@@ -1,5 +1,7 @@
 ## Pokemon PythonRed
 
+###### README changes coming soon!
+
 ### Important Notes:
 
 * This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play Pokémon Red on PC, you can find an emulator.
@@ -7,6 +9,10 @@
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
 
 Summary: **_Don’t Judge_!**
+
+###### Note to players: to download, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
+
+![](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
 
 ### Progress / To Do:
 
@@ -28,6 +34,8 @@ I've done the bare minimum so far, I need some resources to start properly:
 * Find solution for in-game music
 * CHeck out the _pygame_ module
 
+###### For contributions, try one of ^THESE^, or check for typos here!
+
 ### Changed Elements:
 
 #### Pokémon Data
@@ -45,9 +53,9 @@ As far as I know, Python cannot support Pokémon Red’s menu layouts, so some c
 Using an example from the game, this:
 
 > Are you a boy or a girl?
-> 
->  Boy
-> >Girl
+>  
+> Boy
+> Girl
 
 Will become this:
 
@@ -56,32 +64,32 @@ Will become this:
 > 1. Boy
 > 2. Girl
 > 
-> >_
+> _
 
 However, this requires a _lot_ of extra work. If the answer is invalid, the question must be asked again. Maybe like this:
 
-> ...
-> //variables
-> ...
-> playerGender = ‘’
-> ...
-> 
-> print(‘Are you a boy or a girl?’)
-> print(‘’)
-> 
-> print(‘1. Boy’)
-> print(‘2. Girl’)
-> print(‘’)
-> 
-> while playerGender != ‘1’ and playerGender != ‘2’:
->
->    playerGender=input(‘>’)
->    print(‘’)
->
->    if playerGender != ‘1’ and playerGender != ‘2’:
->
->        print(‘Invalid answer!’)
->        print(‘’)
+>     ...
+>     //variables
+>     ...
+>     playerGender = ‘’
+>     ...
+>     
+>     print(‘Are you a boy or a girl?’)
+>     print(‘’)
+>     
+>     print(‘1. Boy’)
+>     print(‘2. Girl’)
+>     print(‘’)
+>     
+>     while playerGender != ‘1’ and playerGender != ‘2’:
+>     
+>         playerGender=input(‘>’)
+>         print(‘’)
+>     
+>     if playerGender != ‘1’ and playerGender != ‘2’:
+>     
+>         print(‘Invalid answer!’)
+>         print(‘’)
 
 Of course, the custom _invalid_ message can change depending on the situation. In this example, as it takes place in talking to the Professor, I could use something like _Sorry, didn’t quite catch that!_.
 
@@ -113,3 +121,6 @@ If Exp. is involved, though likely not:
 However, this allows a player to directly edit their party information, which is not a good idea. Trades would have even more cheating potential, so they might come in ‘a later update’!
 
 #### _That's all, watch this space, and thanks!_
+
+###### For reading this far, you get the privelege of seeing this:
+![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7)
