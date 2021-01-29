@@ -56,7 +56,7 @@ Using an example from the game, this:
 
 > Are you a boy or a girl?
 >  
-> Boy
+> Boy  
 > Girl
 
 Will become this:
