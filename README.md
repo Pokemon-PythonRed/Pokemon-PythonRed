@@ -1,7 +1,5 @@
 ## Pokemon PythonRed
 
-###### README changes coming soon!
-
 ### Important Notes:
 
 * This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play Pokémon Red on PC, you can find an emulator.
@@ -32,20 +30,20 @@ I've done the bare minimum so far, I need some resources to start properly:
 #### To Do
 * Create Pokédex variable (explained later in Elements -> Pokémon Data)
 * Find solution for in-game music
-* CHeck out the _pygame_ module
+* Check out the _pygame_ Python module
 
-###### For contributions, try one of ^THESE^, or check for typos here!
+###### For contributions, try one of ^THESE^, or check for typos in this document!
 
 ### Changed Elements:
 
 #### Pokémon Data
 The entire Kanto Pokédex will be stored as a variable, with a list item for each species:
 
-_Pokemon = [[],[],[]...]_
+    Pokemon = [[],[],[]...]
 
 Each _[]_ includes this:
 
-_[Pokédex #, Name, Type 1, Type 2, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD, Catch Rate]_
+    [Pokédex #, Name, Type 1, Type 2, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD, Catch Rate]
 
 #### Menus
 As far as I know, Python cannot support Pokémon Red’s menu layouts, so some changes will be needed:
