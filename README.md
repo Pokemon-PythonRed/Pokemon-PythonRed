@@ -1,5 +1,15 @@
 ## Pokemon PythonRed
 
+### To Play:
+
+You need to individually run the following commands to install dependencies before running:
+```
+pip install playsound
+```
+```
+pip install pygame
+```
+
 ### Important Notes:
 
 * This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play _Pokémon Red_ on PC, you can find an emulator.
@@ -56,7 +66,7 @@ Using an example from the game, this:
 
 > Are you a boy or a girl?
 >  
-> Boy
+> Boy  
 > Girl
 
 Will become this:
