@@ -1,19 +1,30 @@
 
 #import
 
-from random import *
-from playsound import *
+import random
 import math
 import time
 import os
+import multiprocessing
+from multiprocessing import Lock, Process, Queue, current_process
+import winsound
+from winsound import * #PlaySound, SND_ALIAS, SND_LOOP, SND_PURGE, SND_ASYNC
 
-#vars
+from pyaudio import *
+from playsound import playsound
 
-startOption=0
-playerGender=0
-playerName=''
+#music vars
+
+title=multiprocessing.Process(target=winsound.SND_LOOP, args=('title.wav',winsound.SND_ASYNC))
 
 #start menu
+
+playsound('title.mp3',0)
+
+#winsound.SND_LOOP('title.mp3',winsound.SND_ASYNC)
+
+startOption=0
+time.sleep(1)
 
 print('')
 print('''                                  ,'\ ''')
@@ -29,8 +40,10 @@ print('''       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |''')
 print('''        \_.-'       |__|    `-._ |              '-.|     '-.| |   |''')
 print('''                                `'                            '-._|''')
 print('')
+time.sleep(3)
+
 print('                           PythonRed Version')
-time.sleep(4)
+time.sleep(2)
 
 print('')
 input('                          Press Enter to begin')
@@ -40,7 +53,7 @@ print('1. New Game')
 print('2. Continue')
 print('')
 
-while startOption!='1' and startOption!='2':
+while startOption!='1':
     
     startOption=input('>')
     print('')
@@ -48,17 +61,25 @@ while startOption!='1' and startOption!='2':
     if startOption!='1' and startOption!='2':
         print('Invalid answer!')
         
-if startOption=='2':
+    if startOption=='2':
     
-    input('Saving and continuing coming soon! Please restart!')
-    while True:
-        
-        input('Please restart!')
+        input('Saving and continuing coming soon!')
+        print('')
+
+#vars
+
+introComplete=False
+playerGender=0
+playerName=''
 
 #intro
-        
-print('Please wait..')
-time.sleep(5)
 
-print('')
-print('')
+playsound('blank.mp3')
+
+print('Please wait..')
+time.sleep(1)
+
+if introComplete==False:
+    
+    print('')
+    input('Sorry, that\'s all for now! Press Enter to exit.')
