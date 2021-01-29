@@ -2,7 +2,7 @@
 
 ### Important Notes:
 
-* This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play Pokémon Red on PC, you can find an emulator.
+* This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play _Pokémon Red_ on PC, you can find an emulator.
 * Throughout this process, I will only be able to refer to online resources. This is because I want to limit myself to specific conditions that I can’t fully explain. One of these conditions is I can’t access the official game (or related ROMs).
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
 
@@ -39,11 +39,15 @@ I've done the bare minimum so far, I need some resources to start properly:
 #### Pokémon Data
 The entire Kanto Pokédex will be stored as a variable, with a list item for each species:
 
-    Pokemon = [[],[],[]...]
+```
+Pokemon = [[],[],[]...]
+```
 
-Each _[]_ includes this:
+Each `[]` includes this:
 
-    [Pokédex #, Name, Type 1, Type 2, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD, Catch Rate]
+```
+[Pokédex #, Name, Type 1, Type 2, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD, Catch Rate]
+```
 
 #### Menus
 As far as I know, Python cannot support Pokémon Red’s menu layouts, so some changes will be needed:
@@ -66,30 +70,32 @@ Will become this:
 
 However, this requires a _lot_ of extra work. If the answer is invalid, the question must be asked again. Maybe like this:
 
->     ...
->     //variables
->     ...
->     playerGender = ‘’
->     ...
->     
->     print(‘Are you a boy or a girl?’)
->     print(‘’)
->     
->     print(‘1. Boy’)
->     print(‘2. Girl’)
->     print(‘’)
->     
->     while playerGender != ‘1’ and playerGender != ‘2’:
->     
->         playerGender=input(‘>’)
->         print(‘’)
->     
->     if playerGender != ‘1’ and playerGender != ‘2’:
->     
->         print(‘Invalid answer!’)
->         print(‘’)
+```
+...
+//variables
+...
+playerGender = ‘’
+...
 
-Of course, the custom _invalid_ message can change depending on the situation. In this example, as it takes place in talking to the Professor, I could use something like _Sorry, didn’t quite catch that!_.
+print(‘Are you a boy or a girl?’)
+print(‘’)
+
+print(‘1. Boy’)
+print(‘2. Girl’)
+print(‘’)
+
+while playerGender != ‘1’ and playerGender != ‘2’:
+
+    playerGender=input(‘>’)
+    print(‘’)
+
+if playerGender != ‘1’ and playerGender != ‘2’:
+
+    print(‘Invalid answer!’)
+    print(‘’)
+```
+
+Of course, the custom _invalid_ message can change depending on the situation. In this example, as it takes place in talking to the Professor, I could use something like `Sorry, didn’t quite catch that!`.
 
 #### _Lots_ of Variables
 Basically everything the game keeps track of:

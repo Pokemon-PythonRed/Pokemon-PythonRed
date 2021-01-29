@@ -1,37 +1,64 @@
+
 #import
+
 from random import *
+from playsound import *
 import math
 import time
+import os
 
 #vars
+
 startOption=0
 playerGender=0
 playerName=''
 
 #start menu
+
 print('')
-print('         Pokemon PythonRed Version')
+print('''                                  ,'\ ''')
+print('''    _.----.        ____         ,'  _\   ___    ___     ____''')
+print('''_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.''')
+print('''\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |''')
+print(''' \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |''')
+print('''   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |''')
+print('''    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |''')
+print('''     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |''')
+print('''      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |''')
+print('''       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |''')
+print('''        \_.-'       |__|    `-._ |              '-.|     '-.| |   |''')
+print('''                                `'                            '-._|''')
+print('')
+print('                           PythonRed Version')
 time.sleep(4)
+
 print('')
-input('            Press Enter to begin')
+input('                          Press Enter to begin')
 print('')
+
 print('1. New Game')
 print('2. Continue')
 print('')
+
 while startOption!='1' and startOption!='2':
+    
     startOption=input('>')
     print('')
+    
     if startOption!='1' and startOption!='2':
         print('Invalid answer!')
+        
 if startOption=='2':
+    
     input('Saving and continuing coming soon! Please restart!')
     while True:
+        
         input('Please restart!')
 
-'''#intro
+#intro
+        
 print('Please wait..')
 time.sleep(5)
-print('')
-print('')'''
 
-input('That\'s all for now, thanks!')
+print('')
+print('')
