@@ -10,6 +10,8 @@ pip install playsound
 pip install pygame
 ```
 
+When that's all done, to download, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
+
 ### Important Notes:
 
 * This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play _Pokémon Red_ on PC, you can find an emulator.
@@ -17,8 +19,6 @@ pip install pygame
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
 
 Summary: **_Don’t Judge_!**
-
-###### Note to players: to download, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
 
 ![](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
 
