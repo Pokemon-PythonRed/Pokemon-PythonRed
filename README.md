@@ -3,12 +3,9 @@
 ### To Play:
 
 You need to individually run the following commands to install dependencies before running:
-```
-pip install playsound
-```
-```
-pip install pygame
-```
+
+> `pip install playsound`
+> `pip install pygame`
 
 When that's all done, to download, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
 
@@ -20,6 +17,7 @@ When that's all done, to download, please see [Releases](https://github.com/Turn
 
 Summary: **_Don’t Judge_!**
 
+###### Here's a Poké Ball for you!
 ![](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
 
 ### Progress / To Do:
