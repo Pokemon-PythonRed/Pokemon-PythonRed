@@ -28,8 +28,8 @@ Summary: **_Don’t Judge_!**
 I've done the bare minimum so far, I need some resources to start properly:
 
 * _Pokémon Red_ offset list
-* _Pokémon Red_ Event Flags list
-* _Pokémon Red_’s entire story line (dialogue, trainer names, cutscenes, etc.)
+* _Pokémon Red_ Event Flags list (PKHeX?)
+* (_check!_) _Pokémon Red_'s entire story line (dialogue, trainer names, cutscenes, etc.)
 
 #### My Current Process
 * (_check!_) Create the .py file and start GitHub repository
