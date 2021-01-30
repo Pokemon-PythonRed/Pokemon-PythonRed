@@ -2,7 +2,9 @@
 
 ### To Play:
 
-You need to individually run the following commands to install dependencies before running:
+First, you need to have `Python` installed, obviously. If this isn't already done, you can find the insaller [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). This should also install `pip` which is required in the next step.
+
+Next, you need to individually run the following commands to install dependencies (run in Command Line, not `Python`):
 
 > `pip install playsound`
 > `pip install pygame`
@@ -57,10 +59,12 @@ Each `[]` includes this:
 [Pokédex #, Name, Type 1, Type 2, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD, Catch Rate]
 ```
 
+There will also need to be a list of moves learned when levelling up, but I'm not sure how to implement that.
+
 #### Menus
 As far as I know, Python cannot support Pokémon Red’s menu layouts, so some changes will be needed:
 
-Using an example from the game, this:
+Using a rough example from LGPE, this:
 
 > Are you a boy or a girl?
 >  
@@ -76,13 +80,13 @@ Will become this:
 > 
 > _
 
-However, this requires a _lot_ of extra work. If the answer is invalid, the question must be asked again. Maybe like this:
+However, this requires a bit of extra work. If the answer is invalid, the question must be asked again. Maybe like this:
 
 ```
 ...
 //variables
 ...
-playerGender = ‘’
+playerGender = ‘’ #var must already exist
 ...
 
 print(‘Are you a boy or a girl?’)
@@ -97,10 +101,10 @@ while playerGender != ‘1’ and playerGender != ‘2’:
     playerGender=input(‘>’)
     print(‘’)
 
-if playerGender != ‘1’ and playerGender != ‘2’:
+    if playerGender != ‘1’ and playerGender != ‘2’:
 
-    print(‘Invalid answer!’)
-    print(‘’)
+        print(‘Invalid answer!’)
+        print(‘’)
 ```
 
 Of course, the custom _invalid_ message can change depending on the situation. In this example, as it takes place in talking to the Professor, I could use something like `Sorry, didn’t quite catch that!`.
@@ -134,5 +138,5 @@ However, this allows a player to directly edit their party information, which is
 
 #### _That's all, watch this space, and thanks!_
 
-###### For reading this far, you get the privelege of seeing this:
+###### For reading this far, you get the privelege of seeing this li'l boi who, sadly, won't be in the game (maybe!):
 ![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7)
