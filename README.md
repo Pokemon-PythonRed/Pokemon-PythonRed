@@ -27,15 +27,15 @@ Summary: **_Don’t Judge_!**
 ##### Progress Overview
 I've done the bare minimum so far, I need some resources to start properly:
 
-* _Pokémon Red_ offset list
-* _Pokémon Red_ Event Flags list (PKHeX?)
-* (_check!_) _Pokémon Red_'s entire story line (dialogue, trainer names, cutscenes, etc.)
+* [ ] _Pokémon Red_ offset list
+* [ ] _Pokémon Red_ Event Flags list (PKHeX?)
+* [x] _Pokémon Red_'s entire story line (dialogue, trainer names, cutscenes, etc.)
 
 #### My Current Process
-* (_check!_) Create the .py file and start GitHub repository
-* Find the resources listed above
-* (_check!_) Actually begin coding, starting with the basics of a variable list.
-* (_check!_) Code intro, then make first pre-release!
+* [x] Create the .py file and start GitHub repository
+* [ ] Find the resources listed above
+* [x] Actually begin coding, starting with the basics of a variable list.
+* [x] Code intro, then make first pre-release!
 
 #### To Do
 * Create Pokédex variable (explained later in Elements -> Pokémon Data)
