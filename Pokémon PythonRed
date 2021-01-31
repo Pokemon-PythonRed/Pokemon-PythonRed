@@ -1,27 +1,22 @@
 
 #import
 
-import random
 import math
-import time
 import os
-import multiprocessing
-from multiprocessing import Lock, Process, Queue, current_process
+import secrets
+import time
+import random
 import winsound
-from winsound import * #PlaySound, SND_ALIAS, SND_LOOP, SND_PURGE, SND_ASYNC
 
-from pyaudio import *
-from playsound import playsound
+import pyaudio
+#import pygame
+import playsound
 
-#music vars
-
-title=multiprocessing.Process(target=winsound.SND_LOOP, args=('title.wav',winsound.SND_ASYNC))
+ps=winsound.PlaySound
 
 #start menu
 
-playsound('title.mp3',0)
-
-#winsound.SND_LOOP('title.mp3',winsound.SND_ASYNC)
+ps('Resources/menuTitle.wav',winsound.SND_ASYNC)
 
 startOption=0
 time.sleep(1)
@@ -42,11 +37,11 @@ print('''                                `'                            '-._|''')
 print('')
 time.sleep(3)
 
-print('                           PythonRed Version')
+print('                          PythonRed Version')
 time.sleep(2)
 
 print('')
-input('                          Press Enter to begin')
+input('                        Press Enter to begin!')
 print('')
 
 print('1. New Game')
@@ -68,18 +63,150 @@ while startOption!='1':
 
 #vars
 
-introComplete=False
-playerGender=0
-playerName=''
-
-#intro
-
-playsound('blank.mp3')
-
 print('Please wait..')
-time.sleep(1)
+print('')
 
-if introComplete==False:
+introComplete=False
+introAnswer=''
+playerName=''
+currentLocation=''
+currentMusic=''
+
+while True:
+
+    if introComplete==False:
+
+        if currentMusic!='menuIntro':
+            ps('Resources/menuIntro.wav',winsound.SND_ASYNC)
+            currentMusic='menuIntro'
+        
+        
+        input('OAK: Hello there! Welcome to the world of POKEMON! My name is OAK!')
+        input('People call me the POKEMON PROF!')
+        print('')
+        print("""    `._ """)
+        print("""     \ `. """)
+        print("""      \  `. """)
+        print("""       .   `. """)
+        print("""       j     :-----+...-. """)
+        print("""       /  _,'   /""_     `.     _,..._ """)
+        print("""     ,'  '      .-"c|"`+- -+--"'      `-.._ """)
+        print('''   ,'            """+_ |       _,--""--.._ `---.. ''')
+        print("""  '     _             "'      '\          `--._  `. """)
+        print(""" |    -'                      _.'              `-. `. """)
+        print(""" (     __   ,.----.._        \``-.                |  `._ """)
+        print('''  `.  /_ """   ___.| ,.      j  `.`.   ,          `.    `. ''')
+        print('''    `'| |    ,'    '.'/'""'"'   j`. \,'|  _________||""`-'`. ''')
+        print("""      `_.\   j       j      __-'|_/'"._:."  __       .    " """)
+        print("""          | /        /      \ `/        |`.   .   ..._`. """)
+        print("""          ||        /       | /         | |    :.'    -/ """)
+        print("""          |'    _,-'        |.`.       ,' |   | |\_ """)
+        print("""    _     | `--'     _,-    . `.`--- ,'   /   |  .\`-.. """)
+        print('''    |`v,-'"""'`-.,.-'        `._``--'  _,'    |  | \  ,' ''')
+        print(""",--'`- _       \ \              '""''`'       `_,'  +- """)
+        print(""" -.'    \       . |                        /`     ,---. """)
+        print(""" -`\    |       | L                        `-'     '""'`\ """)
+        print(''' '---...:_      / \                          |   ,.-""".| ''')
+        print("""          '---+'   \                         ' ,'       ` """)
+        print("""               '`''".                       / /          `. """)
+        print("""                     \                     j |            '. """)
+        print("""                      `.                   | |              \ """)
+        print("""                        \ _                |/             /\| """)
+        print("""                         / "-   --""----+--'             / || """)
+        print('''                        `v'"""""-..     |      `..__.,.-'-.,, ''')
+        print("""                         |         `-.,'           .`.J     / """)
+        print("""                         |            |             '---...' """)
+        print("""                         |     .     / """)
+        print("""                         |    | `,  j """)
+        print("""                        ..--+'"--_  / """)
+        print("""                         `-.|     \' """)
+        print("""                             `----' """)
+        print('')
+        input('This world is inhabited by creatures called POKEMON! For some')
+        input('people, POKEMON are pets. Others use them for fights. Myself...')
+        input('I study POKEMON as a profession.')
+        print('')
+        print('First, what is your name?')
+        print('')
+        print('1. NEW NAME')
+        print('2. PYTHON')
+        print('3. RED')
+        print('4. ASH')
+        print('')
+        while introAnswer!='1' and introAnswer!='2' and introAnswer!='3' and introAnswer!='4':
+            
+            introAnswer=input('>')
+            
+        if introAnswer=='2':
+            playerName='PYTHON'
+            
+        elif introAnswer=='3':
+            playerName='RED'
+            
+        elif introAnswer=='4':
+            playerName='ASH'
+            
+        elif introAnswer=='1':
+
+            print('')
+            print('(Caps, 15 chars. max)')
+            print('')
+            playerName=input('>')
+                
+            while len(playerName)>15 and playerName=='' :
+
+                print('')
+                playerName=input('>')
+                
+                if len(playerName)<=15 or playerName!='':
+                        
+                    print('')
+                    print('Sorry, couldn\'t quite catch that!')
+                        
+        else:
+            
+            print('Invalid answer!')
+
+        playerName=playerName.upper()
+
+        print('')
+        input(f'Right! So your name is {playerName}!')
+        print('')
+        input('This is my grandson. He\'s been your rival since you were a baby.')
+        print('')
+        print('...Erm, what is his name again?')
+        print('')
+        input('>')
+        print('')
+        input('...')
+        input('Wait, I remember now! His name is JOHNNY!')
+        print('')
+        input(playerName+'! Your very own POKEMON legend is about to unfold! A world of')
+        input('dreams and adventures with POKEMON awaits! Let\'s go!')
+
+        introComplete=True
+
+        currentLocation='Pallet'
+
+    elif currentLocation=='Pallet':
+
+        if currentMusic!='locationPallet':
+            ps('Resources/locationPallet.wav',winsound.SND_ASYNC)
+            currentMusic='locationPallet'
+
+        print('')
+        input('That\'s all for now, thanks for playing!')
     
-    print('')
-    input('Sorry, that\'s all for now! Press Enter to exit.')
+
+
+
+
+
+
+
+
+
+
+
+
+
