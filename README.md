@@ -138,5 +138,5 @@ However, this allows a player to directly edit their party information, which is
 
 #### _That's all, watch this space, and thanks!_
 
-###### For reading this far, you get the privelege of seeing this li'l boi who, sadly, won't be in the game (maybe!):
+###### For reading this far, you get the privelege of seeing this li'l guy who, sadly, won't be in the game (maybe!):
 ![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7)
