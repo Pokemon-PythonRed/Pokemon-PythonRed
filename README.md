@@ -9,7 +9,7 @@ Next, you need to individually run the following commands to install dependencie
 > `pip install playsound`
 > `pip install pygame`
 
-When that's all done, to download, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
+When that's all done, to download the game, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
 
 ### Important Notes:
 
@@ -27,20 +27,26 @@ Summary: **_Don’t Judge_!**
 ##### Progress Overview
 I've done the bare minimum so far, I need some resources to start properly:
 
-* [ ] _Pokémon Red_ offset list
-* [ ] _Pokémon Red_ Event Flags list (PKHeX?)
-* [x] _Pokémon Red_'s entire story line (dialogue, trainer names, cutscenes, etc.)
-
-#### My Current Process
-* [x] Create the .py file and start GitHub repository
-* [ ] Find the resources listed above
-* [x] Actually begin coding, starting with the basics of a variable list.
-* [x] Code intro, then make first pre-release!
+#### Story Elements
+* [x] Start menu
+* [x] Intro
+* [ ] Pallet Town
+* [ ] Route 1
+* [ ] Viridian City
+* [ ] Oak's Parcel
+* [ ] Route 2
+* [ ] Viridian Forest
+* [ ] Pewter City / Brock's challenge
+* [ ] Route 3
+* [ ] Mt. Moon
+Etc.
 
 #### To Do
-* Create Pokédex variable (explained later in Elements -> Pokémon Data)
-* Find solution for in-game music
-* Check out the _pygame_ Python module
+* [ ] Create Pokédex variable (explained later in Elements -> Pokémon Data)
+* [ ] Find _Pokémon Red_ offset list
+* [ ] Find _Pokémon Red_ Event Flags list (PKHeX?)
+* [ ] Create battle systems
+* [ ] Saving
 
 ###### For contributions, try one of ^THESE^, or check for typos in this document!
 
