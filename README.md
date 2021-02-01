@@ -25,7 +25,7 @@ Summary: **_Don’t Judge_!**
 ### Progress / To Do:
 
 ##### Progress Overview
-I've done the bare minimum so far, I need some resources to start properly:
+It's going well, more coming soon!
 
 #### Story Elements
 * [x] Start menu
