@@ -4,18 +4,20 @@
 
 First, you need to have `Python` installed, obviously. If this isn't already done, you can find the insaller [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). This should also install `pip` which is required in the next step.
 
-Next, you need to individually run the following commands to install dependencies (run in Command Line, not `Python`):
+Next, you need to open Command Prompt (or another Command Line) and _individually_ run the following commands to install dependencies:
 
-> `pip install playsound`
-> `pip install pygame`
+`pip install playsound`
+
+`pip install pygame`
 
 When that's all done, to download the game, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
 
 ### Important Notes:
 
 * This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play _Pokémon Red_ on PC, you can find an emulator.
-* Throughout this process, I will only be able to refer to online resources. This is because I want to limit myself to specific conditions that I can’t fully explain. One of these conditions is I can’t access the official game (or related ROMs).
+* Throughout this process, I will only be able to refer to online resources. This is because I want to limit myself to specific conditions that I can’t fully explain. One of these conditions is I can’t access the official game.
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
+* I've only recently learnt Markdown, specifically for this project.
 
 Summary: **_Don’t Judge_!**
 
@@ -27,18 +29,38 @@ Summary: **_Don’t Judge_!**
 ##### Progress Overview
 It's going well, more coming soon!
 
-#### Story Elements
+#### Story Elements (SPOILERS - COVER LEFT OF PAGE WITH HAND AND SCROLL)
 * [x] Start menu
+ * Pokemon logo
 * [x] Intro
+ * Nidorino picture
+ * Choose name
 * [ ] Pallet Town
+ * Select starter
 * [ ] Route 1
+ * No encounters coming back
 * [ ] Viridian City
+ * Locked Gym
+ * West blocked until later
 * [ ] Oak's Parcel
+ * Cannot proceed until after completion
 * [ ] Route 2
+ * Bush on right
 * [ ] Viridian Forest
+ * Maze, trainers, and encounters randomised
 * [ ] Pewter City / Brock's challenge
+ * Cannot proceed until after Gym
 * [ ] Route 3
+ * Lots of trainers
 * [ ] Mt. Moon
+ * Another maze, fossils
+* [ ] Route 4
+ * Can jump to from Cave
+* [ ] Cerulean City
+ * Nugget Bridge / Route 24
+ * Surf West to Cave
+* Route 25
+
 Etc.
 
 #### To Do
@@ -47,6 +69,8 @@ Etc.
 * [ ] Find _Pokémon Red_ Event Flags list (PKHeX?)
 * [ ] Create battle systems
 * [ ] Saving
+* [ ] Pokemon Centers and Linking
+* [ ] HM system
 
 ###### For contributions, try one of ^THESE^, or check for typos in this document!
 
