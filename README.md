@@ -2,8 +2,7 @@
 
 ### Important Notes:
 
-* This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills. So basically, if you’re looking to play _Pokémon Red_ on PC, you can find an emulator.
-* Throughout this process, I will only be able to refer to online resources. This is because I want to limit myself to specific conditions that I can’t fully explain. One of these conditions is I can’t access the official game.
+* This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills.
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
 * I've only recently learnt Markdown, specifically for this project.
 
