@@ -2,7 +2,7 @@
 
 ### Important Notes:
 
-* This is not meant to be a perfect recreation of _Pokémon Red_. It’s just a test of my own coding skills.
+* This is _not_ a perfect recreation of Pokémon Red. It’s a test of my own coding skills and creativity.
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
 * I've only recently learnt Markdown, specifically for this project.
 
@@ -10,17 +10,13 @@ Summary: **_Don’t Judge_!**
 
 ### To Play:
 
-First, you need to have `Python` installed, obviously. If this isn't already done, you can find the insaller [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). Make sure to tick the box that says `Add Python to PATH` during installation.
+First, ensure you have `Python` installed. If not, you can find the insaller [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). Tick the box that says `Add Python to PATH` during installation.
 
-This will also install `pip` which is required in the next step.
+This also installs `pip` which is required in the next step.
 
-Next, you need to open Command Prompt (or another Command Line) and _individually_ run the following commands to install dependencies:
-
-`pip install pillow`
+Open Command Prompt and _individually_ run any any below commands to install dependencies:
 
 `pip install playsound`
-
-`pip install pygame`
 
 When that's all done, to download the game, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
 
