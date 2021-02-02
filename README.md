@@ -1,4 +1,4 @@
-## Pokemon PythonRed
+## Pokémon PythonRed
 
 ### Important Notes:
 
