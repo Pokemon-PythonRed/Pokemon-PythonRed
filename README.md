@@ -6,6 +6,8 @@ First, you need to have `Python` installed, obviously. If this isn't already don
 
 Next, you need to open Command Prompt (or another Command Line) and _individually_ run the following commands to install dependencies:
 
+`pip install pillow`
+
 `pip install playsound`
 
 `pip install pygame`
