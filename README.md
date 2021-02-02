@@ -65,7 +65,6 @@ It's going well, more coming soon!
  * Nugget Bridge / Route 24
  * Surf West to Cave
 * Route 25
-```
 
 Etc.
 
@@ -100,14 +99,14 @@ There will also need to be a list of moves learned when levelling up, but I'm no
 #### Menus
 As far as I know, Python cannot support Pokémon Red’s menu layouts, so some changes will be needed:
 
-Using a rough example from LGPE, this:
+Using a rough example from LGPE (***non-spoiler***), this:
 
 > Are you a boy or a girl?
 >  
 > Boy  
 > Girl
 
-Will become this:
+Would become this:
 
 > Are you a boy or a girl?
 > 
@@ -143,7 +142,7 @@ while playerGender != ‘1’ and playerGender != ‘2’:
         print(‘’)
 ```
 
-Of course, the custom _invalid_ message can change depending on the situation. In this example, as it takes place in talking to the Professor, I could use something like `Sorry, didn’t quite catch that!`.
+Of course, the custom _invalid_ message can change depending on the situation.
 
 #### _Lots_ of Variables
 Basically everything the game keeps track of:
