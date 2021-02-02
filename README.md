@@ -67,8 +67,6 @@ Summary: **_Don’t Judge_!**
 
 Etc.
 
-###### For contributions, try one of ^THESE^, or check for typos in this document!
-
 ### Changed Elements:
 
 #### Pokémon Data
@@ -85,54 +83,6 @@ Each `[]` includes this:
 ```
 
 There will also need to be a list of moves learned when levelling up, but I'm not sure how to implement that.
-
-#### Menus
-As far as I know, Python cannot support Pokémon Red’s menu layouts, so some changes will be needed:
-
-Using a rough example from LGPE (***non-spoiler***), this:
-
-> Are you a boy or a girl?
->  
-> Boy  
-> Girl
-
-Would become this:
-
-> Are you a boy or a girl?
-> 
-> 1. Boy
-> 2. Girl
-> 
-> _
-
-However, this requires a bit of extra work. If the answer is invalid, the question must be asked again. Maybe like this:
-
-```
-...
-//variables
-...
-playerGender = ‘’ #var must already exist
-...
-
-print(‘Are you a boy or a girl?’)
-print(‘’)
-
-print(‘1. Boy’)
-print(‘2. Girl’)
-print(‘’)
-
-while playerGender != ‘1’ and playerGender != ‘2’:
-
-    playerGender=input(‘>’)
-    print(‘’)
-
-    if playerGender != ‘1’ and playerGender != ‘2’:
-
-        print(‘Invalid answer!’)
-        print(‘’)
-```
-
-Of course, the custom _invalid_ message can change depending on the situation.
 
 #### _Lots_ of Variables
 Basically everything the game keeps track of:
