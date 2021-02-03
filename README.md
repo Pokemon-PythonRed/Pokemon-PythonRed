@@ -2,7 +2,7 @@
 
 ### Important Notes:
 
-* This is _not_ a perfect recreation of Pokémon Red. It’s a test of my own coding skills and creativity.
+* This is _not_ a perfect recreation of Pokémon Red; it's a custom story that takes place in the Kanto region, a test of my own coding skills and creativity.
 * This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
 * I've only recently learnt Markdown, specifically for this project.
 
