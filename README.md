@@ -10,7 +10,7 @@ Summary: **_Don’t Judge_!**
 
 ### To Play:
 
-First, ensure you have `Python` installed. If not, you can find the insaller [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). Tick the box that says `Add Python to PATH` during installation.
+First, ensure you have `Python` installed. If not, you can find the installer [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). Tick the box that says `Add Python to PATH` during installation.
 
 This also installs `pip` which is required in the next step.
 
