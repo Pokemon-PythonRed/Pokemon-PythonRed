@@ -2,7 +2,7 @@
 
 ### Important Notes:
 
-* This is _not_ a perfect recreation of Pokémon Red; it's a custom story that takes place in the fictional Kanto region.!**
+* This is _not_ a perfect recreation of Pokémon Red; it's a custom story that takes place in the fictional Kanto region.
 
 ### To Play:
 
