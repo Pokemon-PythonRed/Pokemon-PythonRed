@@ -2,15 +2,15 @@
 
 ### Important Notes:
 
-* This is _not_ a perfect recreation of Pokémon Red; it's a custom story that takes place in the Kanto region, a test of my own coding skills and creativity.
-* This is my first GitHub project, and I’m not very acquainted to its features and capabilities.
-* I've only recently learnt Markdown, specifically for this project.
+* This is _not_ a perfect recreation of Pokémon Red; it's a custom story that takes place in the fictional Kanto region.
 
 Summary: **_Don’t Judge_!**
 
 ### To Play:
 
 First, ensure you have `Python` installed. If not, you can find the installer [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). Tick the box that says `Add Python to PATH` during installation.
+
+However, if you are using a work/school computer and are not an administrator, you don't need to tick `py launcher`, as IDLE (what you're installing) is the same thing anyway.
 
 This also installs `pip` which is required in the next step.
 
@@ -23,22 +23,27 @@ When that's all done, to download the game, please see [Releases](https://github
 For contributions and feature requests, please see [Issues](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
 
 ## SPOILERS PAST THE POKÉ BALL!
-![](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
+![SPOILER ALERT!](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
 
 ### Progress:
 
-[Kanto Map](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bddf750-53a0-4a9f-872f-8d13685a758f/d3c4hsg-5acbd78f-c4cb-4f40-a87a-05700ac859a4.png/v1/fill/w_900,h_882,q_75,strp/labeled_map_of_kanto_by_rythos-d3c4hsg.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zYmRkZjc1MC01M2EwLTRhOWYtODcyZi04ZDEzNjg1YTc1OGYvZDNjNGhzZy01YWNiZDc4Zi1jNGNiLTRmNDAtYTg3YS0wNTcwMGFjODU5YTQucG5nIiwid2lkdGgiOiI8PTkwMCIsImhlaWdodCI6Ijw9ODgyIn1dXX0.Ycjt66m7t9k-8tio4Tsc0YTsP_nu7Lz2cGBm4CdZWN8)
+![Kanto Region Map](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bddf750-53a0-4a9f-872f-8d13685a758f/d3c4hsg-5acbd78f-c4cb-4f40-a87a-05700ac859a4.png/v1/fill/w_900,h_882,q_75,strp/labeled_map_of_kanto_by_rythos-d3c4hsg.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zYmRkZjc1MC01M2EwLTRhOWYtODcyZi04ZDEzNjg1YTc1OGYvZDNjNGhzZy01YWNiZDc4Zi1jNGNiLTRmNDAtYTg3YS0wNTcwMGFjODU5YTQucG5nIiwid2lkdGgiOiI8PTkwMCIsImhlaWdodCI6Ijw9ODgyIn1dXX0.Ycjt66m7t9k-8tio4Tsc0YTsP_nu7Lz2cGBm4CdZWN8 "Kanto Region Map")
+
+<br>
+
+![HP Calulation Formula](HP_calc.webp "HP Formula")
+![Stat Calculation Formula](Statcalc_gen12.png "Stat Formula")
 
 * [x] Start menu
  * Pokemon logo
 * [x] Intro
  * Nidorino picture
  * Choose name
-* [ ] Pallet Town
+* [x] Pallet Town
  * Select starter
-* [ ] Route 1
+* [x] Route 1
  * No encounters coming back
-* [ ] Viridian City
+* [x] Viridian City
  * Locked Gym
  * West blocked until later
 * [ ] Oak's Parcel

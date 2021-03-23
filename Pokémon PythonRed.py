@@ -1,9 +1,4 @@
-import math
-import os
-import secrets
-import time
-import random
-import winsound
+import getpass,math,os,secrets,time,random,winsound
 try:
     import playsound
 except ImportError:
@@ -29,24 +24,21 @@ def error():
     print('2. You have discovered a bug that needs to be patched.')
     print('')
     print('If your Save Code has been intentionally edited, this is the')
-    print('result of your own actions. However, please see the \'Contributions\'')
-    print('page in Options -> Info.')
+    print('result of your own actions.')
     print('')
     print('If you have not edited your Save Code, please start an Issue on')
-    print('the Pokemon PythonRed Github repository. Please say exactly what')
+    print('the Pokemon PythonRed Github Repository. Please say exactly what')
     print('you did to cause the error, and include your Save Code.')
     print('')
     print('I apologise for any lost progress, I will do my best to recover')
-    print('your data if you give me your Save Code.')
+    print('the data from your Save Code.')
     print('')
     print('This program will not continue running, please follow the above')
-    print('instructions and close the program.')
+    print('instructions then close the program.')
     while True:
         input('')
-ps('title')
+ps('Title')
 startOption='0'
-optionsOption='0'
-infoOption='0'
 time.sleep(1)
 print('')
 print('''                                  ,'\ ''')
@@ -68,43 +60,29 @@ time.sleep(1.85)
 print('')
 input('                        Press Enter to begin!')
 print('')
-print('1. New Game')
-print('2. Continue')
-print('3. Options')
+print('1. Continue')
+print('2. New Game')
+print('3. GitHub Repository')
 print('')
-while startOption!='1':
+while startOption!='2':
     startOption=input('>')
     print('')
-    if startOption!='1' and startOption!='2':
+    if startOption!='1' and startOption!='2' and startOption!='3':
         print('Invalid answer!')
-    if startOption=='2':
+        print('')
+    if startOption=='1':
         print('Saving and continuing coming soon!')
+        print('')
     if startOption=='3':
-        while optionsOption!='2':
-            print('1. Info')
-            print('2. Back')
-            print('')
-            while optionsOption!='2':
-                    optionsOption=input('>')
-                    if optionsOption=='1':
-                            while infoOption!='3':
-                                    print('')
-                                    print('1. GitHub Repository')
-                                    print('2. Contributions')
-                                    print('3. Back')
-                                    print('')
-            if infoOption=='1':
-                print('Please access the GitHub Repository here:')
-                print('')
-            if infoOption=='2':
-                print('If you\'ve been given an error for ruining your save file,')
-                print('consider joining testing team! This allows you to test out')
-                print('errors by changing your Save Code. If you\'re interested,')
-                print('please see this program\'s GitHub Issue named \'Testing\'.')
-                print('')
-            infoOption='0'
-        optionsOption='0'
-    startOption='0'
+        print('Please access the GitHub Repository here:')
+        print('')
+        print('https://github.com/TurnipGuy30/Pokemon-PythonRed')
+        print('')
+    if startOption!='2':
+        startOption='0'
+print('If you chose "New Game" by accident, please quit now.')
+input('Otherwise, press Enter to start a new game!')
+print('')
 print('Please wait..')
 print('')
 ps('none')
@@ -128,18 +106,19 @@ party4=['']
 party5=['']
 party6=['']
 bag=[['',0],['',0]]
-def encounter():
+def encounter(species,level,canEscape):
     victory=False
-    while victory==False:
+    escape=False
+    while victory==False and escape==False:
         print('')
         input('A wild POKEMON appeared!')
         input('...')
         input('You got away safely!')
-        victory=True
-    victory=False
+        escape=True
+    victory=escape=False
 while True:
     if introComplete==False:
-        ps('intro')
+        ps('Intro')
         input('OAK: Hello there! Welcome to the world of POKEMON! My name is OAK!')
         input('People call me the POKEMON PROFESSOR!')
         print('')
@@ -181,9 +160,10 @@ while True:
         print("""                         `-.|     \' """)
         print("""                             `----' """)
         print('')
-        input('This world is inhabited by creatures called POKEMON! For some')
-        input('people, POKEMON are pets. Others use them for fights. Myself...')
-        input('I study POKEMON as a profession.')
+        input('This world is inhabited by powerful creatures called POKEMON!')
+        input('For some people, POKEMON are pets. Others use them for fights.')
+        input('Myself... I study POKEMON as a profession. However, they are')
+        input('mysterious and there is a lot we have yet to discover about them.')
         print('')
         print('First, what is your name?')
         print('')
@@ -211,33 +191,35 @@ while True:
         input(f'Right! So your name is {playerName}!')
         print('')
         input('Now, since you\'re so raring to go, I\'ve prepared a rival for you.')
+        input('He will go on an adventure just like yours, and battle you along')
+        input('the way.')
         print('')
         print('...Erm, what is his name again?')
         print('')
         input('>')
         print('')
         input('...')
-        input('Ha, did you really think I\'d forgotten our Champ\'s name?')
+        input('Ha, did you really think I\'d forgotten our Champion\'s name?')
         input('His name is JOHNNY! He decided to donate his strong POKEMON and start')
         input('his journey over, using only the best techniques. You\'ll meet him soon!')
         print('')
         input(playerName+'! Your very own POKEMON legend is about to unfold! A world of')
         input('dreams and adventures with POKEMON awaits! Let\'s go!')
-        ps('pallet')
+        ps('Pallet')
         print('')
         input('...')
-        input(f'{playerName} is playing the Wii U!')
+        input(f'{playerName} is playing the WII U!')
         input('...')
         input('Alright, that\'s enough POKKEN! Time to get going!')
         input(playerName+' eagerly heads downstairs.')
         print('')
-        input('MOM: Right. All kids leave home some day. It said so on TV.')
-        input('PROF. OAK, next door, is looking for you.')
+        input('MOM: Right. All kids leave home some day. Have a good time!')
+        input('PROFESSOR OAK, next door, is looking for you.')
         print('')
         input(f'After running outside, {playerName} heads to OAK\'s LAB.')
         print('')
-        input('However, it seems OAK isn\'t there! But there\'s a suspicious looking')
-        input('person who meets him at the door. He takes a step back, takes a good look')
+        input('However, it seems OAK isn\'t there! But suspicious-looking person')
+        input(f'person meets {playerName} at the door. He takes a step back, takes a look')
         input(f'at {playerName}, and walks away to the NORTH. {playerName} decides to')
         input('follow from a distance.')
         print('')
@@ -252,24 +234,24 @@ while True:
         input('POKEMON for your protection. Here, come with me!')
         print('')
         input(f'{playerName} follows OAK to the LAB.')
-        ps('oakLab')
+        ps('OakLab')
         print('')
         input(f'OAK: Here, {playerName}! There are 3 POKE BALLS here, each containing a')
         input('starter POKEMON! They each have a lot of potential!')
         print('')
-        input(f'{playerName} tells OAK about his suspicious encouter.')
+        input(f'{playerName} tells OAK about his suspicious encounter.')
         print('')
         input('OAK: Ah! It seems you\'ve already met JOHNNY then! He must\'ve already come')
-        input('along and... yes, he\'s taken a SQUIRTLE... You see, these starters were')
-        input('very rare until JOHNNY discovered their habitats. He\'s done a lot for')
-        input('people all around the world... not to mention...')
+        input('along and... yes, he\'s taken a SQUIRTLE... You see, these starter POKEMON are')
+        input('perfect for beginner trainers, but were very rare until JOHNNY discovered')
+        input('their habitats. He\'s done a lot for people all around the world.')
         print('')
         input('But enough about that! It\'s your turn to choose a POKEMON! There has been a')
         input('surge of rare encounters lately, and we\'re doing our best, but no trainers')
         input('want them because it requires a lot of strategy to bring out their potential.')
         print('')
         input('Oh! I know! Why don\'t you choose out of all the POKEMON we have! Of course,')
-        input('these 3 starters are available too. Choose!')
+        input('these 3 starter POKEMON are available too. Choose!')
         print('')
         print('Choose a POKEMON:')
         print('')
@@ -383,7 +365,10 @@ while True:
         print('')
         input(f'{playerName} obtained POKEDEX!')
         print('')
-        input('Now go! NORTH along ROUTE 1! JOHNNY\'s probably at VIRIDIAN by now! ...')
+        input('This POKEDEX is a high-tech machine that collects data on every POKEMON')
+        input('you meet!')
+        print('')
+        input('Now go! NORTH along ROUTE 1, straight to VIRDIAN CITY!')
         print('')
         input(f'{playerName} went out and approached the tall grass on ROUTE 1, feeling')
         input('ready to go!')
@@ -392,7 +377,7 @@ while True:
         input('Meanwhile, at OAK\'s LAB...')
         print('')
         input('OAK: Oh, JOHNNY... He\'s really unstoppable, defeating RED and all.')
-        input('With his shortcuts, he must be at CERULEAN already... oh, MAY...')
+        input('With his shortcuts, he must have already reached VIRDIAN FOREST!')
         print('')
         input('...')
         print('')
@@ -403,30 +388,13 @@ while True:
         print('')
         input('OAK: ...')
         print('')
-        input('You see... she\'s at CERULEAN CITY with JOHNNY.')
+        input('You see... she\'s headed to PEWTER CITY with JOHNNY.')
         print('')
         input('INTRO COMPLETE!')
         print('')
-        if starter==1:
-            party1=[int(pokemon[1][0]),str(pokemon[1][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==4:
-            party1=[int(pokemon[4][0]),str(pokemon[4][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==7:
-            party1=[int(pokemon[7][0]),str(pokemon[7][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==50:
-            party1=[int(pokemon[50][0]),str(pokemon[50][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==66:
-            party1=[int(pokemon[66][0]),str(pokemon[66][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==92:
-            party1=[int(pokemon[92][0]),str(pokemon[92][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==131:
-            party1=[int(pokemon[131][0]),str(pokemon[131][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==133:
-            party1=[int(pokemon[133][0]),str(pokemon[133][1]),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
-        elif starter==0:
-            party1=[int(pokemon[0][0]),str(pokemon[0][1]),15,15,15,15,15,15]
+        party1=[int(pokemon[starter][0]),str(pokemon[starter][1]),5,random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15),random.randint(1,15)]
         introComplete=True
-        currentLocation='route1S'
+        currentLocation='Route1-S'
     elif startMenu==True:
         print('')
         print('1. POKEDEX')
@@ -467,10 +435,10 @@ while True:
                 startMenu==False
             else:
                 option=''
-    elif currentLocation=='pallet':
-        if currentMusic!='pallet':
-            ps('pallet')
-            currentMusic='pallet'
+    elif currentLocation=='PalletTown':
+        if currentMusic!='PalletTown':
+            ps('PalletTown')
+            currentMusic='PalletTown'
         print('')
         print('CURRENT LOCATION: PALLET TOWN')
         print('"Shades of your journey await!"')
@@ -483,13 +451,13 @@ while True:
         while option=='':
             option=input('>')
             if option=='1':
-                currentLocation='route1S'
+                currentLocation='Route1-S'
             elif option=='2':
                 print('')
                 input('The water is a deep, clear blue.')
                 print('')
             elif option=='3':
-                currentLocation='playerHouse'
+                currentLocation='PlayerHouse'
             elif option=='4':
                 print('')
                 input('Coming soon!')
@@ -499,10 +467,10 @@ while True:
             else:
                 option=''
         option=''
-    elif currentLocation=='playerHouse':
-        if currentMusic!='pallet':
-            ps('pallet')
-            currentMusic='pallet'
+    elif currentLocation=='PlayerHouse':
+        if currentMusic!='PalletTown':
+            ps('PalletTown')
+            currentMusic='PalletTown'
         print('')
         print(f'CURRENT LOCATION: {playerName}\'S HOUSE - DOWNSTAIRS')
         print('')
@@ -517,16 +485,16 @@ while True:
                 input(f'MOM: It looks like you and {party1[1]} are having fun together!')
                 print('')
             elif option=='2':
-                currentLocation='playerHouseU'
+                currentLocation='PlayerHouse-U'
             elif option=='3':
-                currentLocation='pallet'
+                currentLocation='PalletTown'
             else:
                 option=''
         option=''
-    elif currentLocation=='playerHouseU':
-        if currentMusic!='pallet':
-            ps('pallet')
-            currentMusic='pallet'
+    elif currentLocation=='PlayerHouse-U':
+        if currentMusic!='PalletTown':
+            ps('PalletTown')
+            currentMusic='PalletTown'
         print('')
         print(f'CURRENT LOCATION: {playerName}\'S HOUSE - UPSTAIRS')
         print('')
@@ -545,14 +513,14 @@ while True:
                 input(f'Why play POKKEN when you can spend time with {party1[1]}?')
                 print('')
             elif option=='3':
-                currentLocation='playerHouse'
+                currentLocation='PlayerHouse'
             else:
                 option=''
         option=''
-    elif currentLocation=='route1S':
-        if currentMusic!='route1':
-            ps('route1')
-            currentMusic='route1'
+    elif currentLocation=='Route1-S':
+        if currentMusic!='Route1':
+            ps('Route1')
+            currentMusic='Route1'
         print('')
         print('CURRENT LOCATION: SOUTH ROUTE 1')
         print('')
@@ -563,16 +531,16 @@ while True:
             option=input('>')
             if option=='1':
                 encounter()
-                currentLocation='route1N'
+                currentLocation='Route1-N'
             elif option=='2':
-                currentLocation='pallet'
+                currentLocation='PalletTown'
             else:
                 option=''
         option=''
-    elif currentLocation=='route1N':
-        if currentMusic!='route1':
-            ps('route1')
-            currentMusic='route1'
+    elif currentLocation=='Route1-N':
+        if currentMusic!='Route1':
+            ps('Route1')
+            currentMusic='Route1'
         print('')
         print('CURRENT LOCATION: NORTH ROUTE 1')
         print('')
@@ -582,19 +550,20 @@ while True:
         while option=='':
             option=input('>')
             if option=='1':
-                currentLocation='viridian'
+                currentLocation='ViridianCity'
             elif option=='2':
-                currentLocation='route1S'
+                currentLocation='Route1-S'
             else:
                 option=''
         option=''
-    elif currentLocation=='viridian':
-        if currentMusic!='viridian':
-            ps('viridian')
-            currentMusic='viridian'
+    elif currentLocation=='ViridianCity':
+        if currentMusic!='ViridianCity':
+            ps('ViridianCity')
+            currentMusic='ViridianCity'
         print('')
         print('CURRENT LOCATION: VIRIDIAN CITY')
         print('"The eternally green paradise"')
+		print('(This is currently as far as you can go!)')
         print('')
         print('1. Head NORTH to ROUTE 2')
         print('2. Head SOUTH to NORTH ROUTE 1')
@@ -610,7 +579,7 @@ while True:
                 input('Coming soon!')
                 print('')
             elif option=='2':
-                currentLocation='route1N'
+                currentLocation='Route1-N'
             elif option=='3':
                 print('')
                 input('Coming soon!')
@@ -633,3 +602,26 @@ while True:
         option=''
     else:
         error()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
