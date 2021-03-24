@@ -8,7 +8,11 @@
 
 First, ensure you have `Python` installed. If not, you can find the latest installer [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
 
+<<<<<<< HEAD
 However, if you are using a work/school computer and are not an administrator, you don't need to tick `py launcher`, which requires Administrator privileges to install. This is because Python IDLE (what you're installing) is the same thing anyway.
+=======
+However, if you are using a work/school computer and are not an administrator, you don't need to tick `py launcher`, which requires Administrator priveledges to install. This is because Python IDLE (what you're installing) is the same thing anyway.
+>>>>>>> 01841181b7cf63aeb147a9bf3e90a068d8a03eef
 
 This also installs `pip` which is required in the next step.
 
