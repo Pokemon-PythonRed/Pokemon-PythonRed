@@ -1,29 +1,30 @@
-## Pokémon PythonRed
+## Pokémon PythonRed Version
 
 ### Important Notes:
 
 * This is _not_ a perfect recreation of Pokémon Red; it's a custom story that takes place in the fictional Kanto region.
 
-Summary: **_Don’t Judge_!**
-
 ### To Play:
 
-First, ensure you have `Python` installed. If not, you can find the installer [here](https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/ESCL5J4RZcFLrzRbpcnyy6EBjn22m7ZuFJQMH7HiIW0XFw?e=cFyr1g) (v3.6.8). Tick the box that says `Add Python to PATH` during installation.
+First, ensure you have `Python` installed. If not, you can find the latest installer [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
 
-However, if you are using a work/school computer and are not an administrator, you don't need to tick `py launcher`, as IDLE (what you're installing) is the same thing anyway.
+However, if you are using a work/school computer and are not an administrator, you don't need to tick `py launcher`, which requires Administrator privileges to install. This is because Python IDLE (what you're installing) is the same thing anyway.
 
 This also installs `pip` which is required in the next step.
 
-Open Command Prompt and _individually_ run any any below commands to install dependencies:
+Open Command Prompt and _individually_ run any below commands to install dependencies:
 
 `pip install playsound`
 
-When that's all done, to download the game, please see [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
+When that's all done, to download the game, please download the latest (top) [Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases)!
 
-For contributions and feature requests, please see [Issues](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
+For contributions and feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
 
 ## SPOILERS PAST THE POKÉ BALL!
+###### (scrolling past is not recommended if you have never played Pokémon Red)
 ![SPOILER ALERT!](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
+
+<br><br><br><br>
 
 ### Progress:
 
@@ -31,8 +32,8 @@ For contributions and feature requests, please see [Issues](https://github.com/T
 
 <br>
 
-![HP Calulation Formula](HP_calc.webp "HP Formula")
-![Stat Calculation Formula](Statcalc_gen12.png "Stat Formula")
+![HP Calculation Formula](Resources/HP_calc.webp "HP Formula")
+![Stat Calculation Formula](Resources/Statcalc_gen12.png "Stat Formula")
 
 * [x] Start menu
  * Pokemon logo
@@ -71,16 +72,19 @@ Etc.
 The entire Kanto Pokédex will be stored as a variable, with a list item for each species:
 
 ```
-Pokemon = [[],[],[]...]
+pokemon = [[],[],[]...]
 ```
 
 Each `[]` includes this:
 
 ```
-[Pokédex #, Name, Type 1, Type 2, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD, Catch Rate]
+[Pokédex #, Name, Type, Total Stats, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD]
 ```
+Catch Rate will be based on Total Stats.
+
+For simplicity, Pokémon will only have one type each, and one attack each (a _type_-type attack)
 
 #### _That's all, watch this space, and thanks!_
 
-###### For reading this far, you get the privelege of seeing this li'l guy who just _might_ be in the game:
-![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7)
+###### For reading this far, you get the privelege of seeing this li'l guy who just _might_ be a starter:
+![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7 "Mah Boi Mudkip")
