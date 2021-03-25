@@ -133,22 +133,26 @@ party4=['']
 party5=['']
 party6=['']
 bag=[['',0],['',0]]
-def encounter(species,level,canEscape):
+def encounter():
     victory=False
     escape=False
     while victory==False and escape==False:
         print('')
-        input('A wild POKEMON appeared!')
+        input('A wild POKéMON appeared!')
         input('...')
         input('You got away safely!')
         escape=True
     victory=escape=False
+"""
+def encounter(species,level,canEscape):
+
+"""
 time.sleep(5)
 while True:
     if introComplete==False:
         ps('Intro')
-        input('OAK: Hello there! Welcome to the world of POKEMON! My name is OAK!')
-        input('People call me the POKEMON PROFESSOR!')
+        input('OAK: Hello there! Welcome to the world of POKéMON! My name is OAK!')
+        input('People call me the POKéMON PROFESSOR!')
         print('')
         print("""    `._ """)
         print("""     \ `. """)
@@ -188,9 +192,9 @@ while True:
         print("""                         `-.|     \' """)
         print("""                             `----' """)
         print('')
-        input('This world is inhabited by powerful creatures called POKEMON!')
-        input('For some people, POKEMON are pets. Others use them for fights.')
-        input('Myself... I study POKEMON as a profession. However, they are')
+        input('This world is inhabited by powerful creatures called POKéMON!')
+        input('For some people, POKéMON are pets. Others use them for fights.')
+        input('Myself... I study POKéMON as a profession. However, they are')
         input('mysterious and there is a lot we have yet to discover about them.')
         print('')
         print('First, what is your name?')
@@ -228,11 +232,11 @@ while True:
         print('')
         input('...')
         input('Ha, did you really think I\'d forgotten our Champion\'s name?')
-        input('His name is JOHNNY! He decided to donate his strong POKEMON and start')
+        input('His name is JOHNNY! He decided to donate his strong POKéMON and start')
         input('his journey over, using only the best techniques. You\'ll meet him soon!')
         print('')
-        input(playerName+'! Your very own POKEMON legend is about to unfold! A world of')
-        input('dreams and adventures with POKEMON awaits! Let\'s go!')
+        input(playerName+'! Your very own POKéMON legend is about to unfold! A world of')
+        input('dreams and adventures with POKéMON awaits! Let\'s go!')
         ps('Pallet')
         print('')
         input('...')
@@ -258,30 +262,30 @@ while True:
         print('')
         input(f'{playerName} turns around to see OAK running up from behind.')
         print('')
-        input('OAK: It\'s unsafe! Wild POKEMON live in tall grass! You need your own')
-        input('POKEMON for your protection. Here, come with me!')
+        input('OAK: It\'s unsafe! Wild POKéMON live in tall grass! You need your own')
+        input('POKéMON for your protection. Here, come with me!')
         print('')
         input(f'{playerName} follows OAK to the LAB.')
         ps('OakLab')
         print('')
-        input(f'OAK: Here, {playerName}! There are 3 POKE BALLS here, each containing a')
-        input('starter POKEMON! They each have a lot of potential!')
+        input(f'OAK: Here, {playerName}! There are 3 POKé BALLS here, each containing a')
+        input('starter POKéMON! They each have a lot of potential!')
         print('')
         input(f'{playerName} tells OAK about his suspicious encounter.')
         print('')
         input('OAK: Ah! It seems you\'ve already met JOHNNY then! He must\'ve already come')
-        input('along and... yes, he\'s taken a SQUIRTLE... You see, these starter POKEMON are')
+        input('along and... yes, he\'s taken a SQUIRTLE... You see, these starter POKéMON are')
         input('perfect for beginner trainers, but were very rare until JOHNNY discovered')
         input('their habitats. He\'s done a lot for people all around the world.')
         print('')
-        input('But enough about that! It\'s your turn to choose a POKEMON! There has been a')
+        input('But enough about that! It\'s your turn to choose a POKéMON! There has been a')
         input('surge of rare encounters lately, and we\'re doing our best, but no trainers')
         input('want them because it requires a lot of strategy to bring out their potential.')
         print('')
-        input('Oh! I know! Why don\'t you choose out of all the POKEMON we have! Of course,')
-        input('these 3 starter POKEMON are available too. Choose!')
+        input('Oh! I know! Why don\'t you choose out of all the POKéMON we have! Of course,')
+        input('these 3 starter POKéMON are available too. Choose!')
         print('')
-        print('Choose a POKEMON:')
+        print('Choose a POKéMON:')
         print('')
         print('1. BULBASAUR')
         print('2. CHARMANDER')
@@ -296,7 +300,7 @@ while True:
             starterChoice=input('>')
             if starterChoice=='1':
                 print('')
-                print('Are you sure you want the SEED POKEMON, BULBASAUR? (y/n)')
+                print('Are you sure you want the SEED POKéMON, BULBASAUR? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -306,7 +310,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='2':
                 print('')
-                print('Are you sure you want the LIZARD POKEMON, CHARMANDER? (y/n)')
+                print('Are you sure you want the LIZARD POKéMON, CHARMANDER? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -316,7 +320,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='3':
                 print('')
-                print('Are you sure you want the TINYTURTLE POKEMON, SQUIRTLE? (y/n)')
+                print('Are you sure you want the TINYTURTLE POKéMON, SQUIRTLE? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -326,7 +330,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='4':
                 print('')
-                print('Are you sure you want the MOLE POKEMON, DIGLETT? (y/n)')
+                print('Are you sure you want the MOLE POKéMON, DIGLETT? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -336,7 +340,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='5':
                 print('')
-                print('Are you sure you want the SUPERPOWER POKEMON, MACHOP? (y/n)')
+                print('Are you sure you want the SUPERPOWER POKéMON, MACHOP? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -346,7 +350,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='6':
                 print('')
-                print('Are you sure you want the GAS POKEMON, GASTLY? (y/n)')
+                print('Are you sure you want the GAS POKéMON, GASTLY? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -356,7 +360,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='7':
                 print('')
-                print('Are you sure you want the TRANSPORT POKEMON, LAPRAS? (y/n)')
+                print('Are you sure you want the TRANSPORT POKéMON, LAPRAS? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -366,7 +370,7 @@ while True:
                 starterAnswer=''
             elif starterChoice=='8':
                 print('')
-                print('Are you sure you want the EVOLUTION POKEMON, EEVEE? (y/n)')
+                print('Are you sure you want the EVOLUTION POKéMON, EEVEE? (y/n)')
                 while starterAnswer!='y' and starterAnswer!='n':
                     starterAnswer=input('>')
                 starterAnswer=starterAnswer.upper()
@@ -391,9 +395,9 @@ while True:
         input('chance soon enough.')
         input('Oh! Take this! All new trainers get one!')
         print('')
-        input(f'{playerName} obtained POKEDEX!')
+        input(f'{playerName} obtained POKéDEX!')
         print('')
-        input('This POKEDEX is a high-tech machine that collects data on every POKEMON')
+        input('This POKéDEX is a high-tech machine that collects data on every POKéMON')
         input('you meet!')
         print('')
         input('Now go! NORTH along ROUTE 1, straight to VIRDIAN CITY!')
@@ -425,8 +429,8 @@ while True:
         currentLocation='Route1-S'
     elif startMenu==True:
         print('')
-        print('1. POKEDEX')
-        print('2. POKEMON')
+        print('1. POKéDEX')
+        print('2. POKéMON')
         print('3. ITEM')
         print(f'4. {playerName}')
         print('5. SAVE')
@@ -597,8 +601,8 @@ while True:
         print('1. Head NORTH to ROUTE 2')
         print('2. Head SOUTH to NORTH ROUTE 1')
         print('3. Head WEST to ROUTE ?')
-        print('4. POKEMON CENTER')
-        print('5. POKE MART')
+        print('4. POKéMON CENTER')
+        print('5. POKé MART')
         print('6. VIRIDIAN GYM')
         print('')
         while option=='':
@@ -631,26 +635,3 @@ while True:
         option=''
     else:
         error()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
