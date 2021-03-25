@@ -41,8 +41,8 @@ When that's all done, to download the game, please download the latest (top) [Re
 ### Bugs / Feature Request
 For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
 
-### Credits (in no particular order)
-
+### Credits
+* Coming soon...
 
 ## SPOILERS PAST THE POKÉ BALL!
 ###### (Scrolling past is not recommended if you have never played Pokémon Red!)
