@@ -27,7 +27,7 @@ Open `Command Prompt` or `Windows PowerShell` and _individually_ run any below c
 (More commands will be added above as they are needed)
 
 ##### 3. Installing 7-zip
-`Pokémon PythonRed` is released as an SFX '.exe' file, which requires 7-zip to open. Work/school computers can already have `7-zip` installed, but if not, the latest version can be found [here](7-zip.org "7-zip Latest").
+`Pokémon PythonRed` is released as an SFX '.exe' file, which requires 7-zip to open. Work/school computers can already have `7-zip` installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
 
 ##### 4. Downloading `Pokémon PythonRed`
 When that's all done, to download the game, please download the latest (top) [Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
@@ -35,7 +35,7 @@ When that's all done, to download the game, please download the latest (top) [Re
 #### Summary
 1. [Python IDLE](https://www.python.org/downloads/ "Python Latest")
 2. Dependency Commands
-3. [7-zip](7-zip.org "7-zip Latest")
+3. [7-zip](https://7-zip.org "7-zip Latest")
 4. [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases")
 
 ### Bugs / Feature Request
