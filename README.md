@@ -1,5 +1,5 @@
-# Pokémon
-## PythonRed Version
+![Pokémon](Pictures/pokelogo.png "Pokémon")
+# PythonRed Version
 
 ### Important Notes:
 
@@ -55,8 +55,8 @@ For bugs, contributions or feature requests, please create an [Issue](https://gi
 
 <br>
 
-![HP Calculation Formula](Resources/HP_calc.webp "HP Formula")
-![Stat Calculation Formula](Resources/Statcalc_gen12.png "Stat Formula")
+![HP Calculation Formula](Pictures/HP_calc.webp "HP Formula")
+![Stat Calculation Formula](Pictures/Statcalc_gen12.png "Stat Formula")
 
 ### Progress:
 * [x] Start menu
