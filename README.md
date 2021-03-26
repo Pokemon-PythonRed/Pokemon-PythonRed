@@ -22,7 +22,9 @@ This also installs `pip`, the package installer for `Python`, which is required 
 ##### 2. Installing Dependencies
 Open `Command Prompt` or `Windows PowerShell` and _individually_ run any below commands:
 
-`pip install playsound`
+```
+pip install playsound
+```
 
 (More commands will be added above as they are needed)
 
