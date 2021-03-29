@@ -11,8 +11,8 @@
 
 ### Credits
 
-* @[hacking-mudkip](https://github.com/hacking-mudkip) - Concept ideas, porting elements
-* @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado) - Code cleaning, troubleshooting
+* @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Concept ideas, porting elements
+* @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Code cleaning, troubleshooting
 * Looking for others!
 
 ### To Install:
@@ -23,6 +23,8 @@
 2. Run [Dependency Commands](https://github.com/TurnipGuy30/Pokemon-PythonRed#2-installing-dependencies "On this page: Installing Dependencies")
 3. Install [7-zip](https://7-zip.org "7-zip Latest")
 4. Download a [PPR Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases")
+
+If you encounter any problems throughout the installation process, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 #### Step-by-Step Installation
 ##### 1. Installing `Python IDLE`
@@ -51,8 +53,12 @@ If it all runs smoothly with no errors, continue to the next step.
 ##### 4. Downloading `Pokémon PythonRed`
 When that's all done, to download the game, please download the latest (top) [Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
 
+Once the file has finished downloading (sorry if it takes a while!), run the '.exe' file. _7-zip_ should automatically extract the game files.
+
+To run the game, open `Pokémon PythonRed.py`!
+
 ### Bugs / Feature Request
-For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
+For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues "Pokémon PythonRed Issues")!
 
 ## SPOILERS PAST THE POKÉ BALL!
 ###### (Scrolling past is not recommended if you have never played Pokémon Red!)
