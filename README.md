@@ -43,7 +43,7 @@ pip install playsound
 ```
 
 ###### (More commands will be added above as they are needed)
-###### Common Shell Terminals include `Command Prompt`, `Windows PowerShell`, `Git CMD`, `Git Bash`, etc.
+###### Common Shell Terminals include `Command Prompt`, `Windows PowerShell`, `Git CMD`, etc.
 
 If it all runs smoothly with no errors, continue to the next step.
 
