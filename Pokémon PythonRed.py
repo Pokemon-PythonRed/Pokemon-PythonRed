@@ -636,4 +636,4 @@ while True:
                 option=''
         option=''
     else:
-        error()
+        error() ## Mystery Gift: "HACKER"
