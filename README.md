@@ -3,11 +3,11 @@
 
 ### Important Notes:
 
-* This is not a perfect recreation of `Pokémon Red`; it's a fan-made game that, like `Pokémon Red`, takes place in the _Kanto_ region.
-* Prior in-depth knowledge of the `Pokémon` franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
-* `Windows` OS only!! This game makes use of `Python`'s `winsound` module, which is exclusive to `Windows`.
+* This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
+* Prior in-depth knowledge of the _Pokémon_ franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
+* `Windows` OS only!! This game makes use of _Python_'s `winsound` module, which is exclusive to `Windows`.
 * This project (this GitHub Repository and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, or _The Pokémon Company_. This is an independent, fan-made game.
-* This game's plot is a work of fiction! Any references to real people or historical events are completely accidental.
+* This game's plot is a work of fiction!
 
 ### Credits
 
@@ -19,11 +19,11 @@
 #### Step-by-Step Installation
 ##### 1. Installing `Python IDLE`
 
-First, ensure you have `Python` installed. If not, you can find the latest installer [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
+First, ensure you have _Python_ installed. If not, you can find the latest installer [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
 
 However, if you are using a work/school computer and are not an Admin, you don't need to tick `py launcher`, which requires Administrative privileges to install. All `py launcher` does is let you use `Python IDLE` from the Command Line, which is not required for this game.
 
-This also installs `pip`, the package installer for `Python`, which is required in the next step.
+This also installs `pip`, the package installer for _Python_, which is required in the next step.
 
 ##### 2. Installing Dependencies
 Open a Shell Terminal and _individually_ run any below commands:
