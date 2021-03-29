@@ -5,7 +5,7 @@
 
 * This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
 * Prior in-depth knowledge of the _Pokémon_ franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
-* `Windows` OS only!! This game makes use of _Python_'s `winsound` module, which is exclusive to `Windows`.
+* _Windows_ OS only!! This game makes use of _Python_'s `winsound` module, which is exclusive to _Windows_.
 * This project (this GitHub Repository and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, or _The Pokémon Company_. This is an independent, fan-made game.
 * This game's plot is a work of fiction!
 
