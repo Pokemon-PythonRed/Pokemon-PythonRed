@@ -1,5 +1,5 @@
 ![Pokémon](Pictures/logo.png "Pokémon")
-<h1 align="center">PythonRed Version</h1>
+<h1 align="center">:atom: PythonRed Version :electron:</h1>
 
 ### Important Notes:
 
