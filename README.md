@@ -1,4 +1,4 @@
-![Pokémon](Pictures/pokelogo.png "Pokémon")
+![Pokémon](Pictures/logo.png "Pokémon")
 <h1 align="center">PythonRed Version</h1>
 
 ### Important Notes:
@@ -50,7 +50,7 @@ For bugs, contributions or feature requests, please create an [Issue](https://gi
 
 ## SPOILERS PAST THE POKÉ BALL!
 ###### (Scrolling past is not recommended if you have never played Pokémon Red!)
-![SPOILER ALERT!](https://tse2.mm.bing.net/th/id/OIP.VHV4L97MJfgNd5DMRep1oQHaHZ?w=201&h=200&c=7&o=5&dpr=1.5&pid=1.7)
+![SPOILER ALERT!](Pictures/pokeball.jfif "SPOILER ALERT!")
 
 <br><br><br><br>
 
@@ -59,8 +59,8 @@ For bugs, contributions or feature requests, please create an [Issue](https://gi
 
 <br>
 
-![HP Calculation Formula](Pictures/HP_calc.webp "HP Formula")
-![Stat Calculation Formula](Pictures/Statcalc_gen12.png "Stat Formula")
+![HP Calculation Formula](Pictures/hp.webp "HP Formula")
+![Stat Calculation Formula](Pictures/stat.png "Stat Formula")
 
 ### Current Priorities:
 * Wild Pokémon encounters
