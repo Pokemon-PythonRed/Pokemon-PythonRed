@@ -11,8 +11,8 @@
 
 ### Credits
 
-* @hacking-mudkip - Concept ideas, porting elements
-* @Isabel-Lifu-211207-XPrado - Code cleaning, troubleshooting
+* @[hacking-mudkip](https://github.com/hacking-mudkip) - Concept ideas, porting elements
+* @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado) - Code cleaning, troubleshooting
 * Looking for others!
 
 ### To Install:
