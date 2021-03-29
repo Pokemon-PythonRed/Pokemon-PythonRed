@@ -16,6 +16,14 @@
 * Looking for others!
 
 ### To Install:
+
+#### Summary
+
+1. Install [Python IDLE](https://www.python.org/downloads/ "Python Latest")
+2. Run [Dependency Commands](https://github.com/TurnipGuy30/Pokemon-PythonRed#2-installing-dependencies "On this page: Installing Dependencies")
+3. Install [7-zip](https://7-zip.org "7-zip Latest")
+4. Download a [PPR Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases")
+
 #### Step-by-Step Installation
 ##### 1. Installing `Python IDLE`
 
@@ -26,27 +34,22 @@ However, if you are using a work/school computer and are not an Admin, you don't
 This also installs `pip`, the package installer for _Python_, which is required in the next step.
 
 ##### 2. Installing Dependencies
-Open a Shell Terminal and _individually_ run any below commands:
+Open your favourite Shell Terminal and _individually_ run any below commands:
 
 ```
 pip install playsound
 ```
 
 ###### (More commands will be added above as they are needed)
+###### Common Shell Terminals include `Command Prompt`, `Windows PowerShell`, `Git CMD`, `Git Bash`, etc.
 
 If it all runs smoothly with no errors, continue to the next step.
 
 ##### 3. Installing 7-zip
-`Pokémon PythonRed` is released as an SFX '.exe' file, which requires 7-zip to open. Work/school computers can already have `7-zip` installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
+`Pokémon PythonRed` is released as an SFX '.exe' file, which requires _7-zip_ to open. Work/school computers might already have _7-zip_ installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
 
 ##### 4. Downloading `Pokémon PythonRed`
 When that's all done, to download the game, please download the latest (top) [Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
-
-#### Summary
-1. [Python IDLE](https://www.python.org/downloads/ "Python Latest")
-2. Dependency Commands
-3. [7-zip](https://7-zip.org "7-zip Latest")
-4. [PPR Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases")
 
 ### Bugs / Feature Request
 For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
