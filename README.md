@@ -9,6 +9,12 @@
 * This project (this GitHub Repository and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, or _The Pokémon Company_. This is an independent, fan-made game.
 * This game's plot is a work of fiction! Any references to real people or historical events are completely accidental.
 
+### Credits
+
+* @hacking-mudkip - Concept ideas, porting elements
+* @Isabel-Lifu-211207-XPrado - Code cleaning, troubleshooting
+* Looking for others!
+
 ### To Install:
 #### Step-by-Step Installation
 ##### 1. Installing `Python IDLE`
@@ -44,9 +50,6 @@ When that's all done, to download the game, please download the latest (top) [Re
 
 ### Bugs / Feature Request
 For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
-
-### Credits
-* Coming soon...
 
 ## SPOILERS PAST THE POKÉ BALL!
 ###### (Scrolling past is not recommended if you have never played Pokémon Red!)
