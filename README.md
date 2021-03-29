@@ -3,13 +3,13 @@
 
 ### Important Notes:
 
-* This is not a perfect recreation of `Pokémon Red`; it's a fan-made game that takes place in the _Kanto_ region, the location of `Pokémon Red`.
+* This is not a perfect recreation of `Pokémon Red`; it's a fan-made game that, like `Pokémon Red`, takes place in the _Kanto_ region.
 * Prior in-depth knowledge of the `Pokémon` franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
 * `Windows` OS only!! This game makes use of `Python`'s `winsound` module, which is exclusive to `Windows`.
 * This project (this GitHub Repository and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, or _The Pokémon Company_. This is an independent, fan-made game.
 * This game's plot is a work of fiction! Any references to real people or historical events are completely accidental.
 
-### To Play:
+### To Install:
 #### Step-by-Step Installation
 ##### 1. Installing `Python IDLE`
 
@@ -20,13 +20,15 @@ However, if you are using a work/school computer and are not an Admin, you don't
 This also installs `pip`, the package installer for `Python`, which is required in the next step.
 
 ##### 2. Installing Dependencies
-Open `Command Prompt` or `Windows PowerShell` and _individually_ run any below commands:
+Open a Shell Terminal and _individually_ run any below commands:
 
 ```
 pip install playsound
 ```
 
-(More commands will be added above as they are needed)
+###### (More commands will be added above as they are needed)
+
+If it all runs smoothly with no errors, continue to the next step.
 
 ##### 3. Installing 7-zip
 `Pokémon PythonRed` is released as an SFX '.exe' file, which requires 7-zip to open. Work/school computers can already have `7-zip` installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
@@ -38,7 +40,7 @@ When that's all done, to download the game, please download the latest (top) [Re
 1. [Python IDLE](https://www.python.org/downloads/ "Python Latest")
 2. Dependency Commands
 3. [7-zip](https://7-zip.org "7-zip Latest")
-4. [Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases")
+4. [PPR Releases](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases")
 
 ### Bugs / Feature Request
 For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues)!
@@ -59,6 +61,12 @@ For bugs, contributions or feature requests, please create an [Issue](https://gi
 
 ![HP Calculation Formula](Pictures/HP_calc.webp "HP Formula")
 ![Stat Calculation Formula](Pictures/Statcalc_gen12.png "Stat Formula")
+
+### Current Priorities:
+* Wild Pokémon encounters
+ * Pokémon locations
+ * Battle mechanics
+* Saving progress
 
 ### Progress:
 * [x] Start menu
@@ -88,11 +96,13 @@ Each `[]` includes this:
 ```
 [Pokédex #, Name, Type, Total Stats, Base HP, Base ATK, Base DEF, Base SP. ATK, Base SP. DEF, Base SPD]
 ```
-Catch Rate will be based on Total Stats, as the Gen 1/2 Catch Rate formula is too complex, and it gets worse from then on.
+Catch Rate will be based on Total Stats, as the Generation 1&2 Catch Rate formula is too complex, and it gets worse from then on.
 
 For simplicity, Pokémon will only have one type each, and one attack each (a _`type`_-type attack).
 
 #### _That's all, watch this space, and thanks!_
 
-###### For reading this far, you get the privilege of seeing this li'l guy who just _might_ be a hidden starter (wink, wink!):
+###### For reading this far, you get the privilege of seeing this li'l guy who just _might_ be a hidden starter:
 ![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7 "Mah Boi Mudkip")
+
+###### You, dear reader, are privileged. You get a Mystery Gift! If you've played a Pokémon game before, you might know what Mystery Gifts are, and yes, they are a planned feature. Because they aren't yet implemented, you must keep this Password safe until they are finished. The password is "PRIVILEGED". Entering this Password at a specific place will grant you a special feature. But I repeat, YOU CANNOT USE IT YET! You must wait until Fuchsia City is complete. Just you wait, I have big plans for this game!

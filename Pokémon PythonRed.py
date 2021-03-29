@@ -70,7 +70,7 @@ while startOption!='2':
         print('')
     elif startOption=='3':
         print('1. GitHub Repository Link + README')
-        print('2. I Found a Bug / FATAL ERROR')
+        print('2. I Found a Bug / I recieved a "FATAL ERROR"')
         print('3. I Have a Feature Request')
         print('4. Back')
         print('')
@@ -600,7 +600,7 @@ while True:
         print('')
         print('1. Head NORTH to ROUTE 2')
         print('2. Head SOUTH to NORTH ROUTE 1')
-        print('3. Head WEST to ROUTE ?')
+        print('3. Head WEST to ???')
         print('4. POKéMON CENTER')
         print('5. POKé MART')
         print('6. VIRIDIAN GYM')
@@ -615,7 +615,9 @@ while True:
                 currentLocation='Route1-N'
             elif option=='3':
                 print('')
-                input('Coming soon!')
+                input('There\'s a gate!')
+                input('...')
+                input('It seems to be locked!')
                 print('')
             elif option=='4':
                 print('')
