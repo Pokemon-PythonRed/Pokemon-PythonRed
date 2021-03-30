@@ -1,6 +1,8 @@
 ![Pokémon](Pictures/logo.png "Pokémon")
 <h1 align="center">:atom: PythonRed Version :electron:</h1>
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/graphs/commit-activity) ![Maintaner](https://img.shields.io/badge/maintainer-TurnipGuy30-blue) [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/) [![Github all releases](https://img.shields.io/github/downloads/TurnipGuy30/Pokemon-PythonRed/total.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases/) [![Github releases (by asset)](https://img.shields.io/github/downloads/TurnipGuy30/Pokemon-PythonRed/latest)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases/) [![GitHub issues](https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues/) [![GitHub issues-closed](https://img.shields.io/github/issues-closed/TurnipGuy30/Pokemon-PythonRed.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues?q=is%3Aissue+is%3Aclosed) 
+---
 ### Important Notes:
 
 * This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
