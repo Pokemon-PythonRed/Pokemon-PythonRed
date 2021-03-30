@@ -1,7 +1,16 @@
 ![Pokémon](Pictures/logo.png "Pokémon")
 <h1 align="center">:atom: PythonRed Version :electron:</h1>
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/graphs/commit-activity) ![Maintaner](https://img.shields.io/badge/Maintainer-TurnipGuy30-blue) [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Python version](https://img.shields.io/badge/python-3.6-blue)](https://pypi.python.org/pypi/ansicolortags/) [![GitHub issues](https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues/) [![GitHub issues-closed](https://img.shields.io/github/issues-closed/TurnipGuy30/Pokemon-PythonRed.svg)](https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues?q=is%3Aissue+is%3Aclosed)
+<p align="center">
+<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
+<img src="https://img.shields.io/badge/Maintainer-TurnipGuy30-blue">
+<a href="mailto:ba004629@bac.qld.edu.au"><img src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg"></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg"></a>
+<a href="https://pypi.python.org/pypi/ansicolortags/"><img src="https://img.shields.io/badge/python-3.6-blue"></a>
+<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg"></a>
+<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/TurnipGuy30/Pokemon-PythonRed.svg"></a>
+<a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/TurnipGuy30/Pokemon-PythonRed"/></a>
+</p>
 
 ---
 ### Important Notes:
