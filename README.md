@@ -14,10 +14,6 @@
 	<a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/TurnipGuy30/Pokemon-PythonRed"/></a> <!--Stars-->
 </p>
 ---
-
-Stable Release coming soon; I’ve been busy lately, sorry!
-
----
 ### Important Notes:
 
 * This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
