@@ -13,6 +13,9 @@
 	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg"></a> <!--Open Issues-->
 	<a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/TurnipGuy30/Pokemon-PythonRed"/></a> <!--Stars-->
 </p>
+---
+
+Stable Release coming soon; I’ve been busy lately, sorry!
 
 ---
 ### Important Notes:
