@@ -70,7 +70,7 @@ while startOption!='2':
         print('')
     elif startOption=='3':
         print('1. GitHub Repository Link + README')
-        print('2. I Found a Bug / I recieved a "FATAL ERROR"')
+        print('2. I Found a Bug / I Recieved a "FATAL ERROR"')
         print('3. I Have a Feature Request')
         print('4. Back')
         print('')
