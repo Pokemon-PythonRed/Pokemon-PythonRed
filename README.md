@@ -8,8 +8,8 @@
 	<a href="https://www.python.org/"><img src="https://img.shields.io/badge/made%20with-Python-1f425f.svg"></a> <!--Made with Python-->
 	<!--<a href="https://pypi.python.org/pypi/ansicolortags/"><img src="https://img.shields.io/badge/python-3.6-blue"></a> Python 3.6-->
 	<a href="https://www.microsoft.com/en-au/software-download/windows10"><img src="https://img.shields.io/badge/platform-Windows%2010-yellow"></a> <!--Platform-->
-	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases"><img src="https://img.shields.io/badge/latest%20version-v0.0.4-cyan"></a>
-	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases"><img src="https://img.shields.io/badge/stable%3F-no-red"></a>
+	<a href="https://sdassq-my.sharepoint.com/:u:/g/personal/ba004629_bac_qld_edu_au/EYVkbtCVzq1AnAa0a-WE2TYBi6P7NyUxIuSCs_r48Yx33Q?e=XlXvoh"><img src="https://img.shields.io/badge/latest%20version-v0.0.5-cyan"></a> <!--Latest version-->
+	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases"><img src="https://img.shields.io/badge/stable%3F-yes-brightgreen"></a> <!--Stable?-->
 	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg"></a> <!--Open Issues-->
 	<a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/TurnipGuy30/Pokemon-PythonRed"/></a> <!--Stars-->
 </p>
