@@ -15,11 +15,9 @@
 </p>
 
 ---
-<h6 align="center">Note: this file is currently undergoing a makeover. Please be patient.</h6>
+<h6 align="center">A fan-made, text-adventure Pokémon game in Python!</h6>
 
 ---
-
-<br>
 
 <details><summary>Important Notes</summary><br>
 
