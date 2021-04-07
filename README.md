@@ -19,6 +19,8 @@
 
 ---
 
+<br>
+
 <details><summary>Important Notes</summary><br>
 
 * This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
@@ -34,6 +36,8 @@
 * @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Code cleaning, troubleshooting
 * Looking for others!
 </details>
+
+<br>
 
 ### To Install:
 
@@ -77,19 +81,21 @@ If it all runs smoothly with no errors, continue to the next step.
 `Pokémon PythonRed` is released as an SFX '.exe' file, which requires _7-zip_ to open. Work/school computers might already have _7-zip_ installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
 </details>
 
-<details><summary>4. Downloading <code>Pokémon PythonRed</code><summary>
+<details><summary>4. Downloading <code>Pokémon PythonRed</code></summary>
 
-When that's all done, to download the game, please download the latest (top) [Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases "Pokémon PythonRed Releases"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
+When that's all done, to download the game, please download the [latest Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases/latest "Pokémon PythonRed Latest"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
 
 Once the file has finished downloading (sorry if it takes a while!), run the '.exe' file. _7-zip_ should automatically extract the game files.
 
 To run the game, open `Pokémon PythonRed.py`!
 </details>
 
+<br>
+
 ### Bugs / Feature Request
 For bugs, contributions or feature requests, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues "Pokémon PythonRed Issues")!
 
-<br><br><br><br>
+<br>
 
 <details><summary>Resources & Additional Info (Mild Spoilers)</summary>
 
@@ -116,5 +122,4 @@ For simplicity, Pokémon will only have one type each, and one attack each (a _`
 
 #### _That's all, watch this space, and thanks!_
 
-###### For reading this far, you get the privilege of seeing this li'l guy who just _might_ be a hidden starter:
-![](https://tse2.mm.bing.net/th/id/OIP.odJ_-1cegyviucDJCNG_XAAAAA?w=136&h=180&c=7&o=5&dpr=1.5&pid=1.7 "Mah Boi Mudkip")
+![](Resources/pokeball.jfif)
