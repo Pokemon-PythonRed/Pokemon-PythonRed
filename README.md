@@ -51,7 +51,7 @@ Following this list is perfectly fine:
 If you encounter any problems throughout the installation process, see `Step-by-Step Installation` below. If problems persist, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 #### Step-by-Step Installation
-<details><summary>1. Installing <code>Python IDLE</code></summary>
+<details><summary>1. Installing <code>Python IDLE</code></summary><br>
 
 First, ensure you have _Python_ installed. If not, you can find the latest installer [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
 
@@ -60,7 +60,7 @@ However, if you are using a work/school computer and are not an Admin, you don't
 This also installs `pip`, _Python_'s package installer, which is required in the next step.
 </details>
 
-<details><summary>2. Installing Dependencies</summary>
+<details><summary>2. Installing Dependencies</summary><br>
 
 Open your favourite Shell Terminal and _individually_ run any below commands:
 
@@ -74,12 +74,12 @@ pip install playsound
 If it all runs smoothly with no errors, continue to the next step.
 </details>
 
-<details><summary>3. Installing 7-zip</summary>
+<details><summary>3. Installing 7-zip</summary><br>
 	
 `Pokémon PythonRed` is released as an SFX '.exe' file, which requires _7-zip_ to open. Work/school computers might already have _7-zip_ installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
 </details>
 
-<details><summary>4. Downloading <code>Pokémon PythonRed</code></summary>
+<details><summary>4. Downloading <code>Pokémon PythonRed</code></summary><br>
 
 When that's all done, to download the game, please download the [latest Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases/latest "Pokémon PythonRed Latest"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
 
