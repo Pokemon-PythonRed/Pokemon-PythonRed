@@ -19,6 +19,8 @@
 
 ---
 
+<br>
+
 <details><summary>Important Notes</summary><br>
 
 * This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
@@ -34,8 +36,6 @@
 * @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Code cleaning, troubleshooting
 * Looking for others!
 </details>
-
-<br>
 
 ### To Install:
 
