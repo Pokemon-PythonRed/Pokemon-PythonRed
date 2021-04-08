@@ -143,4 +143,4 @@ For simplicity, Pokémon will only have one type each, and one attack each (a _`
 
 #### _That's all, watch this space, and thanks!_
 
-![](Resources/pokeball.jfif)
+![](Pictures/pokeball.jfif)
