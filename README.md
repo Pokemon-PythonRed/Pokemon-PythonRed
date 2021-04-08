@@ -21,20 +21,31 @@
 
 <br>
 
-<details><summary>Important Notes</summary><br>
+<details><summary>Important Notes</summary>
 
+---
 * This is not a perfect recreation of _Pokémon Red_; it's a fan-made game that, like _Pokémon Red_, takes place in the _Kanto_ region.
 * Prior in-depth knowledge of the _Pokémon_ franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
 * _Windows_ OS only!! This game makes use of _Python_'s `winsound` module, which is exclusive to _Windows_.
 * This project (this GitHub Repository and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, or _The Pokémon Company_. This is an independent, fan-made game.
 * This game's plot is a work of fiction!
+---
 </details>
 
-<details><summary>Credits</summary><br>
+### Credits:
+#### Owners:
 
+* @[TurnipGuy30](https://github.com/TurnipGuy30 "TurnipGuy30's Profile") - Performes Commits (updates the game, makes README changes)
+* @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Manages Bug Reports
+* @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Just really cool (best GitHub username!)
+
+<details><summary>Other Contributions:</summary>
+
+---
 * @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Concept ideas, porting elements
-* @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Code cleaning, troubleshooting
+* @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Code cleaning, general troubleshooting
 * Looking for others!
+---
 </details>
 
 ### To Install:
@@ -51,17 +62,21 @@ Following this list is perfectly fine:
 If you encounter any problems throughout the installation process, see `Step-by-Step Installation` below. If problems persist, please create an [Issue](https://github.com/TurnipGuy30/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 #### Step-by-Step Installation
-<details><summary>1. Installing <code>Python IDLE</code></summary><br>
+<details><summary>1. Installing <code>Python IDLE</code></summary>
 
+---
 First, ensure you have _Python_ installed. If not, you can find the latest installer [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
 
 However, if you are using a work/school computer and are not an Admin, you don't need to tick `py launcher`, which requires Administrative privileges to install. All `py launcher` does is let you use `Python IDLE` from the Command Line, which is not required for this game.
 
 This also installs `pip`, _Python_'s package installer, which is required in the next step.
+
+---
 </details>
 
-<details><summary>2. Installing Dependencies</summary><br>
+<details><summary>2. Installing Dependencies</summary>
 
+---
 Open your favourite Shell Terminal and _individually_ run any below commands:
 
 ```
@@ -72,20 +87,28 @@ pip install playsound
 ###### Common Shell Terminals include `Command Prompt`, `Windows PowerShell`, `Git CMD`, etc.
 
 If it all runs smoothly with no errors, continue to the next step.
+
+---
 </details>
 
-<details><summary>3. Installing 7-zip</summary><br>
-	
+<details><summary>3. Installing 7-zip</summary>
+
+---
 `Pokémon PythonRed` is released as an SFX '.exe' file, which requires _7-zip_ to open. Work/school computers might already have _7-zip_ installed, but if not, the latest version can be found [here](https://7-zip.org "7-zip Latest").
+
+---
 </details>
 
 <details><summary>4. Downloading <code>Pokémon PythonRed</code></summary><br>
 
+---
 When that's all done, to download the game, please download the [latest Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases/latest "Pokémon PythonRed Latest"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
 
 Once the file has finished downloading (sorry if it takes a while!), run the '.exe' file. _7-zip_ should automatically extract the game files.
 
 To run the game, open `Pokémon PythonRed.py`!
+
+---
 </details>
 
 <br>
