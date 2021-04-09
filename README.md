@@ -21,6 +21,8 @@
 
 <br>
 
+This is a lot of work; if you like what I'm doing, please let me know! Head over to <a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/discussions">Dicussions</a> and give me some feedback!
+
 <details><summary>Important Notes</summary>
 
 ---
@@ -39,7 +41,7 @@
 * @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Manages Bug Reports
 * @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Just really cool (best GitHub username!)
 
-<details><summary>Other Contributions:</summary>
+<details><summary>All Contributions:</summary>
 
 ---
 * @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Concept ideas, porting elements
