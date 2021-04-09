@@ -10,7 +10,7 @@
 	<a href="https://www.microsoft.com/en-au/software-download/windows10"><img src="https://img.shields.io/badge/platform-Windows%2010-yellow"></a> <!--Platform-->
 	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases/latest"><img src="https://img.shields.io/badge/latest%20version-v0.0.5-cyan"></a> <!--Latest version-->
 	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases"><img src="https://img.shields.io/badge/stable%3F-yes-brightgreen"></a> <!--Stable?-->
-	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg"></a> <!--Open Issues-->
+	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/TurnipGuy30/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/TurnipGuy30/Pokemon-PythonRed"/></a> <!--Stars-->
 </p>
 
