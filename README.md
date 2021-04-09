@@ -37,7 +37,7 @@ This project is a lot of work; if you like it, please let us know! Head over to 
 ### Credits:
 #### Owners:
 
-* @[TurnipGuy30](https://github.com/TurnipGuy30 "TurnipGuy30's Profile") - Performes Commits (updates the game, makes README changes)
+* @[TurnipGuy30](https://github.com/TurnipGuy30 "TurnipGuy30's Profile") - Performs Commits (updates the game, makes README changes)
 * @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Manages Bug Reports
 * @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Just really cool (best GitHub username!)
 
