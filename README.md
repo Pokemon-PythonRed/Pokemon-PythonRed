@@ -21,7 +21,7 @@
 
 <br>
 
-This is a lot of work; if you like what I'm doing, please let me know! Head over to <a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/discussions">Dicussions</a> and give me some feedback!
+This is a lot of work; if you like what I'm doing, please let me know! Head over to <a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/discussions">Discussions</a> and give me some feedback!
 
 <details><summary>Important Notes</summary>
 
@@ -104,7 +104,7 @@ If it all runs smoothly with no errors, continue to the next step.
 <details><summary>4. Downloading <code>Pokémon PythonRed</code></summary><br>
 
 ---
-When that's all done, to download the game, please download the [latest Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases/latest "Pokémon PythonRed Latest"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
+To download the game, please download the [latest Release](https://github.com/TurnipGuy30/Pokemon-PythonRed/releases/latest "Pokémon PythonRed Latest"), and click the download link! These links redirect to OneDrive, as they are too large to be hosted on GitHub.
 
 Once the file has finished downloading (sorry if it takes a while!), run the '.exe' file. _7-zip_ should automatically extract the game files.
 
@@ -122,13 +122,12 @@ For bugs, contributions or feature requests, please create an [Issue](https://gi
 
 <details><summary>Resources & Additional Info (Mild Spoilers)</summary>
 
+---
 ### Resources Used:
-![Kanto Region Map](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bddf750-53a0-4a9f-872f-8d13685a758f/d3c4hsg-5acbd78f-c4cb-4f40-a87a-05700ac859a4.png/v1/fill/w_900,h_882,q_75,strp/labeled_map_of_kanto_by_rythos-d3c4hsg.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zYmRkZjc1MC01M2EwLTRhOWYtODcyZi04ZDEzNjg1YTc1OGYvZDNjNGhzZy01YWNiZDc4Zi1jNGNiLTRmNDAtYTg3YS0wNTcwMGFjODU5YTQucG5nIiwid2lkdGgiOiI8PTkwMCIsImhlaWdodCI6Ijw9ODgyIn1dXX0.Ycjt66m7t9k-8tio4Tsc0YTsP_nu7Lz2cGBm4CdZWN8 "Kanto Region Map")
-
-<br>
-
-![HP Calculation Formula](Pictures/hp.webp "HP Formula")
-![Stat Calculation Formula](Pictures/stat.png "Stat Formula")
+* [Kanto Region Map](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bddf750-53a0-4a9f-872f-8d13685a758f/d3c4hsg-5acbd78f-c4cb-4f40-a87a-05700ac859a4.png/v1/fill/w_900,h_882,q_75,strp/labeled_map_of_kanto_by_rythos-d3c4hsg.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zYmRkZjc1MC01M2EwLTRhOWYtODcyZi04ZDEzNjg1YTc1OGYvZDNjNGhzZy01YWNiZDc4Zi1jNGNiLTRmNDAtYTg3YS0wNTcwMGFjODU5YTQucG5nIiwid2lkdGgiOiI8PTkwMCIsImhlaWdodCI6Ijw9ODgyIn1dXX0.Ycjt66m7t9k-8tio4Tsc0YTsP_nu7Lz2cGBm4CdZWN8 "Kanto Region Map")
+* [HP Formula](Pictures/hp.webp "HP Formula")
+* [Stat Formula](Pictures/stat.png "Stat Formula")
+* [_Pokémon Red_ Game Script](http://www.gamefaqs.com/features/recognition/56771.html)
 
 ### Current Priorities:
 * Wild Pokémon encounters
@@ -141,6 +140,8 @@ Catch Rate will be based on the `Total Stats` stat, as the Generation 1&2 Catch 
 For simplicity, Pokémon will only have one type each, and one attack each (a _`type`_-type attack).
 
 ###### You, dear reader, are privileged. You get to hear about Mystery Gifts! If you've played a Pokémon game before, you might know what Mystery Gifts are, and yes, they are a planned feature. Because they aren't yet implemented, you must keep your Mystery Gift Passwords safe for now. You can find Passwords around this GitHub page, and maybe other places. Entering these Passwords at a specific place in the game will grant you a special feature. But I repeat, YOU CANNOT USE THEM YET! You must wait until Fuchsia City is complete. Just you wait, I have big plans for this game!
+
+---
 </details>
 
 #### _That's all, watch this space, and thanks!_
