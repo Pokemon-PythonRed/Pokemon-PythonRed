@@ -46,6 +46,7 @@ This project is a lot of work; if you like it, please let us know! Head over to 
 ---
 * @[hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Concept ideas, porting elements
 * @[Isabel-Lifu-211207-XPrado](https://github.com/Isabel-Lifu-211207-XPrado "Isabel-Lifu-211207-XPrado's Profile") - Code cleaning, general troubleshooting
+* @[JeremyLARDENOIS](https://github.com/JeremyLARDENOIS "JeremyLARDENOIS's Profile") - Testing and feedback
 * Looking for others!
 ---
 </details>
