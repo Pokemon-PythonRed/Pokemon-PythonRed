@@ -21,7 +21,7 @@
 
 <br>
 
-This project is a lot of work; if you like it, please let us know! Head over to <a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/discussions">Discussions</a> and give us some feedback!
+<a href="https://github.com/TurnipGuy30/Pokemon-PythonRed/discussions">Discussions</a> is a great place to ask questions or give quick feedback!
 
 <details><summary>Important Notes</summary>
 
