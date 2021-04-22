@@ -467,10 +467,10 @@ while True:
                 startMenu==False
             else:
                 option=''
-    elif currentLocation=='PalletTown':
-        if currentMusic!='PalletTown':
-            ps('PalletTown')
-            currentMusic='PalletTown'
+    elif currentLocation=='Pallet':
+        if currentMusic!='Pallet':
+            ps('Pallet')
+            currentMusic='Pallet'
         print('')
         print('CURRENT LOCATION: PALLET TOWN')
         print('"Shades of your journey await!"')
@@ -500,9 +500,9 @@ while True:
                 option=''
         option=''
     elif currentLocation=='PlayerHouse':
-        if currentMusic!='PalletTown':
-            ps('PalletTown')
-            currentMusic='PalletTown'
+        if currentMusic!='Pallet':
+            ps('Pallet')
+            currentMusic='Pallet'
         print('')
         print(f'CURRENT LOCATION: {playerName}\'S HOUSE - DOWNSTAIRS')
         print('')
@@ -519,14 +519,14 @@ while True:
             elif option=='2':
                 currentLocation='PlayerHouse-U'
             elif option=='3':
-                currentLocation='PalletTown'
+                currentLocation='Pallet'
             else:
                 option=''
         option=''
     elif currentLocation=='PlayerHouse-U':
-        if currentMusic!='PalletTown':
-            ps('PalletTown')
-            currentMusic='PalletTown'
+        if currentMusic!='Pallet':
+            ps('Pallet')
+            currentMusic='Pallet'
         print('')
         print(f'CURRENT LOCATION: {playerName}\'S HOUSE - UPSTAIRS')
         print('')
@@ -565,7 +565,7 @@ while True:
                 encounter()
                 currentLocation='Route1-N'
             elif option=='2':
-                currentLocation='PalletTown'
+                currentLocation='Pallet'
             else:
                 option=''
         option=''
@@ -582,16 +582,16 @@ while True:
         while option=='':
             option=input('>')
             if option=='1':
-                currentLocation='ViridianCity'
+                currentLocation='Viridian'
             elif option=='2':
                 currentLocation='Route1-S'
             else:
                 option=''
         option=''
-    elif currentLocation=='ViridianCity':
-        if currentMusic!='ViridianCity':
-            ps('ViridianCity')
-            currentMusic='ViridianCity'
+    elif currentLocation=='Viridian':
+        if currentMusic!='Viridian':
+            ps('Viridian')
+            currentMusic='Viridian'
         print('')
         print('CURRENT LOCATION: VIRIDIAN CITY')
         print('"The eternally green paradise"')
