@@ -4,6 +4,7 @@ try:
 except ImportError:
     while True:
         input('Please install the required dependencies before playing.')
+cls = lambda: os.system('cls')
 def ps(sound):
     if sound=='none':
         winsound.PlaySound(None,winsound.SND_ASYNC)
@@ -54,6 +55,7 @@ print('                          PythonRed Version')
 time.sleep(1.85)
 print('')
 input('                        Press Enter to begin!')
+cls()
 print('')
 print('1. Continue')
 print('2. New Game')
@@ -63,12 +65,15 @@ while startOption!='2':
     startOption=input('>')
     print('')
     if startOption!='1' and startOption!='2' and startOption!='3':
+        cls()
         print('Invalid answer!')
         print('')
     elif startOption=='1':
+        cls()
         print('Saving and continuing coming soon!')
         print('')
     elif startOption=='3':
+        cls()
         print('1. GitHub Repository Link + README')
         print('2. I Found a Bug / I Recieved a "FATAL ERROR"')
         print('3. I Have a Feature Request')
@@ -77,6 +82,7 @@ while startOption!='2':
         while githubOption!='4':
             githubOption=input('>')
             if githubOption=='1':
+                cls()
                 print('Please access the GitHub Repository here:')
                 print('')
                 print('https://github.com/TurnipGuy30/Pokemon-PythonRed')
@@ -84,6 +90,7 @@ while startOption!='2':
                 print('From the Repository, scroll down to find the README.')
                 print('')
             elif githubOption=='2':
+                cls()
                 print('Please create an Issue on the Issues page:')
                 print('')
                 print('https://github.com/TurnipGuy30/Pokemon-PythonRed/issues')
@@ -94,6 +101,7 @@ while startOption!='2':
                 print('any lost data.')
                 print('')
             elif githubOption=='3':
+                cls()
                 print('Please create an Issue on the Issues page:')
                 print('')
                 print('https://github.com/TurnipGuy30/Pokemon-PythonRed/issues')
@@ -107,9 +115,11 @@ while startOption!='2':
                     githubOption='0'
     if startOption!='2':
         startOption='0'
+cls()
 print('If you chose "New Game" by accident, please quit now.')
 input('Otherwise, press Enter to start a new game!')
 print('')
+cls()
 print('Please wait..')
 print('')
 ps('Flutey')
@@ -151,6 +161,7 @@ time.sleep(5)
 while True:
     if introComplete==False:
         ps('Intro')
+        cls()
         input('OAK: Hello there! Welcome to the world of POKéMON! My name is OAK!')
         input('People call me the POKéMON PROFESSOR!')
         print('')
