@@ -2,9 +2,10 @@ import getpass,math,os,secrets,time,random,winsound
 try:
     import playsound
 except ImportError:
+    print('')
     while True:
         input('Please install the required dependencies before playing.')
-cls = lambda: os.system('cls')
+cls=lambda:os.system('cls')
 def ps(sound):
     if sound=='none':
         winsound.PlaySound(None,winsound.SND_ASYNC)
