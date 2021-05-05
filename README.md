@@ -2,8 +2,9 @@
 <h1 align="center">:atom: PythonRed Version :electron:</h1>
 
 <p align="center">
+	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
 	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/graphs/commit-activity"><img src="https://img.shields.io/badge/maintained%3F-yes-green.svg"></a> <!--Maintained?-->
-	<img src="https://img.shields.io/badge/maintainer-TurnipGuy30-blue"> <!--Maintainer-->
+	<a href="https://GitHub.com/TurnipGuy30"><img src="https://img.shields.io/badge/maintainer-TurnipGuy30-blue"></a> <!--Maintainer-->
 	<a href="https://www.python.org/"><img src="https://img.shields.io/badge/made%20with-Python-1f425f.svg"></a> <!--Made with Python-->
 	<a href="https://www.microsoft.com/en-au/software-download/windows10"><img src="https://img.shields.io/badge/platform-Windows%2010-yellow"></a> <!--Platform-->
 	<a href="https://GitHub.com/TurnipGuy30/Pokemon-PythonRed/releases/latest"><img src="https://img.shields.io/badge/latest%20version-v0.0.5-cyan"></a> <!--Latest version-->
