@@ -11,11 +11,6 @@ def ps(sound):
         winsound.PlaySound(None,winsound.SND_ASYNC)
     else:
         winsound.PlaySound('Resources/'+str(sound)+'.wav',winsound.SND_ASYNC)
-def stop():
-    ps('none')
-    print('')
-    while True:
-        input('That\'s all for now, thanks!')
 def error():
     cls()
     print('')
@@ -181,7 +176,7 @@ def encounter():
         escape=True
     victory=escape=False
 """
-def encounter(species,level,canEscape):
+def enc(species,level,canEscape):
 
 """
 cls()
@@ -675,4 +670,4 @@ while True:
                 option=''
         option=''
     else:
-        error() ## --- Mystery Gift #2: "HACKER" ---
+        error()
