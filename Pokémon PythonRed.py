@@ -133,6 +133,12 @@ while startOption!='2':
                 print('')
             elif githubOption!='4':
                     githubOption='0'
+            cls()
+            print('')
+            print('1. Continue')
+            print('2. New Game')
+            print('3. GitHub')
+            print('')
     if startOption!='2':
         startOption='0'
 cls()
@@ -175,10 +181,15 @@ def encounter():
         input('You got away safely!')
         escape=True
     victory=escape=False
-"""
 def enc(species,level,canEscape):
-
-"""
+    ps('BattleWild')
+    print('...')
+    time.sleep(1)
+    print(f'A wild {species} appeared!')
+    print('')
+    print('')
+    while True:
+        input('You shouldn\'t be seeing this!')
 cls()
 time.sleep(5)
 while True:
@@ -233,17 +244,14 @@ while True:
         print('')
         print('First, what is your name?')
         print('')
-        print('1. NEW NAME')
-        print('2. PYTHON')
-        print('3. ASH')
+        print('1. PYTHON')
+        print('2. New Name')
         print('')
         while introAnswer!='1' and introAnswer!='2' and introAnswer!='3':
             introAnswer=input('>')
-        if introAnswer=='2':
+        if introAnswer=='1':
             playerName='PYTHON'
-        elif introAnswer=='3':
-            playerName='ASH'
-        elif introAnswer=='1':
+        elif introAnswer=='2':
             print('')
             print('(Caps, 15 chars. max)')
             print('')
