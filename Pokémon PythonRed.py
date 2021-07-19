@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import getpass,math,os,secrets,time,random,winsound
 try:
     import playsound
