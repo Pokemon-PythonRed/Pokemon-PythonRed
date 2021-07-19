@@ -1,18 +1,13 @@
 #!/usr/bin/python3
 
-import getpass,math,os,secrets,time,random,winsound
-try:
-    import playsound
-except ImportError:
-    print('')
-    while True:
-        input('Please install the required dependencies before playing.')
-cls=lambda:os.system('cls')
+import getpass,math,os,secrets,time,random
+cls=lambda:os.system('clear')
 def ps(sound):
-    if sound=='none':
-        winsound.PlaySound(None,winsound.SND_ASYNC)
-    else:
-        winsound.PlaySound('Resources/'+str(sound)+'.wav',winsound.SND_ASYNC)
+    # if sound=='none':
+    #     winsound.PlaySound(None,winsound.SND_ASYNC)
+    # else:
+    #     winsound.PlaySound('Resources/'+str(sound)+'.wav',winsound.SND_ASYNC)
+    pass
 def error():
     cls()
     print('')
@@ -31,6 +26,8 @@ def error():
     print('react unless restarted, so please close it now.')
     while True:
         input('')
+def stop():
+    print("Not yet implemented")
 ps('Title')
 startOption='0'
 githubOption='0'
