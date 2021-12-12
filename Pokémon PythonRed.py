@@ -1,0 +1,1 @@
+input("\nPokémon PythonRed\n\nI haven't started rewriting the game yet. Don't worry, I'll get around to it soon enough.\n\nIf you need a reminder, the Repository is found at [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed].\n\nPress Enter to exit.")
