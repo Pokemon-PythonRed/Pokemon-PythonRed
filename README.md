@@ -64,8 +64,8 @@
 - Moving around the map
 
 - Wild Pokémon encounters
-    - Pokémon locations
-    - Battle mechanics
+	- Pokémon locations
+	- Battle mechanics
 
 Catch Rate will be based on the `Total Stats` stat, as the Generation 1&2 Catch Rate formula is too complex, and it gets worse from then on.
 
@@ -82,8 +82,8 @@ This means you don't have one or more modules the game needs to run. Open your f
 ```
 (nothing yet)
 ```
-    - More commands will be added above as they are needed
-    - Common Shell Terminals include `Command Prompt`, `Windows PowerShell`, `Git CMD`, etc.
+	- More commands will be added above as they are needed
+	- Common Shell Terminals include `Command Prompt`, `Windows PowerShell`, `Git CMD`, etc.
 
 - I have a bug report or feature request! Where do I submit it?
 
