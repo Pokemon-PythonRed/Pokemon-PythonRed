@@ -66,9 +66,9 @@ For bugs, contribution specifications, or feature requests, please create an [Is
 
 <details><summary>PPR Logo ASCII Art</summary>
 
-(Sorry if it's too big)
+(Sorry if it's too big for your screen!)
 <pre align="center">
-,#&@@&&&&&@&&#.                                                    
+,#&@@&&&&&@&&#.
 .*&&@&&&%(((((((((((((((((((((%&&@&@%,
 ,%&@&#(((((((((((((((((((((((((((((((((((((((%&&@#
 .%&@#(((((((((((((((((((((((((((((((((((((((((((((((((((%@&%
