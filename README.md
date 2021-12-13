@@ -67,7 +67,7 @@ For bugs, contribution specifications, or feature requests, please create an [Is
 <details><summary>PPR Logo ASCII Art</summary>
 
 (Sorry if it's too big)
-```
+<pre align="center">
 ,#&@@&&&&&@&&#.                                                    
 .*&&@&&&%(((((((((((((((((((((%&&@&@%,                                         
 ,%&@&#(((((((((((((((((((((((((((((((((((((((%&&@#                                   
@@ -116,7 +116,7 @@ For bugs, contribution specifications, or feature requests, please create an [Is
 *@&&%************************************************/&&@&.                              
 *&@&&%(***********************************(&@&@%,                                   
 ,%@&&&&&&%#(/****,****/(#%&&&&&@@#,                                          
-```
+</pre>
 </details>
 
 <details><summary>Pokédex Data (long)</summary>
