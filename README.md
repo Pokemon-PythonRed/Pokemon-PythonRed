@@ -1,4 +1,4 @@
-![Pokémon](https://raw.githubusercontent.com/Pokemon-PythonRed/Pokemon-PythonRed/e3dc093af6e6c9febc2dea9299aac2210c0a0f34/Pictures/logo.png "Pokémon")
+![Pokémon](https://raw.githubusercontent.com/Pokemon-PythonRed/Images/main/pokemon.png "Pokémon")
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
@@ -60,7 +60,7 @@ This means you don't have one or more modules the game needs to run. Open your f
 For bugs, contribution specifications, or feature requests, please create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues")! Your comment will be kept in mind.
 
 ---
-[![PPR Logo](Logo.png "PPR Homepage")](https://github.com/Pokemon-PythonRed)
+[![PPR Logo](https://raw.githubusercontent.com/Pokemon-PythonRed/Images/main/logo.png "PPR Homepage")](https://github.com/Pokemon-PythonRed)
 
 ### Extras
 
