@@ -5,7 +5,6 @@
 	<a href="https://GitHub.com/Pokemon-PythonRed/graphs/commit-activity"><img src="https://img.shields.io/badge/maintained%3F-yes-green.svg"></a> <!--Maintained?-->
 	<a href="https://GitHub.com/TurnipGuy30"><img src="https://img.shields.io/badge/maintainer-TurnipGuy30-blue"></a> <!--Maintainer-->
 	<a href="https://www.python.org/"><img src="https://img.shields.io/badge/made%20with-Python%203-1f425f.svg"></a> <!--Made with Python 3-->
-	<a href="https://www.microsoft.com/en-au/software-download/windows10"><img src="https://img.shields.io/badge/platform-Windows%2010-yellow"></a> <!--Platform-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-black"></a> <!--License-->
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
