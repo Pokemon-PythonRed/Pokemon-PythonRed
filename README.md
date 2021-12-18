@@ -36,14 +36,25 @@ In order of first contribution:
 - [@Valensce](https://github.com/Valensce "Valensce's Profile") - Manages Bug Reports, code cleaning, general troubleshooting
 - [@hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Creates ideas (concept ideas, porting elements)
 - [@JeremyLARDENOIS](https://github.com/JeremyLARDENOIS "JeremyLARDENOIS's Profile") - Testing and feedback
+- [@JBYT27](https://github.com/JBYT27) - Edits docs, performs commits, and more
 - Looking for others!
 
 **These credits will be in-game!** If you want your name included, head to [Discussions](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions "Pokémon PythonRed Discussions") and ask what you can help with!
 
 ### Installation
-- Obviously, Python 3 is required to run the game, at least for now. The latest installer can be found [here](https://www.python.org/downloads/ "Python Latest"). Tick the box that says `Add Python to PATH` during installation.
-- To download the game, please run `Pokémon PythonRed.py`. Keep in mind that next-to-nothing has been done so far; this is a *huge* project for someone like myself.
-- Currently, there is no music in the game. **I do have plans to add music**, but probably not until the main game is completed. If you find text in the game that automatically proceeds after a set amount of time, it's probably timed to currently-inexistent music.
+- Some dependencies you need to install before playing the game are:
+	- Python3
+	- A text editor or an IDE editor
+- To download and play the game, clone the repository by the following command:
+```
+git https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
+```
+- After that, run the following command to run the program: 
+
+```
+python Pokémon PythonRed.py
+```
+
 - If you encounter any problems when opening the game please check the FAQs section below. If problems persist, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 ### FAQs
