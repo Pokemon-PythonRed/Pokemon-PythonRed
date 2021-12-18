@@ -47,7 +47,7 @@ In order of first contribution:
 	- A text editor or an IDE editor
 - To download and play the game, clone the repository by the following command:
 ```
-git https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
+git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
 - After that, run the following command to run the program: 
 
