@@ -30,13 +30,12 @@
 ---
 </details>
 
-### Credits:
+### Contributors:
 In order of first contribution:
 - [@TurnipGuy30](https://github.com/TurnipGuy30 "TurnipGuy30's Profile") - Performs Commits (updates the game, makes README changes)
 - [@Valensce](https://github.com/Valensce "Valensce's Profile") - Manages Bug Reports, code cleaning, general troubleshooting
 - [@hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Creates ideas (concept ideas, porting elements)
 - [@JeremyLARDENOIS](https://github.com/JeremyLARDENOIS "JeremyLARDENOIS's Profile") - Testing and feedback
-- [@JBYT27](https://github.com/JBYT27) - Edits docs, performs commits, and more
 - Looking for others!
 
 **These credits will be in-game!** If you want your name included, head to [Discussions](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions "Pokémon PythonRed Discussions") and ask what you can help with!
