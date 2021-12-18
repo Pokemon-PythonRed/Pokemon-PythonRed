@@ -52,7 +52,7 @@ git https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 - After that, run the following command to run the program: 
 
 ```
-python Pokémon PythonRed.py
+python app.py
 ```
 
 - If you encounter any problems when opening the game please check the FAQs section below. If problems persist, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
