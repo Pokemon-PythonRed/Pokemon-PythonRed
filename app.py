@@ -3,18 +3,21 @@ Pokémon PythonRed | https://github.com/Pokemon-PythonRed
 Comments may be removed at a later time.
 '''
 
-# libraries
-try:
-    import datetime, getpass, math, msvcrt, os, time, random, webbrowser, winsound, sqlite3
-except ImportError:
-    exit('Please close the program and install the required dependencies before playing. See [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#faqs] for more information.')
+import datetime
+import getpass
+import msvcrt
+import os
+import json
+import time
+import random
+import webbrowser
+import sqlite3
 
-# create cls()
+
 def cls():
   os.system("clear")
 
-# title screen
-# play title theme
+
 startOption=''
 time.sleep(1)
 print('''
