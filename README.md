@@ -32,7 +32,6 @@ In order of first contribution:
 - [@Valensce](https://github.com/Valensce "Valensce's Profile") - Manages Bug Reports, code cleaning, general troubleshooting
 - [@hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Creates ideas (concept ideas, porting elements)
 - [@JeremyLARDENOIS](https://github.com/JeremyLARDENOIS "JeremyLARDENOIS's Profile") - Testing and feedback
-- Looking for others!
 
 To contribute, just leave a Pull Request or an Issue, and we'll be glad to add you onto the contributors list!
 
