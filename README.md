@@ -55,20 +55,7 @@ git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 python app.py
 ```
 
-- If you encounter any problems when opening the game please check the FAQs section below. If problems persist, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
-
-### FAQs
-
-- When opening the game, I get a message that says `Please install the required dependencies before playing.`
-
-This means you don't have one or more modules the game needs to run. Open your favourite Shell Terminal and run this command:
-```
-[coming soon]
-```
-
-- I have a bug report or feature request! Where do I submit it?
-
-For bugs, contribution specifications, or feature requests, please create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues")! Your comment will be kept in mind.
+- If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 ---
 [![PPR Logo](https://raw.githubusercontent.com/Pokemon-PythonRed/Images/main/logo.png "PPR Homepage")](https://github.com/Pokemon-PythonRed)
