@@ -14,9 +14,6 @@
 <h6 align="center">A work-in-progress, fan-made, text-adventure Pokémon game in Python 3.</h6>
 
 ---
-<br>
-
-[Discussions](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions "Pokémon PythonRed Discussions") is a great place to ask questions or give feedback!
 
 <details><summary>Important Notes</summary>
 
@@ -37,7 +34,7 @@ In order of first contribution:
 - [@JeremyLARDENOIS](https://github.com/JeremyLARDENOIS "JeremyLARDENOIS's Profile") - Testing and feedback
 - Looking for others!
 
-**These credits will be in-game!** If you want your name included, head to [Discussions](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions "Pokémon PythonRed Discussions") and ask what you can help with!
+To contribute, just leave a Pull Request or an Issue, and we'll be glad to add you onto the contributors list!
 
 ### Installation
 - Some dependencies you need to install before playing the game are:
