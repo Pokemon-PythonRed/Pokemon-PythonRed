@@ -32,7 +32,6 @@
 Bot command template:
 @all-contributors please add @jakebolam for infrastructure, tests and code
 -->
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -42,10 +41,8 @@ Bot command template:
     <td align="center"><a href="https://apple.com/"><img src="https://avatars.githubusercontent.com/u/81336967?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hacking-mudkip</b></sub></a><br /><a href="#ideas-hacking-mudkip" title="Ideas, Planning, & Feedback">🤔</a> <a href="#data-hacking-mudkip" title="Data">🔣</a></td>
   </tr>
 </table>
-
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key)). Contributions of any kind welcome!
