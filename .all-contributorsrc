@@ -1,12 +1,30 @@
 {
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": true,
   "badgeTemplate": "<a href='#contributors'><img src='https://img.shields.io/badge/contributors-<%= contributors.length %>-orange'></a>",
-  "projectName": "Pokémon PythonRed",
+  "projectName": "Pokemon-PythonRed",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": "true",
-  "contributors": []
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "TurnipGuy30",
+      "name": "JohnnySD",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50542928?v=4",
+      "profile": "https://turnipguy30.github.io",
+      "contributions": [
+        "code",
+        "data",
+        "ideas",
+        "maintenance",
+        "platform",
+        "test"
+      ]
+    }
+  ],
+  "projectOwner": "Pokemon-PythonRed"
 }
