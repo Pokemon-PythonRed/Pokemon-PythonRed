@@ -65,6 +65,15 @@
         "design",
         "test"
       ]
+    },
+    {
+      "login": "Valerimatical",
+      "name": "Valerie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86031610?v=4",
+      "profile": "https://www.youtube.com/channel/UCkmpUFuS0qBFD1I37o4yA3w",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "projectOwner": "Pokemon-PythonRed"
