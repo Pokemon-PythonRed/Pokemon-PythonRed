@@ -43,6 +43,18 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "JBYT27",
+      "name": "just a weeb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76911308?v=4",
+      "profile": "http://jbloves27.repl.co",
+      "contributions": [
+        "code",
+        "mentoring",
+        "test",
+        "infra"
+      ]
     }
   ],
   "projectOwner": "Pokemon-PythonRed"
