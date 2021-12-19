@@ -2,9 +2,7 @@
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
-	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href='#contributors'><img src='https://img.shields.io/badge/contributors-7-orange'></a>
-<!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
+	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --><a href='#contributors'><img src='https://img.shields.io/badge/contributors-7-orange'></a><!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
@@ -14,20 +12,19 @@
 <h6 align="center">A work-in-progress, fan-made, text-adventure Pokémon game in Python 3.</h6>
 
 ---
-
 <details><summary>Important Notes</summary>
 
 ---
 - This is not a perfect recreation of `Pokémon Red`; it's a fan-made game that, like `Pokémon Red`, takes place in the fictional Kanto region.
 - Prior in-depth knowledge of the `Pokémon` franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
-- This project (this GitHub Repository and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, _The Pokémon Company_, or whoever owns the franchise these days. This is an independent, fan-made game.
+- This project (@Pokemon-PythonRed and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, or _The Pokémon Company_. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
 - The developers use Windows 10 OS, but some effort will be made to make this game cross-platform. However, if we cannot find a way to implement an element in this way, then this game will become Windows 10-only.
+
 ---
 </details>
 
 ### Contributors
-
 <!--
 Bot command template:
 @all-contributors please add @<username> for <contributions>
@@ -48,14 +45,11 @@ Bot command template:
     <td align="center"><a href="http://jbloves27.repl.co"><img src="https://avatars.githubusercontent.com/u/76911308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>just a weeb</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=JBYT27" title="Code">💻</a> <a href="#mentoring-JBYT27" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=JBYT27" title="Tests">⚠️</a> <a href="#infra-JBYT27" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
-
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13)). Contributions of any kind welcome!
-
 ### Installation
 - Some dependencies you need to install before playing the game are:
 	- Python3
@@ -69,9 +63,7 @@ git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 python -m pip -r requirements.txt
 ```
 -Finally, run this command to run the program:
-
 ```
 python ppr/app.py
 ```
-
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
