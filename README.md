@@ -30,7 +30,7 @@
 
 <!--
 Bot command template:
-@all-contributors please add @jakebolam for infrastructure, tests and code
+@all-contributors please add @<username> for <contributions>
 -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
