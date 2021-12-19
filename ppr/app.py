@@ -3,6 +3,7 @@ Pokémon PythonRed | https://github.com/Pokemon-PythonRed
 Comments may be removed at a later time.
 '''
 
+#import dependencies
 import datetime
 import getpass
 import msvcrt
@@ -12,14 +13,16 @@ import time
 import random
 import webbrowser
 import sqlite3
+import platform
 
-# create cls()
+#create cls()
 platforms=[['darwin','clear'],['java','System.out.print("\\033[H\\033[2J");System.out.flush();'],['linux','clear'],['windows','cls']]
 for i in range(len(platforms)):
 	if platform.system().lower()==(platforms[i][0]):
 		clsCommand=platforms[i][1]
 		cls=lambda:os.system(clsCommand)
 
+#title screen
 startOption=''
 time.sleep(1)
 print('''
@@ -41,7 +44,7 @@ print('                          PythonRed Version')
 time.sleep(1.85)
 input('\n                        Press Enter to begin!')
 cls()
-print('Please choose an option.\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
+print('\nPlease choose an option.\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
 while startOption!='2':
 	startOption=input('>')
 	cls()
@@ -61,26 +64,16 @@ while startOption!='2':
 		    print('\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
 	else:
 		print('\nInvalid input!\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
-
-
-
 cls()
 
-load = 10
-num = 0
-
-while num < load:
-  print("Loading... /")
-  time.sleep(0.8)
-  cls()
-  print("Loading... -")
-  time.sleep(0.8)
-  cls()
-  print("Loading... \\")
+#load screen
+load = 3
+num = 1
+while num <= load:
+  print(f"Loading... (Step {num} of {load})")
   time.sleep(0.8)
   cls()
   num += 1
-
-print("Loaded!")
+print("\nLoaded!")
 time.sleep(1)
 cls()
