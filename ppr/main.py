@@ -14,6 +14,7 @@ import random
 import webbrowser
 import sqlite3
 import platform
+from flask import Flask, render_template, request, url_for, redirect # For future code if used in a web platform.
 
 #create cls()
 platforms=[['darwin','clear'],['java','System.out.print("\\033[H\\033[2J");System.out.flush();'],['linux','clear'],['windows','cls']]
