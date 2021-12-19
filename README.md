@@ -2,7 +2,9 @@
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
-	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --><!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
+	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<a href='#contributors'><img src='https://img.shields.io/badge/contributors-1-orange'></a>
+<!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
@@ -34,8 +36,11 @@ Bot command template:
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-
-
+<table>
+  <tr>
+    <td align="center"><a href="https://turnipguy30.github.io"><img src="https://avatars.githubusercontent.com/u/50542928?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JohnnySD</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=TurnipGuy30" title="Code">💻</a> <a href="#data-TurnipGuy30" title="Data">🔣</a> <a href="#ideas-TurnipGuy30" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-TurnipGuy30" title="Maintenance">🚧</a> <a href="#platform-TurnipGuy30" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=TurnipGuy30" title="Tests">⚠️</a></td>
+  </tr>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
