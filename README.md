@@ -54,7 +54,7 @@ Bot command template:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key)). Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13)). Contributions of any kind welcome!
 
 ### Installation
 - Some dependencies you need to install before playing the game are:
