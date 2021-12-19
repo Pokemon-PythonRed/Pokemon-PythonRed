@@ -84,6 +84,15 @@
         "test",
         "platform"
       ]
+    },
+    {
+      "login": "Porsce",
+      "name": "Porsce <3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87019852?v=4",
+      "profile": "https://discord.com/invite/xzsAKZVfxP",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "projectOwner": "Pokemon-PythonRed"
