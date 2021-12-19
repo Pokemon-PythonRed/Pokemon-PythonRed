@@ -52,7 +52,6 @@ Bot command template:
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13)). Contributions of any kind welcome!
@@ -61,15 +60,15 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 	- Python3
 	- A text editor or an IDE editor
 - To download and play the game, clone the repository by the following command:
-```batchfile
+```console
 git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
 - After that, run the following command to install dependencies:
-```batchfile
+```console
 python -m pip -r requirements.txt
 ```
--Finally, run this command to run the program:
-```batchfile
+- Finally, run this command to run the program:
+```console
 python ppr/main.py
 ```
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
