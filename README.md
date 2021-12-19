@@ -2,7 +2,9 @@
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
-	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --><a href='#contributors'><img src='https://img.shields.io/badge/contributors-7-orange'></a><!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
+	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<a href='#contributors'><img src='https://img.shields.io/badge/contributors-8-orange'></a>
+<!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
@@ -37,16 +39,19 @@ Bot command template:
     <td align="center"><a href="https://turnipguy30.github.io"><img src="https://avatars.githubusercontent.com/u/50542928?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JohnnySD</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=TurnipGuy30" title="Code">💻</a> <a href="#data-TurnipGuy30" title="Data">🔣</a> <a href="#ideas-TurnipGuy30" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-TurnipGuy30" title="Maintenance">🚧</a> <a href="#platform-TurnipGuy30" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=TurnipGuy30" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/JeremyLARDENOIS"><img src="https://avatars.githubusercontent.com/u/37746231?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jérémy LARDENOIS</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=jeremyLARDENOIS" title="Tests">⚠️</a> <a href="#platform-jeremyLARDENOIS" title="Packaging/porting to new platform">📦</a></td>
     <td align="center"><a href="https://github.com/XPaVilion"><img src="https://avatars.githubusercontent.com/u/83386810?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lh(n)</b></sub></a><br /><a href="#design-LaHonathon" title="Design">🎨</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=LaHonathon" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://discord.com/invite/xzsAKZVfxP"><img src="https://avatars.githubusercontent.com/u/87019852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Porsce <3</b></sub></a><br /><a href="#design-Porsce" title="Design">🎨</a></td>
     <td align="center"><a href="https://discord.gg/xzsAKZVfxP"><img src="https://avatars.githubusercontent.com/u/79883837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Val=fλ</b></sub></a><br /><a href="#maintenance-Valensce" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://www.youtube.com/channel/UCkmpUFuS0qBFD1I37o4yA3w"><img src="https://avatars.githubusercontent.com/u/86031610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Valerie</b></sub></a><br /><a href="#design-Valerimatical" title="Design">🎨</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://www.youtube.com/channel/UCkmpUFuS0qBFD1I37o4yA3w"><img src="https://avatars.githubusercontent.com/u/86031610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Valerie</b></sub></a><br /><a href="#design-Valerimatical" title="Design">🎨</a></td>
     <td align="center"><a href="https://apple.com/"><img src="https://avatars.githubusercontent.com/u/81336967?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hacking-mudkip</b></sub></a><br /><a href="#ideas-hacking-mudkip" title="Ideas, Planning, & Feedback">🤔</a> <a href="#data-hacking-mudkip" title="Data">🔣</a></td>
     <td align="center"><a href="http://jbloves27.repl.co"><img src="https://avatars.githubusercontent.com/u/76911308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>just a weeb</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=JBYT27" title="Code">💻</a> <a href="#mentoring-JBYT27" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=JBYT27" title="Tests">⚠️</a> <a href="#infra-JBYT27" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
+
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13)). Contributions of any kind welcome!
