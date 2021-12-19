@@ -13,10 +13,12 @@ import random
 import webbrowser
 import sqlite3
 
-
-def cls():
-  os.system("clear")
-
+# create cls()
+platforms=[['darwin','clear'],['java','System.out.print("\\033[H\\033[2J");System.out.flush();'],['linux','clear'],['windows','cls']]
+for i in range(len(platforms)):
+	if platform.system().lower()==(platforms[i][0]):
+		clsCommand=platforms[i][1]
+		cls=lambda:os.system(clsCommand)
 
 startOption=''
 time.sleep(1)
@@ -45,9 +47,9 @@ while startOption!='2':
 	cls()
 	if startOption=='1':
 		# Start db here
-		
-    print("") # Nothing as of right now
-    
+		# Nothing as of right now
+		print('\nSaving and continuing coming soon!\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
+
 	elif startOption=='3':
 		try:
 			webbrowser.open('https://github.com/Pokemon-PythonRed/Pokemon-PythonRed',new=2)
@@ -61,7 +63,7 @@ while startOption!='2':
 		print('\nInvalid input!\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
 
 
-    
+
 cls()
 
 load = 10
@@ -82,4 +84,3 @@ while num < load:
 print("Loaded!")
 time.sleep(1)
 cls()
-

@@ -2,10 +2,8 @@
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
-	<a href="https://GitHub.com/Pokemon-PythonRed/graphs/commit-activity"><img src="https://img.shields.io/badge/maintained%3F-yes-green.svg"></a> <!--Maintained?-->
-	<a href="https://GitHub.com/TurnipGuy30"><img src="https://img.shields.io/badge/maintainer-TurnipGuy30-blue"></a> <!--Maintainer-->
-	<a href="https://www.python.org/"><img src="https://img.shields.io/badge/made%20with-Python%203-1f425f.svg"></a> <!--Made with Python 3-->
-	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-CC0--1.0-black"></a> <!--License-->
+	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --><!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
+	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
 </p>
@@ -26,14 +24,25 @@
 ---
 </details>
 
-### Contributors:
-In order of first contribution:
-- [@TurnipGuy30](https://github.com/TurnipGuy30 "TurnipGuy30's Profile") - Performs Commits (updates the game, makes README changes)
-- [@Valensce](https://github.com/Valensce "Valensce's Profile") - Manages Bug Reports, code cleaning, general troubleshooting
-- [@hacking-mudkip](https://github.com/hacking-mudkip "hacking-mudkip's Profile") - Creates ideas (concept ideas, porting elements)
-- [@JeremyLARDENOIS](https://github.com/JeremyLARDENOIS "JeremyLARDENOIS's Profile") - Testing and feedback
+### Contributors
 
-To contribute, just leave a Pull Request or an Issue, and we'll be glad to add you onto the contributors list!
+<!--
+Bot command template:
+@all-contributors please add @jakebolam for infrastructure, tests and code
+-->
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key)). Contributions of any kind welcome!
 
 ### Installation
 - Some dependencies you need to install before playing the game are:
@@ -43,10 +52,14 @@ To contribute, just leave a Pull Request or an Issue, and we'll be glad to add y
 ```
 git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
-- After that, run the following command to run the program: 
+- After that, run the following command to install dependencies:
+```
+python -m pip -r requirements.txt
+```
+-Finally, run this command to run the program:
 
 ```
-python pokemon/app.py
+python ppr/app.py
 ```
 
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
