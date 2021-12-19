@@ -24,6 +24,16 @@
         "platform",
         "test"
       ]
+    },
+    {
+      "login": "hacking-mudkip",
+      "name": "hacking-mudkip",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81336967?v=4",
+      "profile": "https://apple.com/",
+      "contributions": [
+        "ideas",
+        "data"
+      ]
     }
   ],
   "projectOwner": "Pokemon-PythonRed"
