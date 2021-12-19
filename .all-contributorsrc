@@ -3,7 +3,7 @@
     "README.md"
   ],
   "imageSize": 100,
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 5,
   "contributorsSortAlphabetically": true,
   "badgeTemplate": "<a href='#contributors'><img src='https://img.shields.io/badge/contributors-<%= contributors.length %>-orange'></a>",
   "projectName": "Pokemon-PythonRed",
@@ -33,6 +33,15 @@
       "contributions": [
         "ideas",
         "data"
+      ]
+    },
+    {
+      "login": "Valensce",
+      "name": "Val=fλ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79883837?v=4",
+      "profile": "https://discord.gg/xzsAKZVfxP",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
