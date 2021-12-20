@@ -3,7 +3,7 @@
 <p align="center">
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
 	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href='#contributors'><img src='https://img.shields.io/badge/contributors-9-orange'></a>
+<a href='#contributors'><img src='https://img.shields.io/badge/contributors-10-orange'></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
 	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
@@ -43,6 +43,7 @@ Bot command template:
     <td align="center"><a href="https://discord.com/invite/xzsAKZVfxP"><img src="https://avatars.githubusercontent.com/u/87019852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Porsce <3</b></sub></a><br /><a href="#design-Porsce" title="Design">🎨</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/MuLKy-bot"><img src="https://avatars.githubusercontent.com/u/84059778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=MuLKy-bot" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://discord.gg/xzsAKZVfxP"><img src="https://avatars.githubusercontent.com/u/79883837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Val=fλ</b></sub></a><br /><a href="#maintenance-Valensce" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://www.youtube.com/channel/UCkmpUFuS0qBFD1I37o4yA3w"><img src="https://avatars.githubusercontent.com/u/86031610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Valerie</b></sub></a><br /><a href="#design-Valerimatical" title="Design">🎨</a></td>
     <td align="center"><a href="https://apple.com/"><img src="https://avatars.githubusercontent.com/u/81336967?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hacking-mudkip</b></sub></a><br /><a href="#ideas-hacking-mudkip" title="Ideas, Planning, & Feedback">🤔</a> <a href="#data-hacking-mudkip" title="Data">🔣</a></td>
@@ -52,6 +53,7 @@ Bot command template:
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13)). Contributions of any kind welcome!
