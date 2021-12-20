@@ -16,6 +16,15 @@ import sqlite3
 import platform
 from flask import Flask, render_template, request, url_for, redirect # For future code if used in a web platform.
 
+app = Flask(__name__)
+
+"""
+@app.route('/home')
+@app.route('/')
+def index():
+  return render_template("index.html")
+"""
+
 # create cls()
 platforms=[['darwin','clear'],['java','System.out.print("\\033[H\\033[2J");System.out.flush();'],['linux','clear'],['windows','cls']]
 for i in range(len(platforms)):
