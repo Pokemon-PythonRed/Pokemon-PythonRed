@@ -51,7 +51,6 @@ while startOption!='2':
 	if startOption=='1':
 		# Start db here; nothing as of right now
 		print(f'{title[3]}Saving and continuing coming soon!\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
-
 	elif startOption=='3':
 		try:
 			webbrowser.open('https://github.com/Pokemon-PythonRed/Pokemon-PythonRed',new=2)
@@ -72,5 +71,3 @@ for i in range(load):
   time.sleep(random.randrange(7,15)/10)
 print("Loaded!")
 time.sleep(1)
-
-
