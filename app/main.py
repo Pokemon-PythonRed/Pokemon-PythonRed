@@ -27,6 +27,12 @@ def index():
   return render_template("index.html")
 """
 
+def sp(words):
+	for char in words:
+    		sleep(0.1)
+    		sys.stdout.write(char)
+    		sys.stdout.flush()
+
 # create cls()
 platforms=[['darwin','clear'],['java','System.out.print("\\033[H\\033[2J");System.out.flush();'],['linux','clear'],['windows','cls']]
 for i in range(len(platforms)):
@@ -74,3 +80,40 @@ for i in range(load):
   time.sleep(random.randrange(7,15)/10)
 print("Loaded!")
 time.sleep(1)
+
+cls()
+
+sp("Welcome to the world of Pokemon!")
+time.sleep(1)
+input("> ")
+sp("Pokemon is a world where trainers and pokemon spend time with each other, and care for each other!") # You should prob switch this lol.
+time.sleep(1)
+input("> ")
+sp("What is your name?")
+time.sleep(1)
+name = input("USERNAME: ")
+
+while name != "" or name != None:
+	name = str(name)
+	sp("Is " + name + " your name? y/n")
+	name_yn = input("> ")
+	
+	if name_yn[0].lower() not in ["y", "n"]:
+		print("That is not an option! Try again!")
+		time.sleep(1)
+		input("> ")
+	else:
+		if name_yn[0].lower() == "y":
+			sp("Hello " + name + "! Now, let's enter the story of pokemon...")
+			time.sleep(1)
+			input("> ")
+			break
+		else:
+			sp("Oh, okay! What is your name? y/n")
+			time.sleep(1)
+			name = input("USERNAME: ")
+			
+cls()
+sp("You wake up, the light outside shining in front of your eyes.")
+time.sleep(1)
+input("> ")
