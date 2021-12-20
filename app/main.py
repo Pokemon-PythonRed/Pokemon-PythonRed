@@ -9,6 +9,7 @@ import getpass
 import msvcrt
 import os
 import json
+import sys
 import time
 import random
 import webbrowser
@@ -29,7 +30,7 @@ def index():
 
 def sp(words):
 	for char in words:
-    		sleep(0.1)
+    		time.sleep(0.1)
     		sys.stdout.write(char)
     		sys.stdout.flush()
 
