@@ -14,6 +14,8 @@ import random
 import webbrowser
 import sqlite3
 import platform
+import playsound
+import pygame
 from flask import Flask, render_template, request, url_for, redirect # For future code if used in a web platform.
 
 app = Flask(__name__)
@@ -31,6 +33,7 @@ for i in range(len(platforms)):
 	if platform.system().lower()==(platforms[i][0]):
 		clsCommand=platforms[i][1]
 		cls=lambda:os.system(clsCommand)
+cls()
 
 # title screen
 title=['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''','                          PythonRed Version','\n                        Press Enter to begin!']
