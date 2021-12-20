@@ -28,9 +28,11 @@ def index():
   return render_template("index.html")
 """
 
+textSpeed=0.01
+
 def sp(words):
-	for char in words:
-    		time.sleep(0.1)
+	for char in f'{words}\n':
+    		time.sleep(textSpeed)
     		sys.stdout.write(char)
     		sys.stdout.flush()
 
@@ -77,45 +79,71 @@ while startOption!='2':
 print('')
 load=1
 for i in range(load):
-  print(f"Loading... (Step {str(i+1)} of {str(load)})")
+  sp(f'Loading... (Step {str(i+1)} of {str(load)})')
   time.sleep(random.randrange(7,15)/10)
-print("Loaded!")
+sp('Loaded!\n')
 time.sleep(1)
 
-cls()
+sp('OAK: Hello there! Welcome to the world of POKéMON!\nPeople call me the POKéMON PROF!')
+input('>')
+sp('This world is inhabited by creatures called POKéMON! For some\npeople, POKéMON are pets. Others use them for fights. Myself...\nI study POKéMON as a profession.')
+input('>')
+sp('First, what is your name?\n\n1. PYTHON\n2. New Name\n')
+introAnswer=''
+while not introAnswer in ['1','2']:
+	introAnswer=input('>')
+if introAnswer=='1':
+	playerName='PYTHON'
+elif introAnswer=='2':
+	sp('\n(Caps, 15 chars. max)')
+	playerName=input('>')
+	while len(playerName)>15 or playerName=='':
+		playerName=input('>')
+else:
+	sp('Invalid answer!')
+playerName=playerName.upper()
+sp(f'Right! So your name is {playerName}!')
+input('>')
 
-sp("Welcome to the world of Pokemon!")
-time.sleep(1)
-input("> ")
-sp("Pokemon is a world where trainers and pokemon spend time with each other, and care for each other!") # You should prob switch this lol.
-time.sleep(1)
-input("> ")
-sp("What is your name?")
-time.sleep(1)
-name = input("USERNAME: ")
+'''
+name = input('USERNAME: ')
 
-while name != "" or name != None:
+while name != '' or name != None:
 	name = str(name)
-	sp("Is " + name + " your name? y/n")
-	name_yn = input("> ")
-	
-	if name_yn[0].lower() not in ["y", "n"]:
-		print("That is not an option! Try again!")
+	sp('Is ' + name + ' your name? y/n')
+	name_yn = input('> ')
+
+	if name_yn[0].lower() not in ['y', 'n']:
+		print('That is not an option! Try again!')
 		time.sleep(1)
-		input("> ")
+		input('> ')
 	else:
-		if name_yn[0].lower() == "y":
-			sp("Hello " + name + "! Now, let's enter the story of pokemon...")
+		if name_yn[0].lower() == 'y':
+			sp('Hello ' + name + '! Now, let's enter the story of pokemon...')
 			time.sleep(1)
-			input("> ")
+			input('> ')
 			break
 		else:
-			sp("Oh, okay! What is your name? y/n")
+			sp('Oh, okay! What is your name? y/n')
 			time.sleep(1)
-			name = input("USERNAME: ")
-			
-cls()
-sp("You wake up, the light outside shining in front of your eyes.")
-time.sleep(1)
-input("> ")
+			name = input('USERNAME: ')
+'''
+
+sp('Now, since you\'re so raring to go, I\'ve prepared a rival for you.')
+input('>')
+sp('He will go on an adventure just like yours, and battle you along\nthe way.')
+input('>')
+sp('...Erm, what is his name again?')
+input('>')
+sp('...\nHa, did you really think I\'d forgotten our Champion\'s name?')
+input('>')
+sp('His name is JOHNNY! He decided to donate his strong POKéMON and start\nhis journey over, using only the best techniques. You\'ll meet him soon!')
+input('>')
+print('')
+sp(f'{playerName}! Your very own POKéMON legend is about to unfold! A world of\ndreams and adventures with POKéMON awaits! Let\'s go!')
+input('>')
+sp('')
+time.sleep(3)
+sp('INTRO COMPLETE!\nPress Enter to exit.')
+input('>')
 # cls()
