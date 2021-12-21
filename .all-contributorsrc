@@ -121,6 +121,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "Specialist-Mathematics",
+      "name": "I'm special ;)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85430198?v=4",
+      "profile": "https://github.com/valensce",
+      "contributions": [
+        "test"
+      ]
     }
   ],
   "projectOwner": "Pokemon-PythonRed"
