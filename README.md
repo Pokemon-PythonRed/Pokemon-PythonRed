@@ -1,12 +1,12 @@
 ![Pokémon](https://raw.githubusercontent.com/Pokemon-PythonRed/Images/main/pokemon.png "Pokémon")
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
-	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
+	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
 	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href='#contributors'><img src='https://img.shields.io/badge/contributors-12-orange'></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
-	<a href="https://GitHub.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
+	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
 </p>
 

@@ -1,35 +1,40 @@
 '''
 Pokémon PythonRed | https://github.com/Pokemon-PythonRed
-Comments may be removed at a later time.
+Key:
+# comment (w/ space)
+#spare code (w/o space)
 '''
 
 # import dependencies
-import datetime
-import getpass
+#import datetime
+#import getpass
 import msvcrt
 import os
-import json
+#import json
 import sys
 import time
 import random
 import webbrowser
-import sqlite3
+#import sqlite3
 import platform
-import playsound
-import pygame
-from flask import Flask, render_template, request, url_for, redirect # For future code if used in a web platform.
+#import playsound
+#import pygame
+#from flask import Flask, render_template, request, url_for, redirect
 
+# Flask stuff
+'''
 app = Flask(__name__)
-
-"""
 @app.route('/home')
 @app.route('/')
 def index():
   return render_template("index.html")
-"""
+'''
 
+# create g()
+g=lambda:msvcrt.getch()
+
+# create sp()
 textSpeed=0.01
-
 def sp(words):
 	for char in f'{words}\n':
     		time.sleep(textSpeed)
@@ -85,9 +90,9 @@ sp('Loaded!\n')
 time.sleep(1)
 
 sp('OAK: Hello there! Welcome to the world of POKéMON!\nPeople call me the POKéMON PROF!')
-input('>')
+g()
 sp('This world is inhabited by creatures called POKéMON! For some\npeople, POKéMON are pets. Others use them for fights. Myself...\nI study POKéMON as a profession.')
-input('>')
+g()
 sp('First, what is your name?\n\n1. PYTHON\n2. New Name\n')
 introAnswer=''
 while not introAnswer in ['1','2']:
@@ -103,7 +108,7 @@ else:
 	sp('Invalid answer!')
 playerName=playerName.upper()
 sp(f'Right! So your name is {playerName}!')
-input('>')
+g()
 
 '''
 name = input('USERNAME: ')
@@ -130,20 +135,18 @@ while name != '' or name != None:
 '''
 
 sp('Now, since you\'re so raring to go, I\'ve prepared a rival for you.')
-input('>')
+g()
 sp('He will go on an adventure just like yours, and battle you along\nthe way.')
-input('>')
+g()
 sp('...Erm, what is his name again?')
 input('>')
 sp('...\nHa, did you really think I\'d forgotten our Champion\'s name?')
-input('>')
+g()
 sp('His name is JOHNNY! He decided to donate his strong POKéMON and start\nhis journey over, using only the best techniques. You\'ll meet him soon!')
-input('>')
+g()
 print('')
 sp(f'{playerName}! Your very own POKéMON legend is about to unfold! A world of\ndreams and adventures with POKéMON awaits! Let\'s go!')
+g()
+time.sleep(1)
+sp('\nINTRO COMPLETE!\nPress Enter to exit.')
 input('>')
-sp('')
-time.sleep(3)
-sp('INTRO COMPLETE!\nPress Enter to exit.')
-input('>')
-# cls()
