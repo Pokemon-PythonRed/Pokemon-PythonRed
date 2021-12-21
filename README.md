@@ -19,7 +19,7 @@
 ---
 - This is not a perfect recreation of `Pokémon Red`; it's a fan-made game that, like `Pokémon Red`, takes place in the fictional Kanto region.
 - Prior in-depth knowledge of the `Pokémon` franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
-- This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonnRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, or _The Pokémon Company_. This is an independent, fan-made game.
+- This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, or _The Pokémon Company_. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
 - The developers use Windows 10 OS, but some effort will be made to make this game cross-platform. However, if we cannot find a way to implement an element in this way, then this game will become Windows 10-only.
 
@@ -60,7 +60,7 @@ Bot command template:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute.](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md")
 ### Installation
 - Some dependencies you need to install before playing the game are:
 	- Python 3.x
