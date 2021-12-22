@@ -70,7 +70,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ```console
 git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
-The repository must be cloned because `main.py` needs other files, such as `pokemon.json`, to run.
+The repository must be cloned because the game is dependent on multiple files from the repository.
 - After that, run the following command to install dependencies:
 ```console
 python -m pip -r requirements.txt
