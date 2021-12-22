@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.json linguist-detectable=true linguist-language=JSON
+*.md linguist-detectable=true linguist-language=Markdown
+*.py linguist-detectable=true linguist-language=Python

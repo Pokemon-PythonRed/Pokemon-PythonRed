@@ -9,29 +9,26 @@ Pokémon PythonRed | https://github.com/Pokemon-PythonRed
 
 #import datetime
 import getpass
+import json
 import msvcrt
 import os
-import json
-import sys
-import time
-#import random
-import webbrowser
-#import sqlite3
 import platform
 #import playsound
 #import pygame
+#import random
+#import sqlite3
+import sys
+import time
+import webbrowser
 
 # create g()
-
 
 def g():
 	return msvcrt.getch()
 
 # create sp()
 
-
 textSpeed = 0.01
-
 
 def sp(words):
 	for char in f'{words}\n':
@@ -40,7 +37,6 @@ def sp(words):
 		sys.stdout.flush()
 
 # look for required files
-
 
 if not os.path.isfile(os.path.join(sys.path[0], 'pokemon.json')):
 	sp('\nOne or more required files are not found.\n\nPlease see\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation \nfor more information.\n\nPress Enter to exit.\n')
@@ -87,8 +83,7 @@ while startOption != '2':
 
 	if startOption == '1':
 		if os.path.isfile(os.path.join(sys.path[0], 'save.json')):
-			temp = json.loads(open(os.path.join(sys.path[0], 'save.json')).read())
-			if temp['data']['introComplete']:
+			if json.loads(open(os.path.join(sys.path[0], 'save.json')).read())['data']['introComplete']:
 				break
 		print(f'{title[3]}No previous save file found!\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
 
@@ -148,15 +143,19 @@ for i in range(load):
 	elif i == 1:
 		pokemon = json.loads(open(os.path.join(sys.path[0], 'pokemon.json')).read())
 		open(os.path.join(sys.path[0], 'pokemon.json')).close()
+
 		if startOption == '2':
 			open(os.path.join(sys.path[0], 'save.json'), 'w').write(
 				json.dumps(saveTemplate, indent=4, sort_keys=True))
 		save = json.loads(open(os.path.join(sys.path[0], 'save.json')).read())
 		open(os.path.join(sys.path[0], 'save.json')).close()
 
+		types = json.loads(open(os.path.join(sys.path[0], 'types.json')).read())
+		open(os.path.join(sys.path[0], 'types.json')).close()
+
 	elif i == 2:
 		exit = False
-		option = temp = ''
+		option = ''
 		y = ['Y', 'y']
 		n = ['N', 'n']
 		yn = ['Y', 'N', 'y', 'n']
@@ -193,7 +192,7 @@ if (
 
 while not exit:
 
-	option = temp = ''
+	option = ''
 
 	# intro
 
