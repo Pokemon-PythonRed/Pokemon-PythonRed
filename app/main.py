@@ -5,7 +5,6 @@ Pokémon PythonRed | https://github.com/Pokemon-PythonRed
 	#code (w/o space)
 '''
 
-
 # dependencies
 
 #import datetime
@@ -22,30 +21,31 @@ import platform
 #import playsound
 #import pygame
 
-
 # create g()
+
 
 def g():
 	return msvcrt.getch()
 
-
 # create sp()
 
+
 textSpeed = 0.01
+
+
 def sp(words):
 	for char in f'{words}\n':
 		time.sleep(textSpeed)
 		sys.stdout.write(char)
 		sys.stdout.flush()
 
-
 # look for required files
+
 
 if not os.path.isfile(os.path.join(sys.path[0], 'pokemon.json')):
 	sp('\nOne or more required files are not found.\n\nPlease see\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation \nfor more information.\n\nPress Enter to exit.\n')
 	input('>')
 	sys.exit()
-
 
 # create cls()
 
@@ -56,7 +56,6 @@ for i in range(len(platforms)):
 		clsCommand = platforms[i][1]
 		def cls(): return os.system(clsCommand)
 cls()
-
 
 # title screen
 
@@ -96,7 +95,7 @@ while startOption != '2':
 	elif startOption == '3':
 		try:
 			webbrowser.open(
-					'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed', new=2)
+                    'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed', new=2)
 		except:
 			print(f'{title[3]}Failed to open website, here\'s the link:\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed')
 		else:
@@ -108,13 +107,11 @@ while startOption != '2':
 		print(
 			f'{title[3]}Invalid input!\n\n1. Continue Game\n2. New Game\n3. GitHub Repository\n')
 
-
 # new game
 
 if startOption == '2':
 	sp('\nThis will overwrite any previous save data. Press Enter to continue.\n')
 	input('>')
-
 
 # load screen
 
@@ -152,7 +149,8 @@ for i in range(load):
 		pokemon = json.loads(open(os.path.join(sys.path[0], 'pokemon.json')).read())
 		open(os.path.join(sys.path[0], 'pokemon.json')).close()
 		if startOption == '2':
-			open(os.path.join(sys.path[0], 'save.json'), 'w').write(json.dumps(saveTemplate))
+			open(os.path.join(sys.path[0], 'save.json'), 'w').write(
+				json.dumps(saveTemplate, indent=4, sort_keys=True))
 		save = json.loads(open(os.path.join(sys.path[0], 'save.json')).read())
 		open(os.path.join(sys.path[0], 'save.json')).close()
 
@@ -162,24 +160,27 @@ for i in range(load):
 		y = ['Y', 'y']
 		n = ['N', 'n']
 		yn = ['Y', 'N', 'y', 'n']
+
 		def abort():
 			cls()
-			sp(f'\nExcuse me, {getpass.getuser()}, please don\'t hack your save file. Press Enter to exit.\n')
+			sp(
+				f'\nExcuse me, {getpass.getuser()}, please don\'t hack your save file. Press Enter to exit.\n')
 			input('>')
 			sys.exit()
+
 		def backup():
 			sp('Would you like to save the game? Y/N\n')
 			saveOption = ''
 			while saveOption not in yn:
 				saveOption = input('>')
 			if saveOption in y:
-				open(os.path.join(sys.path[0], 'save.json'), 'w').write(json.dumps(save))
+				open(os.path.join(sys.path[0], 'save.json'), 'w').write(
+					json.dumps(save, indent=4, sort_keys=True))
 				sp('\nGame saved successfully!')
 
 sp('\nLoaded!\n')
 
 time.sleep(1)
-
 
 # check for hacking
 
@@ -190,17 +191,17 @@ if (
 ):
 	abort()
 
-
 while not exit:
 
 	option = temp = ''
 
-
 	# intro
 
 	if save['data']['introComplete'] == False:
+
 		sp('(Intro Start!)\n')
 		time.sleep(1)
+
 		sp('OAK: Hello there! Welcome to the world of POKéMON!\nPeople call me the POKéMON PROFESSOR!')
 		g()
 		sp('This world is inhabited by creatures called POKéMON!')
@@ -252,13 +253,13 @@ while not exit:
 		save['data']['currentLocation'] = 'playerHouseUp'
 		save['data']['introComplete'] = True
 
-		sp('\n(Intro Complete!)\n')
-
+		sp('\n(Intro Complete!)')
 
 	# player house - upstairs
 
 	elif save['data']['currentLocation'] == 'playerHouseUp':
-		sp('Current Location: Player House (Upstairs)\n[s] - Save\n[d] - Go Downstairs\n[q] - Quit\n')
+		sp(
+			'Current Location: Player House (Upstairs)\n[s] - Save\n[d] - Go Downstairs\n[q] - Quit\n')
 
 		while option == '':
 			option = input('>')

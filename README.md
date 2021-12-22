@@ -5,9 +5,12 @@
 	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href='#contributors'><img src='https://img.shields.io/badge/contributors-12-orange'></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
-	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black"></a> <!--License-->
+	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Pokemon-PythonRed/Pokemon-PythonRed?color=black"></a> <!--License-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
+  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/network/members"><img src="https://img.shields.io/github/forks/Pokemon-PythonRed/Pokemon-PythonRed?color=yellow"></a> <!--Forks-->
+  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://img.shields.io/github/repo-size/Pokemon-PythonRed/Pokemon-PythonRed?color=blueviolet"></a> <!--Repo Size-->
+  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://img.shields.io/tokei/lines/github/Pokemon-PythonRed/Pokemon-PythonRed?color=darkblue"></a> <!--Lines-->
 </p>
 
 ---
@@ -60,7 +63,7 @@ Bot command template:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute.](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md")
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md").
 ### Installation
 - Some dependencies you need to install before playing the game are:
 	- Python 3.x
