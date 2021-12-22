@@ -9,9 +9,7 @@
 		"def": 1000,
 		"spa": 1000,
 		"spd": 1000,
-		"spe": 1000,
-		"seen": false,
-		"caught": false
+		"spe": 1000
 	},
 	"Bulbasaur": {
 		"index": 1,
@@ -23,9 +21,7 @@
 		"def": 49,
 		"spa": 65,
 		"spd": 65,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Ivysaur": {
 		"index": 2,
@@ -37,9 +33,7 @@
 		"def": 63,
 		"spa": 80,
 		"spd": 80,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Venusaur": {
 		"index": 3,
@@ -51,9 +45,7 @@
 		"def": 83,
 		"spa": 100,
 		"spd": 100,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Charmander": {
 		"index": 4,
@@ -65,9 +57,7 @@
 		"def": 43,
 		"spa": 60,
 		"spd": 50,
-		"spe": 65,
-		"seen": false,
-		"caught": false
+		"spe": 65
 	},
 	"Charmeleon": {
 		"index": 5,
@@ -79,9 +69,7 @@
 		"def": 58,
 		"spa": 80,
 		"spd": 65,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Charizard": {
 		"index": 6,
@@ -93,9 +81,7 @@
 		"def": 78,
 		"spa": 109,
 		"spd": 85,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	},
 	"Squirtle": {
 		"index": 7,
@@ -107,9 +93,7 @@
 		"def": 65,
 		"spa": 50,
 		"spd": 64,
-		"spe": 43,
-		"seen": false,
-		"caught": false
+		"spe": 43
 	},
 	"Wartortle": {
 		"index": 8,
@@ -121,9 +105,7 @@
 		"def": 80,
 		"spa": 65,
 		"spd": 80,
-		"spe": 58,
-		"seen": false,
-		"caught": false
+		"spe": 58
 	},
 	"Blastoise": {
 		"index": 9,
@@ -135,9 +117,7 @@
 		"def": 100,
 		"spa": 85,
 		"spd": 105,
-		"spe": 78,
-		"seen": false,
-		"caught": false
+		"spe": 78
 	},
 	"Caterpie": {
 		"index": 10,
@@ -149,9 +129,7 @@
 		"def": 35,
 		"spa": 20,
 		"spd": 20,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Metapod": {
 		"index": 11,
@@ -163,9 +141,7 @@
 		"def": 55,
 		"spa": 25,
 		"spd": 25,
-		"spe": 30,
-		"seen": false,
-		"caught": false
+		"spe": 30
 	},
 	"Butterfree": {
 		"index": 12,
@@ -177,9 +153,7 @@
 		"def": 50,
 		"spa": 90,
 		"spd": 80,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Weedle": {
 		"index": 13,
@@ -191,9 +165,7 @@
 		"def": 30,
 		"spa": 20,
 		"spd": 20,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Kakuna": {
 		"index": 14,
@@ -205,9 +177,7 @@
 		"def": 50,
 		"spa": 25,
 		"spd": 25,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Beedrill": {
 		"index": 15,
@@ -219,9 +189,7 @@
 		"def": 40,
 		"spa": 45,
 		"spd": 80,
-		"spe": 75,
-		"seen": false,
-		"caught": false
+		"spe": 75
 	},
 	"Pidgey": {
 		"index": 16,
@@ -233,9 +201,7 @@
 		"def": 40,
 		"spa": 35,
 		"spd": 35,
-		"spe": 56,
-		"seen": false,
-		"caught": false
+		"spe": 56
 	},
 	"Pidgeotto": {
 		"index": 17,
@@ -247,9 +213,7 @@
 		"def": 55,
 		"spa": 50,
 		"spd": 50,
-		"spe": 71,
-		"seen": false,
-		"caught": false
+		"spe": 71
 	},
 	"Pidgeot": {
 		"index": 18,
@@ -261,9 +225,7 @@
 		"def": 75,
 		"spa": 70,
 		"spd": 70,
-		"spe": 101,
-		"seen": false,
-		"caught": false
+		"spe": 101
 	},
 	"Rattata": {
 		"index": 19,
@@ -275,9 +237,7 @@
 		"def": 35,
 		"spa": 25,
 		"spd": 35,
-		"spe": 72,
-		"seen": false,
-		"caught": false
+		"spe": 72
 	},
 	"Ratticate": {
 		"index": 20,
@@ -289,9 +249,7 @@
 		"def": 60,
 		"spa": 50,
 		"spd": 70,
-		"spe": 97,
-		"seen": false,
-		"caught": false
+		"spe": 97
 	},
 	"Spearow": {
 		"index": 21,
@@ -303,9 +261,7 @@
 		"def": 30,
 		"spa": 31,
 		"spd": 31,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Fearow": {
 		"index": 22,
@@ -317,9 +273,7 @@
 		"def": 65,
 		"spa": 61,
 		"spd": 61,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	},
 	"Ekans": {
 		"index": 23,
@@ -331,9 +285,7 @@
 		"def": 44,
 		"spa": 40,
 		"spd": 54,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Arbok": {
 		"index": 24,
@@ -345,9 +297,7 @@
 		"def": 69,
 		"spa": 65,
 		"spd": 79,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Pikachu": {
 		"index": 25,
@@ -359,9 +309,7 @@
 		"def": 40,
 		"spa": 50,
 		"spd": 50,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Raichu": {
 		"index": 26,
@@ -373,9 +321,7 @@
 		"def": 55,
 		"spa": 90,
 		"spd": 80,
-		"spe": 110,
-		"seen": false,
-		"caught": false
+		"spe": 110
 	},
 	"Sandshrew": {
 		"index": 27,
@@ -387,9 +333,7 @@
 		"def": 85,
 		"spa": 20,
 		"spd": 30,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Sandslash": {
 		"index": 28,
@@ -401,13 +345,11 @@
 		"def": 110,
 		"spa": 45,
 		"spd": 55,
-		"spe": 65,
-		"seen": false,
-		"caught": false
+		"spe": 65
 	},
 	"Nidoran-Female": {
 		"index": 29,
-		"name": "NIDORAN♀",
+		"name": "NIDORAN\u00e2\u2122\u20ac",
 		"type": "POISON",
 		"total": 275,
 		"hp": 55,
@@ -415,9 +357,7 @@
 		"def": 52,
 		"spa": 40,
 		"spd": 40,
-		"spe": 41,
-		"seen": false,
-		"caught": false
+		"spe": 41
 	},
 	"Nidorina": {
 		"index": 30,
@@ -429,9 +369,7 @@
 		"def": 67,
 		"spa": 55,
 		"spd": 55,
-		"spe": 56,
-		"seen": false,
-		"caught": false
+		"spe": 56
 	},
 	"Nidoqueen": {
 		"index": 31,
@@ -443,13 +381,11 @@
 		"def": 87,
 		"spa": 75,
 		"spd": 85,
-		"spe": 76,
-		"seen": false,
-		"caught": false
+		"spe": 76
 	},
 	"Nidoran-Male": {
 		"index": 32,
-		"name": "NIDORAN♂",
+		"name": "NIDORAN\u00e2\u2122\u201a",
 		"type": "POISON",
 		"total": 273,
 		"hp": 46,
@@ -457,9 +393,7 @@
 		"def": 40,
 		"spa": 40,
 		"spd": 40,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Nidorino": {
 		"index": 33,
@@ -471,9 +405,7 @@
 		"def": 57,
 		"spa": 55,
 		"spd": 55,
-		"spe": 65,
-		"seen": false,
-		"caught": false
+		"spe": 65
 	},
 	"Nidoking": {
 		"index": 34,
@@ -485,9 +417,7 @@
 		"def": 77,
 		"spa": 85,
 		"spd": 75,
-		"spe": 85,
-		"seen": false,
-		"caught": false
+		"spe": 85
 	},
 	"Clefairy": {
 		"index": 35,
@@ -499,9 +429,7 @@
 		"def": 48,
 		"spa": 60,
 		"spd": 65,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Clefable": {
 		"index": 36,
@@ -513,9 +441,7 @@
 		"def": 73,
 		"spa": 95,
 		"spd": 90,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Vulpix": {
 		"index": 37,
@@ -527,9 +453,7 @@
 		"def": 40,
 		"spa": 50,
 		"spd": 65,
-		"spe": 65,
-		"seen": false,
-		"caught": false
+		"spe": 65
 	},
 	"Ninetales": {
 		"index": 38,
@@ -541,9 +465,7 @@
 		"def": 75,
 		"spa": 81,
 		"spd": 100,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	},
 	"Jigglypuff": {
 		"index": 39,
@@ -555,9 +477,7 @@
 		"def": 20,
 		"spa": 45,
 		"spd": 25,
-		"spe": 20,
-		"seen": false,
-		"caught": false
+		"spe": 20
 	},
 	"Wigglytuff": {
 		"index": 40,
@@ -569,9 +489,7 @@
 		"def": 45,
 		"spa": 85,
 		"spd": 50,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Zubat": {
 		"index": 41,
@@ -583,9 +501,7 @@
 		"def": 35,
 		"spa": 30,
 		"spd": 40,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Golbat": {
 		"index": 42,
@@ -597,9 +513,7 @@
 		"def": 70,
 		"spa": 65,
 		"spd": 75,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Oddish": {
 		"index": 43,
@@ -611,9 +525,7 @@
 		"def": 55,
 		"spa": 75,
 		"spd": 65,
-		"spe": 30,
-		"seen": false,
-		"caught": false
+		"spe": 30
 	},
 	"Gloom": {
 		"index": 44,
@@ -625,9 +537,7 @@
 		"def": 70,
 		"spa": 85,
 		"spd": 75,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Vileplume": {
 		"index": 45,
@@ -639,9 +549,7 @@
 		"def": 85,
 		"spa": 110,
 		"spd": 90,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Paras": {
 		"index": 46,
@@ -653,9 +561,7 @@
 		"def": 55,
 		"spa": 45,
 		"spd": 55,
-		"spe": 25,
-		"seen": false,
-		"caught": false
+		"spe": 25
 	},
 	"Parasect": {
 		"index": 47,
@@ -667,9 +573,7 @@
 		"def": 80,
 		"spa": 60,
 		"spd": 80,
-		"spe": 30,
-		"seen": false,
-		"caught": false
+		"spe": 30
 	},
 	"Venonat": {
 		"index": 48,
@@ -681,9 +585,7 @@
 		"def": 50,
 		"spa": 40,
 		"spd": 55,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Venomoth": {
 		"index": 49,
@@ -695,9 +597,7 @@
 		"def": 60,
 		"spa": 90,
 		"spd": 75,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Diglett": {
 		"index": 50,
@@ -709,9 +609,7 @@
 		"def": 25,
 		"spa": 35,
 		"spd": 45,
-		"spe": 95,
-		"seen": false,
-		"caught": false
+		"spe": 95
 	},
 	"Dugtrio": {
 		"index": 51,
@@ -723,9 +621,7 @@
 		"def": 50,
 		"spa": 50,
 		"spd": 70,
-		"spe": 120,
-		"seen": false,
-		"caught": false
+		"spe": 120
 	},
 	"Meowth": {
 		"index": 52,
@@ -737,9 +633,7 @@
 		"def": 35,
 		"spa": 40,
 		"spd": 40,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Persian": {
 		"index": 53,
@@ -751,9 +645,7 @@
 		"def": 60,
 		"spa": 65,
 		"spd": 65,
-		"spe": 115,
-		"seen": false,
-		"caught": false
+		"spe": 115
 	},
 	"Psyduck": {
 		"index": 54,
@@ -765,9 +657,7 @@
 		"def": 48,
 		"spa": 65,
 		"spd": 50,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Golduck": {
 		"index": 55,
@@ -779,9 +669,7 @@
 		"def": 78,
 		"spa": 95,
 		"spd": 80,
-		"spe": 85,
-		"seen": false,
-		"caught": false
+		"spe": 85
 	},
 	"Mankey": {
 		"index": 56,
@@ -793,9 +681,7 @@
 		"def": 35,
 		"spa": 35,
 		"spd": 45,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Primeape": {
 		"index": 57,
@@ -807,9 +693,7 @@
 		"def": 60,
 		"spa": 60,
 		"spd": 70,
-		"spe": 95,
-		"seen": false,
-		"caught": false
+		"spe": 95
 	},
 	"Growlithe": {
 		"index": 58,
@@ -821,9 +705,7 @@
 		"def": 45,
 		"spa": 70,
 		"spd": 50,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Arcanine": {
 		"index": 59,
@@ -835,9 +717,7 @@
 		"def": 80,
 		"spa": 100,
 		"spd": 80,
-		"spe": 95,
-		"seen": false,
-		"caught": false
+		"spe": 95
 	},
 	"Poliwag": {
 		"index": 60,
@@ -849,9 +729,7 @@
 		"def": 40,
 		"spa": 40,
 		"spd": 40,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Poliwhirl": {
 		"index": 61,
@@ -863,9 +741,7 @@
 		"def": 65,
 		"spa": 50,
 		"spd": 50,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Poliwrath": {
 		"index": 62,
@@ -877,9 +753,7 @@
 		"def": 95,
 		"spa": 70,
 		"spd": 90,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Abra": {
 		"index": 63,
@@ -891,9 +765,7 @@
 		"def": 15,
 		"spa": 105,
 		"spd": 55,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Kadabra": {
 		"index": 64,
@@ -905,9 +777,7 @@
 		"def": 30,
 		"spa": 120,
 		"spd": 70,
-		"spe": 105,
-		"seen": false,
-		"caught": false
+		"spe": 105
 	},
 	"Alakazam": {
 		"index": 65,
@@ -919,9 +789,7 @@
 		"def": 45,
 		"spa": 135,
 		"spd": 95,
-		"spe": 120,
-		"seen": false,
-		"caught": false
+		"spe": 120
 	},
 	"Machop": {
 		"index": 66,
@@ -933,9 +801,7 @@
 		"def": 50,
 		"spa": 35,
 		"spd": 35,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Machoke": {
 		"index": 67,
@@ -947,9 +813,7 @@
 		"def": 70,
 		"spa": 50,
 		"spd": 60,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Machamp": {
 		"index": 68,
@@ -961,9 +825,7 @@
 		"def": 80,
 		"spa": 65,
 		"spd": 85,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Bellsprout": {
 		"index": 69,
@@ -975,9 +837,7 @@
 		"def": 35,
 		"spa": 70,
 		"spd": 30,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Weepinbell": {
 		"index": 70,
@@ -989,9 +849,7 @@
 		"def": 50,
 		"spa": 85,
 		"spd": 45,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Victreebell": {
 		"index": 71,
@@ -1003,9 +861,7 @@
 		"def": 65,
 		"spa": 100,
 		"spd": 70,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Tentacool": {
 		"index": 72,
@@ -1017,9 +873,7 @@
 		"def": 35,
 		"spa": 50,
 		"spd": 100,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Tentacruel": {
 		"index": 73,
@@ -1031,9 +885,7 @@
 		"def": 65,
 		"spa": 80,
 		"spd": 120,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	},
 	"Geodude": {
 		"index": 74,
@@ -1045,9 +897,7 @@
 		"def": 100,
 		"spa": 30,
 		"spd": 30,
-		"spe": 20,
-		"seen": false,
-		"caught": false
+		"spe": 20
 	},
 	"Graveler": {
 		"index": 75,
@@ -1059,9 +909,7 @@
 		"def": 115,
 		"spa": 45,
 		"spd": 45,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Golem": {
 		"index": 76,
@@ -1073,9 +921,7 @@
 		"def": 130,
 		"spa": 55,
 		"spd": 65,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Ponyta": {
 		"index": 77,
@@ -1087,9 +933,7 @@
 		"def": 55,
 		"spa": 65,
 		"spd": 65,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Rapidash": {
 		"index": 78,
@@ -1101,9 +945,7 @@
 		"def": 70,
 		"spa": 80,
 		"spd": 80,
-		"spe": 105,
-		"seen": false,
-		"caught": false
+		"spe": 105
 	},
 	"Slowpoke": {
 		"index": 79,
@@ -1115,9 +957,7 @@
 		"def": 65,
 		"spa": 40,
 		"spd": 40,
-		"spe": 15,
-		"seen": false,
-		"caught": false
+		"spe": 15
 	},
 	"Slowbro": {
 		"index": 80,
@@ -1129,9 +969,7 @@
 		"def": 110,
 		"spa": 100,
 		"spd": 80,
-		"spe": 30,
-		"seen": false,
-		"caught": false
+		"spe": 30
 	},
 	"Magnemite": {
 		"index": 81,
@@ -1143,9 +981,7 @@
 		"def": 70,
 		"spa": 95,
 		"spd": 55,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Magneton": {
 		"index": 82,
@@ -1157,9 +993,7 @@
 		"def": 95,
 		"spa": 120,
 		"spd": 70,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Farfetch'd": {
 		"index": 83,
@@ -1171,9 +1005,7 @@
 		"def": 55,
 		"spa": 58,
 		"spd": 62,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Doduo": {
 		"index": 84,
@@ -1185,9 +1017,7 @@
 		"def": 45,
 		"spa": 35,
 		"spd": 35,
-		"spe": 75,
-		"seen": false,
-		"caught": false
+		"spe": 75
 	},
 	"Dodrio": {
 		"index": 85,
@@ -1199,9 +1029,7 @@
 		"def": 70,
 		"spa": 60,
 		"spd": 60,
-		"spe": 110,
-		"seen": false,
-		"caught": false
+		"spe": 110
 	},
 	"Seel": {
 		"index": 86,
@@ -1213,9 +1041,7 @@
 		"def": 55,
 		"spa": 45,
 		"spd": 70,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Dewgong": {
 		"index": 87,
@@ -1227,9 +1053,7 @@
 		"def": 80,
 		"spa": 70,
 		"spd": 95,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Grimer": {
 		"index": 88,
@@ -1241,9 +1065,7 @@
 		"def": 50,
 		"spa": 40,
 		"spd": 50,
-		"spe": 25,
-		"seen": false,
-		"caught": false
+		"spe": 25
 	},
 	"Muk": {
 		"index": 89,
@@ -1255,9 +1077,7 @@
 		"def": 75,
 		"spa": 65,
 		"spd": 100,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Shellder": {
 		"index": 90,
@@ -1269,9 +1089,7 @@
 		"def": 100,
 		"spa": 45,
 		"spd": 25,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Cloyster": {
 		"index": 91,
@@ -1283,9 +1101,7 @@
 		"def": 180,
 		"spa": 85,
 		"spd": 45,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Gastly": {
 		"index": 92,
@@ -1297,9 +1113,7 @@
 		"def": 30,
 		"spa": 100,
 		"spd": 35,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Haunter": {
 		"index": 93,
@@ -1311,9 +1125,7 @@
 		"def": 45,
 		"spa": 115,
 		"spd": 55,
-		"spe": 95,
-		"seen": false,
-		"caught": false
+		"spe": 95
 	},
 	"Gengar": {
 		"index": 94,
@@ -1325,9 +1137,7 @@
 		"def": 60,
 		"spa": 130,
 		"spd": 75,
-		"spe": 110,
-		"seen": false,
-		"caught": false
+		"spe": 110
 	},
 	"Onix": {
 		"index": 95,
@@ -1339,9 +1149,7 @@
 		"def": 160,
 		"spa": 30,
 		"spd": 45,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Drowzee": {
 		"index": 96,
@@ -1353,9 +1161,7 @@
 		"def": 45,
 		"spa": 43,
 		"spd": 90,
-		"spe": 42,
-		"seen": false,
-		"caught": false
+		"spe": 42
 	},
 	"Hypno": {
 		"index": 97,
@@ -1367,9 +1173,7 @@
 		"def": 70,
 		"spa": 73,
 		"spd": 115,
-		"spe": 67,
-		"seen": false,
-		"caught": false
+		"spe": 67
 	},
 	"Krabby": {
 		"index": 98,
@@ -1381,9 +1185,7 @@
 		"def": 90,
 		"spa": 25,
 		"spd": 25,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Kingler": {
 		"index": 99,
@@ -1395,9 +1197,7 @@
 		"def": 115,
 		"spa": 50,
 		"spd": 50,
-		"spe": 75,
-		"seen": false,
-		"caught": false
+		"spe": 75
 	},
 	"Voltorb": {
 		"index": 100,
@@ -1409,9 +1209,7 @@
 		"def": 50,
 		"spa": 55,
 		"spd": 55,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	},
 	"Electrode": {
 		"index": 101,
@@ -1423,9 +1221,7 @@
 		"def": 70,
 		"spa": 80,
 		"spd": 80,
-		"spe": 150,
-		"seen": false,
-		"caught": false
+		"spe": 150
 	},
 	"Exeggcute": {
 		"index": 102,
@@ -1437,9 +1233,7 @@
 		"def": 80,
 		"spa": 60,
 		"spd": 45,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Exeggutor": {
 		"index": 103,
@@ -1451,9 +1245,7 @@
 		"def": 85,
 		"spa": 125,
 		"spd": 75,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Cubone": {
 		"index": 104,
@@ -1465,9 +1257,7 @@
 		"def": 95,
 		"spa": 40,
 		"spd": 50,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Marowak": {
 		"index": 105,
@@ -1479,9 +1269,7 @@
 		"def": 110,
 		"spa": 50,
 		"spd": 80,
-		"spe": 45,
-		"seen": false,
-		"caught": false
+		"spe": 45
 	},
 	"Hitmonlee": {
 		"index": 106,
@@ -1493,9 +1281,7 @@
 		"def": 53,
 		"spa": 35,
 		"spd": 110,
-		"spe": 87,
-		"seen": false,
-		"caught": false
+		"spe": 87
 	},
 	"Hitmonchan": {
 		"index": 107,
@@ -1507,9 +1293,7 @@
 		"def": 79,
 		"spa": 35,
 		"spd": 110,
-		"spe": 76,
-		"seen": false,
-		"caught": false
+		"spe": 76
 	},
 	"Lickitung": {
 		"index": 108,
@@ -1521,9 +1305,7 @@
 		"def": 75,
 		"spa": 60,
 		"spd": 75,
-		"spe": 30,
-		"seen": false,
-		"caught": false
+		"spe": 30
 	},
 	"Koffing": {
 		"index": 109,
@@ -1535,9 +1317,7 @@
 		"def": 95,
 		"spa": 60,
 		"spd": 45,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Weezing": {
 		"index": 110,
@@ -1549,9 +1329,7 @@
 		"def": 120,
 		"spa": 85,
 		"spd": 70,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Rhyhorn": {
 		"index": 111,
@@ -1563,9 +1341,7 @@
 		"def": 95,
 		"spa": 30,
 		"spd": 30,
-		"spe": 25,
-		"seen": false,
-		"caught": false
+		"spe": 25
 	},
 	"Rhydon": {
 		"index": 112,
@@ -1577,9 +1353,7 @@
 		"def": 120,
 		"spa": 45,
 		"spd": 45,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Chansey": {
 		"index": 113,
@@ -1591,9 +1365,7 @@
 		"def": 5,
 		"spa": 35,
 		"spd": 105,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Tangela": {
 		"index": 114,
@@ -1605,9 +1377,7 @@
 		"def": 115,
 		"spa": 100,
 		"spd": 40,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Kangaskhan": {
 		"index": 115,
@@ -1619,9 +1389,7 @@
 		"def": 80,
 		"spa": 40,
 		"spd": 80,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Horsea": {
 		"index": 116,
@@ -1633,9 +1401,7 @@
 		"def": 70,
 		"spa": 70,
 		"spd": 25,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Seadra": {
 		"index": 117,
@@ -1647,9 +1413,7 @@
 		"def": 95,
 		"spa": 95,
 		"spd": 45,
-		"spe": 85,
-		"seen": false,
-		"caught": false
+		"spe": 85
 	},
 	"Goldeen": {
 		"index": 118,
@@ -1661,9 +1425,7 @@
 		"def": 60,
 		"spa": 35,
 		"spd": 50,
-		"spe": 63,
-		"seen": false,
-		"caught": false
+		"spe": 63
 	},
 	"Seaking": {
 		"index": 119,
@@ -1675,9 +1437,7 @@
 		"def": 65,
 		"spa": 65,
 		"spd": 80,
-		"spe": 68,
-		"seen": false,
-		"caught": false
+		"spe": 68
 	},
 	"Staryu": {
 		"index": 120,
@@ -1689,9 +1449,7 @@
 		"def": 55,
 		"spa": 70,
 		"spd": 55,
-		"spe": 85,
-		"seen": false,
-		"caught": false
+		"spe": 85
 	},
 	"Starmie": {
 		"index": 121,
@@ -1703,12 +1461,10 @@
 		"def": 85,
 		"spa": 100,
 		"spd": 85,
-		"spe": 115,
-		"seen": false,
-		"caught": false
+		"spe": 115
 	},
 	"Mr. Mime": {
-	"index": 122,
+		"index": 122,
 		"name": "MR. MIME",
 		"type": "PSYCHIC",
 		"total": 460,
@@ -1717,10 +1473,7 @@
 		"def": 65,
 		"spa": 100,
 		"spd": 120,
-		"spe": 90,
-		"seen": false,
-		"caught": false
-		false
+		"spe": 90
 	},
 	"Scyther": {
 		"index": 123,
@@ -1732,9 +1485,7 @@
 		"def": 80,
 		"spa": 55,
 		"spd": 80,
-		"spe": 105,
-		"seen": false,
-		"caught": false
+		"spe": 105
 	},
 	"Jynx": {
 		"index": 124,
@@ -1746,9 +1497,7 @@
 		"def": 35,
 		"spa": 115,
 		"spd": 95,
-		"spe": 95,
-		"seen": false,
-		"caught": false
+		"spe": 95
 	},
 	"Electabuzz": {
 		"index": 125,
@@ -1760,9 +1509,7 @@
 		"def": 57,
 		"spa": 95,
 		"spd": 85,
-		"spe": 105,
-		"seen": false,
-		"caught": false
+		"spe": 105
 	},
 	"Magmar": {
 		"index": 126,
@@ -1774,9 +1521,7 @@
 		"def": 57,
 		"spa": 100,
 		"spd": 85,
-		"spe": 93,
-		"seen": false,
-		"caught": false
+		"spe": 93
 	},
 	"Pinsir": {
 		"index": 127,
@@ -1788,9 +1533,7 @@
 		"def": 100,
 		"spa": 55,
 		"spd": 70,
-		"spe": 85,
-		"seen": false,
-		"caught": false
+		"spe": 85
 	},
 	"Tauros": {
 		"index": 128,
@@ -1802,9 +1545,7 @@
 		"def": 95,
 		"spa": 40,
 		"spd": 70,
-		"spe": 110,
-		"seen": false,
-		"caught": false
+		"spe": 110
 	},
 	"Magikarp": {
 		"index": 129,
@@ -1816,9 +1557,7 @@
 		"def": 55,
 		"spa": 15,
 		"spd": 20,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Gyarados": {
 		"index": 130,
@@ -1830,9 +1569,7 @@
 		"def": 79,
 		"spa": 60,
 		"spd": 100,
-		"spe": 81,
-		"seen": false,
-		"caught": false
+		"spe": 81
 	},
 	"Lapras": {
 		"index": 131,
@@ -1844,9 +1581,7 @@
 		"def": 80,
 		"spa": 85,
 		"spd": 95,
-		"spe": 60,
-		"seen": false,
-		"caught": false
+		"spe": 60
 	},
 	"Ditto": {
 		"index": 132,
@@ -1858,9 +1593,7 @@
 		"def": 48,
 		"spa": 48,
 		"spd": 48,
-		"spe": 48,
-		"seen": false,
-		"caught": false
+		"spe": 48
 	},
 	"Eevee": {
 		"index": 133,
@@ -1872,9 +1605,7 @@
 		"def": 50,
 		"spa": 45,
 		"spd": 65,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Vaporeon": {
 		"index": 134,
@@ -1886,9 +1617,7 @@
 		"def": 60,
 		"spa": 110,
 		"spd": 95,
-		"spe": 65,
-		"seen": false,
-		"caught": false
+		"spe": 65
 	},
 	"Jolteon": {
 		"index": 135,
@@ -1900,9 +1629,7 @@
 		"def": 60,
 		"spa": 110,
 		"spd": 95,
-		"spe": 130,
-		"seen": false,
-		"caught": false
+		"spe": 130
 	},
 	"Flareon": {
 		"index": 136,
@@ -1914,9 +1641,7 @@
 		"def": 60,
 		"spa": 95,
 		"spd": 110,
-		"spe": 65,
-		"seen": false,
-		"caught": false
+		"spe": 65
 	},
 	"Porygon": {
 		"index": 137,
@@ -1928,9 +1653,7 @@
 		"def": 70,
 		"spa": 85,
 		"spd": 75,
-		"spe": 40,
-		"seen": false,
-		"caught": false
+		"spe": 40
 	},
 	"Omanyte": {
 		"index": 138,
@@ -1942,9 +1665,7 @@
 		"def": 100,
 		"spa": 90,
 		"spd": 55,
-		"spe": 35,
-		"seen": false,
-		"caught": false
+		"spe": 35
 	},
 	"Omastar": {
 		"index": 139,
@@ -1956,9 +1677,7 @@
 		"def": 125,
 		"spa": 115,
 		"spd": 70,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Kabuto": {
 		"index": 140,
@@ -1970,9 +1689,7 @@
 		"def": 90,
 		"spa": 55,
 		"spd": 45,
-		"spe": 55,
-		"seen": false,
-		"caught": false
+		"spe": 55
 	},
 	"Kabutops": {
 		"index": 141,
@@ -1984,9 +1701,7 @@
 		"def": 105,
 		"spa": 65,
 		"spd": 70,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Aerodactyl": {
 		"index": 142,
@@ -1998,9 +1713,7 @@
 		"def": 65,
 		"spa": 60,
 		"spd": 75,
-		"spe": 130,
-		"seen": false,
-		"caught": false
+		"spe": 130
 	},
 	"Snorlax": {
 		"index": 143,
@@ -2012,9 +1725,7 @@
 		"def": 65,
 		"spa": 65,
 		"spd": 110,
-		"spe": 30,
-		"seen": false,
-		"caught": false
+		"spe": 30
 	},
 	"Articuno": {
 		"index": 144,
@@ -2026,9 +1737,7 @@
 		"def": 100,
 		"spa": 95,
 		"spd": 125,
-		"spe": 85,
-		"seen": false,
-		"caught": false
+		"spe": 85
 	},
 	"Zapdos": {
 		"index": 145,
@@ -2040,9 +1749,7 @@
 		"def": 85,
 		"spa": 125,
 		"spd": 90,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	},
 	"Moltres": {
 		"index": 146,
@@ -2054,9 +1761,7 @@
 		"def": 90,
 		"spa": 125,
 		"spd": 85,
-		"spe": 90,
-		"seen": false,
-		"caught": false
+		"spe": 90
 	},
 	"Dratini": {
 		"index": 147,
@@ -2068,9 +1773,7 @@
 		"def": 45,
 		"spa": 50,
 		"spd": 50,
-		"spe": 50,
-		"seen": false,
-		"caught": false
+		"spe": 50
 	},
 	"Dragonair": {
 		"index": 148,
@@ -2082,9 +1785,7 @@
 		"def": 65,
 		"spa": 70,
 		"spd": 70,
-		"spe": 70,
-		"seen": false,
-		"caught": false
+		"spe": 70
 	},
 	"Dragonite": {
 		"index": 149,
@@ -2096,9 +1797,7 @@
 		"def": 95,
 		"spa": 100,
 		"spd": 100,
-		"spe": 80,
-		"seen": false,
-		"caught": false
+		"spe": 80
 	},
 	"Mewtwo": {
 		"index": 150,
@@ -2110,9 +1809,7 @@
 		"def": 90,
 		"spa": 154,
 		"spd": 90,
-		"spe": 130,
-		"seen": false,
-		"caught": false
+		"spe": 130
 	},
 	"Mew": {
 		"index": 151,
@@ -2124,8 +1821,6 @@
 		"def": 100,
 		"spa": 100,
 		"spd": 100,
-		"spe": 100,
-		"seen": false,
-		"caught": false
+		"spe": 100
 	}
 }
