@@ -83,3 +83,35 @@ python -m pip -r requirements.txt
 python app/main.py
 ```
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
+### Controls
+- When `>` is shown, press Enter to continue. You may need to input text first.
+- When text bullets are shown, you need to enter the character next to the option you choose.
+- In the overworld, navigation bullets are `WASD` for directional movement, then numbered for interactions. Other commands might also be available.
+- When `Y/N` is shown, you can enter `y` or `n` for Yes or No respectively.
+- When a reading through next normally, you can press any key to proceed.
+#### Examples
+No text needed, just press Enter:
+```
+Press Enter to continue.
+
+>_
+```
+Enter text from a bullet point:
+```
+Choose an option.
+[1] - Save
+[2] - Quit
+
+>_
+```
+Enter Yes or No:
+```
+Would you like to save? Y/N
+
+>_
+```
+Press any key:
+```
+OAK: Hello there! Welcome to the world of POKéMON!
+_
+```

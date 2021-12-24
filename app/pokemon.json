@@ -1,7 +1,7 @@
 {
-	"MissingNo.": {
+	"MISSINGNO.": {
 		"index": 0,
-		"name": "MISSINGNO.",
+		"name": "MissingNo.",
 		"type": "NULL",
 		"total": 6000,
 		"hp": 1000,
@@ -11,9 +11,9 @@
 		"spd": 1000,
 		"spe": 1000
 	},
-	"Bulbasaur": {
+	"BULBASAUR": {
 		"index": 1,
-		"name": "BULBASAUR",
+		"name": "Bulbasaur",
 		"type": "GRASS",
 		"total": 318,
 		"hp": 45,
@@ -23,9 +23,9 @@
 		"spd": 65,
 		"spe": 45
 	},
-	"Ivysaur": {
+	"IVYSAUR": {
 		"index": 2,
-		"name": "IVYSAUR",
+		"name": "Ivysaur",
 		"type": "GRASS",
 		"total": 405,
 		"hp": 60,
@@ -35,9 +35,9 @@
 		"spd": 80,
 		"spe": 60
 	},
-	"Venusaur": {
+	"VENUSAUR": {
 		"index": 3,
-		"name": "VENUSAUR",
+		"name": "Venusaur",
 		"type": "GRASS",
 		"total": 525,
 		"hp": 80,
@@ -47,9 +47,9 @@
 		"spd": 100,
 		"spe": 80
 	},
-	"Charmander": {
+	"CHARMANDER": {
 		"index": 4,
-		"name": "CHARMANDER",
+		"name": "Charmander",
 		"type": "FIRE",
 		"total": 309,
 		"hp": 39,
@@ -59,9 +59,9 @@
 		"spd": 50,
 		"spe": 65
 	},
-	"Charmeleon": {
+	"CHARMELEON": {
 		"index": 5,
-		"name": "CHARMELEON",
+		"name": "Charmeleon",
 		"type": "FIRE",
 		"total": 405,
 		"hp": 58,
@@ -71,9 +71,9 @@
 		"spd": 65,
 		"spe": 80
 	},
-	"Charizard": {
+	"CHARIZARD": {
 		"index": 6,
-		"name": "CHARIZARD",
+		"name": "Charizard",
 		"type": "FIRE",
 		"total": 534,
 		"hp": 78,
@@ -83,9 +83,9 @@
 		"spd": 85,
 		"spe": 100
 	},
-	"Squirtle": {
+	"SQUIRTLE": {
 		"index": 7,
-		"name": "SQUIRTLE",
+		"name": "Squirtle",
 		"type": "WATER",
 		"total": 314,
 		"hp": 44,
@@ -95,9 +95,9 @@
 		"spd": 64,
 		"spe": 43
 	},
-	"Wartortle": {
+	"WARTORTLE": {
 		"index": 8,
-		"name": "WARTORTLE",
+		"name": "Wartortle",
 		"type": "WATER",
 		"total": 405,
 		"hp": 59,
@@ -107,9 +107,9 @@
 		"spd": 80,
 		"spe": 58
 	},
-	"Blastoise": {
+	"BLASTOISE": {
 		"index": 9,
-		"name": "BLASTOISE",
+		"name": "Blastoise",
 		"type": "WATER",
 		"total": 530,
 		"hp": 79,
@@ -119,9 +119,9 @@
 		"spd": 105,
 		"spe": 78
 	},
-	"Caterpie": {
+	"CATERPIE": {
 		"index": 10,
-		"name": "CATERPIE",
+		"name": "Caterpie",
 		"type": "BUG",
 		"total": 195,
 		"hp": 45,
@@ -131,9 +131,9 @@
 		"spd": 20,
 		"spe": 45
 	},
-	"Metapod": {
+	"METAPOD": {
 		"index": 11,
-		"name": "METAPOD",
+		"name": "Metapod",
 		"type": "BUG",
 		"total": 205,
 		"hp": 50,
@@ -143,9 +143,9 @@
 		"spd": 25,
 		"spe": 30
 	},
-	"Butterfree": {
+	"BUTTERFREE": {
 		"index": 12,
-		"name": "BUTTERFREE",
+		"name": "Butterfree",
 		"type": "BUG",
 		"total": 395,
 		"hp": 60,
@@ -155,9 +155,9 @@
 		"spd": 80,
 		"spe": 70
 	},
-	"Weedle": {
+	"WEEDLE": {
 		"index": 13,
-		"name": "WEEDLE",
+		"name": "Weedle",
 		"type": "BUG",
 		"total": 195,
 		"hp": 40,
@@ -167,9 +167,9 @@
 		"spd": 20,
 		"spe": 50
 	},
-	"Kakuna": {
+	"KAKUNA": {
 		"index": 14,
-		"name": "KAKUNA",
+		"name": "Kakuna",
 		"type": "BUG",
 		"total": 205,
 		"hp": 45,
@@ -179,9 +179,9 @@
 		"spd": 25,
 		"spe": 35
 	},
-	"Beedrill": {
+	"BEEDRILL": {
 		"index": 15,
-		"name": "BEEDRILL",
+		"name": "Beedrill",
 		"type": "BUG",
 		"total": 395,
 		"hp": 65,
@@ -191,9 +191,9 @@
 		"spd": 80,
 		"spe": 75
 	},
-	"Pidgey": {
+	"PIDGEY": {
 		"index": 16,
-		"name": "PIDGEY",
+		"name": "Pidgey",
 		"type": "NORMAL",
 		"total": 251,
 		"hp": 40,
@@ -203,9 +203,9 @@
 		"spd": 35,
 		"spe": 56
 	},
-	"Pidgeotto": {
+	"PIDGEOTTO": {
 		"index": 17,
-		"name": "PIDGEOTTO",
+		"name": "Pidgeotto",
 		"type": "NORMAL",
 		"total": 349,
 		"hp": 63,
@@ -215,9 +215,9 @@
 		"spd": 50,
 		"spe": 71
 	},
-	"Pidgeot": {
+	"PIDGEOT": {
 		"index": 18,
-		"name": "PIDGEOT",
+		"name": "Pidgeot",
 		"type": "NORMAL",
 		"total": 479,
 		"hp": 83,
@@ -227,9 +227,9 @@
 		"spd": 70,
 		"spe": 101
 	},
-	"Rattata": {
+	"RATTATA": {
 		"index": 19,
-		"name": "RATTATA",
+		"name": "Rattata",
 		"type": "NORMAL",
 		"total": 253,
 		"hp": 30,
@@ -239,9 +239,9 @@
 		"spd": 35,
 		"spe": 72
 	},
-	"Ratticate": {
+	"RATICATE": {
 		"index": 20,
-		"name": "RATICATE",
+		"name": "Ratticate",
 		"type": "NORMAL",
 		"total": 413,
 		"hp": 55,
@@ -251,9 +251,9 @@
 		"spd": 70,
 		"spe": 97
 	},
-	"Spearow": {
+	"SPEAROW": {
 		"index": 21,
-		"name": "SPEAROW",
+		"name": "Spearow",
 		"type": "NORMAL",
 		"total": 262,
 		"hp": 40,
@@ -263,9 +263,9 @@
 		"spd": 31,
 		"spe": 70
 	},
-	"Fearow": {
+	"FEAROW": {
 		"index": 22,
-		"name": "FEAROW",
+		"name": "Fearow",
 		"type": "NORMAL",
 		"total": 442,
 		"hp": 65,
@@ -275,9 +275,9 @@
 		"spd": 61,
 		"spe": 100
 	},
-	"Ekans": {
+	"EKANS": {
 		"index": 23,
-		"name": "EKANS",
+		"name": "Ekans",
 		"type": "POISON",
 		"total": 288,
 		"hp": 35,
@@ -287,9 +287,9 @@
 		"spd": 54,
 		"spe": 55
 	},
-	"Arbok": {
+	"ARBOK": {
 		"index": 24,
-		"name": "ARBOK",
+		"name": "Arbok",
 		"type": "POISON",
 		"total": 448,
 		"hp": 60,
@@ -299,9 +299,9 @@
 		"spd": 79,
 		"spe": 80
 	},
-	"Pikachu": {
+	"PIKACHU": {
 		"index": 25,
-		"name": "PIKACHU",
+		"name": "Pikachu",
 		"type": "ELECTRIC",
 		"total": 320,
 		"hp": 35,
@@ -311,9 +311,9 @@
 		"spd": 50,
 		"spe": 90
 	},
-	"Raichu": {
+	"RAICHU": {
 		"index": 26,
-		"name": "RAICHU",
+		"name": "Raichu",
 		"type": "ELECTRIC",
 		"total": 485,
 		"hp": 60,
@@ -323,9 +323,9 @@
 		"spd": 80,
 		"spe": 110
 	},
-	"Sandshrew": {
+	"SANDSHREW": {
 		"index": 27,
-		"name": "SANDSHREW",
+		"name": "Sandshrew",
 		"type": "GROUND",
 		"total": 300,
 		"hp": 50,
@@ -335,9 +335,9 @@
 		"spd": 30,
 		"spe": 40
 	},
-	"Sandslash": {
+	"SANDSLASH": {
 		"index": 28,
-		"name": "SANDSLASH",
+		"name": "Sandslash",
 		"type": "GROUND",
 		"total": 450,
 		"hp": 75,
@@ -347,9 +347,9 @@
 		"spd": 55,
 		"spe": 65
 	},
-	"Nidoran-Female": {
+	"NIDORAN\u00e2\u2122\u20ac": {
 		"index": 29,
-		"name": "NIDORAN\u00e2\u2122\u20ac",
+		"name": "Nidoran-Female",
 		"type": "POISON",
 		"total": 275,
 		"hp": 55,
@@ -359,9 +359,9 @@
 		"spd": 40,
 		"spe": 41
 	},
-	"Nidorina": {
+	"NIDORINA": {
 		"index": 30,
-		"name": "NIDORINA",
+		"name": "Nidorina",
 		"type": "POISON",
 		"total": 365,
 		"hp": 70,
@@ -371,9 +371,9 @@
 		"spd": 55,
 		"spe": 56
 	},
-	"Nidoqueen": {
+	"NIDOQUEEN": {
 		"index": 31,
-		"name": "NIDOQUEEN",
+		"name": "Nidoqueen",
 		"type": "POISON",
 		"total": 505,
 		"hp": 90,
@@ -383,9 +383,9 @@
 		"spd": 85,
 		"spe": 76
 	},
-	"Nidoran-Male": {
+	"NIDORAN\u00e2\u2122\u201a": {
 		"index": 32,
-		"name": "NIDORAN\u00e2\u2122\u201a",
+		"name": "Nidoran-Male",
 		"type": "POISON",
 		"total": 273,
 		"hp": 46,
@@ -395,9 +395,9 @@
 		"spd": 40,
 		"spe": 50
 	},
-	"Nidorino": {
+	"NIDORINO": {
 		"index": 33,
-		"name": "NIDORINO",
+		"name": "Nidorino",
 		"type": "POISON",
 		"total": 365,
 		"hp": 61,
@@ -407,9 +407,9 @@
 		"spd": 55,
 		"spe": 65
 	},
-	"Nidoking": {
+	"NIDOKING": {
 		"index": 34,
-		"name": "NIDOKING",
+		"name": "Nidoking",
 		"type": "POISON",
 		"total": 505,
 		"hp": 81,
@@ -419,9 +419,9 @@
 		"spd": 75,
 		"spe": 85
 	},
-	"Clefairy": {
+	"CLEFAIRY": {
 		"index": 35,
-		"name": "CLEFAIRY",
+		"name": "Clefairy",
 		"type": "FAIRY",
 		"total": 323,
 		"hp": 70,
@@ -431,9 +431,9 @@
 		"spd": 65,
 		"spe": 35
 	},
-	"Clefable": {
+	"CLEFABLE": {
 		"index": 36,
-		"name": "CLEFABLE",
+		"name": "Clefable",
 		"type": "FAIRY",
 		"total": 483,
 		"hp": 95,
@@ -443,9 +443,9 @@
 		"spd": 90,
 		"spe": 60
 	},
-	"Vulpix": {
+	"VULPIX": {
 		"index": 37,
-		"name": "VULPIX",
+		"name": "Vulpix",
 		"type": "FIRE",
 		"total": 299,
 		"hp": 38,
@@ -455,9 +455,9 @@
 		"spd": 65,
 		"spe": 65
 	},
-	"Ninetales": {
+	"NINETALES": {
 		"index": 38,
-		"name": "NINETALES",
+		"name": "Ninetales",
 		"type": "FIRE",
 		"total": 505,
 		"hp": 73,
@@ -467,9 +467,9 @@
 		"spd": 100,
 		"spe": 100
 	},
-	"Jigglypuff": {
+	"JIGGLYPUFF": {
 		"index": 39,
-		"name": "JIGGLYPUFF",
+		"name": "Jigglypuff",
 		"type": "NORMAL",
 		"total": 270,
 		"hp": 115,
@@ -479,9 +479,9 @@
 		"spd": 25,
 		"spe": 20
 	},
-	"Wigglytuff": {
+	"WIGGLYTUFF": {
 		"index": 40,
-		"name": "WIGGLYTUFF",
+		"name": "Wigglytuff",
 		"type": "NORMAL",
 		"total": 435,
 		"hp": 140,
@@ -491,9 +491,9 @@
 		"spd": 50,
 		"spe": 45
 	},
-	"Zubat": {
+	"ZUBAT": {
 		"index": 41,
-		"name": "ZUBAT",
+		"name": "Zubat",
 		"type": "POISON",
 		"total": 245,
 		"hp": 40,
@@ -503,9 +503,9 @@
 		"spd": 40,
 		"spe": 55
 	},
-	"Golbat": {
+	"GOLBAT": {
 		"index": 42,
-		"name": "GOLBAT",
+		"name": "Golbat",
 		"type": "POISON",
 		"total": 455,
 		"hp": 75,
@@ -515,9 +515,9 @@
 		"spd": 75,
 		"spe": 90
 	},
-	"Oddish": {
+	"ODDISH": {
 		"index": 43,
-		"name": "ODDISH",
+		"name": "Oddish",
 		"type": "GRASS",
 		"total": 320,
 		"hp": 45,
@@ -527,9 +527,9 @@
 		"spd": 65,
 		"spe": 30
 	},
-	"Gloom": {
+	"GLOOM": {
 		"index": 44,
-		"name": "GLOOM",
+		"name": "Gloom",
 		"type": "GRASS",
 		"total": 395,
 		"hp": 60,
@@ -539,9 +539,9 @@
 		"spd": 75,
 		"spe": 40
 	},
-	"Vileplume": {
+	"VILEPLUME": {
 		"index": 45,
-		"name": "VILEPLUME",
+		"name": "Vileplume",
 		"type": "GRASS",
 		"total": 490,
 		"hp": 75,
@@ -551,9 +551,9 @@
 		"spd": 90,
 		"spe": 50
 	},
-	"Paras": {
+	"PARAS": {
 		"index": 46,
-		"name": "PARAS",
+		"name": "Paras",
 		"type": "BUG",
 		"total": 285,
 		"hp": 35,
@@ -563,9 +563,9 @@
 		"spd": 55,
 		"spe": 25
 	},
-	"Parasect": {
+	"PARASECT": {
 		"index": 47,
-		"name": "PARASECT",
+		"name": "Parasect",
 		"type": "BUG",
 		"total": 405,
 		"hp": 60,
@@ -575,9 +575,9 @@
 		"spd": 80,
 		"spe": 30
 	},
-	"Venonat": {
+	"VENONAT": {
 		"index": 48,
-		"name": "VENONAT",
+		"name": "Venonat",
 		"type": "BUG",
 		"total": 305,
 		"hp": 60,
@@ -587,9 +587,9 @@
 		"spd": 55,
 		"spe": 45
 	},
-	"Venomoth": {
+	"VENOMOTH": {
 		"index": 49,
-		"name": "VENOMOTH",
+		"name": "Venomoth",
 		"type": "BUG",
 		"total": 450,
 		"hp": 70,
@@ -599,9 +599,9 @@
 		"spd": 75,
 		"spe": 90
 	},
-	"Diglett": {
+	"DIGLETT": {
 		"index": 50,
-		"name": "DIGLETT",
+		"name": "Diglett",
 		"type": "GROUND",
 		"total": 265,
 		"hp": 10,
@@ -611,9 +611,9 @@
 		"spd": 45,
 		"spe": 95
 	},
-	"Dugtrio": {
+	"DUGTRIO": {
 		"index": 51,
-		"name": "DUGTRIO",
+		"name": "Dugtrio",
 		"type": "GROUND",
 		"total": 425,
 		"hp": 35,
@@ -623,9 +623,9 @@
 		"spd": 70,
 		"spe": 120
 	},
-	"Meowth": {
+	"MEOWTH": {
 		"index": 52,
-		"name": "MEOWTH",
+		"name": "Meowth",
 		"type": "NORMAL",
 		"total": 290,
 		"hp": 40,
@@ -635,9 +635,9 @@
 		"spd": 40,
 		"spe": 90
 	},
-	"Persian": {
+	"PERSIAN": {
 		"index": 53,
-		"name": "PERSIAN",
+		"name": "Persian",
 		"type": "NORMAL",
 		"total": 440,
 		"hp": 65,
@@ -647,9 +647,9 @@
 		"spd": 65,
 		"spe": 115
 	},
-	"Psyduck": {
+	"PSYDUCK": {
 		"index": 54,
-		"name": "PSYDUCK",
+		"name": "Psyduck",
 		"type": "WATER",
 		"total": 320,
 		"hp": 50,
@@ -659,9 +659,9 @@
 		"spd": 50,
 		"spe": 55
 	},
-	"Golduck": {
+	"GOLDUCK": {
 		"index": 55,
-		"name": "GOLDUCK",
+		"name": "Golduck",
 		"type": "WATER",
 		"total": 500,
 		"hp": 80,
@@ -671,9 +671,9 @@
 		"spd": 80,
 		"spe": 85
 	},
-	"Mankey": {
+	"MANKEY": {
 		"index": 56,
-		"name": "MANKEY",
+		"name": "Mankey",
 		"type": "FIGHTING",
 		"total": 305,
 		"hp": 40,
@@ -683,9 +683,9 @@
 		"spd": 45,
 		"spe": 70
 	},
-	"Primeape": {
+	"PRIMEAPE": {
 		"index": 57,
-		"name": "PRIMEAPE",
+		"name": "Primeape",
 		"type": "FIGHTING",
 		"total": 455,
 		"hp": 65,
@@ -695,9 +695,9 @@
 		"spd": 70,
 		"spe": 95
 	},
-	"Growlithe": {
+	"GROWLITHE": {
 		"index": 58,
-		"name": "GROWLITHE",
+		"name": "Growlithe",
 		"type": "FIRE",
 		"total": 350,
 		"hp": 55,
@@ -707,9 +707,9 @@
 		"spd": 50,
 		"spe": 60
 	},
-	"Arcanine": {
+	"ARCANINE": {
 		"index": 59,
-		"name": "ARCANINE",
+		"name": "Arcanine",
 		"type": "FIRE",
 		"total": 555,
 		"hp": 90,
@@ -719,9 +719,9 @@
 		"spd": 80,
 		"spe": 95
 	},
-	"Poliwag": {
+	"POLIWAG": {
 		"index": 60,
-		"name": "POLIWAG",
+		"name": "Poliwag",
 		"type": "WATER",
 		"total": 300,
 		"hp": 40,
@@ -731,9 +731,9 @@
 		"spd": 40,
 		"spe": 90
 	},
-	"Poliwhirl": {
+	"POLIWHIRL": {
 		"index": 61,
-		"name": "POLIWHIRL",
+		"name": "Poliwhirl",
 		"type": "WATER",
 		"total": 385,
 		"hp": 65,
@@ -743,9 +743,9 @@
 		"spd": 50,
 		"spe": 90
 	},
-	"Poliwrath": {
+	"POLIWRATH": {
 		"index": 62,
-		"name": "POLIWRATH",
+		"name": "Poliwrath",
 		"type": "WATER",
 		"total": 510,
 		"hp": 90,
@@ -755,9 +755,9 @@
 		"spd": 90,
 		"spe": 70
 	},
-	"Abra": {
+	"ABRA": {
 		"index": 63,
-		"name": "ABRA",
+		"name": "Abra",
 		"type": "PSYCHIC",
 		"total": 310,
 		"hp": 25,
@@ -767,9 +767,9 @@
 		"spd": 55,
 		"spe": 90
 	},
-	"Kadabra": {
+	"KADABRA": {
 		"index": 64,
-		"name": "KADABRA",
+		"name": "Kadabra",
 		"type": "PSYCHIC",
 		"total": 400,
 		"hp": 40,
@@ -779,9 +779,9 @@
 		"spd": 70,
 		"spe": 105
 	},
-	"Alakazam": {
+	"ALAKAZAM": {
 		"index": 65,
-		"name": "ALAKAZAM",
+		"name": "Alakazam",
 		"type": "PSYCHIC",
 		"total": 500,
 		"hp": 55,
@@ -791,9 +791,9 @@
 		"spd": 95,
 		"spe": 120
 	},
-	"Machop": {
+	"MACHOP": {
 		"index": 66,
-		"name": "MACHOP",
+		"name": "Machop",
 		"type": "FIGHTING",
 		"total": 305,
 		"hp": 70,
@@ -803,9 +803,9 @@
 		"spd": 35,
 		"spe": 35
 	},
-	"Machoke": {
+	"MACHOKE": {
 		"index": 67,
-		"name": "MACHOKE",
+		"name": "Machoke",
 		"type": "FIGHTING",
 		"total": 405,
 		"hp": 80,
@@ -815,9 +815,9 @@
 		"spd": 60,
 		"spe": 45
 	},
-	"Machamp": {
+	"MACHAMP": {
 		"index": 68,
-		"name": "MACHAMP",
+		"name": "Machamp",
 		"type": "FIGHTING",
 		"total": 505,
 		"hp": 90,
@@ -827,9 +827,9 @@
 		"spd": 85,
 		"spe": 55
 	},
-	"Bellsprout": {
+	"BELLSPROUT": {
 		"index": 69,
-		"name": "BELLSPROUT",
+		"name": "Bellsprout",
 		"type": "GRASS",
 		"total": 300,
 		"hp": 50,
@@ -839,9 +839,9 @@
 		"spd": 30,
 		"spe": 40
 	},
-	"Weepinbell": {
+	"WEEPINBELL": {
 		"index": 70,
-		"name": "WEEPINBELL",
+		"name": "Weepinbell",
 		"type": "GRASS",
 		"total": 390,
 		"hp": 65,
@@ -851,9 +851,9 @@
 		"spd": 45,
 		"spe": 55
 	},
-	"Victreebell": {
+	"VICTREEBEL": {
 		"index": 71,
-		"name": "VICTREEBEL",
+		"name": "Victreebell",
 		"type": "GRASS",
 		"total": 490,
 		"hp": 80,
@@ -863,9 +863,9 @@
 		"spd": 70,
 		"spe": 70
 	},
-	"Tentacool": {
+	"TENTACOOL": {
 		"index": 72,
-		"name": "TENTACOOL",
+		"name": "Tentacool",
 		"type": "WATER",
 		"total": 335,
 		"hp": 40,
@@ -875,9 +875,9 @@
 		"spd": 100,
 		"spe": 70
 	},
-	"Tentacruel": {
+	"TENTACRUEL": {
 		"index": 73,
-		"name": "TENTACRUEL",
+		"name": "Tentacruel",
 		"type": "WATER",
 		"total": 515,
 		"hp": 80,
@@ -887,9 +887,9 @@
 		"spd": 120,
 		"spe": 100
 	},
-	"Geodude": {
+	"GEODUDE": {
 		"index": 74,
-		"name": "GEODUDE",
+		"name": "Geodude",
 		"type": "ROCK",
 		"total": 300,
 		"hp": 40,
@@ -899,9 +899,9 @@
 		"spd": 30,
 		"spe": 20
 	},
-	"Graveler": {
+	"GRAVELER": {
 		"index": 75,
-		"name": "GRAVELER",
+		"name": "Graveler",
 		"type": "ROCK",
 		"total": 390,
 		"hp": 55,
@@ -911,9 +911,9 @@
 		"spd": 45,
 		"spe": 35
 	},
-	"Golem": {
+	"GOLEM": {
 		"index": 76,
-		"name": "GOLEM",
+		"name": "Golem",
 		"type": "ROCK",
 		"total": 495,
 		"hp": 80,
@@ -923,9 +923,9 @@
 		"spd": 65,
 		"spe": 45
 	},
-	"Ponyta": {
+	"PONYTA": {
 		"index": 77,
-		"name": "PONYTA",
+		"name": "Ponyta",
 		"type": "FIRE",
 		"total": 410,
 		"hp": 50,
@@ -935,9 +935,9 @@
 		"spd": 65,
 		"spe": 90
 	},
-	"Rapidash": {
+	"RAPIDASH": {
 		"index": 78,
-		"name": "RAPIDASH",
+		"name": "Rapidash",
 		"type": "FIRE",
 		"total": 500,
 		"hp": 65,
@@ -947,9 +947,9 @@
 		"spd": 80,
 		"spe": 105
 	},
-	"Slowpoke": {
+	"SLOWPOKE": {
 		"index": 79,
-		"name": "SLOWPOKE",
+		"name": "Slowpoke",
 		"type": "WATER",
 		"total": 315,
 		"hp": 90,
@@ -959,9 +959,9 @@
 		"spd": 40,
 		"spe": 15
 	},
-	"Slowbro": {
+	"SLOWBRO": {
 		"index": 80,
-		"name": "SLOWBRO",
+		"name": "Slowbro",
 		"type": "WATER",
 		"total": 490,
 		"hp": 95,
@@ -971,9 +971,9 @@
 		"spd": 80,
 		"spe": 30
 	},
-	"Magnemite": {
+	"MAGNEMITE": {
 		"index": 81,
-		"name": "MAGNEMITE",
+		"name": "Magnemite",
 		"type": "ELECTRIC",
 		"total": 325,
 		"hp": 25,
@@ -983,9 +983,9 @@
 		"spd": 55,
 		"spe": 45
 	},
-	"Magneton": {
+	"MAGNETON": {
 		"index": 82,
-		"name": "MAGNETON",
+		"name": "Magneton",
 		"type": "ELECTRIC",
 		"total": 465,
 		"hp": 50,
@@ -995,9 +995,9 @@
 		"spd": 70,
 		"spe": 70
 	},
-	"Farfetch'd": {
+	"FARFETCH'D": {
 		"index": 83,
-		"name": "FARFETCH'D",
+		"name": "Farfetch'd",
 		"type": "NORMAL",
 		"total": 377,
 		"hp": 52,
@@ -1007,9 +1007,9 @@
 		"spd": 62,
 		"spe": 60
 	},
-	"Doduo": {
+	"DODUO": {
 		"index": 84,
-		"name": "DODUO",
+		"name": "Doduo",
 		"type": "NORMAL",
 		"total": 310,
 		"hp": 35,
@@ -1019,9 +1019,9 @@
 		"spd": 35,
 		"spe": 75
 	},
-	"Dodrio": {
+	"DODRIO": {
 		"index": 85,
-		"name": "DODRIO",
+		"name": "Dodrio",
 		"type": "NORMAL",
 		"total": 470,
 		"hp": 60,
@@ -1031,9 +1031,9 @@
 		"spd": 60,
 		"spe": 110
 	},
-	"Seel": {
+	"SEEL": {
 		"index": 86,
-		"name": "SEEL",
+		"name": "Seel",
 		"type": "WATER",
 		"total": 325,
 		"hp": 65,
@@ -1043,9 +1043,9 @@
 		"spd": 70,
 		"spe": 45
 	},
-	"Dewgong": {
+	"DEWGONG": {
 		"index": 87,
-		"name": "DEWGONG",
+		"name": "Dewgong",
 		"type": "WATER",
 		"total": 475,
 		"hp": 90,
@@ -1055,9 +1055,9 @@
 		"spd": 95,
 		"spe": 70
 	},
-	"Grimer": {
+	"GRIMER": {
 		"index": 88,
-		"name": "GRIMER",
+		"name": "Grimer",
 		"type": "POISON",
 		"total": 325,
 		"hp": 80,
@@ -1067,9 +1067,9 @@
 		"spd": 50,
 		"spe": 25
 	},
-	"Muk": {
+	"MUK": {
 		"index": 89,
-		"name": "MUK",
+		"name": "Muk",
 		"type": "POISON",
 		"total": 500,
 		"hp": 105,
@@ -1079,9 +1079,9 @@
 		"spd": 100,
 		"spe": 50
 	},
-	"Shellder": {
+	"SHELLDER": {
 		"index": 90,
-		"name": "SHELLDER",
+		"name": "Shellder",
 		"type": "WATER",
 		"total": 305,
 		"hp": 30,
@@ -1091,9 +1091,9 @@
 		"spd": 25,
 		"spe": 40
 	},
-	"Cloyster": {
+	"CLOYSTER": {
 		"index": 91,
-		"name": "CLOYSTER",
+		"name": "Cloyster",
 		"type": "WATER",
 		"total": 525,
 		"hp": 50,
@@ -1103,9 +1103,9 @@
 		"spd": 45,
 		"spe": 70
 	},
-	"Gastly": {
+	"GASTLY": {
 		"index": 92,
-		"name": "GASTLY",
+		"name": "Gastly",
 		"type": "GHOST",
 		"total": 310,
 		"hp": 30,
@@ -1115,9 +1115,9 @@
 		"spd": 35,
 		"spe": 80
 	},
-	"Haunter": {
+	"HAUNTER": {
 		"index": 93,
-		"name": "HAUNTER",
+		"name": "Haunter",
 		"type": "GHOST",
 		"total": 405,
 		"hp": 45,
@@ -1127,9 +1127,9 @@
 		"spd": 55,
 		"spe": 95
 	},
-	"Gengar": {
+	"GENGAR": {
 		"index": 94,
-		"name": "GENGAR",
+		"name": "Gengar",
 		"type": "GHOST",
 		"total": 500,
 		"hp": 60,
@@ -1139,9 +1139,9 @@
 		"spd": 75,
 		"spe": 110
 	},
-	"Onix": {
+	"ONIX": {
 		"index": 95,
-		"name": "ONIX",
+		"name": "Onix",
 		"type": "ROCK",
 		"total": 385,
 		"hp": 35,
@@ -1151,9 +1151,9 @@
 		"spd": 45,
 		"spe": 70
 	},
-	"Drowzee": {
+	"DROWZEE": {
 		"index": 96,
-		"name": "DROWZEE",
+		"name": "Drowzee",
 		"type": "PSYCHIC",
 		"total": 328,
 		"hp": 60,
@@ -1163,9 +1163,9 @@
 		"spd": 90,
 		"spe": 42
 	},
-	"Hypno": {
+	"HYPNO": {
 		"index": 97,
-		"name": "HYPNO",
+		"name": "Hypno",
 		"type": "PSYCHIC",
 		"total": 483,
 		"hp": 85,
@@ -1175,9 +1175,9 @@
 		"spd": 115,
 		"spe": 67
 	},
-	"Krabby": {
+	"KRABBY": {
 		"index": 98,
-		"name": "KRABBY",
+		"name": "Krabby",
 		"type": "WATER",
 		"total": 325,
 		"hp": 30,
@@ -1187,9 +1187,9 @@
 		"spd": 25,
 		"spe": 50
 	},
-	"Kingler": {
+	"KINGLER": {
 		"index": 99,
-		"name": "KINGLER",
+		"name": "Kingler",
 		"type": "WATER",
 		"total": 475,
 		"hp": 55,
@@ -1199,9 +1199,9 @@
 		"spd": 50,
 		"spe": 75
 	},
-	"Voltorb": {
+	"VOLTORB": {
 		"index": 100,
-		"name": "VOLTORB",
+		"name": "Voltorb",
 		"type": "ELECTRIC",
 		"total": 330,
 		"hp": 40,
@@ -1211,9 +1211,9 @@
 		"spd": 55,
 		"spe": 100
 	},
-	"Electrode": {
+	"ELECTRODE": {
 		"index": 101,
-		"name": "ELECTRODE",
+		"name": "Electrode",
 		"type": "ELECTRIC",
 		"total": 490,
 		"hp": 60,
@@ -1223,9 +1223,9 @@
 		"spd": 80,
 		"spe": 150
 	},
-	"Exeggcute": {
+	"EXEGGCUTE": {
 		"index": 102,
-		"name": "EXEGGCUTE",
+		"name": "Exeggcute",
 		"type": "GRASS",
 		"total": 325,
 		"hp": 60,
@@ -1235,9 +1235,9 @@
 		"spd": 45,
 		"spe": 40
 	},
-	"Exeggutor": {
+	"EXEGGUTOR": {
 		"index": 103,
-		"name": "EXEGGUTOR",
+		"name": "Exeggutor",
 		"type": "GRASS",
 		"total": 530,
 		"hp": 95,
@@ -1247,9 +1247,9 @@
 		"spd": 75,
 		"spe": 55
 	},
-	"Cubone": {
+	"CUBONE": {
 		"index": 104,
-		"name": "CUBONE",
+		"name": "Cubone",
 		"type": "GROUND",
 		"total": 320,
 		"hp": 50,
@@ -1259,9 +1259,9 @@
 		"spd": 50,
 		"spe": 35
 	},
-	"Marowak": {
+	"MAROWAK": {
 		"index": 105,
-		"name": "MAROWAK",
+		"name": "Marowak",
 		"type": "GROUND",
 		"total": 425,
 		"hp": 60,
@@ -1271,9 +1271,9 @@
 		"spd": 80,
 		"spe": 45
 	},
-	"Hitmonlee": {
+	"HITMONLEE": {
 		"index": 106,
-		"name": "HITMONLEE",
+		"name": "Hitmonlee",
 		"type": "FIGHTING",
 		"total": 455,
 		"hp": 50,
@@ -1283,9 +1283,9 @@
 		"spd": 110,
 		"spe": 87
 	},
-	"Hitmonchan": {
+	"HITMONCHAN": {
 		"index": 107,
-		"name": "HITMONCHAN",
+		"name": "Hitmonchan",
 		"type": "FIGHTING",
 		"total": 455,
 		"hp": 50,
@@ -1295,9 +1295,9 @@
 		"spd": 110,
 		"spe": 76
 	},
-	"Lickitung": {
+	"LICKITUNG": {
 		"index": 108,
-		"name": "LICKITUNG",
+		"name": "Lickitung",
 		"type": "NORMAL",
 		"total": 385,
 		"hp": 90,
@@ -1307,9 +1307,9 @@
 		"spd": 75,
 		"spe": 30
 	},
-	"Koffing": {
+	"KOFFING": {
 		"index": 109,
-		"name": "KOFFING",
+		"name": "Koffing",
 		"type": "POISON",
 		"total": 340,
 		"hp": 40,
@@ -1319,9 +1319,9 @@
 		"spd": 45,
 		"spe": 35
 	},
-	"Weezing": {
+	"WEEZING": {
 		"index": 110,
-		"name": "WEEZING",
+		"name": "Weezing",
 		"type": "POISON",
 		"total": 490,
 		"hp": 65,
@@ -1331,9 +1331,9 @@
 		"spd": 70,
 		"spe": 60
 	},
-	"Rhyhorn": {
+	"RHYHORN": {
 		"index": 111,
-		"name": "RHYHORN",
+		"name": "Rhyhorn",
 		"type": "GROUND",
 		"total": 345,
 		"hp": 80,
@@ -1343,9 +1343,9 @@
 		"spd": 30,
 		"spe": 25
 	},
-	"Rhydon": {
+	"RHYDON": {
 		"index": 112,
-		"name": "RHYDON",
+		"name": "Rhydon",
 		"type": "GROUND",
 		"total": 485,
 		"hp": 105,
@@ -1355,9 +1355,9 @@
 		"spd": 45,
 		"spe": 40
 	},
-	"Chansey": {
+	"CHANSEY": {
 		"index": 113,
-		"name": "CHANSEY",
+		"name": "Chansey",
 		"type": "NORMAL",
 		"total": 450,
 		"hp": 250,
@@ -1367,9 +1367,9 @@
 		"spd": 105,
 		"spe": 50
 	},
-	"Tangela": {
+	"TANGELA": {
 		"index": 114,
-		"name": "TANGELA",
+		"name": "Tangela",
 		"type": "GRASS",
 		"total": 435,
 		"hp": 65,
@@ -1379,9 +1379,9 @@
 		"spd": 40,
 		"spe": 60
 	},
-	"Kangaskhan": {
+	"KANGASKHAN": {
 		"index": 115,
-		"name": "KANGASKHAN",
+		"name": "Kangaskhan",
 		"type": "NORMAL",
 		"total": 490,
 		"hp": 105,
@@ -1391,9 +1391,9 @@
 		"spd": 80,
 		"spe": 90
 	},
-	"Horsea": {
+	"HORSEA": {
 		"index": 116,
-		"name": "HORSEA",
+		"name": "Horsea",
 		"type": "WATER",
 		"total": 295,
 		"hp": 30,
@@ -1403,9 +1403,9 @@
 		"spd": 25,
 		"spe": 60
 	},
-	"Seadra": {
+	"SEADRA": {
 		"index": 117,
-		"name": "SEADRA",
+		"name": "Seadra",
 		"type": "WATER",
 		"total": 440,
 		"hp": 55,
@@ -1415,9 +1415,9 @@
 		"spd": 45,
 		"spe": 85
 	},
-	"Goldeen": {
+	"GOLDEEN": {
 		"index": 118,
-		"name": "GOLDEEN",
+		"name": "Goldeen",
 		"type": "WATER",
 		"total": 320,
 		"hp": 45,
@@ -1427,9 +1427,9 @@
 		"spd": 50,
 		"spe": 63
 	},
-	"Seaking": {
+	"SEAKING": {
 		"index": 119,
-		"name": "SEAKING",
+		"name": "Seaking",
 		"type": "WATER",
 		"total": 450,
 		"hp": 80,
@@ -1439,9 +1439,9 @@
 		"spd": 80,
 		"spe": 68
 	},
-	"Staryu": {
+	"STARYU": {
 		"index": 120,
-		"name": "STARYU",
+		"name": "Staryu",
 		"type": "WATER",
 		"total": 340,
 		"hp": 30,
@@ -1451,9 +1451,9 @@
 		"spd": 55,
 		"spe": 85
 	},
-	"Starmie": {
+	"STARMIE": {
 		"index": 121,
-		"name": "STARMIE",
+		"name": "Starmie",
 		"type": "WATER",
 		"total": 520,
 		"hp": 60,
@@ -1463,9 +1463,9 @@
 		"spd": 85,
 		"spe": 115
 	},
-	"Mr. Mime": {
+	"MR. MIME": {
 		"index": 122,
-		"name": "MR. MIME",
+		"name": "Mr. Mime",
 		"type": "PSYCHIC",
 		"total": 460,
 		"hp": 40,
@@ -1475,9 +1475,9 @@
 		"spd": 120,
 		"spe": 90
 	},
-	"Scyther": {
+	"SCYTHER": {
 		"index": 123,
-		"name": "SCYTHER",
+		"name": "Scyther",
 		"type": "BUG",
 		"total": 500,
 		"hp": 70,
@@ -1487,9 +1487,9 @@
 		"spd": 80,
 		"spe": 105
 	},
-	"Jynx": {
+	"JYNX": {
 		"index": 124,
-		"name": "JYNX",
+		"name": "Jynx",
 		"type": "ICE",
 		"total": 455,
 		"hp": 65,
@@ -1499,9 +1499,9 @@
 		"spd": 95,
 		"spe": 95
 	},
-	"Electabuzz": {
+	"ELECTABUZZ": {
 		"index": 125,
-		"name": "ELECTABUZZ",
+		"name": "Electabuzz",
 		"type": "ELECTRIC",
 		"total": 490,
 		"hp": 65,
@@ -1511,9 +1511,9 @@
 		"spd": 85,
 		"spe": 105
 	},
-	"Magmar": {
+	"MAGMAR": {
 		"index": 126,
-		"name": "MAGMAR",
+		"name": "Magmar",
 		"type": "FIRE",
 		"total": 495,
 		"hp": 65,
@@ -1523,9 +1523,9 @@
 		"spd": 85,
 		"spe": 93
 	},
-	"Pinsir": {
+	"PINSIR": {
 		"index": 127,
-		"name": "PINSIR",
+		"name": "Pinsir",
 		"type": "BUG",
 		"total": 500,
 		"hp": 65,
@@ -1535,9 +1535,9 @@
 		"spd": 70,
 		"spe": 85
 	},
-	"Tauros": {
+	"TAUROS": {
 		"index": 128,
-		"name": "TAUROS",
+		"name": "Tauros",
 		"type": "NORMAL",
 		"total": 490,
 		"hp": 75,
@@ -1547,9 +1547,9 @@
 		"spd": 70,
 		"spe": 110
 	},
-	"Magikarp": {
+	"MAGIKARP": {
 		"index": 129,
-		"name": "MAGIKARP",
+		"name": "Magikarp",
 		"type": "WATER",
 		"total": 200,
 		"hp": 20,
@@ -1559,9 +1559,9 @@
 		"spd": 20,
 		"spe": 80
 	},
-	"Gyarados": {
+	"GYARADOS": {
 		"index": 130,
-		"name": "GYARADOS",
+		"name": "Gyarados",
 		"type": "WATER",
 		"total": 540,
 		"hp": 95,
@@ -1571,9 +1571,9 @@
 		"spd": 100,
 		"spe": 81
 	},
-	"Lapras": {
+	"LAPRAS": {
 		"index": 131,
-		"name": "LAPRAS",
+		"name": "Lapras",
 		"type": "WATER",
 		"total": 535,
 		"hp": 130,
@@ -1583,9 +1583,9 @@
 		"spd": 95,
 		"spe": 60
 	},
-	"Ditto": {
+	"DITTO": {
 		"index": 132,
-		"name": "DITTO",
+		"name": "Ditto",
 		"type": "NORMAL",
 		"total": 288,
 		"hp": 48,
@@ -1595,9 +1595,9 @@
 		"spd": 48,
 		"spe": 48
 	},
-	"Eevee": {
+	"EEVEE": {
 		"index": 133,
-		"name": "EEVEE",
+		"name": "Eevee",
 		"type": "NORMAL",
 		"total": 325,
 		"hp": 55,
@@ -1607,9 +1607,9 @@
 		"spd": 65,
 		"spe": 55
 	},
-	"Vaporeon": {
+	"VAPOREON": {
 		"index": 134,
-		"name": "VAPOREON",
+		"name": "Vaporeon",
 		"type": "WATER",
 		"total": 525,
 		"hp": 130,
@@ -1619,9 +1619,9 @@
 		"spd": 95,
 		"spe": 65
 	},
-	"Jolteon": {
+	"JOLTEON": {
 		"index": 135,
-		"name": "JOLTEON",
+		"name": "Jolteon",
 		"type": "ELECTRIC",
 		"total": 525,
 		"hp": 65,
@@ -1631,9 +1631,9 @@
 		"spd": 95,
 		"spe": 130
 	},
-	"Flareon": {
+	"FLAREON": {
 		"index": 136,
-		"name": "FLAREON",
+		"name": "Flareon",
 		"type": "FIRE",
 		"total": 525,
 		"hp": 65,
@@ -1643,9 +1643,9 @@
 		"spd": 110,
 		"spe": 65
 	},
-	"Porygon": {
+	"PORYGON": {
 		"index": 137,
-		"name": "PORYGON",
+		"name": "Porygon",
 		"type": "NORMAL",
 		"total": 395,
 		"hp": 65,
@@ -1655,9 +1655,9 @@
 		"spd": 75,
 		"spe": 40
 	},
-	"Omanyte": {
+	"OMANYTE": {
 		"index": 138,
-		"name": "OMANYTE",
+		"name": "Omanyte",
 		"type": "ROCK",
 		"total": 355,
 		"hp": 35,
@@ -1667,9 +1667,9 @@
 		"spd": 55,
 		"spe": 35
 	},
-	"Omastar": {
+	"OMASTAR": {
 		"index": 139,
-		"name": "OMASTAR",
+		"name": "Omastar",
 		"type": "ROCK",
 		"total": 495,
 		"hp": 70,
@@ -1679,9 +1679,9 @@
 		"spd": 70,
 		"spe": 55
 	},
-	"Kabuto": {
+	"KABUTO": {
 		"index": 140,
-		"name": "KABUTO",
+		"name": "Kabuto",
 		"type": "ROCK",
 		"total": 355,
 		"hp": 30,
@@ -1691,9 +1691,9 @@
 		"spd": 45,
 		"spe": 55
 	},
-	"Kabutops": {
+	"KABUTOPS": {
 		"index": 141,
-		"name": "KABUTOPS",
+		"name": "Kabutops",
 		"type": "ROCK",
 		"total": 495,
 		"hp": 60,
@@ -1703,9 +1703,9 @@
 		"spd": 70,
 		"spe": 80
 	},
-	"Aerodactyl": {
+	"AERODACTYL": {
 		"index": 142,
-		"name": "AERODACTYL",
+		"name": "Aerodactyl",
 		"type": "ROCK",
 		"total": 515,
 		"hp": 80,
@@ -1715,9 +1715,9 @@
 		"spd": 75,
 		"spe": 130
 	},
-	"Snorlax": {
+	"SNORLAX": {
 		"index": 143,
-		"name": "SNORLAX",
+		"name": "Snorlax",
 		"type": "NORMAL",
 		"total": 540,
 		"hp": 160,
@@ -1727,9 +1727,9 @@
 		"spd": 110,
 		"spe": 30
 	},
-	"Articuno": {
+	"ARTICUNO": {
 		"index": 144,
-		"name": "ARTICUNO",
+		"name": "Articuno",
 		"type": "ICE",
 		"total": 580,
 		"hp": 90,
@@ -1739,9 +1739,9 @@
 		"spd": 125,
 		"spe": 85
 	},
-	"Zapdos": {
+	"ZAPDOS": {
 		"index": 145,
-		"name": "ZAPDOS",
+		"name": "Zapdos",
 		"type": "ELECTRIC",
 		"total": 580,
 		"hp": 90,
@@ -1751,9 +1751,9 @@
 		"spd": 90,
 		"spe": 100
 	},
-	"Moltres": {
+	"MOLTRES": {
 		"index": 146,
-		"name": "MOLTRES",
+		"name": "Moltres",
 		"type": "FIRE",
 		"total": 580,
 		"hp": 90,
@@ -1763,9 +1763,9 @@
 		"spd": 85,
 		"spe": 90
 	},
-	"Dratini": {
+	"DRATINI": {
 		"index": 147,
-		"name": "DRATINI",
+		"name": "Dratini",
 		"type": "DRAGON",
 		"total": 300,
 		"hp": 41,
@@ -1775,9 +1775,9 @@
 		"spd": 50,
 		"spe": 50
 	},
-	"Dragonair": {
+	"DRAGONAIR": {
 		"index": 148,
-		"name": "DRAGONAIR",
+		"name": "Dragonair",
 		"type": "DRAGON",
 		"total": 420,
 		"hp": 61,
@@ -1787,9 +1787,9 @@
 		"spd": 70,
 		"spe": 70
 	},
-	"Dragonite": {
+	"DRAGONITE": {
 		"index": 149,
-		"name": "DRAGONITE",
+		"name": "Dragonite",
 		"type": "DRAGON",
 		"total": 600,
 		"hp": 91,
@@ -1799,9 +1799,9 @@
 		"spd": 100,
 		"spe": 80
 	},
-	"Mewtwo": {
+	"MEWTWO": {
 		"index": 150,
-		"name": "MEWTWO",
+		"name": "Mewtwo",
 		"type": "PSYCHIC",
 		"total": 680,
 		"hp": 106,
@@ -1811,9 +1811,9 @@
 		"spd": 90,
 		"spe": 130
 	},
-	"Mew": {
+	"MEW": {
 		"index": 151,
-		"name": "MEW",
+		"name": "Mew",
 		"type": "PSYCHIC",
 		"total": 600,
 		"hp": 100,
