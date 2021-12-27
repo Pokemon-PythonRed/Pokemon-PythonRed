@@ -233,14 +233,14 @@ for i in range(load):
 					#		if save['party'][i].stats['chp'] > 0:
 					#			current = i
 
-					#def check(party):
-					#	total = 0
-					#	for i in len(party):
-					#		total += i['hp']
-					#	if total > 0:
-					#		return True
-					#	else:
-					#		return False
+					def check(party):
+						total = 0
+						for i in len(party):
+							total += i['hp']
+						if total > 0:
+							return True
+						else:
+							return False
 
 					bars = math.ceil(save["party"][0].stats["chp"])*20
 					opponentBars = math.ceil(opponentParty[0].stats["chp"])*20
@@ -255,12 +255,12 @@ for i in range(load):
 sp('\nLoaded! Press any key to continue.\n')
 g()
 
-# check for hacking
+# check for illegal save data
 
 if (
 	(len(save['name']) > 15) or
 	(save['name'] == '' and save['introComplete']) or
-	(save['name'] != '' and not save['introComplete'])
+	(save['name'] != '' and not save['introComplete']) # etc.
 ):
 	abort()
 
@@ -331,7 +331,7 @@ while not exit:
 
 	elif menuOpen == True:
 		sp(
-			f'Menu\n[d] - POKéDEX\n[p] - POKéMON\n[i] - Item\n[t] - {save["trainer"]["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
+			f'Menu\n[d] - POKéDEX\n[p] - POKéMON\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
 
 		while option == '':
 			option = input('>')
