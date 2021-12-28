@@ -7,8 +7,8 @@ We would suggest installing Python 3 before using this.
 
 | Version | Supported          |
 | ------- | ------------------ |
-|> 3.0.x  | :white_check_mark: |
-| 3.0.x   | :white_check_mark: |
+| > 3.x   | :white_check_mark: |
+|   3.x   | :white_check_mark: |
 | < 3.0   | :x:                |
 
 ## Reporting a Vulnerability
