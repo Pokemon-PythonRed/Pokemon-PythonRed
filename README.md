@@ -29,7 +29,7 @@
 ---
 </details>
 
-### Contributors
+## Contributors
 <!--
 Bot command template:
 @all-contributors please add @<username> for <contributions>
@@ -64,6 +64,7 @@ Bot command template:
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md").
+## Get started
 ### Installation
 - Some dependencies you need to install before playing the game are:
 	- Python 3.x
