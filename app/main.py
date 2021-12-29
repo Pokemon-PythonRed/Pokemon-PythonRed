@@ -15,11 +15,14 @@ import math
 import msvcrt
 import os
 import platform
+#import playsound
+#import pygame
 import random
 #import sqlite3
 import sys
 import time
 import webbrowser
+#import winsound
 
 # create g()
 
