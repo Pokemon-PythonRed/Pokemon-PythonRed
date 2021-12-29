@@ -26,7 +26,7 @@ import webbrowser
 # create g()
 if (platform.system() == "Windows"):
 	from msvcrt import getch as g
-elif (platform.system() == "linux"):
+elif (platform.system() == "Linux"):
 	from getch import getch as g
 
 # create sp()
