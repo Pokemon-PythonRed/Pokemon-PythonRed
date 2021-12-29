@@ -403,7 +403,7 @@ while not exit:
 
 	elif save['currentLocation'] == 'playerHouseDown':
 		sp(
-			f'Current Location: {save["trainer"]["name"]}\'s House (Downstairs)\n\n[w] - Go Upstairs\n[d] - Go Outside\n')
+			f'Current Location: {save["name"]}\'s House (Downstairs)\n\n[w] - Go Upstairs\n[d] - Go Outside\n')
 
 		while option == '':
 			option = input('>')
@@ -424,7 +424,7 @@ while not exit:
 
 	elif save['currentLocation'] == 'palletTown':
 		sp(
-			f'Current Location: Pallet Town - "Shades of your journey await!"\n(Currently the furthest point.)\n\n[w] - Go to Route 1\n[a] - Go to {save["trainer"]["name"]}\'s House\n[s] - Go to Sea-Route 21\n[d] - Go to OAK\'s LAB\n')
+			f'Current Location: Pallet Town - "Shades of your journey await!"\n(Currently the furthest point.)\n\n[w] - Go to Route 1\n[a] - Go to {save["name"]}\'s House\n[s] - Go to Sea-Route 21\n[d] - Go to OAK\'s LAB\n')
 
 		while option == '':
 			option = input('>')
