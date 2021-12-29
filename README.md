@@ -10,8 +10,7 @@
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/stargazers"><img src="https://img.shields.io/github/stars/Pokemon-PythonRed/Pokemon-PythonRed"/></a> <!--Stars-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/network/members"><img src="https://img.shields.io/github/forks/Pokemon-PythonRed/Pokemon-PythonRed?color=yellow"></a> <!--Forks-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://img.shields.io/github/repo-size/Pokemon-PythonRed/Pokemon-PythonRed?color=blueviolet"></a> <!--Repo Size-->
-  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tags/latest"><img src="https://shields.io/github/v/tag/Pokemon-PythonRed/Pokemon-PythonRed?include_prereleases&color=darkblue"></a> <!--Version-->
-  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://img.shields.io/tokei/lines/github/Pokemon-PythonRed/Pokemon-PythonRed?color=lightgrey"></a> <!--Lines-->
+  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://img.shields.io/tokei/lines/github/Pokemon-PythonRed/Pokemon-PythonRed?color=darkblue"></a> <!--Lines-->
 </p>
 
 ---
