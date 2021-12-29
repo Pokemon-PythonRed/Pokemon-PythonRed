@@ -12,7 +12,6 @@ Comments may be removed at a later time.
 import getpass
 import json
 import math
-import getch
 import os
 import platform
 #import playsound
@@ -25,9 +24,10 @@ import webbrowser
 #import winsound
 
 # create g()
-
-def g():
-	return getch.getch()
+if (platform.system() == "Windows"):
+	from msvcrt import getch as g
+elif (platform.system() == "linux"):
+	from getch import getch as g
 
 # create sp()
 
