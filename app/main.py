@@ -12,7 +12,7 @@ Comments may be removed at a later time.
 import getpass
 import json
 import math
-import msvcrt
+import getch
 import os
 import platform
 #import playsound
@@ -27,7 +27,7 @@ import webbrowser
 # create g()
 
 def g():
-	return msvcrt.getch()
+	return getch.getch()
 
 # create sp()
 
