@@ -66,23 +66,37 @@ Bot command template:
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md").
 ## Get started
 ### Installation
-- Some dependencies you need to install before playing the game are:
-	- Python 3.x
-	- Git
-	- A text editor or an IDE editor
-- To download and play the game, clone the repository by the following command:
+- To play the game, you will need:
+  - Python 3.x
+- Follow [this link](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/archive/refs/heads/master.zip) to download a `.zip` file of this repository. Once it downloads, unzip and open it.
+- You will need to open a command line in the folder, then run the following command to install dependencies:
+```console
+python -m pip install -r requirements.txt
+```
+- Finally, open `main.py` in the `app` folder.
+
+<details><summary>Installation for Contributors</summary>
+
+---
+- Contributors will need the following:
+  - Python 3.x
+  - Git
+  - A text editor or IDE editor
+- To clone the repository, run this command:
 ```console
 git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
-The repository must be cloned because the game is dependent on multiple files from the repository.
 - After that, run the following command to install dependencies:
 ```console
-python -m pip -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 - Finally, run this command to run the program:
 ```console
 python app/main.py
 ```
+---
+</details>
+
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 ### Controls
 - When `>` is shown, press Enter to continue. You may need to input text first.
