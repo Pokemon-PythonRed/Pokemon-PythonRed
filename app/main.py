@@ -6,6 +6,10 @@ Comments may be removed at a later time.
 	#code (w/o space)
 '''
 
+# import files
+
+import __init__
+
 # dependencies
 
 #import datetime
@@ -24,9 +28,10 @@ import webbrowser
 #import winsound
 
 # create g()
-if (platform.system() == "Windows"):
+
+if platform.system() == "Windows":
 	from msvcrt import getch as g
-elif (platform.system() == "Linux"):
+elif platform.system() == "Linux":
 	from getch import getch as g
 
 # create sp()
