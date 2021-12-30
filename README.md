@@ -39,6 +39,7 @@ Bot command template:
 <!-- markdownlint-disable -->
 <table>
   <tr>
+    <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=all-contributors" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/features/security"><img src="https://avatars.githubusercontent.com/u/27347476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dependabot</b></sub></a><br /><a href="#infra-dependabot" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://github.com/valensce"><img src="https://avatars.githubusercontent.com/u/85430198?v=4?s=100" width="100px;" alt=""/><br /><sub><b>I'm special ;)</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=Specialist-Mathematics" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/valensce"><img src="https://avatars.githubusercontent.com/u/83048878?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ikuto Tsukiyomi</b></sub></a><br /><a href="#ideas-Isabel-Lifu" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-Isabel-Lifu" title="Design">🎨</a></td>
