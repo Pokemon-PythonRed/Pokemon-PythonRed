@@ -28,7 +28,6 @@
 - Prior in-depth knowledge of the `Pokémon` franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
 - This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, or _The Pokémon Company_. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
-- The developers use Windows 10 OS, but some effort will be made to make this game cross-platform. However, if we cannot find a way to implement an element in this way, then this game will become Windows 10-only.
 
 ---
 </details>
@@ -73,7 +72,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ## Get started
 ### Installation
 - To play the game, you will need:
-  - Python 3.x
+  - Windows or Linux OS
+  - Python 3 (aka CPython 3.x)
 - Follow [this link](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/archive/refs/heads/master.zip) to download a `.zip` file of this repository. Once it downloads, unzip and open it.
 - You will need to open a command line in the folder, then run the following command to install dependencies:
 ```console
@@ -85,18 +85,19 @@ python -m pip install -r requirements.txt
 
 ---
 - Contributors will need the following:
-  - Python 3.x
+  - Windows or Linux OS
+  - Python 3 (aka CPython 3.x)
   - Git
   - A text editor or IDE editor
-- To clone the repository, run this command:
+- To clone the repository, use GitHub Desktop or run this command:
 ```console
 git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
-- After that, run the following command to install dependencies:
+- After that, run the following command from the repository folder to install dependencies:
 ```console
 python -m pip install -r requirements.txt
 ```
-- Finally, run this command to run the program:
+- Finally, open `app/main.py` or run this command to run the program:
 ```console
 python app/main.py
 ```
