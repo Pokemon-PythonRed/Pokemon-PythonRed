@@ -41,7 +41,11 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/79883837?v=4",
       "profile": "https://discord.gg/xzsAKZVfxP",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "code",
+        "design",
+        "ideas",
+        "test"
       ]
     },
     {
