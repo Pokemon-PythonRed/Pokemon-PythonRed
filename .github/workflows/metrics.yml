@@ -15,5 +15,7 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
           template: classic
+          plugin_introduction: yes
+          plugin_introduction_title: no # Hide section title
           user: Pokemon-PythonRed # Optional if you're the owner of target repository and you're using your own personal token
-          repo: Pokemon-PythonRed  # Repository name
+          repo: Pokemon-PythonRed # Repository name
