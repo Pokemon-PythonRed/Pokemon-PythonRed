@@ -19,7 +19,7 @@
 </p>
 
 ---
-<h6 align="center">A work-in-progress, fan-made, text-adventure Pokémon game in Python 3.</h6>
+<h6 align="center">A fan-made, text-adventure Pokémon game in Python 3.</h6>
 
 ---
 <details><summary>Important Notes</summary>
