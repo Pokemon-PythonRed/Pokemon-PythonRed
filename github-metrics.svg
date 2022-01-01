@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="264" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="246" class="">
     <defs>
         <style/>
     </defs>
@@ -1423,7 +1423,7 @@
                 <div class="row fill-width" style="margin-top: 8px;">
                     <section>
                         <div class="introduction">
-            A work-in-progress, fan-made, text-adventure Pokémon game in Python 3.
+            [WIP] A fan-made, text-adventure Pokémon game in Python 3.
           </div>
                     </section>
                 </div>
@@ -1479,7 +1479,7 @@
                 </div>
             </section>
             <footer>
-                <span>Last updated 1 Jan 2022, 22:03:49  with lowlighter/metrics@3.16.0</span>
+                <span>Last updated 1 Jan 2022, 22:14:18  with lowlighter/metrics@3.16.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
