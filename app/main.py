@@ -240,7 +240,7 @@ for i in range(load):
 
 					def check(party):
 						total = 0
-						for i in len(party):
+						for i in range(len(party)):
 							total += i['hp']
 						if total > 0:
 							return True
