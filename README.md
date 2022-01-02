@@ -13,6 +13,7 @@
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://img.shields.io/tokei/lines/github/Pokemon-PythonRed/Pokemon-PythonRed?color=darkblue"></a> <!--Lines-->
 </p>
 <p align="center">
+  <a href="https://lgtm.com/projects/g/Pokemon-PythonRed/Pokemon-PythonRed/context:python"><img src="https://img.shields.io/lgtm/grade/python/g/Pokemon-PythonRed/Pokemon-PythonRed.svg"/></a> <!--Grade-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/metrics.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/metrics.yml/badge.svg?branch=master"></a> <!--Metrics Status-->
 </p>
 <p align="center">
