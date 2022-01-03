@@ -7,6 +7,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2.4.0
       - name: Build with py2exe
         run: |
           pip install py2exe
