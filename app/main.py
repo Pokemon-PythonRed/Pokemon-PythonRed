@@ -8,7 +8,7 @@ Comments may be removed at a later time.
 
 # import files
 
-import __init__
+#import __init__
 
 # dependencies
 
