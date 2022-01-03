@@ -5,7 +5,7 @@ on:
     branches: ["main", "master"]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ["ubuntu-latest"]
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Build with py2exe
