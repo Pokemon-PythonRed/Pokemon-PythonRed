@@ -15,7 +15,6 @@
 <p align="center">
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/build.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/build.yml/badge.svg?branch=master"></a> <!--Build-->
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/metrics.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/metrics.yml/badge.svg?branch=master"></a> <!--Metrics-->
-	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/pylint.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/pylint.yml/badge.svg?branch=master"></a> <!--Pylint-->
 </p>
 <p align="center">
 	<a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tags/latest"><img src="https://shields.io/github/v/tag/Pokemon-PythonRed/Pokemon-PythonRed?sort=semver&color=inactive"></a> <!--Latest-->
