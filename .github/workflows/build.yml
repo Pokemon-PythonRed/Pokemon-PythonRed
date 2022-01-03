@@ -1,0 +1,11 @@
+name: Build
+on:
+  workflow_dispatch:
+  push:
+    branches: "master"
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - run: pip install py2exe
+      - run: python setup.py py2exe
