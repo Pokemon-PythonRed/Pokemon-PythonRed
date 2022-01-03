@@ -7,8 +7,8 @@ jobs:
   build:
     runs-on: ["windows-latest"]
     steps:
-      - name: Build with py2exe
-        uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v2.4.0
+        name: Build with py2exe
       - run: |
           pip install py2exe
           cd app
@@ -16,7 +16,7 @@ jobs:
   publish:
     runs-on: ["ubuntu-latest"]
     steps:
-      - name: Publish
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      - name: Publish
