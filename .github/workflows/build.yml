@@ -13,3 +13,6 @@ jobs:
           pip install py2exe
           cd app
           python setup.py py2exe
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
