@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Build with py2exe
-        working-directory: /app
         run: |
           pip install py2exe
+          cd app
           python setup.py py2exe
