@@ -5,7 +5,7 @@ on:
     branches: "master"
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - run: pip install py2exe
       - run: python setup.py py2exe
