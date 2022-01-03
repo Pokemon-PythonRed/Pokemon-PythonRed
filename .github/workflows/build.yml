@@ -21,9 +21,3 @@ jobs:
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      - name: Commit
-        run: |
-          git config --global user.name 'TurnipGuy30'
-          git config --global user.email 'ba004629@bac.qld.edu.au'
-          git commit -am "Automated report"
-          git push
