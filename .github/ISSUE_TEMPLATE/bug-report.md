@@ -1,28 +1,70 @@
 ---
 name: Bug Report
-about: Tell us about a bug, or if you found a "FATAL ERROR".
+about: Tell us about a bug.
 title: ''
 labels: bug
-assignees: Isabel-Lifu-211207-XPrado
+assignees: TurnipGuy30
 
 ---
 
-**Describe the bug**
+<!-- Please read through the following very carefully. -->
+
+<!--
+- Describe the bug -
 A clear and concise description of what the bug is.
+-->
 
-**To Reproduce**
-Steps to reproduce the behaviour:
-1. Go to '...'
-2. Type '...'
-3. Press Enter
-4. See "FATAL ERROR"
+**Bug Description**:
 
-**Expected behaviour**
+
+
+<!--
+- To reproduce -
+Steps to reproduce the behaviour. If possible, you should also write a code block of the program's text leading up to the error.
+-->
+
+**Steps To Reproduce**:
+
+
+
+<!--
+- Expected behaviour -
 A clear and concise description of what you expected to happen.
+-->
 
-**Please complete the following information so we can further understand your problem:**
- - Python Version: [e.g. 3.6 64-bit]
- - PPR Version: [e.g. v0.0.5]
+**Expected Behaviour**:
 
-**Additional context**
+
+
+<!--
+- Context -
+Please complete the following information so we can further understand your problem.
+-->
+
+**Context**:
+
+ - Python Version: 
+ <!--[e.g. 3.6 64-bit]-->
+
+ - PPR Version: 
+ <!--[e.g. latest commit, etc. if possible]-->
+
+<!--
+- Additional information -
 Add any other context about the problem here.
+-->
+
+**Additional Information**:
+
+
+
+<!--
+- Decline contribution acknowledgement -
+To tick the checkbox, fill it with an 'x', eg. '- [x]'.
+
+NOTE: THIS OPTION DISALLOWS US FROM PUBLICLY ACKNOWLEDGING YOUR CONTRIBUTION.
+-->
+
+- [ ] I **decline** to being added to the Contributors list.
+
+<!-- Thank you for your time! We'll get back to you as soon as possible. -->
