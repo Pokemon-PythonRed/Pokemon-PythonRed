@@ -164,6 +164,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "sourcery-ai",
+      "name": "Sourcery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36609879?v=4",
+      "profile": "https://sourcery.ai",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
