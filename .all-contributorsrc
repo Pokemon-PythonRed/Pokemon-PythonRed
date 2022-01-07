@@ -164,6 +164,27 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "sourcery-ai",
+      "name": "Sourcery",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36609879?v=4",
+      "profile": "https://sourcery.ai",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "actions",
+      "name": "GitHub Actions",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44036562?v=4",
+      "profile": "https://github.com/features/actions",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
     }
   ]
 }
