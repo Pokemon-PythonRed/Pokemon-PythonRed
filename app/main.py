@@ -239,13 +239,8 @@ for i in range(load):
 					#			current = i
 
 					def check(party):
-						total = 0
-						for i in range(len(party)):
-							total += i['hp']
-						if total > 0:
-							return True
-						else:
-							return False
+						total = sum(i['hp'] for i in range(len(party)))
+						return total > 0
 
 					bars = math.ceil(save["party"][0].stats["chp"])*20
 					opponentBars = math.ceil(opponentParty[0].stats["chp"])*20
@@ -293,7 +288,7 @@ while not exit:
 
 		introAnswer = ''
 
-		while not introAnswer in ['1', '2']:
+		while introAnswer not in {'1', '2'}:
 			introAnswer = input('>')
 
 		if introAnswer == '1':
@@ -331,8 +326,6 @@ while not exit:
 		save['introComplete'] = True
 
 		sp('\n(Intro Complete!)')
-
-	# menu
 
 	elif menuOpen == True:
 		sp(
@@ -377,8 +370,6 @@ while not exit:
 		else:
 			sp('Invalid answer!')
 
-	# player house - upstairs
-
 	elif save['currentLocation'] == 'playerHouseUp':
 		sp(
 			f'Current Location: {save["name"]}\'s Room (Upstairs)\n\n[s] - Go Downstairs\n[1] - Computer\n[2] - Notebook\n')
@@ -404,8 +395,6 @@ while not exit:
 		else:
 			sp('Invalid answer!')
 
-	# player house - downstairs
-
 	elif save['currentLocation'] == 'playerHouseDown':
 		sp(
 			f'Current Location: {save["name"]}\'s House (Downstairs)\n\n[w] - Go Upstairs\n[d] - Go Outside\n')
@@ -424,8 +413,6 @@ while not exit:
 
 		else:
 			sp('Invalid answer!')
-
-	# pallet town
 
 	elif save['currentLocation'] == 'palletTown':
 		sp(
