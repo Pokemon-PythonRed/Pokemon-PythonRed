@@ -6,6 +6,7 @@
   "contributorsPerLine": 6,
   "contributorsSortAlphabetically": true,
   "badgeTemplate": "<a href='#contributors'><img src='https://img.shields.io/badge/contributors-<%= contributors.length %>-orange'></a>",
+  "projectOwner": "Pokemon-PythonRed",
   "projectName": "Pokemon-PythonRed",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -164,6 +165,5 @@
         "test"
       ]
     }
-  ],
-  "projectOwner": "Pokemon-PythonRed"
+  ]
 }

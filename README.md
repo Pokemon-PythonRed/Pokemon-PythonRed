@@ -125,6 +125,7 @@ Press Enter to continue.
 Enter text from a bullet point:
 ```
 Choose an option.
+
 [1] - Save
 [2] - Quit
 
