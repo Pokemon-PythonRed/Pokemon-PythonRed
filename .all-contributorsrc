@@ -3,7 +3,7 @@
     "README.md"
   ],
   "imageSize": 100,
-  "contributorsPerLine": 6,
+  "contributorsPerLine": 7,
   "contributorsSortAlphabetically": true,
   "badgeTemplate": "<a href='#contributors'><img src='https://img.shields.io/badge/contributors-<%= contributors.length %>-orange'></a>",
   "projectOwner": "Pokemon-PythonRed",
@@ -32,8 +32,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/81336967?v=4",
       "profile": "https://apple.com/",
       "contributions": [
-        "ideas",
-        "data"
+        "data",
+        "ideas"
       ]
     },
     {
@@ -42,10 +42,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/79883837?v=4",
       "profile": "https://discord.gg/xzsAKZVfxP",
       "contributions": [
-        "maintenance",
         "code",
         "design",
         "ideas",
+        "maintenance",
         "test"
       ]
     },
@@ -56,9 +56,9 @@
       "profile": "http://jbloves27.repl.co",
       "contributions": [
         "code",
+        "infra",
         "mentoring",
-        "test",
-        "infra"
+        "test"
       ]
     },
     {
@@ -86,10 +86,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/37746231?v=4",
       "profile": "https://github.com/JeremyLARDENOIS",
       "contributions": [
-        "test",
-        "platform",
         "code",
-        "mentoring"
+        "mentoring",
+        "platform",
+        "test"
       ]
     },
     {
@@ -107,8 +107,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/83048878?v=4",
       "profile": "https://github.com/valensce",
       "contributions": [
-        "ideas",
-        "design"
+        "design",
+        "ideas"
       ]
     },
     {
