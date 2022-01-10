@@ -167,8 +167,8 @@ for i in range(load):
 	elif i == 1:
 		exit = menuOpen = False
 		option = ''
-		y = ['Yes', 'yes', 'Y', 'y']
-		n = ['No', 'no', 'N', 'n']
+		y = ['y']
+		n = ['n']
 		yn = y + n
 
 		def abort():
@@ -179,13 +179,14 @@ for i in range(load):
 			sys.exit()
 
 		def backup():
-			sp('Would you like to save the game? Y/N\n')
-			saveOption = ''
-			while saveOption not in yn:
-				saveOption = input('>')
-			if saveOption in y:
+			sp('Would you like to save your progress? Y/N\n')
+			saveOption = ' '
+			while saveOption.lower()[0] not in yn:
+				saveOption = input('>') + ' '
+			if saveOption.lower()[0] in y:
 				open(os.path.join(sys.path[0], 'save.json'), 'w').write(
-					json.dumps(save, indent=4, sort_keys=True))
+					json.dumps(save, indent=4, sort_keys=True)
+				)
 				sp('\nGame saved successfully!')
 
 		if i == 2:

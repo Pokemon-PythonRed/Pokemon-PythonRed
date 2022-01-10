@@ -8,4 +8,8 @@ If you'd like to contribute, here are some things you could do:
 - Create some art (ASCII text)
 - Check for incorrect data in the [JSON databases](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tree/master/app)
 
-All contributors will be added to [the Contributors list](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#contributors), which will later be incorporated into in-game credits!
+All contributors will be added to [the Contributors list](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#contributors), which will later be incorporated into in-game credits! If you would like us to omit your contribution from the list, just let us know.
+
+When contributing, keep the following in mind:
+
+- Owners and managers can change any contributed material as they see fit.
