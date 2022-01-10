@@ -39,6 +39,7 @@ For more information on various topics regarding this project, please visit the 
 - [Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed Contributing Guidelines")
 - [License](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License")
 - [Security Policy](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md "Pokémon PythonRed Security Policy")
+- [Task List](https://github.com/orgs/Pokemon-PythonRed/projects/1 "Pokémon PythonRed Tasks")
 
 ---
 ## Contributors
