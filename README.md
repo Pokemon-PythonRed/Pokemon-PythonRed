@@ -35,10 +35,10 @@
 ---
 ## References
 For more information on various topics regarding this project, please visit the following links:
-- [Code Of Conduct](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CODE_OF_CONDUCT.md)
-- [Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md)
-- [License (MIT)](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE)
-- [Security](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md)
+- [Code Of Conduct](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CODE_OF_CONDUCT.md "Pokémon PythonRed Code Of Conduct")
+- [Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed Contributing Guidelines")
+- [License](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License")
+- [Security Policy](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md "Pokémon PythonRed Security Policy")
 
 ---
 ## Contributors
