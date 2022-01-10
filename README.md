@@ -25,8 +25,8 @@
 
 ---
 ## Important Notes
-- This is not a recreation of `Pokémon Red`; think of it as a remix.
-- Prior in-depth knowledge of the `Pokémon` franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
+- This is not a recreation of Pokémon Red; think of it as a remix.
+- Prior in-depth knowledge of the Pokémon franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
 - This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, or _The Pokémon Company_. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
 - Pokémon PythonRed is a work-in-progress and is intended to be a long-term project. The owners feel no rush to meet community deadlines or expectations. Please be considerate.
