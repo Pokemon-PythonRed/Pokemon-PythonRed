@@ -92,28 +92,8 @@ Bot command template:
 python -m pip install -r requirements.txt
 ```
 - Finally, open `main.py` in the `app` folder.
-<details><summary>Installation for Contributors</summary>
 
----
-- Contributors will need the following:
-    - Windows or Linux OS
-    - Python 3 (aka CPython 3.x)
-    - Git
-    - A text editor or IDE editor
-- To clone the repository, use GitHub Desktop or run this command:
-```console
-git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
-```
-- After that, run the following command from the repository folder to install dependencies:
-```console
-python -m pip install -r requirements.txt
-```
-- Finally, open `app/main.py` or run this command to run the program:
-```console
-python app/main.py
-```
----
-</details>
+--- 
 
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 ### Controls
