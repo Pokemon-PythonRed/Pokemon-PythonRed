@@ -155,7 +155,7 @@ _
 Here's some extra information that isn't required to play the game, but might still be interesting.
 ### Technicalities
 Since this is a Python game, some elements will have to be changed from the original version. Here are some examples of challenging changes.
-#### Saves and saving
+#### Save data and saving
 The game has to keep track of the many variables that make up a Save File. These include:
 - Trainer info
 - Party / Box info
@@ -167,7 +167,7 @@ The game has to keep track of the many variables that make up a Save File. These
 
 These are stored in a Python `dictionary` variable, which is then saved to the external file `save.json` via Python's `json` module.
 #### Game data
-Not to be confused with Save Data, Game Data is composed of the numbers and calculations that the game uses. These include:
+Not to be confused with save data, game data is composed of the numbers and calculations that the game uses. These include:
 - Pokémon info
 - Trainer battle info
 - Save file templates
