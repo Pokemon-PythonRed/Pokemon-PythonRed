@@ -185,7 +185,7 @@ for i in range(load):
 				saveOption = input('>') + ' '
 			if saveOption.lower()[0] in y:
 				open(os.path.join(sys.path[0], 'save.json'), 'w').write(
-					json.dumps(save, indent=4, sort_keys=True)
+					f'{json.dumps(save, indent=4, sort_keys=True)}\n'
 				)
 				sp('\nGame saved successfully!')
 
