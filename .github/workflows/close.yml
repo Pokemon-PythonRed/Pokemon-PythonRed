@@ -1,7 +1,5 @@
 name: Issue Closed
 on:
-  pull_request_target:
-    types: ["closed"]
   issues:
     types: ["closed"]
 jobs:
