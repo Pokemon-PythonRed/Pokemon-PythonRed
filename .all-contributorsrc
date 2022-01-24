@@ -175,6 +175,15 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "stger040",
+      "name": "Richard St Germaine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97212886?v=4",
+      "profile": "https://www.linkedin.com/in/richard-st-germaine-a62642182/",
+      "contributions": [
+        "test"
+      ]
     }
   ]
 }
