@@ -14,7 +14,8 @@
 </p>
 <p align="center">
     <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/main.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/main.yml/badge.svg?branch=master"></a> <!--Main-->
-    <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/project.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/project.yml/badge.svg?branch=master"></a> <!--Project-->
+    <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/open.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/open.yml/badge.svg?branch=master"></a> <!--Open-->
+    <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/close.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/close.yml/badge.svg?branch=master"></a> <!--Close-->
 </p>
 <p align="center">
     <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tags/latest"><img src="https://shields.io/github/v/tag/Pokemon-PythonRed/Pokemon-PythonRed?sort=semver&color=inactive"></a> <!--Latest-->
