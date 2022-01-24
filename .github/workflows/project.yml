@@ -1,0 +1,15 @@
+name: Project Card
+on:
+  issues:
+    types: ["opened"]
+jobs:
+  createCard:
+    runs-on: ["ubuntu-latest"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@latest
+      - name: Create or Update Project Card
+        uses: peter-evans/create-or-update-project-card@latest
+        with:
+          project-name: Pokémon PythonRed Issues
+          column-name: Todo

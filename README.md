@@ -14,6 +14,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/main.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/main.yml/badge.svg?branch=master"></a> <!--Main-->
+    <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/project.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/project.yml/badge.svg?branch=master"></a> <!--Project-->
 </p>
 <p align="center">
     <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tags/latest"><img src="https://shields.io/github/v/tag/Pokemon-PythonRed/Pokemon-PythonRed?sort=semver&color=inactive"></a> <!--Latest-->
@@ -37,9 +38,10 @@
 For more information on various topics regarding this project, please visit the following links:
 - [Code Of Conduct](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CODE_OF_CONDUCT.md "Pokémon PythonRed Code Of Conduct")
 - [Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed Contributing Guidelines")
+- [Issues List](https://github.com/orgs/Pokemon-PythonRed/projects/2 "Pokémon PythonRed Issues Project")
 - [License](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License")
 - [Security Policy](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md "Pokémon PythonRed Security Policy")
-- [Task List](https://github.com/orgs/Pokemon-PythonRed/projects/1 "Pokémon PythonRed Tasks")
+- [Task List](https://github.com/orgs/Pokemon-PythonRed/projects/1 "Pokémon PythonRed Tasks Project")
 
 ---
 ## Contributors
