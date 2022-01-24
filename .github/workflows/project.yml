@@ -7,7 +7,7 @@ jobs:
     runs-on: ["ubuntu-latest"]
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2.4.0
       - name: Create or Update Project Card
         uses: peter-evans/create-or-update-project-card@latest
         with:
