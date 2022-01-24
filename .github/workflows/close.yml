@@ -1,15 +1,17 @@
-name: Project Card
+name: Issue Closed
 on:
+  pull_request_target:
+    types: ["closed"]
   issues:
-    types: ["opened"]
+    types: ["closed"]
 jobs:
   createCard:
     runs-on: ["ubuntu-latest"]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@latest
       - name: Create or Update Project Card
         uses: peter-evans/create-or-update-project-card@latest
         with:
-          project-name: Pokémon PythonRed Issues
-          column-name: Todo
+          project-name: Issues Management
+          column-name: Closed
