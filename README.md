@@ -39,8 +39,10 @@
 For more information on various topics regarding this project, please visit the following links:
 - [Code Of Conduct](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CODE_OF_CONDUCT.md "Pokémon PythonRed Code Of Conduct")
 - [Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed Contributing Guidelines")
+- [Contributors List](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#contributors "Pokémon PythonRed Contributors")
 - [Current Tasks](https://github.com/orgs/Pokemon-PythonRed/projects/1 "Pokémon PythonRed Current Tasks")
 - [Discussions](https://github.com/orgs/Pokemon-PythonRed/discussions "Pokémon PythonRed Discussions")
+- [Installation Guide](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation "Pokémon PythonRed Installation")
 - [Issue Management](https://github.com/orgs/Pokemon-PythonRed/projects/2 "Pokémon PythonRed Issue Management")
 - [License](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License")
 - [Security Policy](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md "Pokémon PythonRed Security Policy")
@@ -87,8 +89,8 @@ Bot command template:
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ---
-## Get started
-### Installation
+## Installation
+### Startup
 - To play the game, you will need:
     - Windows or Linux OS
     - Python 3 (aka CPython 3.x)
