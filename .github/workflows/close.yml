@@ -11,5 +11,6 @@ jobs:
       - name: Create or Update Project Card
         uses: peter-evans/create-or-update-project-card@latest
         with:
+          token: ${{ secrets.METRICS_TOKEN }}
           project-name: Issues Management
           column-name: Closed
