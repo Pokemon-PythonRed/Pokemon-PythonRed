@@ -6,10 +6,6 @@ Comments may be removed at a later time.
 	#code (w/o space)
 '''
 
-# import files
-
-#import __init__
-
 # dependencies
 
 #import datetime
