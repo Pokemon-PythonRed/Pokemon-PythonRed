@@ -1,4 +1,4 @@
-## Hey, thanks for taking an interest!
+# Hey, thanks for taking an interest
 
 If you'd like to contribute, here are some things you could do:
 
