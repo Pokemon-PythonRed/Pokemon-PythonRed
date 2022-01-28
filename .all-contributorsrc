@@ -244,6 +244,16 @@
       "contributions": [
         "plugin"
       ]
+    },
+    {
+      "login": "nilsjpwerner",
+      "name": "Nils Werner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10968348?v=4",
+      "profile": "https://github.com/NilsJPWerner",
+      "contributions": [
+        "code",
+        "tool"
+      ]
     }
   ]
 }
