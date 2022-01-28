@@ -4,7 +4,7 @@
 <p align="center">
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href='#contributors'><img src='https://img.shields.io/badge/contributors-24-orange'></a>
+<a href='#contributors'><img src='https://img.shields.io/badge/contributors-25-orange'></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Pokemon-PythonRed/Pokemon-PythonRed?color=black"></a> <!--License-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed.svg"></a> <!--Issues-->
@@ -87,15 +87,18 @@ Bot command template:
     <td align="center"><a href="https://ravanger101.github.io/Dragon_Realms_Website/"><img src="https://avatars.githubusercontent.com/u/86346730?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ravanger_101</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=Ravanger101" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/richard-st-germaine-a62642182/"><img src="https://avatars.githubusercontent.com/u/97212886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Richard St Germaine</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=stger040" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/MuLKy-bot"><img src="https://avatars.githubusercontent.com/u/84059778?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=MuLKy-bot" title="Tests">⚠️</a></td>
+    <td align="center"><a href="http://shanalikhan.github.io"><img src="https://avatars.githubusercontent.com/u/8774556?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shan Khan</b></sub></a><br /><a href="#plugin-shanalikhan" title="Plugin/utility libraries">🔌</a> <a href="#tool-shanalikhan" title="Tools">🔧</a></td>
     <td align="center"><a href="https://sourcery.ai"><img src="https://avatars.githubusercontent.com/u/36609879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sourcery</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=sourcery-ai" title="Code">💻</a></td>
-    <td align="center"><a href="https://trunk.io"><img src="https://avatars.githubusercontent.com/u/74779146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Trunk</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=trunk-io" title="Code">💻</a> <a href="#tool-trunk-io" title="Tools">🔧</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://trunk.io"><img src="https://avatars.githubusercontent.com/u/74779146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Trunk</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=trunk-io" title="Code">💻</a> <a href="#tool-trunk-io" title="Tools">🔧</a></td>
     <td align="center"><a href="https://discord.gg/xzsAKZVfxP"><img src="https://avatars.githubusercontent.com/u/79883837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Val=fλ</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=Valensce" title="Code">💻</a> <a href="#design-Valensce" title="Design">🎨</a> <a href="#ideas-Valensce" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-Valensce" title="Maintenance">🚧</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=Valensce" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://www.youtube.com/channel/UCkmpUFuS0qBFD1I37o4yA3w"><img src="https://avatars.githubusercontent.com/u/86031610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Valerie</b></sub></a><br /><a href="#design-Valerimatical" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/cweijan"><img src="https://avatars.githubusercontent.com/u/27798227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>WeiJian Chen </b></sub></a><br /><a href="#plugin-cweijan" title="Plugin/utility libraries">🔌</a></td>
     <td align="center"><a href="https://github.com/basedpainnn"><img src="https://avatars.githubusercontent.com/u/93128221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>basedpainnn</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=basedpainnn" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://apple.com/"><img src="https://avatars.githubusercontent.com/u/81336967?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hacking-mudkip</b></sub></a><br /><a href="#data-hacking-mudkip" title="Data">🔣</a> <a href="#ideas-hacking-mudkip" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
     <td align="center"><a href="http://jbloves27.repl.co"><img src="https://avatars.githubusercontent.com/u/76911308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>just a weeb</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=JBYT27" title="Code">💻</a> <a href="#infra-JBYT27" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#mentoring-JBYT27" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=JBYT27" title="Tests">⚠️</a></td>
   </tr>
 </table>
