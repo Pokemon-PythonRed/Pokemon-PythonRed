@@ -225,6 +225,16 @@
         "plugin",
         "tool"
       ]
+    },
+    {
+      "login": "fnando",
+      "name": "Nando Vieira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3009?v=4",
+      "profile": "https://nandovieira.com",
+      "contributions": [
+        "code",
+        "tool"
+      ]
     }
   ]
 }
