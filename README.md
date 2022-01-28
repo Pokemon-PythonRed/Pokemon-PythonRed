@@ -120,7 +120,7 @@ Bot command template:
 - Follow [this link](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/archive/refs/heads/master.zip) to download a `.zip` file of this repository. Once it downloads, unzip and open it.
 - You will need to open a command line in the folder, then run the following command to install dependencies:
 
-```console
+```sh
 python -m pip install -r requirements.txt
 ```
 
@@ -137,19 +137,19 @@ python -m pip install -r requirements.txt
   - A text editor or IDE editor
 - To clone the repository, use GitHub Desktop or run this command:
 
-```console
+```sh
 git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
 ```
 
 - After that, run the following command from the repository folder to install dependencies:
 
-```console
+```sh
 python -m pip install -r requirements.txt
 ```
 
 - Finally, open `app/main.py` or run this command to run the program:
 
-```console
+```sh
 python app/main.py
 ```
 
@@ -170,7 +170,7 @@ python app/main.py
 
 No text needed, just press Enter:
 
-```
+```console
 Press Enter to continue.
 
 >_
@@ -178,7 +178,7 @@ Press Enter to continue.
 
 Enter text from a bullet point:
 
-```
+```console
 Choose an option.
 
 [1] - Save
@@ -189,7 +189,7 @@ Choose an option.
 
 Enter Yes or No:
 
-```
+```console
 Would you like to save? Y/N
 
 >_
@@ -197,7 +197,7 @@ Would you like to save? Y/N
 
 Press any key:
 
-```
+```console
 OAK: Hello there! Welcome to the world of POKéMON!
 _
 ```
