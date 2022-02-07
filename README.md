@@ -24,7 +24,7 @@
 </p>
 
 ---
-<h6 align="center">A fan-made, text-adventure Pokémon game in Python 3.</h6>
+<h6 align="center"><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions/59">Project Status Updates</a></h6>
 
 ---
 
@@ -51,6 +51,7 @@ For more information on various topics regarding this project, please visit the 
 - [Installation Guide](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation "Pokémon PythonRed Installation")
 - [Issue Management](https://github.com/orgs/Pokemon-PythonRed/projects/2 "Pokémon PythonRed Issue Management")
 - [License](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License")
+- [Project Status Updates](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions/59)
 - [Security Policy](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md "Pokémon PythonRed Security Policy")
 
 ---
