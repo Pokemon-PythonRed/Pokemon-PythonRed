@@ -328,7 +328,7 @@ while not exit:
 		sp(
 			f'Menu\n[d] - POKéDEX\n[p] - POKéMON\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
 
-		while option == '':
+		while not option:
 			option = input('>')
 
 		sp('')
