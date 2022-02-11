@@ -32,7 +32,7 @@ elif platform.system() == "Linux":
 
 # create sp()
 
-textSpeed = 0.05
+textSpeed = 0.03
 
 def sp(words):
 	for char in f'{words}\n':
@@ -375,9 +375,10 @@ while not exit:
 			option = input('>')
 
 		if option == '1':
-			sp('\n...\n')
+			sp('\n...')
 			g()
 			sp('Looks like you can\'t use it yet.')
+			g()
 
 		elif option == '2':
 			sp(
@@ -419,16 +420,16 @@ while not exit:
 			option = input('>')
 
 		if option == 'w':
-			sp('Coming soon!\n')
+			sp('\nComing soon!')
 
 		elif option == 'a':
 			save['currentLocation'] = 'playerHouseDown'
 
 		elif option == 's':
-			sp('The water is a deep, clear blue.\n')
+			sp('\nThe water is a deep, clear blue.')
 
 		elif option == 'd':
-			sp('Coming soon!\n')
+			sp('\nComing soon!')
 
 		elif option == 'm':
 			menuOpen = True
