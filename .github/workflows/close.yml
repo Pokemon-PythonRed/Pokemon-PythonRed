@@ -13,5 +13,5 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           project-location: Pokemon-PythonRed
-          project-number: 2
+          project-name: Issue Management
           column-name: Closed
