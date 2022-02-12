@@ -9,8 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.0
       - name: Create or Update Project Card
-        uses: peter-evans/create-or-update-project-card@v1
+        uses: peter-evans/create-or-update-project-card@v1.1.4
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          project-location: Pokemon-PythonRed
           project-number: 2
           column-name: Closed
