@@ -1,4 +1,6 @@
-# Hey, thanks for taking an interest
+# Contributing Guidelines
+
+First off, thanks for taking an interest! Pokémon PythonRed started as a small personal project, but has quickly grown into a helpful and interested community.
 
 If you'd like to contribute, here are some things you could do:
 
