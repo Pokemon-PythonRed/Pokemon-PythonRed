@@ -3,15 +3,15 @@ on:
   issues:
     types: ["closed"]
 jobs:
-  createCard:
+  close:
     runs-on: ["ubuntu-latest"]
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
-      - name: Create or Update Project Card
-        uses: peter-evans/create-or-update-project-card@v1.1.4
+      - name: Create Project Card Action
+        uses: technote-space/create-project-card-action@v1.0.3
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          project-location: Pokemon-PythonRed
-          project-name: Issue Management
-          column-name: Closed
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          PROJECT: Issue Management
+          COLUMN: Closed
+          CHECK_ORG_PROJECT: true
