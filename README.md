@@ -28,14 +28,22 @@
 
 ---
 
-## Important Notes
+## Summary & Important Notes
 
-- This is not a recreation of Pokémon Red; think of it as a remix.
+- This is a game written in Python 3 and based on the `Pokémon Red` game. However, it is not intended to be a perfect recreation; think of it as a remix.
 - Prior in-depth knowledge of the Pokémon franchise, especially the video game series, is recommended and may be required to fully enjoy this game.
-- This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by _Nintendo_, _GAME FREAK_, _Creatures Inc._, or _The Pokémon Company_. This is an independent, fan-made game.
+- This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by Nintendo, GAME FREAK, Creatures Inc., or The Pokémon Company. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
 - Pokémon PythonRed is a work-in-progress and is intended to be a long-term project. The owners feel no rush to meet community deadlines or expectations. Please be considerate.
 - Any problems with the game can be reported in [Issues](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
+
+---
+
+## Community
+
+If you or someone else has been offended or treated poorly by a member of our community, please submit a complaint.
+
+For report options, please see [the Enforcement section of the Code of Conduct](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CODE_OF_CONDUCT.md#enforcement).
 
 ---
 
@@ -126,37 +134,9 @@ python -m pip install -r requirements.txt
 
 - Finally, open `main.py` in the `app` folder.
 
-<details><summary>Installation for Contributors</summary>
-
----
-
-- Contributors will need the following:
-  - Windows or Linux OS
-  - Python 3 (aka CPython 3.x)
-  - Git
-  - A text editor or IDE editor
-- To clone the repository, use GitHub Desktop or run this command:
-
-```sh
-git clone https://github.com/Pokemon-PythonRed/Pokemon-PythonRed.git
-```
-
-- After that, run the following command from the repository folder to install dependencies:
-
-```sh
-python -m pip install -r requirements.txt
-```
-
-- Finally, open `app/main.py` or run this command to run the program:
-
-```sh
-python app/main.py
-```
-
----
-</details>
-
 - If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
+
+  - If you want to contribute to the project, please see [the Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md).
 
 ### Controls
 
@@ -207,6 +187,10 @@ _
 ## Extras
 
 Here's some extra information that isn't required to play the game, but might still be interesting.
+
+<details><summary>Technicalities</summary>
+
+---
 
 ### Technicalities
 
@@ -278,15 +262,23 @@ print('Would you like to save your progress? Y/N\n')
 
 The user can use multiple save files by moving or backing up their `save.json` file to a different directory on their device. This has been implemented in the interest of user-friendliness and safety. Save files can easily be backed up, reset, or shared.
 
-#### Mystery Gifts
+---
+
+</details>
+
+<details><summary>Mystery Gifts</summary>
+
+---
+
+### Mystery Gifts
 
 Pokémon games use Mystery Gifts to bring communities together and incentivise players to take part in events, and Pokémon PythonRed is no different. Codes can be given out in planned giveaway events to specific people, left online to be found by anyone, or even given in-person to specific people. Most of them are online, so you should try looking in places [@TurnipGuy30](https://github.com/TurnipGuy30) has been.
 
-##### Technical information
+#### Technical information
 
 As of the time of writing, Mystery Gifts have not yet been implemented into the game. The base game will have to be completed first. For now, keep track of any codes you find.
 
-##### Formatting
+#### Formatting
 
 Pokémon PythonRed Mystery Gift codes are easy to identify because they will always be given in the following format:
 
@@ -296,14 +288,16 @@ Pokémon PythonRed Mystery Gift #20: "POKEMONPYTHONRED"
 
 (Yes, this is a valid code. Consider it a free trial. You're welcome.)
 
-##### Possible rewards
+#### Possible rewards
 
 Redeemed codes will reward a player with in-game items or Pokémon.
 
-##### Recipient responsibilities
+#### Recipient responsibilities
 
 Any person or group who finds or receives a code has no responsibility to keep it to themselves unless otherwise stated by the giver of the code.
 
-##### Summary
+#### Summary
 
 Mystery Gifts are meant to unite the community and provide a fun way to interact with the game.
+
+</details>
