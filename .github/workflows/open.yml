@@ -12,5 +12,5 @@ jobs:
         uses: peter-evans/create-or-update-project-card@v1.1.4
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          project-name: Issue Management
+          project-number: 2
           column-name: Open
