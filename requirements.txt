@@ -1,5 +1,5 @@
 flask==2.0.2
 getch==1.0; sys_platform == "linux"
 playsound==1.3.0
-py2exe==0.11.0.1; sys_platform == "windows"
+py2exe==0.11.1.0; sys_platform == "windows"
 pygame==2.1.2
