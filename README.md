@@ -300,4 +300,6 @@ Any person or group who finds or receives a code has no responsibility to keep i
 
 Mystery Gifts are meant to unite the community and provide a fun way to interact with the game.
 
+---
+
 </details>
