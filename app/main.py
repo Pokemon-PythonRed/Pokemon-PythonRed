@@ -2,8 +2,8 @@
 Pokémon PythonRed | [https://github.com/Pokemon-PythonRed]
 Comments may be removed at a later time.
 	Key:
-	# comment (w/ space)
-	#code (w/o space)
+	# comment (with space)
+	#unused code (without space)
 '''
 
 # dependencies
@@ -23,14 +23,14 @@ import time
 import webbrowser
 #import winsound
 
-# create g()
+# declare getch
 
 if platform.system() == "Windows":
 	from msvcrt import getch as g
 elif platform.system() == "Linux":
 	from getch import getch as g
 
-# create sp()
+# declare timed text output
 
 textSpeed = 0.03
 
@@ -40,17 +40,17 @@ def sp(words):
 		sys.stdout.write(char)
 		sys.stdout.flush()
 
-# look for required files
+# check for required files
 
-if not (
-    os.path.isfile(os.path.join(sys.path[0], 'pokemon.json')) and
-    os.path.isfile(os.path.join(sys.path[0], 'types.json'))
-):
-	sp('\nOne or more required files are not found.\n\nPlease see\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation \nfor more information.\n\nPress Enter to exit.\n')
+if not (os.path.isfile(os.path.join(sys.path[0], i)) for i in [
+	'pokemon.json',
+	'types.json'
+]):
+	sp('\nOne or more required files are not found.\n\nPlease see\n[https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation]\nfor more information.\n\nPress Enter to exit.\n')
 	input('>')
 	sys.exit()
 
-# create cls()
+# declare clear
 
 platforms = [['darwin', 'clear'], ['java', 'System.out.print("\\033[H\\033[2J");System.out.flush();'], [
 	'linux', 'clear'], ['windows', 'cls']]
@@ -87,25 +87,19 @@ while startOption != '2':
 	cls()
 
 	if startOption == '1':
-		if os.path.isfile(os.path.join(sys.path[0], 'save.json')):
-			if json.loads(open(os.path.join(sys.path[0], 'save.json')).read())['introComplete']:
-				cls()
-				print(
-					f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
-				break
+		if (os.path.isfile(os.path.join(sys.path[0], 'save.json')) and json.loads(open(os.path.join(sys.path[0], 'save.json')).read())['introComplete']):
+			cls()
+			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+			break
 		print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	elif startOption == '2':
 		cls()
-		print(
-			f'{title[3]}Starting game!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		print(f'{title[3]}Starting game!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	elif startOption == '3':
 		try:
-			webbrowser.open(
-    			'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed',
-       			new = 2
-        	)
+			webbrowser.open('https://github.com/Pokemon-PythonRed/Pokemon-PythonRed', new = 2)
 		except:
 			print(f'{title[3]}Failed to open website, here\'s the link:\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed')
 		else:
@@ -114,8 +108,7 @@ while startOption != '2':
 			print('\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	else:
-		print(
-			f'{title[3]}Invalid input!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		print(f'{title[3]}Invalid input!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 # new game
 
@@ -152,8 +145,7 @@ for i in range(load):
 		open(os.path.join(sys.path[0], 'pokemon.json')).close()
 
 		if startOption == '2':
-			open(os.path.join(sys.path[0], 'save.json'), 'w').write(
-				json.dumps(saveTemplate, indent=4, sort_keys=True))
+			open(os.path.join(sys.path[0], 'save.json'), 'w').write(json.dumps(saveTemplate, indent=4, sort_keys=True))
 		save = {**saveTemplate, **json.loads(open(os.path.join(sys.path[0], 'save.json')).read())}
 		open(os.path.join(sys.path[0], 'save.json')).close()
 
@@ -169,8 +161,7 @@ for i in range(load):
 
 		def abort():
 			cls()
-			sp(
-				f'\nExcuse me, {getpass.getuser()}, but you shouldn\'t be able to see this.\nPlease don\'t edit the program, or your save file. Press Enter to exit.\n')
+			sp(f'\nExcuse me, {getpass.getuser()}, but you shouldn\'t be able to see this.\nPlease don\'t edit the program, or your save file. Press Enter to exit.\n')
 			input('>')
 			sys.exit()
 
@@ -180,9 +171,7 @@ for i in range(load):
 			while saveOption.lower()[0] not in yn:
 				saveOption = input('>') + ' '
 			if saveOption.lower()[0] in y:
-				open(os.path.join(sys.path[0], 'save.json'), 'w').write(
-					f'{json.dumps(save, indent=4, sort_keys=True)}\n'
-				)
+				open(os.path.join(sys.path[0], 'save.json'), 'w').write(f'{json.dumps(save, indent=4, sort_keys=True)}\n')
 				sp('\nGame saved successfully!')
 
 		if i == 2:
@@ -325,8 +314,7 @@ while not exit:
 		sp('\n(Intro Complete!)')
 
 	elif menuOpen == True:
-		sp(
-			f'Menu\n[d] - POKéDEX\n[p] - POKéMON\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
+		sp(f'Menu\n[d] - POKéDEX\n[p] - POKéMON\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
 
 		while not option:
 			option = input('>')
@@ -368,8 +356,7 @@ while not exit:
 			sp('Invalid answer!')
 
 	elif save['currentLocation'] == 'playerHouseUp':
-		sp(
-			f'Current Location: {save["name"]}\'s Room (Upstairs)\n\n[s] - Go Downstairs\n[1] - Computer\n[2] - Notebook\n')
+		sp(f'Current Location: {save["name"]}\'s Room (Upstairs)\n\n[s] - Go Downstairs\n[1] - Computer\n[2] - Notebook\n')
 
 		while option == '':
 			option = input('>')
@@ -381,8 +368,7 @@ while not exit:
 			g()
 
 		elif option == '2':
-			sp(
-				'\nThe notebook is open to a page that says:\n\n"Use the [m] command in the overworld to open the menu.\nFrom the menu, you can save your progress, check your POKéMON, and more!"')
+			sp('\nThe notebook is open to a page that says:\n\n"Use the [m] command in the overworld to open the menu.\nFrom the menu, you can save your progress, check your POKéMON, and more!"')
 
 		elif option == 's':
 			save['currentLocation'] = 'playerHouseDown'
@@ -394,8 +380,7 @@ while not exit:
 			sp('Invalid answer!')
 
 	elif save['currentLocation'] == 'playerHouseDown':
-		sp(
-			f'Current Location: {save["name"]}\'s House (Downstairs)\n\n[w] - Go Upstairs\n[d] - Go Outside\n')
+		sp(f'Current Location: {save["name"]}\'s House (Downstairs)\n\n[w] - Go Upstairs\n[d] - Go Outside\n')
 
 		while option == '':
 			option = input('>')
@@ -413,8 +398,7 @@ while not exit:
 			sp('Invalid answer!')
 
 	elif save['currentLocation'] == 'palletTown':
-		sp(
-			f'Current Location: Pallet Town - "Shades of your journey await!"\n(Currently the furthest point.)\n\n[w] - Go to Route 1\n[a] - Go to {save["name"]}\'s House\n[s] - Go to Sea-Route 21\n[d] - Go to OAK\'s LAB\n')
+		sp(f'Current Location: Pallet Town - "Shades of your journey await!"\n(Currently the furthest point.)\n\n[w] - Go to Route 1\n[a] - Go to {save["name"]}\'s House\n[s] - Go to Sea-Route 21\n[d] - Go to OAK\'s LAB\n')
 
 		while option == '':
 			option = input('>')
