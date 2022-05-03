@@ -17,7 +17,6 @@ import platform
 #import playsound
 #import pygame
 import random
-#import sqlite3
 import sys
 import time
 import webbrowser
@@ -100,7 +99,7 @@ while startOption != '2':
 	elif startOption == '3':
 		try:
 			webbrowser.open('https://github.com/Pokemon-PythonRed/Pokemon-PythonRed', new = 2)
-		except:
+		except Exception:
 			print(f'{title[3]}Failed to open website, here\'s the link:\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed')
 		else:
 			print(f'{title[3]}Repository page opened successfully!')
