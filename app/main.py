@@ -324,8 +324,11 @@ while not exit:
 			sp('Coming soon!')
 
 		elif option == 'p':
-			for i in range(len(save['party'])):
-				sp(i.name)
+			if save['party']:
+				for i in range(len(save['party'])):
+					sp(i.name)
+			else:
+				sp('Your party is empty!')
 
 		elif option == 'i':
 			sp('Coming soon!')
