@@ -123,3 +123,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pokémon PythonRed save files
+*/save.json
+
+# Windows dummy files to appease Pylance
+app/getch.py
