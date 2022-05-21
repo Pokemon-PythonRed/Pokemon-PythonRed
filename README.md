@@ -91,7 +91,7 @@ Bot command template:
     <td align="center"><a href="https://github.com/ionutvmi"><img src="https://avatars.githubusercontent.com/u/3531898?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mihai Ionut Vilcu</b></sub></a><br /><a href="#tool-ionutvmi" title="Tools">🔧</a></td>
     <td align="center"><a href="https://nandovieira.com"><img src="https://avatars.githubusercontent.com/u/3009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nando Vieira</b></sub></a><br /><a href="#tool-fnando" title="Tools">🔧</a></td>
     <td align="center"><a href="https://github.com/NilsJPWerner"><img src="https://avatars.githubusercontent.com/u/10968348?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nils Werner</b></sub></a><br /><a href="#tool-nilsjpwerner" title="Tools">🔧</a></td>
-    <td align="center"><a href="https://discord.com/invite/xzsAKZVfxP"><img src="https://avatars.githubusercontent.com/u/87019852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Porsce <3</b></sub></a><br /><a href="#design-Porsce" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/Porsce"><img src="https://avatars.githubusercontent.com/u/87019852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Porsce <3</b></sub></a><br /><a href="#design-Porsce" title="Design">🎨</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://ravanger101.github.io/Dragon_Realms_Website/"><img src="https://avatars.githubusercontent.com/u/86346730?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ravanger_101</b></sub></a><br /><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=Ravanger101" title="Tests">⚠️</a> <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/commits?author=Ravanger101" title="Code">💻</a></td>
