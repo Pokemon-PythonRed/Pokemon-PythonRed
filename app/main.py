@@ -17,6 +17,7 @@ import platform
 #import playsound
 #import pygame
 import random
+#import string
 import sys
 import time
 import webbrowser
@@ -135,7 +136,7 @@ for i in range(load):
             },
             'introComplete': False,
             'lastPlayed': '',
-            'money': '',
+            'money': 0,
             'name': '',
             'party': []
         }
