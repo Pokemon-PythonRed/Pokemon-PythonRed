@@ -17,6 +17,8 @@ jobs:
           cd app
           python build.py py2exe
       - name: GitHub Push
+        run: |
+          git pull
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.METRICS_TOKEN }}
