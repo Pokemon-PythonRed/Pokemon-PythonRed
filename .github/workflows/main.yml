@@ -16,8 +16,8 @@ jobs:
           pip install py2exe
           cd app
           python build.py py2exe
-          git commit -am "Build with py2exe"
-          git push
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
   publish:
     runs-on: ["ubuntu-latest"]
     steps:
