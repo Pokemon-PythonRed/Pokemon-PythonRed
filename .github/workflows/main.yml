@@ -18,6 +18,9 @@ jobs:
           python build.py py2exe
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.METRICS_TOKEN }}
+          branch: ${{ github.master }}
   publish:
     runs-on: ["ubuntu-latest"]
     steps:
