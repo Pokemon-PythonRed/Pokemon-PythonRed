@@ -125,21 +125,21 @@ for i in range(load):
 
 	if i == 0:
 		saveTemplate = {
-            'box': [],
-            'currentLocation': '',
-            'hms': {
-                'cut': False,
-                'flash': False,
-                'fly': False,
-                'strength': False,
-                'surf': False
-            },
-            'introComplete': False,
-            'lastPlayed': '',
-            'money': 0,
-            'name': '',
-            'party': []
-        }
+			'box': [],
+			'currentLocation': '',
+			'hms': {
+				'cut': False,
+				'flash': False,
+				'fly': False,
+				'strength': False,
+				'surf': False
+			},
+			'introComplete': False,
+			'lastPlayed': '',
+			'money': 0,
+			'name': '',
+			'party': []
+		}
 
 		dex = json.loads(open(os.path.join(sys.path[0], 'pokemon.json')).read())
 		open(os.path.join(sys.path[0], 'pokemon.json')).close()
@@ -179,13 +179,13 @@ for i in range(load):
 				def __init__(self, name, species, level, moves, ivs):
 					if ivs == 'random':
 						ivs = {
-          					'hp': random.randint(1, 15),
-               				'atk': random.randint(1, 15),
-                   			'def': random.randint(1, 15),
-                      		'spa': random.randint(1, 15),
-                        	'spd': random.randint(1, 15),
-                         	'spe': random.randint(1, 15)
-                        }
+		  					'hp': random.randint(1, 15),
+			   				'atk': random.randint(1, 15),
+				   			'def': random.randint(1, 15),
+					  		'spa': random.randint(1, 15),
+							'spd': random.randint(1, 15),
+						 	'spe': random.randint(1, 15)
+						}
 					self.name = name
 					self.species = species
 					self.type = dex[self.index]['type']
