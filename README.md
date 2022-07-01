@@ -1,4 +1,3 @@
-<!-- markdownlint-disable-file -->
 ![Pokémon](https://raw.githubusercontent.com/Pokemon-PythonRed/%2Egithub/main/images/pokemon.png "Pokémon")
 <h1 align="center">PythonRed Version</h1>
 <p align="center">
@@ -35,7 +34,7 @@
 - This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by Nintendo, GAME FREAK, Creatures Inc., or The Pokémon Company. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
 - Pokémon PythonRed is a work-in-progress and is intended to be a long-term project. The owners feel no rush to meet community deadlines or expectations. Please be considerate.
-- Any problems with the game can be reported in [Issues](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
+- Any problems with the game can be reported in [issues](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 ---
 
@@ -66,7 +65,7 @@ For more information on various topics regarding this project, please visit the 
 
 ## Contributors
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md").
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors "All-Contributors Repository") specification ([emoji key](https://allcontributors.org/docs/en/emoji-key "All-Contributors Emoji Key"), [command issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/13 "Pokémon PythonRed All-Contributors Command Issue")). [See what you can do to contribute](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed CONTRIBUTING.md").
 <!--
 Bot command template:
 @all-contributors please add @<username> for <contributions>
@@ -134,7 +133,7 @@ python -m pip install -r requirements.txt
 
 - Finally, open `main.py` in the `app` folder.
 
-- If you encounter any problems when opening the game, feel free to create an [Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
+- If you encounter any problems when opening the game, feel free to [create an issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new "Pokémon PythonRed Issues").
 
   - If you want to contribute to the project, please see [the Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md).
 
