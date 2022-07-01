@@ -1,9 +1,16 @@
 '''
-Pokémon PythonRed | [https://github.com/Pokemon-PythonRed]
-Comments may be removed at a later time.
-	Key:
+Pokémon PythonRed
+
+	Project Page - [https://Pokemon-PythonRed.github.io]
+	Repository   - [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed]
+	License      - MIT
+
+Comments Key:
+
 	# comment (with space)
 	#unused code (without space)
+
+Comments may be removed at a later time.
 '''
 
 # dependencies
@@ -34,8 +41,8 @@ elif platform.system() == "Linux":
 
 textSpeed = 0.03
 
-def sp(words):
-	for char in f'{words}\n':
+def sp(text):
+	for char in f'{text}\n':
 		time.sleep(textSpeed)
 		sys.stdout.write(char)
 		sys.stdout.flush()
@@ -44,7 +51,7 @@ def sp(words):
 
 if not (os.path.isfile(os.path.join(sys.path[0], i)) for i in [
 	'pokemon.json',
-	'types.json'
+	'types.json' # TODO: add more files
 ]):
 	sp('\nOne or more required files are not found.\n\nPlease see\n[https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation]\nfor more information.\n\nPress Enter to exit.\n')
 	input('>')
@@ -205,7 +212,7 @@ for i in range(load):
 
 				def battle(n, s, c, e, a, opponentParty):
 
-					# todo: calculate opponent stats
+					# TODO: calculate opponent stats
 
 					sp(f'\n{n}: {s}')
 					g()
@@ -234,9 +241,9 @@ for i in range(load):
 					while check(save['party']) and check(opponentParty):
 						sp(f'{save["party"][0].name}{" "*10-len(save["party"][0].name)}[{"="*bars}{" "*(20-bars)}]\n{save["party"][0].type}\n\n{opponentParty[0].name}{" "*10-len(opponentParty[0].name)}[{"="*opponentBars}{" "*(20-opponentBars)}]\n{opponentParty[0].type}')
 
-					# todo: player turn, opponent turn, damage calculation
+					# TODO: player turn, opponent turn, damage calculation
 
-					# todo: win/loss conditions
+					# TODO: win/loss conditions
 
 sp('\nLoaded! Press any key to continue.\n')
 g()
@@ -246,9 +253,11 @@ g()
 if (
 	(len(save['name']) > 15) or
 	(save['name'] == '' and save['introComplete']) or
-	(save['name'] != '' and not save['introComplete']) # etc.
+	(save['name'] != '' and not save['introComplete']) # TODO: more checks
 ):
 	abort()
+
+# main loop
 
 while not exit:
 
