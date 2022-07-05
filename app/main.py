@@ -9,14 +9,12 @@ Comments Key:
 
 	# comment (with space)
 	#unused code (without space)
-
-Comments may be removed at a later time.
 '''
 
 # dependencies
 
 #import datetime
-import getpass
+#from getpass import getuser
 import json
 import math
 import os
@@ -33,9 +31,9 @@ import webbrowser
 # declare getch
 
 if platform.system() == "Windows":
-	from msvcrt import getch as g
+	from msvcrt import getch as getch
 elif platform.system() == "Linux":
-	from getch import getch as g
+	from getch import getch as getch
 
 # declare timed text output
 
@@ -46,14 +44,28 @@ def sp(text):
 		time.sleep(textSpeed)
 		sys.stdout.write(char)
 		sys.stdout.flush()
+	getch()
+
+# load screen
+
+sp('Loading...')
+
+# store links
+
+link = {
+	'repository': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed',
+	'installation': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation',
+	'issue': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new'
+}
 
 # check for required files
 
 if not (os.path.isfile(os.path.join(sys.path[0], i)) for i in [
-	'pokemon.json',
+	'dex.json',
+	'level.json',
 	'types.json' # TODO: add more files
 ]):
-	sp('\nOne or more required files are not found.\n\nPlease see\n[https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation]\nfor more information.\n\nPress Enter to exit.\n')
+	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link.installation}]\nfor more information.\n\nPress Enter to exit.\n')
 	input('>')
 	sys.exit()
 
@@ -65,6 +77,108 @@ for i in range(len(platforms)):
 	if platform.system().lower() == (platforms[i][0]):
 		clsCommand = platforms[i][1]
 		def cls(): return os.system(clsCommand)
+
+exit = menuOpen = False
+option = ''
+y = ['y']
+n = ['n']
+yn = y + n
+
+def abort():
+	sp(f'\nERROR\n\nAn internal error has occured. There are two possible causes for this:\n\n- The save file is corrupted.\n- There is a bug within the program which threw a needless error.\n\nThese issues may be caused by editing the save file or the program file.\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder.\n\n[{link.issue}]\n\nPress Enter to exit.')
+	input('>')
+	sys.exit()
+
+def backup():
+	sp('Would you like to save your progress? Y/N\n')
+	saveOption = ' '
+	while saveOption.lower()[0] not in yn:
+		saveOption = input('>') + ' '
+	if saveOption.lower()[0] in y:
+		open(os.path.join(sys.path[0], 'save.json'), 'w').write(f'{json.dumps(save, indent=4, sort_keys=True)}\n')
+		sp('\nGame saved successfully!')
+
+class Pokemon:
+	def __init__(self, name, species, level, ivs):
+		if ivs == 'random':
+			ivs = {
+				'hp': random.randint(1, 15),
+				'atk': random.randint(1, 15),
+				'def': random.randint(1, 15),
+				'spa': random.randint(1, 15),
+				'spd': random.randint(1, 15),
+				'spe': random.randint(1, 15)
+			}
+		self.name = name
+		self.species = species
+		self.type = dex[self.index]['type']
+		self.level = level
+		self.ivs = ivs
+		self.atktype = random.choice(['p', 's'])
+		self.lvltype = dex[self.species]['xp']
+		self.totalxp = level['total'][self.lvltype][self.level]
+		self.currentxp = 0
+	
+		def resetStats(self):
+			self.stats = {
+				'hp': math.floor(((dex[self.species]['hp'] + self.ivs['hp']) * 2 + math.floor(math.ceil(math.sqrt(self.ivs['hp'])) / 4) * self.level) / 100) + self.level + 10,
+				'atk': math.floor(((dex[self.species]['atk'] + self.ivs['atk']) * 2 + math.floor(math.ceil(math.sqrt(self.ivs['atk'])) / 4) * self.level) / 100) + 5,
+				'def': math.floor(((dex[self.species]['def'] + self.ivs['def']) * 2 + math.floor(math.ceil(math.sqrt(self.ivs['def'])) / 4) * self.level) / 100) + 5,
+				'spa': math.floor(((dex[self.species]['spa'] + self.ivs['spa']) * 2 + math.floor(math.ceil(math.sqrt(self.ivs['spa'])) / 4) * self.level) / 100) + 5,
+				'spd': math.floor(((dex[self.species]['spd'] + self.ivs['spd']) * 2 + math.floor(math.ceil(math.sqrt(self.ivs['spd'])) / 4) * self.level) / 100) + 5,
+				'spe': math.floor(((dex[self.species]['spe'] + self.ivs['spe']) * 2 + math.floor(math.ceil(math.sqrt(self.ivs['spe'])) / 4) * self.level) / 100) + 5
+			}
+			self.stats['chp'] = self.stats['hp']
+		resetStats(self)
+	
+	def checkLevelUp(self):
+		for i in save['party']:
+			while i.currentxp >= level['next'][self.lvltype][self.level] and i.level < 100:
+				i.currentxp -= level['next'][self.lvltype][self.level]
+				i.level += 1
+				i.resetStats()
+				sp(f'\n{i.name} grew to level {i.level}!') 
+
+	def checkFainted(self):
+		if self.stats['chp'] <= 0:
+			self.stats['chp'] = 0
+			return True
+		return False
+
+	def battle(n, s, c, e, a, opponentParty):
+
+		# TODO: calculate opponent stats
+
+		sp(f'\n{n}: {s}')
+		sp(f'\n{c} {n} wants to fight!')
+		time.sleep(0.5)
+		sp(f'\nGo, {save.party[0]["name"]}!')
+		time.sleep(0.5)
+		sp(f'\n{n} sent out {opponentParty[0]}!')
+		party1 = len(save['party'])
+		party2 = len(opponentParty)
+
+		current = ''
+		opponentCurrent = 0
+		for i in range(party1):
+			while current == '':
+				if save['party'][i].stats['chp'] > 0:
+					current = i
+
+		def check(party):
+			total = sum(i['hp'] for i in range(len(party)))
+			return total > 0
+
+		bars = math.ceil(save["party"][0].stats["chp"])*20
+		opponentBars = math.ceil(opponentParty[0].stats["chp"])*20
+
+		while check(save['party']) and check(opponentParty):
+			sp(f'{save["party"][0].name}{" "*10-len(save["party"][0].name)}[{"="*bars}{" "*(20-bars)}]\n{save["party"][0].type}\n\n{opponentParty[0].name}{" "*10-len(opponentParty[0].name)}[{"="*opponentBars}{" "*(20-opponentBars)}]\n{opponentParty[0].type}')
+
+		# TODO: player turn, opponent turn, damage calculation
+
+		# TODO: win/loss conditions
+
 cls()
 
 # title screen
@@ -83,7 +197,7 @@ print(title[1])
 time.sleep(1.85)
 print(title[2])
 
-g()
+getch()
 
 cls()
 
@@ -94,7 +208,7 @@ while startOption != '2':
 	cls()
 
 	if startOption == '1':
-		if (os.path.isfile(os.path.join(sys.path[0], 'save.json')) and json.loads(open(os.path.join(sys.path[0], 'save.json')).read())['introComplete']):
+		if (os.path.isfile(os.path.join(sys.path[0], 'save.json')) and json.loads(open(os.path.join(sys.path[0], 'save.json')).read())['flags']['introComplete']):
 			cls()
 			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 			break
@@ -106,9 +220,9 @@ while startOption != '2':
 
 	elif startOption == '3':
 		try:
-			webbrowser.open('https://github.com/Pokemon-PythonRed/Pokemon-PythonRed', new = 2)
+			webbrowser.open(link.repository, new = 2)
 		except Exception:
-			print(f'{title[3]}Failed to open website, here\'s the link:\nhttps://github.com/Pokemon-PythonRed/Pokemon-PythonRed')
+			print(f'{title[3]}Failed to open website, here\'s the link:\n[{link.repository}]\n')
 		else:
 			print(f'{title[3]}Repository page opened successfully!')
 		finally:
@@ -123,137 +237,75 @@ if startOption == '2':
 	sp('>2\n\nThis will overwrite any previous save data. Press Enter to continue.\n')
 	input('>')
 
-# load screen
+# save file template
 
-sp('')
-load = 3
-for i in range(load):
-	sp(f'Loading... (Step {str(i+1)} of {str(load)})')
+saveTemplate = {
+	'badges': {
+		'boulder': False,
+		'cascade': False,
+		'thunder': False,
+		'rainbow': False,
+		'soul': False,
+		'marsh': False,
+		'volcano': False,
+		'earth': False
+	},
+	'box': [],
+	'currentLocation': '',
+	'flags': {
+		'introComplete': False,
+		'receivedStarter': False,
+		'pokemonCaught': 0,
+		'pokemonSeen': 0,
+		'pokemonUncaught': 0,
+		'typeSeen': [],
+		'typeUncaught': [],
+		'typeCaught': [],
+		'trainerFought': {},
+		'eggInDaycare': False
+	},
+	'hms': {
+		'cut': False,
+		'flash': False,
+		'fly': False,
+		'strength': False,
+		'surf': False
+	},
+	'lastPlayed': '',
+	'money': 0,
+	'mysteryGiftsOpened': {
+		# TODO: add mystery gifts
+	},
+	'name': '',
+	'options': {
+		'textSpeed': textSpeed
+	},
+	'party': [],
+	'xpMultiplier': 1.0
+}
 
-	if i == 0:
-		saveTemplate = {
-			'box': [],
-			'currentLocation': '',
-			'hms': {
-				'cut': False,
-				'flash': False,
-				'fly': False,
-				'strength': False,
-				'surf': False
-			},
-			'introComplete': False,
-			'lastPlayed': '',
-			'money': 0,
-			'name': '',
-			'party': []
-		}
+# load save file
 
-		dex = json.loads(open(os.path.join(sys.path[0], 'pokemon.json')).read())
-		open(os.path.join(sys.path[0], 'pokemon.json')).close()
+dex = json.loads(open(os.path.join(sys.path[0], 'dex.json')).read())
+open(os.path.join(sys.path[0], 'dex.json')).close()
 
-		if startOption == '2':
-			open(os.path.join(sys.path[0], 'save.json'), 'w').write(json.dumps(saveTemplate, indent=4, sort_keys=True))
-		save = {**saveTemplate, **json.loads(open(os.path.join(sys.path[0], 'save.json')).read())}
-		open(os.path.join(sys.path[0], 'save.json')).close()
+if startOption == '2':
+	open(os.path.join(sys.path[0], 'save.json'), 'w').write(json.dumps(saveTemplate, indent=4, sort_keys=True))
+save = {**saveTemplate, **json.loads(open(os.path.join(sys.path[0], 'save.json')).read())}
+open(os.path.join(sys.path[0], 'save.json')).close()
 
-		types = json.loads(open(os.path.join(sys.path[0], 'types.json')).read())
-		open(os.path.join(sys.path[0], 'types.json')).close()
+types = json.loads(open(os.path.join(sys.path[0], 'types.json')).read())
+open(os.path.join(sys.path[0], 'types.json')).close()
 
-	elif i == 1:
-		exit = menuOpen = False
-		option = ''
-		y = ['y']
-		n = ['n']
-		yn = y + n
-
-		def abort():
-			cls()
-			sp(f'\nExcuse me, {getpass.getuser()}, but you shouldn\'t be able to see this.\nPlease don\'t edit the program, or your save file. Press Enter to exit.\n')
-			input('>')
-			sys.exit()
-
-		def backup():
-			sp('Would you like to save your progress? Y/N\n')
-			saveOption = ' '
-			while saveOption.lower()[0] not in yn:
-				saveOption = input('>') + ' '
-			if saveOption.lower()[0] in y:
-				open(os.path.join(sys.path[0], 'save.json'), 'w').write(f'{json.dumps(save, indent=4, sort_keys=True)}\n')
-				sp('\nGame saved successfully!')
-
-		if i == 2:
-			class Pokemon:
-				def __init__(self, name, species, level, moves, ivs):
-					if ivs == 'random':
-						ivs = {
-		  					'hp': random.randint(1, 15),
-			   				'atk': random.randint(1, 15),
-				   			'def': random.randint(1, 15),
-					  		'spa': random.randint(1, 15),
-							'spd': random.randint(1, 15),
-						 	'spe': random.randint(1, 15)
-						}
-					self.name = name
-					self.species = species
-					self.type = dex[self.index]['type']
-					self.level = level
-					self.moves = moves
-					self.ivs = ivs
-					self.atktype = random.choice(['p', 's'])
-					self.stats = {
-						'hp': math.floor(((dex[species]['hp'] + ivs['hp']) * 2 + math.floor(math.ceil(math.sqrt(ivs['hp'])) / 4) * self.level) / 100) + self.level + 10,
-						'atk': math.floor(((dex[species]['atk'] + ivs['atk']) * 2 + math.floor(math.ceil(math.sqrt(ivs['atk'])) / 4) * self.level) / 100) + 5,
-						'def': math.floor(((dex[species]['def'] + ivs['def']) * 2 + math.floor(math.ceil(math.sqrt(ivs['def'])) / 4) * self.level) / 100) + 5,
-						'spa': math.floor(((dex[species]['spa'] + ivs['spa']) * 2 + math.floor(math.ceil(math.sqrt(ivs['spa'])) / 4) * self.level) / 100) + 5,
-						'spd': math.floor(((dex[species]['spd'] + ivs['spd']) * 2 + math.floor(math.ceil(math.sqrt(ivs['spd'])) / 4) * self.level) / 100) + 5,
-						'spe': math.floor(((dex[species]['spe'] + ivs['spe']) * 2 + math.floor(math.ceil(math.sqrt(ivs['spe'])) / 4) * self.level) / 100) + 5
-					}
-					self.stats['chp'] = self.stats['hp']
-
-				def battle(n, s, c, e, a, opponentParty):
-
-					# TODO: calculate opponent stats
-
-					sp(f'\n{n}: {s}')
-					g()
-					sp(f'\n{c} {n} wants to fight!')
-					time.sleep(0.5)
-					sp(f'\nGo, {save.party[0]["name"]}!')
-					time.sleep(0.5)
-					sp(f'\n{n} sent out {opponentParty[0]}!')
-					#party1 = len(save['party'])
-					#party2 = len(opponentParty)
-
-					#current = ''
-					#opponentCurrent = 0
-					#for i in range(party1):
-					#	while current == '':
-					#		if save['party'][i].stats['chp'] > 0:
-					#			current = i
-
-					def check(party):
-						total = sum(i['hp'] for i in range(len(party)))
-						return total > 0
-
-					bars = math.ceil(save["party"][0].stats["chp"])*20
-					opponentBars = math.ceil(opponentParty[0].stats["chp"])*20
-
-					while check(save['party']) and check(opponentParty):
-						sp(f'{save["party"][0].name}{" "*10-len(save["party"][0].name)}[{"="*bars}{" "*(20-bars)}]\n{save["party"][0].type}\n\n{opponentParty[0].name}{" "*10-len(opponentParty[0].name)}[{"="*opponentBars}{" "*(20-opponentBars)}]\n{opponentParty[0].type}')
-
-					# TODO: player turn, opponent turn, damage calculation
-
-					# TODO: win/loss conditions
-
-sp('\nLoaded! Press any key to continue.\n')
-g()
+level = json.loads(open(os.path.join(sys.path[0], 'level.json')).read())
+open(os.path.join(sys.path[0], 'level.json')).close()
 
 # check for illegal save data
 
 if (
 	(len(save['name']) > 15) or
-	(save['name'] == '' and save['introComplete']) or
-	(save['name'] != '' and not save['introComplete']) # TODO: more checks
+	(save['name'] == '' and save['flags']['introComplete']) or
+	(save['name'] != '' and not save['flags']['introComplete']) # TODO: more checks
 ):
 	abort()
 
@@ -265,20 +317,14 @@ while not exit:
 
 	# intro
 
-	if save['introComplete'] == False:
+	if save['flags']['introComplete'] == False:
 
 		sp('(Intro Start!)\n')
-		g()
 		sp('OAK: Hello there! Welcome to the world of POKéMON!')
-		g()
 		sp('My name is OAK! People call me the POKéMON PROFESSOR!')
-		g()
 		sp('This world is inhabited by creatures called POKéMON!')
-		g()
 		sp('For some people, POKéMON are pets. Others use them\nfor fights. Myself...')
-		g()
 		sp('I study POKéMON as a profession.')
-		g()
 		sp('\nFirst, what is your name?\n\n[1] - PYTHON\n[2] - New Name\n')
 
 		introAnswer = ''
@@ -302,23 +348,17 @@ while not exit:
 		playerName = playerName.upper()
 
 		sp(f'\nRight! So your name is {playerName}!')
-		g()
 		sp('\nNow, since you\'re so raring to go, I\'ve prepared a rival for you.')
-		g()
 		sp('He will go on an adventure just like yours, and battle you along\nthe way.')
-		g()
 		sp('\n...Erm, what is his name again?\n')
 		input('>')
 		sp('\n...')
-		g()
 		sp('Hoho, just kidding! His name is JOHNNY! He\'s very well-known\naround here, and... quite a character. You\'ll meet him soon!\n')
-		g()
 		sp(f'{playerName}! Your very own POKéMON legend is about to unfold! A world of\ndreams and adventures with POKéMON awaits! Let\'s go!')
-		g()
 
 		save['name'] = playerName
 		save['currentLocation'] = 'playerHouseUp'
-		save['introComplete'] = True
+		save['flags']['introComplete'] = True
 
 		sp('\n(Intro Complete!)')
 
@@ -375,9 +415,7 @@ while not exit:
 
 		if option == '1':
 			sp('\n...')
-			g()
 			sp('Looks like you can\'t use it yet.')
-			g()
 
 		elif option == '2':
 			sp('\nThe notebook is open to a page that says:\n\n"Use the [m] command in the overworld to open the menu.\nFrom the menu, you can save your progress, check your POKéMON, and more!"')
@@ -435,6 +473,10 @@ while not exit:
 
 	elif save['currentLocation'] == 'oakLab':
 		abort()
+
+	# TODO: add more locations
+
+	# TODO: complete story dialogue
 
 	else:
 		abort()
