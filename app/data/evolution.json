@@ -1,0 +1,1880 @@
+[
+	{
+		"Level": "7",
+		"Ndex": "10",
+		"Pokemon": "Caterpie",
+		"Type": "Bug"
+	},
+	{
+		"Level": "7",
+		"Ndex": "13",
+		"Pokemon": "Weedle",
+		"Type": "Bug"
+	},
+	{
+		"Level": "7",
+		"Ndex": "265",
+		"Pokemon": "Wurmple",
+		"Type": "Bug"
+	},
+	{
+		"Level": "9",
+		"Ndex": "664",
+		"Pokemon": "Scatterbug",
+		"Type": "Bug"
+	},
+	{
+		"Level": "10",
+		"Ndex": "11",
+		"Pokemon": "Metapod",
+		"Type": "Bug"
+	},
+	{
+		"Level": "10",
+		"Ndex": "14",
+		"Pokemon": "Kakuna",
+		"Type": "Bug"
+	},
+	{
+		"Level": "10",
+		"Ndex": "266",
+		"Pokemon": "Silcoon",
+		"Type": "Bug"
+	},
+	{
+		"Level": "10",
+		"Ndex": "268",
+		"Pokemon": "Cascoon",
+		"Type": "Bug"
+	},
+	{
+		"Level": "10",
+		"Ndex": "401",
+		"Pokemon": "Kricketot",
+		"Type": "Bug"
+	},
+	{
+		"Level": "10",
+		"Ndex": "824",
+		"Pokemon": "Blipbug",
+		"Type": "Bug"
+	},
+	{
+		"Level": "12",
+		"Ndex": "665",
+		"Pokemon": "Spewpa",
+		"Type": "Bug"
+	},
+	{
+		"Level": "14",
+		"Ndex": "155",
+		"Pokemon": "Cyndaquil",
+		"Type": "Fire"
+	},
+	{
+		"Level": "14",
+		"Ndex": "270",
+		"Pokemon": "Lotad",
+		"Type": "Water"
+	},
+	{
+		"Level": "14",
+		"Ndex": "273",
+		"Pokemon": "Seedot",
+		"Type": "Grass"
+	},
+	{
+		"Level": "14",
+		"Ndex": "390",
+		"Pokemon": "Chimchar",
+		"Type": "Fire"
+	},
+	{
+		"Level": "14",
+		"Ndex": "396",
+		"Pokemon": "Starly",
+		"Type": "Normal"
+	},
+	{
+		"Level": "14",
+		"Ndex": "731",
+		"Pokemon": "Pikipek",
+		"Type": "Normal"
+	},
+	{
+		"Level": "15",
+		"Ndex": "161",
+		"Pokemon": "Sentret",
+		"Type": "Normal"
+	},
+	{
+		"Level": "15",
+		"Ndex": "179",
+		"Pokemon": "Mareep",
+		"Type": "Electric"
+	},
+	{
+		"Level": "15",
+		"Ndex": "360",
+		"Pokemon": "Wynaut",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "15",
+		"Ndex": "399",
+		"Pokemon": "Bidoof",
+		"Type": "Normal"
+	},
+	{
+		"Level": "15",
+		"Ndex": "403",
+		"Pokemon": "Shinx",
+		"Type": "Electric"
+	},
+	{
+		"Level": "16",
+		"Ndex": "1",
+		"Pokemon": "Bulbasaur",
+		"Type": "Grass"
+	},
+	{
+		"Level": "16",
+		"Ndex": "4",
+		"Pokemon": "Charmander",
+		"Type": "Fire"
+	},
+	{
+		"Level": "16",
+		"Ndex": "7",
+		"Pokemon": "Squirtle",
+		"Type": "Water"
+	},
+	{
+		"Level": "16",
+		"Ndex": "29",
+		"Pokemon": "Nidoran♀",
+		"Type": "Poison"
+	},
+	{
+		"Level": "16",
+		"Ndex": "32",
+		"Pokemon": "Nidoran♂",
+		"Type": "Poison"
+	},
+	{
+		"Level": "16",
+		"Ndex": "63",
+		"Pokemon": "Abra",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "16",
+		"Ndex": "152",
+		"Pokemon": "Chikorita",
+		"Type": "Grass"
+	},
+	{
+		"Level": "16",
+		"Ndex": "252",
+		"Pokemon": "Treecko",
+		"Type": "Grass"
+	},
+	{
+		"Level": "16",
+		"Ndex": "255",
+		"Pokemon": "Torchic",
+		"Type": "Fire"
+	},
+	{
+		"Level": "16",
+		"Ndex": "258",
+		"Pokemon": "Mudkip",
+		"Type": "Water"
+	},
+	{
+		"Level": "16",
+		"Ndex": "393",
+		"Pokemon": "Piplup",
+		"Type": "Water"
+	},
+	{
+		"Level": "16",
+		"Ndex": "506",
+		"Pokemon": "Lillipup",
+		"Type": "Normal"
+	},
+	{
+		"Level": "16",
+		"Ndex": "650",
+		"Pokemon": "Chespin",
+		"Type": "Grass"
+	},
+	{
+		"Level": "16",
+		"Ndex": "653",
+		"Pokemon": "Fennekin",
+		"Type": "Fire"
+	},
+	{
+		"Level": "16",
+		"Ndex": "656",
+		"Pokemon": "Froakie",
+		"Type": "Water"
+	},
+	{
+		"Level": "16",
+		"Ndex": "810",
+		"Pokemon": "Grookey",
+		"Type": "Grass"
+	},
+	{
+		"Level": "16",
+		"Ndex": "813",
+		"Pokemon": "Scorbunny",
+		"Type": "Fire"
+	},
+	{
+		"Level": "16",
+		"Ndex": "816",
+		"Pokemon": "Sobble",
+		"Type": "Water"
+	},
+	{
+		"Level": "17",
+		"Ndex": "495",
+		"Pokemon": "Snivy",
+		"Type": "Grass"
+	},
+	{
+		"Level": "17",
+		"Ndex": "498",
+		"Pokemon": "Tepig",
+		"Type": "Fire"
+	},
+	{
+		"Level": "17",
+		"Ndex": "501",
+		"Pokemon": "Oshawott",
+		"Type": "Water"
+	},
+	{
+		"Level": "17",
+		"Ndex": "661",
+		"Pokemon": "Fletchling",
+		"Type": "Normal"
+	},
+	{
+		"Level": "17",
+		"Ndex": "722",
+		"Pokemon": "Rowlet",
+		"Type": "Grass"
+	},
+	{
+		"Level": "17",
+		"Ndex": "725",
+		"Pokemon": "Litten",
+		"Type": "Fire"
+	},
+	{
+		"Level": "17",
+		"Ndex": "728",
+		"Pokemon": "Popplio",
+		"Type": "Water"
+	},
+	{
+		"Level": "18",
+		"Ndex": "16",
+		"Pokemon": "Pidgey",
+		"Type": "Normal"
+	},
+	{
+		"Level": "18",
+		"Ndex": "158",
+		"Pokemon": "Totodile",
+		"Type": "Water"
+	},
+	{
+		"Level": "18",
+		"Ndex": "165",
+		"Pokemon": "Ledyba",
+		"Type": "Bug"
+	},
+	{
+		"Level": "18",
+		"Ndex": "183",
+		"Pokemon": "Marill",
+		"Type": "Water"
+	},
+	{
+		"Level": "18",
+		"Ndex": "187",
+		"Pokemon": "Hoppip",
+		"Type": "Grass"
+	},
+	{
+		"Level": "18",
+		"Ndex": "261",
+		"Pokemon": "Poochyena",
+		"Type": "Dark"
+	},
+	{
+		"Level": "18",
+		"Ndex": "287",
+		"Pokemon": "Slakoth",
+		"Type": "Normal"
+	},
+	{
+		"Level": "18",
+		"Ndex": "387",
+		"Pokemon": "Turtwig",
+		"Type": "Grass"
+	},
+	{
+		"Level": "18",
+		"Ndex": "761",
+		"Pokemon": "Bounsweet",
+		"Type": "Grass"
+	},
+	{
+		"Level": "18",
+		"Ndex": "821",
+		"Pokemon": "Rookidee",
+		"Type": "Flying"
+	},
+	{
+		"Level": "18",
+		"Ndex": "827",
+		"Pokemon": "Nickit",
+		"Type": "Dark"
+	},
+	{
+		"Level": "18",
+		"Ndex": "837",
+		"Pokemon": "Rolycoly",
+		"Type": "Rock"
+	},
+	{
+		"Level": "19",
+		"Ndex": "669",
+		"Pokemon": "Flabébé",
+		"Type": "Fairy"
+	},
+	{
+		"Level": "20",
+		"Ndex": "19",
+		"Pokemon": "Rattata",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "21",
+		"Pokemon": "Spearow",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "129",
+		"Pokemon": "Magikarp",
+		"Type": "Water"
+	},
+	{
+		"Level": "20",
+		"Ndex": "163",
+		"Pokemon": "Hoothoot",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "194",
+		"Pokemon": "Wooper",
+		"Type": "Water"
+	},
+	{
+		"Level": "20",
+		"Ndex": "236",
+		"Pokemon": "Tyrogue",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "20",
+		"Ndex": "263",
+		"Pokemon": "Zigzagoon",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "280",
+		"Pokemon": "Ralts",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "20",
+		"Ndex": "290",
+		"Pokemon": "Nincada",
+		"Type": "Bug"
+	},
+	{
+		"Level": "20",
+		"Ndex": "293",
+		"Pokemon": "Whismur",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "374",
+		"Pokemon": "Beldum",
+		"Type": "Steel"
+	},
+	{
+		"Level": "20",
+		"Ndex": "412",
+		"Pokemon": "Burmy",
+		"Type": "Bug"
+	},
+	{
+		"Level": "20",
+		"Ndex": "412",
+		"Pokemon": "Burmy",
+		"Type": "Bug"
+	},
+	{
+		"Level": "20",
+		"Ndex": "412",
+		"Pokemon": "Burmy",
+		"Type": "Bug"
+	},
+	{
+		"Level": "20",
+		"Ndex": "504",
+		"Pokemon": "Patrat",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "509",
+		"Pokemon": "Purrloin",
+		"Type": "Dark"
+	},
+	{
+		"Level": "20",
+		"Ndex": "540",
+		"Pokemon": "Sewaddle",
+		"Type": "Bug"
+	},
+	{
+		"Level": "20",
+		"Ndex": "659",
+		"Pokemon": "Bunnelby",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "734",
+		"Pokemon": "Yungoos",
+		"Type": "Normal"
+	},
+	{
+		"Level": "20",
+		"Ndex": "736",
+		"Pokemon": "Grubbin",
+		"Type": "Bug"
+	},
+	{
+		"Level": "20",
+		"Ndex": "829",
+		"Pokemon": "Gossifleur",
+		"Type": "Grass"
+	},
+	{
+		"Level": "21",
+		"Ndex": "43",
+		"Pokemon": "Oddish",
+		"Type": "Grass"
+	},
+	{
+		"Level": "21",
+		"Ndex": "69",
+		"Pokemon": "Bellsprout",
+		"Type": "Grass"
+	},
+	{
+		"Level": "21",
+		"Ndex": "415",
+		"Pokemon": "Combee",
+		"Type": "Bug"
+	},
+	{
+		"Level": "21",
+		"Ndex": "519",
+		"Pokemon": "Pidove",
+		"Type": "Normal"
+	},
+	{
+		"Level": "22",
+		"Ndex": "23",
+		"Pokemon": "Ekans",
+		"Type": "Poison"
+	},
+	{
+		"Level": "22",
+		"Ndex": "27",
+		"Pokemon": "Sandshrew",
+		"Type": "Ground"
+	},
+	{
+		"Level": "22",
+		"Ndex": "41",
+		"Pokemon": "Zubat",
+		"Type": "Poison"
+	},
+	{
+		"Level": "22",
+		"Ndex": "167",
+		"Pokemon": "Spinarak",
+		"Type": "Bug"
+	},
+	{
+		"Level": "22",
+		"Ndex": "276",
+		"Pokemon": "Taillow",
+		"Type": "Normal"
+	},
+	{
+		"Level": "22",
+		"Ndex": "283",
+		"Pokemon": "Surskit",
+		"Type": "Bug"
+	},
+	{
+		"Level": "22",
+		"Ndex": "543",
+		"Pokemon": "Venipede",
+		"Type": "Bug"
+	},
+	{
+		"Level": "22",
+		"Ndex": "751",
+		"Pokemon": "Dewpider",
+		"Type": "Water"
+	},
+	{
+		"Level": "22",
+		"Ndex": "833",
+		"Pokemon": "Chewtle",
+		"Type": "Water"
+	},
+	{
+		"Level": "23",
+		"Ndex": "209",
+		"Pokemon": "Snubbull",
+		"Type": "Fairy"
+	},
+	{
+		"Level": "23",
+		"Ndex": "285",
+		"Pokemon": "Shroomish",
+		"Type": "Grass"
+	},
+	{
+		"Level": "24",
+		"Ndex": "46",
+		"Pokemon": "Paras",
+		"Type": "Bug"
+	},
+	{
+		"Level": "24",
+		"Ndex": "228",
+		"Pokemon": "Houndour",
+		"Type": "Dark"
+	},
+	{
+		"Level": "24",
+		"Ndex": "296",
+		"Pokemon": "Makuhita",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "24",
+		"Ndex": "443",
+		"Pokemon": "Gible",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "24",
+		"Ndex": "755",
+		"Pokemon": "Morelull",
+		"Type": "Grass"
+	},
+	{
+		"Level": "24",
+		"Ndex": "819",
+		"Pokemon": "Skwovet",
+		"Type": "Normal"
+	},
+	{
+		"Level": "24",
+		"Ndex": "831",
+		"Pokemon": "Wooloo",
+		"Type": "Normal"
+	},
+	{
+		"Level": "25",
+		"Ndex": "60",
+		"Pokemon": "Poliwag",
+		"Type": "Water"
+	},
+	{
+		"Level": "25",
+		"Ndex": "74",
+		"Pokemon": "Geodude",
+		"Type": "Rock"
+	},
+	{
+		"Level": "25",
+		"Ndex": "92",
+		"Pokemon": "Gastly",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "25",
+		"Ndex": "177",
+		"Pokemon": "Natu",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "25",
+		"Ndex": "223",
+		"Pokemon": "Remoraid",
+		"Type": "Water"
+	},
+	{
+		"Level": "25",
+		"Ndex": "231",
+		"Pokemon": "Phanpy",
+		"Type": "Ground"
+	},
+	{
+		"Level": "25",
+		"Ndex": "278",
+		"Pokemon": "Wingull",
+		"Type": "Water"
+	},
+	{
+		"Level": "25",
+		"Ndex": "420",
+		"Pokemon": "Cherubi",
+		"Type": "Grass"
+	},
+	{
+		"Level": "25",
+		"Ndex": "524",
+		"Pokemon": "Roggenrola",
+		"Type": "Rock"
+	},
+	{
+		"Level": "25",
+		"Ndex": "532",
+		"Pokemon": "Timburr",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "25",
+		"Ndex": "535",
+		"Pokemon": "Tympole",
+		"Type": "Water"
+	},
+	{
+		"Level": "25",
+		"Ndex": "677",
+		"Pokemon": "Espurr",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "25",
+		"Ndex": "742",
+		"Pokemon": "Cutiefly",
+		"Type": "Bug"
+	},
+	{
+		"Level": "25",
+		"Ndex": "744",
+		"Pokemon": "Rockruff",
+		"Type": "Rock"
+	},
+	{
+		"Level": "25",
+		"Ndex": "835",
+		"Pokemon": "Yamper",
+		"Type": "Electric"
+	},
+	{
+		"Level": "26",
+		"Ndex": "50",
+		"Pokemon": "Diglett",
+		"Type": "Ground"
+	},
+	{
+		"Level": "26",
+		"Ndex": "96",
+		"Pokemon": "Drowzee",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "26",
+		"Ndex": "309",
+		"Pokemon": "Electrike",
+		"Type": "Electric"
+	},
+	{
+		"Level": "26",
+		"Ndex": "316",
+		"Pokemon": "Gulpin",
+		"Type": "Poison"
+	},
+	{
+		"Level": "26",
+		"Ndex": "418",
+		"Pokemon": "Buizel",
+		"Type": "Water"
+	},
+	{
+		"Level": "26",
+		"Ndex": "846",
+		"Pokemon": "Arrokuda",
+		"Type": "Water"
+	},
+	{
+		"Level": "27",
+		"Ndex": "170",
+		"Pokemon": "Chinchou",
+		"Type": "Water"
+	},
+	{
+		"Level": "27",
+		"Ndex": "188",
+		"Pokemon": "Skiploom",
+		"Type": "Grass"
+	},
+	{
+		"Level": "27",
+		"Ndex": "522",
+		"Pokemon": "Blitzle",
+		"Type": "Electric"
+	},
+	{
+		"Level": "27",
+		"Ndex": "759",
+		"Pokemon": "Stufful",
+		"Type": "Normal"
+	},
+	{
+		"Level": "28",
+		"Ndex": "52",
+		"Pokemon": "Meowth",
+		"Type": "Normal"
+	},
+	{
+		"Level": "28",
+		"Ndex": "56",
+		"Pokemon": "Mankey",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "28",
+		"Ndex": "66",
+		"Pokemon": "Machop",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "28",
+		"Ndex": "98",
+		"Pokemon": "Krabby",
+		"Type": "Water"
+	},
+	{
+		"Level": "28",
+		"Ndex": "104",
+		"Pokemon": "Cubone",
+		"Type": "Ground"
+	},
+	{
+		"Level": "28",
+		"Ndex": "425",
+		"Pokemon": "Drifloon",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "28",
+		"Ndex": "732",
+		"Pokemon": "Trumbeak",
+		"Type": "Normal"
+	},
+	{
+		"Level": "28",
+		"Ndex": "850",
+		"Pokemon": "Sizzlipede",
+		"Type": "Fire"
+	},
+	{
+		"Level": "29",
+		"Ndex": "551",
+		"Pokemon": "Sandile",
+		"Type": "Ground"
+	},
+	{
+		"Level": "30",
+		"Ndex": "72",
+		"Pokemon": "Tentacool",
+		"Type": "Water"
+	},
+	{
+		"Level": "30",
+		"Ndex": "81",
+		"Pokemon": "Magnemite",
+		"Type": "Electric"
+	},
+	{
+		"Level": "30",
+		"Ndex": "100",
+		"Pokemon": "Voltorb",
+		"Type": "Electric"
+	},
+	{
+		"Level": "30",
+		"Ndex": "147",
+		"Pokemon": "Dratini",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "30",
+		"Ndex": "159",
+		"Pokemon": "Croconaw",
+		"Type": "Water"
+	},
+	{
+		"Level": "30",
+		"Ndex": "180",
+		"Pokemon": "Flaaffy",
+		"Type": "Electric"
+	},
+	{
+		"Level": "30",
+		"Ndex": "216",
+		"Pokemon": "Teddiursa",
+		"Type": "Normal"
+	},
+	{
+		"Level": "30",
+		"Ndex": "238",
+		"Pokemon": "Smoochum",
+		"Type": "Ice"
+	},
+	{
+		"Level": "30",
+		"Ndex": "239",
+		"Pokemon": "Elekid",
+		"Type": "Electric"
+	},
+	{
+		"Level": "30",
+		"Ndex": "240",
+		"Pokemon": "Magby",
+		"Type": "Fire"
+	},
+	{
+		"Level": "30",
+		"Ndex": "246",
+		"Pokemon": "Larvitar",
+		"Type": "Rock"
+	},
+	{
+		"Level": "30",
+		"Ndex": "281",
+		"Pokemon": "Kirlia",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "30",
+		"Ndex": "318",
+		"Pokemon": "Carvanha",
+		"Type": "Water"
+	},
+	{
+		"Level": "30",
+		"Ndex": "339",
+		"Pokemon": "Barboach",
+		"Type": "Water"
+	},
+	{
+		"Level": "30",
+		"Ndex": "341",
+		"Pokemon": "Corphish",
+		"Type": "Water"
+	},
+	{
+		"Level": "30",
+		"Ndex": "371",
+		"Pokemon": "Bagon",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "30",
+		"Ndex": "404",
+		"Pokemon": "Luxio",
+		"Type": "Electric"
+	},
+	{
+		"Level": "30",
+		"Ndex": "408",
+		"Pokemon": "Cranidos",
+		"Type": "Rock"
+	},
+	{
+		"Level": "30",
+		"Ndex": "410",
+		"Pokemon": "Shieldon",
+		"Type": "Rock"
+	},
+	{
+		"Level": "30",
+		"Ndex": "422",
+		"Pokemon": "Shellos",
+		"Type": "Water"
+	},
+	{
+		"Level": "30",
+		"Ndex": "544",
+		"Pokemon": "Whirlipede",
+		"Type": "Bug"
+	},
+	{
+		"Level": "30",
+		"Ndex": "570",
+		"Pokemon": "Zorua",
+		"Type": "Dark"
+	},
+	{
+		"Level": "30",
+		"Ndex": "686",
+		"Pokemon": "Inkay",
+		"Type": "Dark"
+	},
+	{
+		"Level": "30",
+		"Ndex": "749",
+		"Pokemon": "Mudbray",
+		"Type": "Ground"
+	},
+	{
+		"Level": "30",
+		"Ndex": "767",
+		"Pokemon": "Wimpod",
+		"Type": "Bug"
+	},
+	{
+		"Level": "30",
+		"Ndex": "825",
+		"Pokemon": "Dottler",
+		"Type": "Bug"
+	},
+	{
+		"Level": "30",
+		"Ndex": "848",
+		"Pokemon": "Toxel",
+		"Type": "Electric"
+	},
+	{
+		"Level": "31",
+		"Ndex": "48",
+		"Pokemon": "Venonat",
+		"Type": "Bug"
+	},
+	{
+		"Level": "31",
+		"Ndex": "84",
+		"Pokemon": "Doduo",
+		"Type": "Normal"
+	},
+	{
+		"Level": "31",
+		"Ndex": "204",
+		"Pokemon": "Pineco",
+		"Type": "Bug"
+	},
+	{
+		"Level": "31",
+		"Ndex": "456",
+		"Pokemon": "Finneon",
+		"Type": "Water"
+	},
+	{
+		"Level": "31",
+		"Ndex": "529",
+		"Pokemon": "Drilbur",
+		"Type": "Ground"
+	},
+	{
+		"Level": "32",
+		"Ndex": "2",
+		"Pokemon": "Ivysaur",
+		"Type": "Grass"
+	},
+	{
+		"Level": "32",
+		"Ndex": "116",
+		"Pokemon": "Horsea",
+		"Type": "Water"
+	},
+	{
+		"Level": "32",
+		"Ndex": "153",
+		"Pokemon": "Bayleef",
+		"Type": "Grass"
+	},
+	{
+		"Level": "32",
+		"Ndex": "304",
+		"Pokemon": "Aron",
+		"Type": "Steel"
+	},
+	{
+		"Level": "32",
+		"Ndex": "325",
+		"Pokemon": "Spoink",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "32",
+		"Ndex": "331",
+		"Pokemon": "Cacnea",
+		"Type": "Grass"
+	},
+	{
+		"Level": "32",
+		"Ndex": "363",
+		"Pokemon": "Spheal",
+		"Type": "Ice"
+	},
+	{
+		"Level": "32",
+		"Ndex": "388",
+		"Pokemon": "Grotle",
+		"Type": "Grass"
+	},
+	{
+		"Level": "32",
+		"Ndex": "507",
+		"Pokemon": "Herdier",
+		"Type": "Normal"
+	},
+	{
+		"Level": "32",
+		"Ndex": "520",
+		"Pokemon": "Tranquill",
+		"Type": "Normal"
+	},
+	{
+		"Level": "32",
+		"Ndex": "574",
+		"Pokemon": "Gothita",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "32",
+		"Ndex": "577",
+		"Pokemon": "Solosis",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "32",
+		"Ndex": "672",
+		"Pokemon": "Skiddo",
+		"Type": "Grass"
+	},
+	{
+		"Level": "32",
+		"Ndex": "674",
+		"Pokemon": "Pancham",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "32",
+		"Ndex": "856",
+		"Pokemon": "Hatenna",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "32",
+		"Ndex": "859",
+		"Pokemon": "Impidimp",
+		"Type": "Dark"
+	},
+	{
+		"Level": "33",
+		"Ndex": "54",
+		"Pokemon": "Psyduck",
+		"Type": "Water"
+	},
+	{
+		"Level": "33",
+		"Ndex": "118",
+		"Pokemon": "Goldeen",
+		"Type": "Water"
+	},
+	{
+		"Level": "33",
+		"Ndex": "220",
+		"Pokemon": "Swinub",
+		"Type": "Ice"
+	},
+	{
+		"Level": "33",
+		"Ndex": "322",
+		"Pokemon": "Numel",
+		"Type": "Fire"
+	},
+	{
+		"Level": "33",
+		"Ndex": "436",
+		"Pokemon": "Bronzor",
+		"Type": "Steel"
+	},
+	{
+		"Level": "33",
+		"Ndex": "757",
+		"Pokemon": "Salandit",
+		"Type": "Poison"
+	},
+	{
+		"Level": "34",
+		"Ndex": "86",
+		"Pokemon": "Seel",
+		"Type": "Water"
+	},
+	{
+		"Level": "34",
+		"Ndex": "397",
+		"Pokemon": "Staravia",
+		"Type": "Normal"
+	},
+	{
+		"Level": "34",
+		"Ndex": "434",
+		"Pokemon": "Stunky",
+		"Type": "Poison"
+	},
+	{
+		"Level": "34",
+		"Ndex": "449",
+		"Pokemon": "Hippopotas",
+		"Type": "Ground"
+	},
+	{
+		"Level": "34",
+		"Ndex": "557",
+		"Pokemon": "Dwebble",
+		"Type": "Bug"
+	},
+	{
+		"Level": "34",
+		"Ndex": "562",
+		"Pokemon": "Yamask",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "34",
+		"Ndex": "585",
+		"Pokemon": "Deerling",
+		"Type": "Normal"
+	},
+	{
+		"Level": "34",
+		"Ndex": "723",
+		"Pokemon": "Dartrix",
+		"Type": "Grass"
+	},
+	{
+		"Level": "34",
+		"Ndex": "726",
+		"Pokemon": "Torracat",
+		"Type": "Fire"
+	},
+	{
+		"Level": "34",
+		"Ndex": "729",
+		"Pokemon": "Brionne",
+		"Type": "Water"
+	},
+	{
+		"Level": "34",
+		"Ndex": "753",
+		"Pokemon": "Fomantis",
+		"Type": "Grass"
+	},
+	{
+		"Level": "34",
+		"Ndex": "838",
+		"Pokemon": "Carkol",
+		"Type": "Rock"
+	},
+	{
+		"Level": "34",
+		"Ndex": "878",
+		"Pokemon": "Cufant",
+		"Type": "Steel"
+	},
+	{
+		"Level": "35",
+		"Ndex": "109",
+		"Pokemon": "Koffing",
+		"Type": "Poison"
+	},
+	{
+		"Level": "35",
+		"Ndex": "264G",
+		"Pokemon": "Linoone",
+		"Type": "Dark"
+	},
+	{
+		"Level": "35",
+		"Ndex": "328",
+		"Pokemon": "Trapinch",
+		"Type": "Ground"
+	},
+	{
+		"Level": "35",
+		"Ndex": "333",
+		"Pokemon": "Swablu",
+		"Type": "Normal"
+	},
+	{
+		"Level": "35",
+		"Ndex": "554",
+		"Pokemon": "Darumaka",
+		"Type": "Fire"
+	},
+	{
+		"Level": "35",
+		"Ndex": "580",
+		"Pokemon": "Ducklett",
+		"Type": "Water"
+	},
+	{
+		"Level": "35",
+		"Ndex": "582",
+		"Pokemon": "Vanillite",
+		"Type": "Ice"
+	},
+	{
+		"Level": "35",
+		"Ndex": "662",
+		"Pokemon": "Fletchinder",
+		"Type": "Fire"
+	},
+	{
+		"Level": "35",
+		"Ndex": "667",
+		"Pokemon": "Litleo",
+		"Type": "Fire"
+	},
+	{
+		"Level": "35",
+		"Ndex": "679",
+		"Pokemon": "Honedge",
+		"Type": "Steel"
+	},
+	{
+		"Level": "35",
+		"Ndex": "782",
+		"Pokemon": "Jangmo-o",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "35",
+		"Ndex": "811",
+		"Pokemon": "Thwackey",
+		"Type": "Grass"
+	},
+	{
+		"Level": "35",
+		"Ndex": "814",
+		"Pokemon": "Raboot",
+		"Type": "Fire"
+	},
+	{
+		"Level": "35",
+		"Ndex": "817",
+		"Pokemon": "Drizzile",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "5",
+		"Pokemon": "Charmeleon",
+		"Type": "Fire"
+	},
+	{
+		"Level": "36",
+		"Ndex": "8",
+		"Pokemon": "Wartortle",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "17",
+		"Pokemon": "Pidgeotto",
+		"Type": "Normal"
+	},
+	{
+		"Level": "36",
+		"Ndex": "156",
+		"Pokemon": "Quilava",
+		"Type": "Fire"
+	},
+	{
+		"Level": "36",
+		"Ndex": "253",
+		"Pokemon": "Grovyle",
+		"Type": "Grass"
+	},
+	{
+		"Level": "36",
+		"Ndex": "256",
+		"Pokemon": "Combusken",
+		"Type": "Fire"
+	},
+	{
+		"Level": "36",
+		"Ndex": "259",
+		"Pokemon": "Marshtomp",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "288",
+		"Pokemon": "Vigoroth",
+		"Type": "Normal"
+	},
+	{
+		"Level": "36",
+		"Ndex": "343",
+		"Pokemon": "Baltoy",
+		"Type": "Ground"
+	},
+	{
+		"Level": "36",
+		"Ndex": "391",
+		"Pokemon": "Monferno",
+		"Type": "Fire"
+	},
+	{
+		"Level": "36",
+		"Ndex": "394",
+		"Pokemon": "Prinplup",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "496",
+		"Pokemon": "Servine",
+		"Type": "Grass"
+	},
+	{
+		"Level": "36",
+		"Ndex": "499",
+		"Pokemon": "Pignite",
+		"Type": "Fire"
+	},
+	{
+		"Level": "36",
+		"Ndex": "502",
+		"Pokemon": "Dewott",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "536",
+		"Pokemon": "Palpitoad",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "568",
+		"Pokemon": "Trubbish",
+		"Type": "Poison"
+	},
+	{
+		"Level": "36",
+		"Ndex": "595",
+		"Pokemon": "Joltik",
+		"Type": "Bug"
+	},
+	{
+		"Level": "36",
+		"Ndex": "651",
+		"Pokemon": "Quilladin",
+		"Type": "Grass"
+	},
+	{
+		"Level": "36",
+		"Ndex": "654",
+		"Pokemon": "Braixen",
+		"Type": "Fire"
+	},
+	{
+		"Level": "36",
+		"Ndex": "657",
+		"Pokemon": "Frogadier",
+		"Type": "Water"
+	},
+	{
+		"Level": "36",
+		"Ndex": "843",
+		"Pokemon": "Silicobra",
+		"Type": "Ground"
+	},
+	{
+		"Level": "37",
+		"Ndex": "79",
+		"Pokemon": "Slowpoke",
+		"Type": "Water"
+	},
+	{
+		"Level": "37",
+		"Ndex": "307",
+		"Pokemon": "Meditite",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "37",
+		"Ndex": "353",
+		"Pokemon": "Shuppet",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "37",
+		"Ndex": "355",
+		"Pokemon": "Duskull",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "37",
+		"Ndex": "453",
+		"Pokemon": "Croagunk",
+		"Type": "Poison"
+	},
+	{
+		"Level": "37",
+		"Ndex": "564",
+		"Pokemon": "Tirtouga",
+		"Type": "Water"
+	},
+	{
+		"Level": "37",
+		"Ndex": "566",
+		"Pokemon": "Archen",
+		"Type": "Rock"
+	},
+	{
+		"Level": "37",
+		"Ndex": "613",
+		"Pokemon": "Cubchoo",
+		"Type": "Ice"
+	},
+	{
+		"Level": "37",
+		"Ndex": "692",
+		"Pokemon": "Clauncher",
+		"Type": "Water"
+	},
+	{
+		"Level": "37",
+		"Ndex": "712",
+		"Pokemon": "Bergmite",
+		"Type": "Ice"
+	},
+	{
+		"Level": "38",
+		"Ndex": "88",
+		"Pokemon": "Grimer",
+		"Type": "Poison"
+	},
+	{
+		"Level": "38",
+		"Ndex": "218",
+		"Pokemon": "Slugma",
+		"Type": "Fire"
+	},
+	{
+		"Level": "38",
+		"Ndex": "222G",
+		"Pokemon": "Corsola",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "38",
+		"Ndex": "431",
+		"Pokemon": "Glameow",
+		"Type": "Normal"
+	},
+	{
+		"Level": "38",
+		"Ndex": "599",
+		"Pokemon": "Klink",
+		"Type": "Steel"
+	},
+	{
+		"Level": "38",
+		"Ndex": "610",
+		"Pokemon": "Axew",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "38",
+		"Ndex": "747",
+		"Pokemon": "Mareanie",
+		"Type": "Poison"
+	},
+	{
+		"Level": "38",
+		"Ndex": "822",
+		"Pokemon": "Corvisquire",
+		"Type": "Flying"
+	},
+	{
+		"Level": "39",
+		"Ndex": "559",
+		"Pokemon": "Scraggy",
+		"Type": "Dark"
+	},
+	{
+		"Level": "39",
+		"Ndex": "590",
+		"Pokemon": "Foongus",
+		"Type": "Grass"
+	},
+	{
+		"Level": "39",
+		"Ndex": "602",
+		"Pokemon": "Tynamo",
+		"Type": "Electric"
+	},
+	{
+		"Level": "39",
+		"Ndex": "688",
+		"Pokemon": "Binacle",
+		"Type": "Rock"
+	},
+	{
+		"Level": "39",
+		"Ndex": "696",
+		"Pokemon": "Tyrunt",
+		"Type": "Rock"
+	},
+	{
+		"Level": "39",
+		"Ndex": "698",
+		"Pokemon": "Amaura",
+		"Type": "Rock"
+	},
+	{
+		"Level": "40",
+		"Ndex": "77",
+		"Pokemon": "Ponyta",
+		"Type": "Fire"
+	},
+	{
+		"Level": "40",
+		"Ndex": "138",
+		"Pokemon": "Omanyte",
+		"Type": "Rock"
+	},
+	{
+		"Level": "40",
+		"Ndex": "140",
+		"Pokemon": "Kabuto",
+		"Type": "Rock"
+	},
+	{
+		"Level": "40",
+		"Ndex": "294",
+		"Pokemon": "Loudred",
+		"Type": "Normal"
+	},
+	{
+		"Level": "40",
+		"Ndex": "320",
+		"Pokemon": "Wailmer",
+		"Type": "Water"
+	},
+	{
+		"Level": "40",
+		"Ndex": "345",
+		"Pokemon": "Lileep",
+		"Type": "Rock"
+	},
+	{
+		"Level": "40",
+		"Ndex": "347",
+		"Pokemon": "Anorith",
+		"Type": "Rock"
+	},
+	{
+		"Level": "40",
+		"Ndex": "451",
+		"Pokemon": "Skorupi",
+		"Type": "Poison"
+	},
+	{
+		"Level": "40",
+		"Ndex": "459",
+		"Pokemon": "Snover",
+		"Type": "Grass"
+	},
+	{
+		"Level": "40",
+		"Ndex": "552",
+		"Pokemon": "Krokorok",
+		"Type": "Ground"
+	},
+	{
+		"Level": "40",
+		"Ndex": "592",
+		"Pokemon": "Frillish",
+		"Type": "Water"
+	},
+	{
+		"Level": "40",
+		"Ndex": "597",
+		"Pokemon": "Ferroseed",
+		"Type": "Grass"
+	},
+	{
+		"Level": "40",
+		"Ndex": "704",
+		"Pokemon": "Goomy",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "41",
+		"Ndex": "575",
+		"Pokemon": "Gothorita",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "41",
+		"Ndex": "578",
+		"Pokemon": "Duosion",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "41",
+		"Ndex": "607",
+		"Pokemon": "Litwick",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "42",
+		"Ndex": "111",
+		"Pokemon": "Rhyhorn",
+		"Type": "Ground"
+	},
+	{
+		"Level": "42",
+		"Ndex": "122G",
+		"Pokemon": "Mr. Mime",
+		"Type": "Ice"
+	},
+	{
+		"Level": "42",
+		"Ndex": "305",
+		"Pokemon": "Lairon",
+		"Type": "Steel"
+	},
+	{
+		"Level": "42",
+		"Ndex": "361",
+		"Pokemon": "Snorunt",
+		"Type": "Ice"
+	},
+	{
+		"Level": "42",
+		"Ndex": "605",
+		"Pokemon": "Elgyem",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "42",
+		"Ndex": "769",
+		"Pokemon": "Sandygast",
+		"Type": "Ghost"
+	},
+	{
+		"Level": "42",
+		"Ndex": "857",
+		"Pokemon": "Hattrem",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "42",
+		"Ndex": "860",
+		"Pokemon": "Morgrem",
+		"Type": "Dark"
+	},
+	{
+		"Level": "43",
+		"Ndex": "622",
+		"Pokemon": "Golett",
+		"Type": "Ground"
+	},
+	{
+		"Level": "43",
+		"Ndex": "789",
+		"Pokemon": "Cosmog",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "44",
+		"Ndex": "364",
+		"Pokemon": "Sealeo",
+		"Type": "Ice"
+	},
+	{
+		"Level": "45",
+		"Ndex": "329",
+		"Pokemon": "Vibrava",
+		"Type": "Ground"
+	},
+	{
+		"Level": "45",
+		"Ndex": "375",
+		"Pokemon": "Metang",
+		"Type": "Steel"
+	},
+	{
+		"Level": "45",
+		"Ndex": "783",
+		"Pokemon": "Hakamo-o",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "47",
+		"Ndex": "583",
+		"Pokemon": "Vanillish",
+		"Type": "Ice"
+	},
+	{
+		"Level": "48",
+		"Ndex": "444",
+		"Pokemon": "Gabite",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "48",
+		"Ndex": "611",
+		"Pokemon": "Fraxure",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "48",
+		"Ndex": "690",
+		"Pokemon": "Skrelp",
+		"Type": "Poison"
+	},
+	{
+		"Level": "48",
+		"Ndex": "714",
+		"Pokemon": "Noibat",
+		"Type": "Flying"
+	},
+	{
+		"Level": "49",
+		"Ndex": "600",
+		"Pokemon": "Klang",
+		"Type": "Steel"
+	},
+	{
+		"Level": "50",
+		"Ndex": "372",
+		"Pokemon": "Shelgon",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "50",
+		"Ndex": "619",
+		"Pokemon": "Mienfoo",
+		"Type": "Fighting"
+	},
+	{
+		"Level": "50",
+		"Ndex": "633",
+		"Pokemon": "Deino",
+		"Type": "Dark"
+	},
+	{
+		"Level": "50",
+		"Ndex": "705",
+		"Pokemon": "Sliggoo",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "50",
+		"Ndex": "885",
+		"Pokemon": "Dreepy",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "52",
+		"Ndex": "624",
+		"Pokemon": "Pawniard",
+		"Type": "Dark"
+	},
+	{
+		"Level": "53",
+		"Ndex": "790",
+		"Pokemon": "Cosmoem",
+		"Type": "Psychic"
+	},
+	{
+		"Level": "54",
+		"Ndex": "627",
+		"Pokemon": "Rufflet",
+		"Type": "Normal"
+	},
+	{
+		"Level": "54",
+		"Ndex": "629",
+		"Pokemon": "Vullaby",
+		"Type": "Dark"
+	},
+	{
+		"Level": "55",
+		"Ndex": "148",
+		"Pokemon": "Dragonair",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "55",
+		"Ndex": "247",
+		"Pokemon": "Pupitar",
+		"Type": "Rock"
+	},
+	{
+		"Level": "59",
+		"Ndex": "636",
+		"Pokemon": "Larvesta",
+		"Type": "Bug"
+	},
+	{
+		"Level": "60",
+		"Ndex": "886",
+		"Pokemon": "Drakloak",
+		"Type": "Dragon"
+	},
+	{
+		"Level": "64",
+		"Ndex": "634",
+		"Pokemon": "Zweilous",
+		"Type": "Dark"
+	}
+]
