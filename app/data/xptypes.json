@@ -10,7 +10,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "2",
@@ -23,7 +23,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "3",
@@ -36,7 +36,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "4",
@@ -49,7 +49,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "50",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "5",
@@ -62,7 +62,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "65",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "6",
@@ -75,7 +75,7 @@
 		"Sp. Atk": "109",
 		"Sp. Def": "85",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "7",
@@ -88,7 +88,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "64",
 		"Speed": "43",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "8",
@@ -101,7 +101,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "80",
 		"Speed": "58",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "9",
@@ -114,7 +114,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "105",
 		"Speed": "78",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "10",
@@ -127,7 +127,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "20",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "11",
@@ -140,7 +140,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "12",
@@ -153,7 +153,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "80",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "13",
@@ -166,7 +166,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "20",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "14",
@@ -179,7 +179,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "15",
@@ -192,7 +192,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "80",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "16",
@@ -205,7 +205,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "56",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "17",
@@ -218,7 +218,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "71",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "18",
@@ -231,7 +231,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "70",
 		"Speed": "101",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "19",
@@ -244,7 +244,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "35",
 		"Speed": "72",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "20",
@@ -257,7 +257,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "70",
 		"Speed": "97",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "21",
@@ -270,7 +270,7 @@
 		"Sp. Atk": "31",
 		"Sp. Def": "31",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "22",
@@ -283,7 +283,7 @@
 		"Sp. Atk": "61",
 		"Sp. Def": "61",
 		"Speed": "100",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "23",
@@ -296,7 +296,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "54",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "24",
@@ -309,7 +309,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "79",
 		"Speed": "80",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "25",
@@ -322,7 +322,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "26",
@@ -335,7 +335,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "80",
 		"Speed": "110",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "27",
@@ -348,7 +348,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "30",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "28",
@@ -361,7 +361,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "29",
@@ -374,7 +374,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "41",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "30",
@@ -387,7 +387,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "56",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "31",
@@ -400,7 +400,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "85",
 		"Speed": "76",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "32",
@@ -413,7 +413,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "33",
@@ -426,7 +426,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "34",
@@ -439,7 +439,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "75",
 		"Speed": "85",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "35",
@@ -452,7 +452,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "65",
 		"Speed": "35",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "36",
@@ -465,7 +465,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "90",
 		"Speed": "60",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "37",
@@ -478,7 +478,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "65",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "38",
@@ -491,7 +491,7 @@
 		"Sp. Atk": "81",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "39",
@@ -504,7 +504,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "25",
 		"Speed": "20",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "40",
@@ -517,7 +517,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "50",
 		"Speed": "45",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "41",
@@ -530,7 +530,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "40",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "42",
@@ -543,7 +543,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "75",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "43",
@@ -556,7 +556,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "65",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "44",
@@ -569,7 +569,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "75",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "45",
@@ -582,7 +582,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "90",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "46",
@@ -595,7 +595,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "25",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "47",
@@ -608,7 +608,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "80",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "48",
@@ -621,7 +621,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "55",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "49",
@@ -634,7 +634,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "75",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "50",
@@ -647,7 +647,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "45",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "51",
@@ -660,7 +660,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "70",
 		"Speed": "120",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "52",
@@ -673,7 +673,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "53",
@@ -686,7 +686,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "115",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "54",
@@ -699,7 +699,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "50",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "55",
@@ -712,7 +712,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "80",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "56",
@@ -725,7 +725,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "45",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "57",
@@ -738,7 +738,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "58",
@@ -751,7 +751,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "50",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "59",
@@ -764,7 +764,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "80",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "60",
@@ -777,7 +777,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "61",
@@ -790,7 +790,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "62",
@@ -803,7 +803,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "90",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "63",
@@ -816,7 +816,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "55",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "64",
@@ -829,7 +829,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "70",
 		"Speed": "105",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "65",
@@ -842,7 +842,7 @@
 		"Sp. Atk": "135",
 		"Sp. Def": "95",
 		"Speed": "120",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "66",
@@ -855,7 +855,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "35",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "67",
@@ -868,7 +868,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "60",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "68",
@@ -881,7 +881,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "85",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "69",
@@ -894,7 +894,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "30",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "70",
@@ -907,7 +907,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "45",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "71",
@@ -920,7 +920,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "72",
@@ -933,7 +933,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "100",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "73",
@@ -946,7 +946,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "120",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "74",
@@ -959,7 +959,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "20",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "75",
@@ -972,7 +972,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "35",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "76",
@@ -985,7 +985,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "77",
@@ -998,7 +998,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "78",
@@ -1011,7 +1011,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "105",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "79",
@@ -1024,7 +1024,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "80",
@@ -1037,7 +1037,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "80",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "81",
@@ -1050,7 +1050,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "55",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "82",
@@ -1063,7 +1063,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "83",
@@ -1076,7 +1076,7 @@
 		"Sp. Atk": "58",
 		"Sp. Def": "62",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "84",
@@ -1089,7 +1089,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "85",
@@ -1102,7 +1102,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "110",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "86",
@@ -1115,7 +1115,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "70",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "87",
@@ -1128,7 +1128,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "95",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "88",
@@ -1141,7 +1141,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "25",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "89",
@@ -1154,7 +1154,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "100",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "90",
@@ -1167,7 +1167,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "25",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "91",
@@ -1180,7 +1180,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "45",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "92",
@@ -1193,7 +1193,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "35",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "93",
@@ -1206,7 +1206,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "55",
 		"Speed": "95",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "94",
@@ -1219,7 +1219,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "75",
 		"Speed": "110",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "95",
@@ -1232,7 +1232,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "45",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "96",
@@ -1245,7 +1245,7 @@
 		"Sp. Atk": "43",
 		"Sp. Def": "90",
 		"Speed": "42",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "97",
@@ -1258,7 +1258,7 @@
 		"Sp. Atk": "73",
 		"Sp. Def": "115",
 		"Speed": "67",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "98",
@@ -1271,7 +1271,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "99",
@@ -1284,7 +1284,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "100",
@@ -1297,7 +1297,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "100",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "101",
@@ -1310,7 +1310,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "150",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "102",
@@ -1323,7 +1323,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "45",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "103",
@@ -1336,7 +1336,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "75",
 		"Speed": "55",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "104",
@@ -1349,7 +1349,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "105",
@@ -1362,7 +1362,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "80",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "106",
@@ -1375,7 +1375,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "110",
 		"Speed": "87",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "107",
@@ -1388,7 +1388,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "110",
 		"Speed": "76",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "108",
@@ -1401,7 +1401,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "75",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "109",
@@ -1414,7 +1414,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "45",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "110",
@@ -1427,7 +1427,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "70",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "111",
@@ -1440,7 +1440,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "25",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "112",
@@ -1453,7 +1453,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "113",
@@ -1466,7 +1466,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "105",
 		"Speed": "50",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "114",
@@ -1479,7 +1479,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "40",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "115",
@@ -1492,7 +1492,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "80",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "116",
@@ -1505,7 +1505,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "25",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "117",
@@ -1518,7 +1518,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "45",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "118",
@@ -1531,7 +1531,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "50",
 		"Speed": "63",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "119",
@@ -1544,7 +1544,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "80",
 		"Speed": "68",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "120",
@@ -1557,7 +1557,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "55",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "121",
@@ -1570,7 +1570,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "85",
 		"Speed": "115",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "122",
@@ -1583,7 +1583,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "120",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "123",
@@ -1596,7 +1596,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "80",
 		"Speed": "105",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "124",
@@ -1609,7 +1609,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "95",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "125",
@@ -1622,7 +1622,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "85",
 		"Speed": "105",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "126",
@@ -1635,7 +1635,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "85",
 		"Speed": "93",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "127",
@@ -1648,7 +1648,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "70",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "128",
@@ -1661,7 +1661,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "70",
 		"Speed": "110",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "129",
@@ -1674,7 +1674,7 @@
 		"Sp. Atk": "15",
 		"Sp. Def": "20",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "130",
@@ -1687,7 +1687,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "100",
 		"Speed": "81",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "131",
@@ -1700,7 +1700,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "95",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "132",
@@ -1713,7 +1713,7 @@
 		"Sp. Atk": "48",
 		"Sp. Def": "48",
 		"Speed": "48",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "133",
@@ -1726,7 +1726,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "65",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "134",
@@ -1739,7 +1739,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "95",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "135",
@@ -1752,7 +1752,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "95",
 		"Speed": "130",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "136",
@@ -1765,7 +1765,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "110",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "137",
@@ -1778,7 +1778,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "75",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "138",
@@ -1791,7 +1791,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "55",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "139",
@@ -1804,7 +1804,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "70",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "140",
@@ -1817,7 +1817,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "45",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "141",
@@ -1830,7 +1830,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "70",
 		"Speed": "80",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "142",
@@ -1843,7 +1843,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "75",
 		"Speed": "130",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "143",
@@ -1856,7 +1856,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "110",
 		"Speed": "30",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "144",
@@ -1869,7 +1869,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "125",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "145",
@@ -1882,7 +1882,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "90",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "146",
@@ -1895,7 +1895,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "85",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "147",
@@ -1908,7 +1908,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "148",
@@ -1921,7 +1921,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "149",
@@ -1934,7 +1934,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "150",
@@ -1947,7 +1947,7 @@
 		"Sp. Atk": "154",
 		"Sp. Def": "90",
 		"Speed": "130",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "151",
@@ -1960,7 +1960,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "152",
@@ -1973,7 +1973,7 @@
 		"Sp. Atk": "49",
 		"Sp. Def": "65",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "153",
@@ -1986,7 +1986,7 @@
 		"Sp. Atk": "63",
 		"Sp. Def": "80",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "154",
@@ -1999,7 +1999,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "100",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "155",
@@ -2012,7 +2012,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "50",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "156",
@@ -2025,7 +2025,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "65",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "157",
@@ -2038,7 +2038,7 @@
 		"Sp. Atk": "109",
 		"Sp. Def": "85",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "158",
@@ -2051,7 +2051,7 @@
 		"Sp. Atk": "44",
 		"Sp. Def": "48",
 		"Speed": "43",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "159",
@@ -2064,7 +2064,7 @@
 		"Sp. Atk": "59",
 		"Sp. Def": "63",
 		"Speed": "58",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "160",
@@ -2077,7 +2077,7 @@
 		"Sp. Atk": "79",
 		"Sp. Def": "83",
 		"Speed": "78",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "161",
@@ -2090,7 +2090,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "45",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "162",
@@ -2103,7 +2103,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "163",
@@ -2116,7 +2116,7 @@
 		"Sp. Atk": "36",
 		"Sp. Def": "56",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "164",
@@ -2129,7 +2129,7 @@
 		"Sp. Atk": "86",
 		"Sp. Def": "96",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "165",
@@ -2142,7 +2142,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "80",
 		"Speed": "55",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "166",
@@ -2155,7 +2155,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "110",
 		"Speed": "85",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "167",
@@ -2168,7 +2168,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "30",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "168",
@@ -2181,7 +2181,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "40",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "169",
@@ -2194,7 +2194,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "130",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "170",
@@ -2207,7 +2207,7 @@
 		"Sp. Atk": "56",
 		"Sp. Def": "56",
 		"Speed": "67",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "171",
@@ -2220,7 +2220,7 @@
 		"Sp. Atk": "76",
 		"Sp. Def": "76",
 		"Speed": "67",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "172",
@@ -2233,7 +2233,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "173",
@@ -2246,7 +2246,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "15",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "174",
@@ -2259,7 +2259,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "20",
 		"Speed": "15",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "175",
@@ -2272,7 +2272,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "65",
 		"Speed": "20",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "176",
@@ -2285,7 +2285,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "105",
 		"Speed": "40",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "177",
@@ -2298,7 +2298,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "45",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "178",
@@ -2311,7 +2311,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "70",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "179",
@@ -2324,7 +2324,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "45",
 		"Speed": "35",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "180",
@@ -2337,7 +2337,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "60",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "181",
@@ -2350,7 +2350,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "90",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "182",
@@ -2363,7 +2363,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "100",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "183",
@@ -2376,7 +2376,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "50",
 		"Speed": "40",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "184",
@@ -2389,7 +2389,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "80",
 		"Speed": "50",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "185",
@@ -2402,7 +2402,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "65",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "186",
@@ -2415,7 +2415,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "100",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "187",
@@ -2428,7 +2428,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "55",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "188",
@@ -2441,7 +2441,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "65",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "189",
@@ -2454,7 +2454,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "95",
 		"Speed": "110",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "190",
@@ -2467,7 +2467,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "55",
 		"Speed": "85",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "191",
@@ -2480,7 +2480,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "192",
@@ -2493,7 +2493,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "85",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "193",
@@ -2506,7 +2506,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "45",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "194",
@@ -2519,7 +2519,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "195",
@@ -2532,7 +2532,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "196",
@@ -2545,7 +2545,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "95",
 		"Speed": "110",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "197",
@@ -2558,7 +2558,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "130",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "198",
@@ -2571,7 +2571,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "42",
 		"Speed": "91",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "199",
@@ -2584,7 +2584,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "110",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "200",
@@ -2597,7 +2597,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "85",
 		"Speed": "85",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "201",
@@ -2610,7 +2610,7 @@
 		"Sp. Atk": "72",
 		"Sp. Def": "48",
 		"Speed": "48",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "202",
@@ -2623,7 +2623,7 @@
 		"Sp. Atk": "33",
 		"Sp. Def": "58",
 		"Speed": "33",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "203",
@@ -2636,7 +2636,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "65",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "204",
@@ -2649,7 +2649,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "205",
@@ -2662,7 +2662,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "206",
@@ -2675,7 +2675,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "207",
@@ -2688,7 +2688,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "65",
 		"Speed": "85",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "208",
@@ -2701,7 +2701,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "209",
@@ -2714,7 +2714,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "30",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "210",
@@ -2727,7 +2727,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "45",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "211",
@@ -2740,7 +2740,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "212",
@@ -2753,7 +2753,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "80",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "213",
@@ -2766,7 +2766,7 @@
 		"Sp. Atk": "10",
 		"Sp. Def": "230",
 		"Speed": "5",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "214",
@@ -2779,7 +2779,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "95",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "215",
@@ -2792,7 +2792,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "75",
 		"Speed": "115",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "216",
@@ -2805,7 +2805,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "217",
@@ -2818,7 +2818,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "75",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "218",
@@ -2831,7 +2831,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "40",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "219",
@@ -2844,7 +2844,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "80",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "220",
@@ -2857,7 +2857,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "221",
@@ -2870,7 +2870,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "222",
@@ -2883,7 +2883,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "95",
 		"Speed": "35",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "223",
@@ -2896,7 +2896,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "35",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "224",
@@ -2909,7 +2909,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "75",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "225",
@@ -2922,7 +2922,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "45",
 		"Speed": "75",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "226",
@@ -2935,7 +2935,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "140",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "227",
@@ -2948,7 +2948,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "228",
@@ -2961,7 +2961,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "50",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "229",
@@ -2974,7 +2974,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "80",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "230",
@@ -2987,7 +2987,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "95",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "231",
@@ -3000,7 +3000,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "232",
@@ -3013,7 +3013,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "233",
@@ -3026,7 +3026,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "95",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "234",
@@ -3039,7 +3039,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "65",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "235",
@@ -3052,7 +3052,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "45",
 		"Speed": "75",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "236",
@@ -3065,7 +3065,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "237",
@@ -3078,7 +3078,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "110",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "238",
@@ -3091,7 +3091,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "65",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "239",
@@ -3104,7 +3104,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "55",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "240",
@@ -3117,7 +3117,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "55",
 		"Speed": "83",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "241",
@@ -3130,7 +3130,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "70",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "242",
@@ -3143,7 +3143,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "135",
 		"Speed": "55",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "243",
@@ -3156,7 +3156,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "100",
 		"Speed": "115",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "244",
@@ -3169,7 +3169,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "75",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "245",
@@ -3182,7 +3182,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "115",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "246",
@@ -3195,7 +3195,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "50",
 		"Speed": "41",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "247",
@@ -3208,7 +3208,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "70",
 		"Speed": "51",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "248",
@@ -3221,7 +3221,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "100",
 		"Speed": "61",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "249",
@@ -3234,7 +3234,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "154",
 		"Speed": "110",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "250",
@@ -3247,7 +3247,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "154",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "251",
@@ -3260,7 +3260,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "252",
@@ -3273,7 +3273,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "55",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "253",
@@ -3286,7 +3286,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "65",
 		"Speed": "95",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "254",
@@ -3299,7 +3299,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "85",
 		"Speed": "120",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "255",
@@ -3312,7 +3312,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "50",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "256",
@@ -3325,7 +3325,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "60",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "257",
@@ -3338,7 +3338,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "70",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "258",
@@ -3351,7 +3351,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "259",
@@ -3364,7 +3364,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "260",
@@ -3377,7 +3377,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "90",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "261",
@@ -3390,7 +3390,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "262",
@@ -3403,7 +3403,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "263",
@@ -3416,7 +3416,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "41",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "264",
@@ -3429,7 +3429,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "61",
 		"Speed": "100",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "265",
@@ -3442,7 +3442,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "30",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "266",
@@ -3455,7 +3455,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "267",
@@ -3468,7 +3468,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "50",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "268",
@@ -3481,7 +3481,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "269",
@@ -3494,7 +3494,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "90",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "270",
@@ -3507,7 +3507,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "271",
@@ -3520,7 +3520,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "272",
@@ -3533,7 +3533,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "100",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "273",
@@ -3546,7 +3546,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "274",
@@ -3559,7 +3559,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "40",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "275",
@@ -3572,7 +3572,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "60",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "276",
@@ -3585,7 +3585,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "85",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "277",
@@ -3598,7 +3598,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "50",
 		"Speed": "125",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "278",
@@ -3611,7 +3611,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "30",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "279",
@@ -3624,7 +3624,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "70",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "280",
@@ -3637,7 +3637,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "35",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "281",
@@ -3650,7 +3650,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "55",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "282",
@@ -3663,7 +3663,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "115",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "283",
@@ -3676,7 +3676,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "52",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "284",
@@ -3689,7 +3689,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "82",
 		"Speed": "80",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "285",
@@ -3702,7 +3702,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "60",
 		"Speed": "35",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "286",
@@ -3715,7 +3715,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "70",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "287",
@@ -3728,7 +3728,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "30",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "288",
@@ -3741,7 +3741,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "289",
@@ -3754,7 +3754,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "65",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "290",
@@ -3767,7 +3767,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "40",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "291",
@@ -3780,7 +3780,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "160",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "292",
@@ -3793,7 +3793,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "40",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "293",
@@ -3806,7 +3806,7 @@
 		"Sp. Atk": "51",
 		"Sp. Def": "23",
 		"Speed": "28",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "294",
@@ -3819,7 +3819,7 @@
 		"Sp. Atk": "71",
 		"Sp. Def": "43",
 		"Speed": "48",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "295",
@@ -3832,7 +3832,7 @@
 		"Sp. Atk": "91",
 		"Sp. Def": "73",
 		"Speed": "68",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "296",
@@ -3845,7 +3845,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "30",
 		"Speed": "25",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "297",
@@ -3858,7 +3858,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "60",
 		"Speed": "50",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "298",
@@ -3871,7 +3871,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "40",
 		"Speed": "20",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "299",
@@ -3884,7 +3884,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "90",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "300",
@@ -3897,7 +3897,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "50",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "301",
@@ -3910,7 +3910,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "90",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "302",
@@ -3923,7 +3923,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "303",
@@ -3936,7 +3936,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "50",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "304",
@@ -3949,7 +3949,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "30",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "305",
@@ -3962,7 +3962,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "306",
@@ -3975,7 +3975,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "307",
@@ -3988,7 +3988,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "55",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "308",
@@ -4001,7 +4001,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "75",
 		"Speed": "80",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "309",
@@ -4014,7 +4014,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "40",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "310",
@@ -4027,7 +4027,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "60",
 		"Speed": "105",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "311",
@@ -4040,7 +4040,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "75",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "312",
@@ -4053,7 +4053,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "85",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "313",
@@ -4066,7 +4066,7 @@
 		"Sp. Atk": "47",
 		"Sp. Def": "85",
 		"Speed": "85",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "314",
@@ -4079,7 +4079,7 @@
 		"Sp. Atk": "73",
 		"Sp. Def": "85",
 		"Speed": "85",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "315",
@@ -4092,7 +4092,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "80",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "316",
@@ -4105,7 +4105,7 @@
 		"Sp. Atk": "43",
 		"Sp. Def": "53",
 		"Speed": "40",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "317",
@@ -4118,7 +4118,7 @@
 		"Sp. Atk": "73",
 		"Sp. Def": "83",
 		"Speed": "55",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "318",
@@ -4131,7 +4131,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "20",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "319",
@@ -4144,7 +4144,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "40",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "320",
@@ -4157,7 +4157,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "35",
 		"Speed": "60",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "321",
@@ -4170,7 +4170,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "45",
 		"Speed": "60",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "322",
@@ -4183,7 +4183,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "45",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "323",
@@ -4196,7 +4196,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "75",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "324",
@@ -4209,7 +4209,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "70",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "325",
@@ -4222,7 +4222,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "60",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "326",
@@ -4235,7 +4235,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "110",
 		"Speed": "80",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "327",
@@ -4248,7 +4248,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "60",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "328",
@@ -4261,7 +4261,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "10",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "329",
@@ -4274,7 +4274,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "330",
@@ -4287,7 +4287,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "331",
@@ -4300,7 +4300,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "40",
 		"Speed": "35",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "332",
@@ -4313,7 +4313,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "60",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "333",
@@ -4326,7 +4326,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "75",
 		"Speed": "50",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "334",
@@ -4339,7 +4339,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "105",
 		"Speed": "80",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "335",
@@ -4352,7 +4352,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "90",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "336",
@@ -4365,7 +4365,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "60",
 		"Speed": "65",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "337",
@@ -4378,7 +4378,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "85",
 		"Speed": "70",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "338",
@@ -4391,7 +4391,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "70",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "339",
@@ -4404,7 +4404,7 @@
 		"Sp. Atk": "46",
 		"Sp. Def": "41",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "340",
@@ -4417,7 +4417,7 @@
 		"Sp. Atk": "76",
 		"Sp. Def": "71",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "341",
@@ -4430,7 +4430,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "35",
 		"Speed": "35",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "342",
@@ -4443,7 +4443,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "55",
 		"Speed": "55",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "343",
@@ -4456,7 +4456,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "70",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "344",
@@ -4469,7 +4469,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "120",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "345",
@@ -4482,7 +4482,7 @@
 		"Sp. Atk": "61",
 		"Sp. Def": "87",
 		"Speed": "23",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "346",
@@ -4495,7 +4495,7 @@
 		"Sp. Atk": "81",
 		"Sp. Def": "107",
 		"Speed": "43",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "347",
@@ -4508,7 +4508,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "75",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "348",
@@ -4521,7 +4521,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "45",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "349",
@@ -4534,7 +4534,7 @@
 		"Sp. Atk": "10",
 		"Sp. Def": "55",
 		"Speed": "80",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "350",
@@ -4547,7 +4547,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "125",
 		"Speed": "81",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "351",
@@ -4560,7 +4560,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "352",
@@ -4573,7 +4573,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "120",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "353",
@@ -4586,7 +4586,7 @@
 		"Sp. Atk": "63",
 		"Sp. Def": "33",
 		"Speed": "45",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "354",
@@ -4599,7 +4599,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "63",
 		"Speed": "65",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "355",
@@ -4612,7 +4612,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "90",
 		"Speed": "25",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "356",
@@ -4625,7 +4625,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "130",
 		"Speed": "25",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "357",
@@ -4638,7 +4638,7 @@
 		"Sp. Atk": "72",
 		"Sp. Def": "87",
 		"Speed": "51",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "358",
@@ -4651,7 +4651,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "90",
 		"Speed": "65",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "359",
@@ -4664,7 +4664,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "60",
 		"Speed": "75",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "360",
@@ -4677,7 +4677,7 @@
 		"Sp. Atk": "23",
 		"Sp. Def": "48",
 		"Speed": "23",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "361",
@@ -4690,7 +4690,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "362",
@@ -4703,7 +4703,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "80",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "363",
@@ -4716,7 +4716,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "50",
 		"Speed": "25",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "364",
@@ -4729,7 +4729,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "70",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "365",
@@ -4742,7 +4742,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "90",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "366",
@@ -4755,7 +4755,7 @@
 		"Sp. Atk": "74",
 		"Sp. Def": "55",
 		"Speed": "32",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "367",
@@ -4768,7 +4768,7 @@
 		"Sp. Atk": "94",
 		"Sp. Def": "75",
 		"Speed": "52",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "368",
@@ -4781,7 +4781,7 @@
 		"Sp. Atk": "114",
 		"Sp. Def": "75",
 		"Speed": "52",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "369",
@@ -4794,7 +4794,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "65",
 		"Speed": "55",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "370",
@@ -4807,7 +4807,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "65",
 		"Speed": "97",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "371",
@@ -4820,7 +4820,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "30",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "372",
@@ -4833,7 +4833,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "50",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "373",
@@ -4846,7 +4846,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "80",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "374",
@@ -4859,7 +4859,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "60",
 		"Speed": "30",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "375",
@@ -4872,7 +4872,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "80",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "376",
@@ -4885,7 +4885,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "90",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "377",
@@ -4898,7 +4898,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "100",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "378",
@@ -4911,7 +4911,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "200",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "379",
@@ -4924,7 +4924,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "150",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "380",
@@ -4937,7 +4937,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "130",
 		"Speed": "110",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "381",
@@ -4950,7 +4950,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "110",
 		"Speed": "110",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "382",
@@ -4963,7 +4963,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "140",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "383",
@@ -4976,7 +4976,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "90",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "384",
@@ -4989,7 +4989,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "90",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "385",
@@ -5002,7 +5002,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "386",
@@ -5015,7 +5015,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "50",
 		"Speed": "150",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "387",
@@ -5028,7 +5028,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "31",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "388",
@@ -5041,7 +5041,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "36",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "389",
@@ -5054,7 +5054,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "85",
 		"Speed": "56",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "390",
@@ -5067,7 +5067,7 @@
 		"Sp. Atk": "58",
 		"Sp. Def": "44",
 		"Speed": "61",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "391",
@@ -5080,7 +5080,7 @@
 		"Sp. Atk": "78",
 		"Sp. Def": "52",
 		"Speed": "81",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "392",
@@ -5093,7 +5093,7 @@
 		"Sp. Atk": "104",
 		"Sp. Def": "71",
 		"Speed": "108",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "393",
@@ -5106,7 +5106,7 @@
 		"Sp. Atk": "61",
 		"Sp. Def": "56",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "394",
@@ -5119,7 +5119,7 @@
 		"Sp. Atk": "81",
 		"Sp. Def": "76",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "395",
@@ -5132,7 +5132,7 @@
 		"Sp. Atk": "111",
 		"Sp. Def": "101",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "396",
@@ -5145,7 +5145,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "397",
@@ -5158,7 +5158,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "398",
@@ -5171,7 +5171,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "60",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "399",
@@ -5184,7 +5184,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "40",
 		"Speed": "31",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "400",
@@ -5197,7 +5197,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "60",
 		"Speed": "71",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "401",
@@ -5210,7 +5210,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "41",
 		"Speed": "25",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "402",
@@ -5223,7 +5223,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "51",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "403",
@@ -5236,7 +5236,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "34",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "404",
@@ -5249,7 +5249,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "49",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "405",
@@ -5262,7 +5262,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "79",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "406",
@@ -5275,7 +5275,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "70",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "407",
@@ -5288,7 +5288,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "105",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "408",
@@ -5301,7 +5301,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "58",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "409",
@@ -5314,7 +5314,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "50",
 		"Speed": "58",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "410",
@@ -5327,7 +5327,7 @@
 		"Sp. Atk": "42",
 		"Sp. Def": "88",
 		"Speed": "30",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "411",
@@ -5340,7 +5340,7 @@
 		"Sp. Atk": "47",
 		"Sp. Def": "138",
 		"Speed": "30",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "412",
@@ -5353,7 +5353,7 @@
 		"Sp. Atk": "29",
 		"Sp. Def": "45",
 		"Speed": "36",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "413",
@@ -5366,7 +5366,7 @@
 		"Sp. Atk": "79",
 		"Sp. Def": "105",
 		"Speed": "36",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "414",
@@ -5379,7 +5379,7 @@
 		"Sp. Atk": "94",
 		"Sp. Def": "50",
 		"Speed": "66",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "415",
@@ -5392,7 +5392,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "42",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "416",
@@ -5405,7 +5405,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "102",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "417",
@@ -5418,7 +5418,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "90",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "418",
@@ -5431,7 +5431,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "30",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "419",
@@ -5444,7 +5444,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "50",
 		"Speed": "115",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "420",
@@ -5457,7 +5457,7 @@
 		"Sp. Atk": "62",
 		"Sp. Def": "53",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "421",
@@ -5470,7 +5470,7 @@
 		"Sp. Atk": "87",
 		"Sp. Def": "78",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "422",
@@ -5483,7 +5483,7 @@
 		"Sp. Atk": "57",
 		"Sp. Def": "62",
 		"Speed": "34",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "423",
@@ -5496,7 +5496,7 @@
 		"Sp. Atk": "92",
 		"Sp. Def": "82",
 		"Speed": "39",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "424",
@@ -5509,7 +5509,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "66",
 		"Speed": "115",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "425",
@@ -5522,7 +5522,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "44",
 		"Speed": "70",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "426",
@@ -5535,7 +5535,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "54",
 		"Speed": "80",
-		"XP Type": "Fluctuating"
+		"XP Type": "fluctuating"
 	},
 	{
 		"#": "427",
@@ -5548,7 +5548,7 @@
 		"Sp. Atk": "44",
 		"Sp. Def": "56",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "428",
@@ -5561,7 +5561,7 @@
 		"Sp. Atk": "54",
 		"Sp. Def": "96",
 		"Speed": "105",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "429",
@@ -5574,7 +5574,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "105",
 		"Speed": "105",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "430",
@@ -5587,7 +5587,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "52",
 		"Speed": "71",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "431",
@@ -5600,7 +5600,7 @@
 		"Sp. Atk": "42",
 		"Sp. Def": "37",
 		"Speed": "85",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "432",
@@ -5613,7 +5613,7 @@
 		"Sp. Atk": "64",
 		"Sp. Def": "59",
 		"Speed": "112",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "433",
@@ -5626,7 +5626,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "50",
 		"Speed": "45",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "434",
@@ -5639,7 +5639,7 @@
 		"Sp. Atk": "41",
 		"Sp. Def": "41",
 		"Speed": "74",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "435",
@@ -5652,7 +5652,7 @@
 		"Sp. Atk": "71",
 		"Sp. Def": "61",
 		"Speed": "84",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "436",
@@ -5665,7 +5665,7 @@
 		"Sp. Atk": "24",
 		"Sp. Def": "86",
 		"Speed": "23",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "437",
@@ -5678,7 +5678,7 @@
 		"Sp. Atk": "79",
 		"Sp. Def": "116",
 		"Speed": "33",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "438",
@@ -5691,7 +5691,7 @@
 		"Sp. Atk": "10",
 		"Sp. Def": "45",
 		"Speed": "10",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "439",
@@ -5704,7 +5704,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "90",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "440",
@@ -5717,7 +5717,7 @@
 		"Sp. Atk": "15",
 		"Sp. Def": "65",
 		"Speed": "30",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "441",
@@ -5730,7 +5730,7 @@
 		"Sp. Atk": "92",
 		"Sp. Def": "42",
 		"Speed": "91",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "442",
@@ -5743,7 +5743,7 @@
 		"Sp. Atk": "92",
 		"Sp. Def": "108",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "443",
@@ -5756,7 +5756,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "45",
 		"Speed": "42",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "444",
@@ -5769,7 +5769,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "55",
 		"Speed": "82",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "445",
@@ -5782,7 +5782,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "85",
 		"Speed": "102",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "446",
@@ -5795,7 +5795,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "85",
 		"Speed": "5",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "447",
@@ -5808,7 +5808,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "40",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "448",
@@ -5821,7 +5821,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "70",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "449",
@@ -5834,7 +5834,7 @@
 		"Sp. Atk": "38",
 		"Sp. Def": "42",
 		"Speed": "32",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "450",
@@ -5847,7 +5847,7 @@
 		"Sp. Atk": "68",
 		"Sp. Def": "72",
 		"Speed": "47",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "451",
@@ -5860,7 +5860,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "55",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "452",
@@ -5873,7 +5873,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "75",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "453",
@@ -5886,7 +5886,7 @@
 		"Sp. Atk": "61",
 		"Sp. Def": "40",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "454",
@@ -5899,7 +5899,7 @@
 		"Sp. Atk": "86",
 		"Sp. Def": "65",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "455",
@@ -5912,7 +5912,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "72",
 		"Speed": "46",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "456",
@@ -5925,7 +5925,7 @@
 		"Sp. Atk": "49",
 		"Sp. Def": "61",
 		"Speed": "66",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "457",
@@ -5938,7 +5938,7 @@
 		"Sp. Atk": "69",
 		"Sp. Def": "86",
 		"Speed": "91",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "458",
@@ -5951,7 +5951,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "120",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "459",
@@ -5964,7 +5964,7 @@
 		"Sp. Atk": "62",
 		"Sp. Def": "60",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "460",
@@ -5977,7 +5977,7 @@
 		"Sp. Atk": "92",
 		"Sp. Def": "85",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "461",
@@ -5990,7 +5990,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "85",
 		"Speed": "125",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "462",
@@ -6003,7 +6003,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "90",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "463",
@@ -6016,7 +6016,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "95",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "464",
@@ -6029,7 +6029,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "465",
@@ -6042,7 +6042,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "50",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "466",
@@ -6055,7 +6055,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "85",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "467",
@@ -6068,7 +6068,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "95",
 		"Speed": "83",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "468",
@@ -6081,7 +6081,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "115",
 		"Speed": "80",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "469",
@@ -6094,7 +6094,7 @@
 		"Sp. Atk": "116",
 		"Sp. Def": "56",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "470",
@@ -6107,7 +6107,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "65",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "471",
@@ -6120,7 +6120,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "95",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "472",
@@ -6133,7 +6133,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "75",
 		"Speed": "95",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "473",
@@ -6146,7 +6146,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "60",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "474",
@@ -6159,7 +6159,7 @@
 		"Sp. Atk": "135",
 		"Sp. Def": "75",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "475",
@@ -6172,7 +6172,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "115",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "476",
@@ -6185,7 +6185,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "150",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "477",
@@ -6198,7 +6198,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "135",
 		"Speed": "45",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "478",
@@ -6211,7 +6211,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "70",
 		"Speed": "110",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "479",
@@ -6224,7 +6224,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "77",
 		"Speed": "91",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "480",
@@ -6237,7 +6237,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "130",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "481",
@@ -6250,7 +6250,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "105",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "482",
@@ -6263,7 +6263,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "70",
 		"Speed": "115",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "483",
@@ -6276,7 +6276,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "100",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "484",
@@ -6289,7 +6289,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "120",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "485",
@@ -6302,7 +6302,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "106",
 		"Speed": "77",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "486",
@@ -6315,7 +6315,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "110",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "487",
@@ -6328,7 +6328,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "120",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "488",
@@ -6341,7 +6341,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "130",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "489",
@@ -6354,7 +6354,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "490",
@@ -6367,7 +6367,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "491",
@@ -6380,7 +6380,7 @@
 		"Sp. Atk": "135",
 		"Sp. Def": "90",
 		"Speed": "125",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "492",
@@ -6393,7 +6393,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "493",
@@ -6406,7 +6406,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "120",
 		"Speed": "120",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "494",
@@ -6419,7 +6419,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "495",
@@ -6432,7 +6432,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "63",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "496",
@@ -6445,7 +6445,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "75",
 		"Speed": "83",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "497",
@@ -6458,7 +6458,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "95",
 		"Speed": "113",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "498",
@@ -6471,7 +6471,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "499",
@@ -6484,7 +6484,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "55",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "500",
@@ -6497,7 +6497,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "65",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "501",
@@ -6510,7 +6510,7 @@
 		"Sp. Atk": "63",
 		"Sp. Def": "45",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "502",
@@ -6523,7 +6523,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "60",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "503",
@@ -6536,7 +6536,7 @@
 		"Sp. Atk": "108",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "504",
@@ -6549,7 +6549,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "39",
 		"Speed": "42",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "505",
@@ -6562,7 +6562,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "69",
 		"Speed": "77",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "506",
@@ -6575,7 +6575,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "45",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "507",
@@ -6588,7 +6588,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "65",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "508",
@@ -6601,7 +6601,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "90",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "509",
@@ -6614,7 +6614,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "37",
 		"Speed": "66",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "510",
@@ -6627,7 +6627,7 @@
 		"Sp. Atk": "88",
 		"Sp. Def": "50",
 		"Speed": "106",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "511",
@@ -6640,7 +6640,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "48",
 		"Speed": "64",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "512",
@@ -6653,7 +6653,7 @@
 		"Sp. Atk": "98",
 		"Sp. Def": "63",
 		"Speed": "101",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "513",
@@ -6666,7 +6666,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "48",
 		"Speed": "64",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "514",
@@ -6679,7 +6679,7 @@
 		"Sp. Atk": "98",
 		"Sp. Def": "63",
 		"Speed": "101",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "515",
@@ -6692,7 +6692,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "48",
 		"Speed": "64",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "516",
@@ -6705,7 +6705,7 @@
 		"Sp. Atk": "98",
 		"Sp. Def": "63",
 		"Speed": "101",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "517",
@@ -6718,7 +6718,7 @@
 		"Sp. Atk": "67",
 		"Sp. Def": "55",
 		"Speed": "24",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "518",
@@ -6731,7 +6731,7 @@
 		"Sp. Atk": "107",
 		"Sp. Def": "95",
 		"Speed": "29",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "519",
@@ -6744,7 +6744,7 @@
 		"Sp. Atk": "36",
 		"Sp. Def": "30",
 		"Speed": "43",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "520",
@@ -6757,7 +6757,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "42",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "521",
@@ -6770,7 +6770,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "55",
 		"Speed": "93",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "522",
@@ -6783,7 +6783,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "32",
 		"Speed": "76",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "523",
@@ -6796,7 +6796,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "63",
 		"Speed": "116",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "524",
@@ -6809,7 +6809,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "15",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "525",
@@ -6822,7 +6822,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "40",
 		"Speed": "20",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "526",
@@ -6835,7 +6835,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "80",
 		"Speed": "25",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "527",
@@ -6848,7 +6848,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "43",
 		"Speed": "72",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "528",
@@ -6861,7 +6861,7 @@
 		"Sp. Atk": "77",
 		"Sp. Def": "55",
 		"Speed": "114",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "529",
@@ -6874,7 +6874,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "45",
 		"Speed": "68",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "530",
@@ -6887,7 +6887,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "65",
 		"Speed": "88",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "531",
@@ -6900,7 +6900,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "86",
 		"Speed": "50",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "532",
@@ -6913,7 +6913,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "35",
 		"Speed": "35",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "533",
@@ -6926,7 +6926,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "534",
@@ -6939,7 +6939,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "535",
@@ -6952,7 +6952,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "40",
 		"Speed": "64",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "536",
@@ -6965,7 +6965,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "55",
 		"Speed": "69",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "537",
@@ -6978,7 +6978,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "75",
 		"Speed": "74",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "538",
@@ -6991,7 +6991,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "85",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "539",
@@ -7004,7 +7004,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "75",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "540",
@@ -7017,7 +7017,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "60",
 		"Speed": "42",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "541",
@@ -7030,7 +7030,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "80",
 		"Speed": "42",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "542",
@@ -7043,7 +7043,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "92",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "543",
@@ -7056,7 +7056,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "39",
 		"Speed": "57",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "544",
@@ -7069,7 +7069,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "79",
 		"Speed": "47",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "545",
@@ -7082,7 +7082,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "69",
 		"Speed": "112",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "546",
@@ -7095,7 +7095,7 @@
 		"Sp. Atk": "37",
 		"Sp. Def": "50",
 		"Speed": "66",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "547",
@@ -7108,7 +7108,7 @@
 		"Sp. Atk": "77",
 		"Sp. Def": "75",
 		"Speed": "116",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "548",
@@ -7121,7 +7121,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "50",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "549",
@@ -7134,7 +7134,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "75",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "550",
@@ -7147,7 +7147,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "55",
 		"Speed": "98",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "551",
@@ -7160,7 +7160,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "552",
@@ -7173,7 +7173,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "74",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "553",
@@ -7186,7 +7186,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "70",
 		"Speed": "92",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "554",
@@ -7199,7 +7199,7 @@
 		"Sp. Atk": "15",
 		"Sp. Def": "45",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "555",
@@ -7212,7 +7212,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "55",
 		"Speed": "95",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "556",
@@ -7225,7 +7225,7 @@
 		"Sp. Atk": "106",
 		"Sp. Def": "67",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "557",
@@ -7238,7 +7238,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "558",
@@ -7251,7 +7251,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "75",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "559",
@@ -7264,7 +7264,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "70",
 		"Speed": "48",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "560",
@@ -7277,7 +7277,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "115",
 		"Speed": "58",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "561",
@@ -7290,7 +7290,7 @@
 		"Sp. Atk": "103",
 		"Sp. Def": "80",
 		"Speed": "97",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "562",
@@ -7303,7 +7303,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "563",
@@ -7316,7 +7316,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "105",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "564",
@@ -7329,7 +7329,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "45",
 		"Speed": "22",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "565",
@@ -7342,7 +7342,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "65",
 		"Speed": "32",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "566",
@@ -7355,7 +7355,7 @@
 		"Sp. Atk": "74",
 		"Sp. Def": "45",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "567",
@@ -7368,7 +7368,7 @@
 		"Sp. Atk": "112",
 		"Sp. Def": "65",
 		"Speed": "110",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "568",
@@ -7381,7 +7381,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "62",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "569",
@@ -7394,7 +7394,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "82",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "570",
@@ -7407,7 +7407,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "40",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "571",
@@ -7420,7 +7420,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "60",
 		"Speed": "105",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "572",
@@ -7433,7 +7433,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "75",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "573",
@@ -7446,7 +7446,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "60",
 		"Speed": "115",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "574",
@@ -7459,7 +7459,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "45",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "575",
@@ -7472,7 +7472,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "85",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "576",
@@ -7485,7 +7485,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "110",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "577",
@@ -7498,7 +7498,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "50",
 		"Speed": "20",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "578",
@@ -7511,7 +7511,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "60",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "579",
@@ -7524,7 +7524,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "85",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "580",
@@ -7537,7 +7537,7 @@
 		"Sp. Atk": "44",
 		"Sp. Def": "50",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "581",
@@ -7550,7 +7550,7 @@
 		"Sp. Atk": "87",
 		"Sp. Def": "63",
 		"Speed": "98",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "582",
@@ -7563,7 +7563,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "60",
 		"Speed": "44",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "583",
@@ -7576,7 +7576,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "75",
 		"Speed": "59",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "584",
@@ -7589,7 +7589,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "95",
 		"Speed": "79",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "585",
@@ -7602,7 +7602,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "586",
@@ -7615,7 +7615,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "587",
@@ -7628,7 +7628,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "60",
 		"Speed": "103",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "588",
@@ -7641,7 +7641,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "45",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "589",
@@ -7654,7 +7654,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "105",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "590",
@@ -7667,7 +7667,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "55",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "591",
@@ -7680,7 +7680,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "80",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "592",
@@ -7693,7 +7693,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "85",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "593",
@@ -7706,7 +7706,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "105",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "594",
@@ -7719,7 +7719,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "45",
 		"Speed": "65",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "595",
@@ -7732,7 +7732,7 @@
 		"Sp. Atk": "57",
 		"Sp. Def": "50",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "596",
@@ -7745,7 +7745,7 @@
 		"Sp. Atk": "97",
 		"Sp. Def": "60",
 		"Speed": "108",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "597",
@@ -7758,7 +7758,7 @@
 		"Sp. Atk": "24",
 		"Sp. Def": "86",
 		"Speed": "10",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "598",
@@ -7771,7 +7771,7 @@
 		"Sp. Atk": "54",
 		"Sp. Def": "116",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "599",
@@ -7784,7 +7784,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "60",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "600",
@@ -7797,7 +7797,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "85",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "601",
@@ -7810,7 +7810,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "85",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "602",
@@ -7823,7 +7823,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "40",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "603",
@@ -7836,7 +7836,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "70",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "604",
@@ -7849,7 +7849,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "80",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "605",
@@ -7862,7 +7862,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "55",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "606",
@@ -7875,7 +7875,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "95",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "607",
@@ -7888,7 +7888,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "55",
 		"Speed": "20",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "608",
@@ -7901,7 +7901,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "60",
 		"Speed": "55",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "609",
@@ -7914,7 +7914,7 @@
 		"Sp. Atk": "145",
 		"Sp. Def": "90",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "610",
@@ -7927,7 +7927,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "40",
 		"Speed": "57",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "611",
@@ -7940,7 +7940,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "67",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "612",
@@ -7953,7 +7953,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "97",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "613",
@@ -7966,7 +7966,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "40",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "614",
@@ -7979,7 +7979,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "615",
@@ -7992,7 +7992,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "135",
 		"Speed": "105",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "616",
@@ -8005,7 +8005,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "65",
 		"Speed": "25",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "617",
@@ -8018,7 +8018,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "60",
 		"Speed": "145",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "618",
@@ -8031,7 +8031,7 @@
 		"Sp. Atk": "81",
 		"Sp. Def": "99",
 		"Speed": "32",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "619",
@@ -8044,7 +8044,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "50",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "620",
@@ -8057,7 +8057,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "60",
 		"Speed": "105",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "621",
@@ -8070,7 +8070,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "90",
 		"Speed": "48",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "622",
@@ -8083,7 +8083,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "50",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "623",
@@ -8096,7 +8096,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "80",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "624",
@@ -8109,7 +8109,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "625",
@@ -8122,7 +8122,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "626",
@@ -8135,7 +8135,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "95",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "627",
@@ -8148,7 +8148,7 @@
 		"Sp. Atk": "37",
 		"Sp. Def": "50",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "628",
@@ -8161,7 +8161,7 @@
 		"Sp. Atk": "57",
 		"Sp. Def": "75",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "629",
@@ -8174,7 +8174,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "65",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "630",
@@ -8187,7 +8187,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "95",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "631",
@@ -8200,7 +8200,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "66",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "632",
@@ -8213,7 +8213,7 @@
 		"Sp. Atk": "48",
 		"Sp. Def": "48",
 		"Speed": "109",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "633",
@@ -8226,7 +8226,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "50",
 		"Speed": "38",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "634",
@@ -8239,7 +8239,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "70",
 		"Speed": "58",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "635",
@@ -8252,7 +8252,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "90",
 		"Speed": "98",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "636",
@@ -8265,7 +8265,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "55",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "637",
@@ -8278,7 +8278,7 @@
 		"Sp. Atk": "135",
 		"Sp. Def": "105",
 		"Speed": "100",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "638",
@@ -8291,7 +8291,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "72",
 		"Speed": "108",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "639",
@@ -8304,7 +8304,7 @@
 		"Sp. Atk": "72",
 		"Sp. Def": "90",
 		"Speed": "108",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "640",
@@ -8317,7 +8317,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "129",
 		"Speed": "108",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "641",
@@ -8330,7 +8330,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "80",
 		"Speed": "111",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "642",
@@ -8343,7 +8343,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "80",
 		"Speed": "111",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "643",
@@ -8356,7 +8356,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "120",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "644",
@@ -8369,7 +8369,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "100",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "645",
@@ -8382,7 +8382,7 @@
 		"Sp. Atk": "115",
 		"Sp. Def": "80",
 		"Speed": "101",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "646",
@@ -8395,7 +8395,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "90",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "647",
@@ -8408,7 +8408,7 @@
 		"Sp. Atk": "129",
 		"Sp. Def": "90",
 		"Speed": "108",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "648",
@@ -8421,7 +8421,7 @@
 		"Sp. Atk": "128",
 		"Sp. Def": "128",
 		"Speed": "90",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "649",
@@ -8434,7 +8434,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "95",
 		"Speed": "99",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "650",
@@ -8447,7 +8447,7 @@
 		"Sp. Atk": "48",
 		"Sp. Def": "45",
 		"Speed": "38",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "651",
@@ -8460,7 +8460,7 @@
 		"Sp. Atk": "56",
 		"Sp. Def": "58",
 		"Speed": "57",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "652",
@@ -8473,7 +8473,7 @@
 		"Sp. Atk": "74",
 		"Sp. Def": "75",
 		"Speed": "64",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "653",
@@ -8486,7 +8486,7 @@
 		"Sp. Atk": "62",
 		"Sp. Def": "60",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "654",
@@ -8499,7 +8499,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "70",
 		"Speed": "73",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "655",
@@ -8512,7 +8512,7 @@
 		"Sp. Atk": "114",
 		"Sp. Def": "100",
 		"Speed": "104",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "656",
@@ -8525,7 +8525,7 @@
 		"Sp. Atk": "62",
 		"Sp. Def": "44",
 		"Speed": "71",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "657",
@@ -8538,7 +8538,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "56",
 		"Speed": "97",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "658",
@@ -8551,7 +8551,7 @@
 		"Sp. Atk": "103",
 		"Sp. Def": "71",
 		"Speed": "122",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "659",
@@ -8564,7 +8564,7 @@
 		"Sp. Atk": "32",
 		"Sp. Def": "36",
 		"Speed": "57",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "660",
@@ -8577,7 +8577,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "77",
 		"Speed": "78",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "661",
@@ -8590,7 +8590,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "38",
 		"Speed": "62",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "662",
@@ -8603,7 +8603,7 @@
 		"Sp. Atk": "56",
 		"Sp. Def": "52",
 		"Speed": "84",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "663",
@@ -8616,7 +8616,7 @@
 		"Sp. Atk": "74",
 		"Sp. Def": "69",
 		"Speed": "126",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "664",
@@ -8629,7 +8629,7 @@
 		"Sp. Atk": "27",
 		"Sp. Def": "25",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "665",
@@ -8642,7 +8642,7 @@
 		"Sp. Atk": "27",
 		"Sp. Def": "30",
 		"Speed": "29",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "666",
@@ -8655,7 +8655,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "50",
 		"Speed": "89",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "667",
@@ -8668,7 +8668,7 @@
 		"Sp. Atk": "73",
 		"Sp. Def": "54",
 		"Speed": "72",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "668",
@@ -8681,7 +8681,7 @@
 		"Sp. Atk": "109",
 		"Sp. Def": "66",
 		"Speed": "106",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "669",
@@ -8694,7 +8694,7 @@
 		"Sp. Atk": "61",
 		"Sp. Def": "79",
 		"Speed": "42",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "670",
@@ -8707,7 +8707,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "98",
 		"Speed": "52",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "671",
@@ -8720,7 +8720,7 @@
 		"Sp. Atk": "112",
 		"Sp. Def": "154",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "672",
@@ -8733,7 +8733,7 @@
 		"Sp. Atk": "62",
 		"Sp. Def": "57",
 		"Speed": "52",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "673",
@@ -8746,7 +8746,7 @@
 		"Sp. Atk": "97",
 		"Sp. Def": "81",
 		"Speed": "68",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "674",
@@ -8759,7 +8759,7 @@
 		"Sp. Atk": "46",
 		"Sp. Def": "48",
 		"Speed": "43",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "675",
@@ -8772,7 +8772,7 @@
 		"Sp. Atk": "69",
 		"Sp. Def": "71",
 		"Speed": "58",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "676",
@@ -8785,7 +8785,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "90",
 		"Speed": "102",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "677",
@@ -8798,7 +8798,7 @@
 		"Sp. Atk": "63",
 		"Sp. Def": "60",
 		"Speed": "68",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "678",
@@ -8811,7 +8811,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "81",
 		"Speed": "104",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "679",
@@ -8824,7 +8824,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "37",
 		"Speed": "28",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "680",
@@ -8837,7 +8837,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "49",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "681",
@@ -8850,7 +8850,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "140",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "682",
@@ -8863,7 +8863,7 @@
 		"Sp. Atk": "63",
 		"Sp. Def": "65",
 		"Speed": "23",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "683",
@@ -8876,7 +8876,7 @@
 		"Sp. Atk": "99",
 		"Sp. Def": "89",
 		"Speed": "29",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "684",
@@ -8889,7 +8889,7 @@
 		"Sp. Atk": "59",
 		"Sp. Def": "57",
 		"Speed": "49",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "685",
@@ -8902,7 +8902,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "75",
 		"Speed": "72",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "686",
@@ -8915,7 +8915,7 @@
 		"Sp. Atk": "37",
 		"Sp. Def": "46",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "687",
@@ -8928,7 +8928,7 @@
 		"Sp. Atk": "68",
 		"Sp. Def": "75",
 		"Speed": "73",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "688",
@@ -8941,7 +8941,7 @@
 		"Sp. Atk": "39",
 		"Sp. Def": "56",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "689",
@@ -8954,7 +8954,7 @@
 		"Sp. Atk": "54",
 		"Sp. Def": "86",
 		"Speed": "68",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "690",
@@ -8967,7 +8967,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "60",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "691",
@@ -8980,7 +8980,7 @@
 		"Sp. Atk": "97",
 		"Sp. Def": "123",
 		"Speed": "44",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "692",
@@ -8993,7 +8993,7 @@
 		"Sp. Atk": "58",
 		"Sp. Def": "63",
 		"Speed": "44",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "693",
@@ -9006,7 +9006,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "89",
 		"Speed": "59",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "694",
@@ -9019,7 +9019,7 @@
 		"Sp. Atk": "61",
 		"Sp. Def": "43",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "695",
@@ -9032,7 +9032,7 @@
 		"Sp. Atk": "109",
 		"Sp. Def": "94",
 		"Speed": "109",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "696",
@@ -9045,7 +9045,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "48",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "697",
@@ -9058,7 +9058,7 @@
 		"Sp. Atk": "69",
 		"Sp. Def": "59",
 		"Speed": "71",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "698",
@@ -9071,7 +9071,7 @@
 		"Sp. Atk": "67",
 		"Sp. Def": "63",
 		"Speed": "46",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "699",
@@ -9084,7 +9084,7 @@
 		"Sp. Atk": "99",
 		"Sp. Def": "92",
 		"Speed": "58",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "700",
@@ -9097,7 +9097,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "130",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "701",
@@ -9110,7 +9110,7 @@
 		"Sp. Atk": "74",
 		"Sp. Def": "63",
 		"Speed": "118",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "702",
@@ -9123,7 +9123,7 @@
 		"Sp. Atk": "81",
 		"Sp. Def": "67",
 		"Speed": "101",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "703",
@@ -9136,7 +9136,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "150",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "704",
@@ -9149,7 +9149,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "75",
 		"Speed": "40",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "705",
@@ -9162,7 +9162,7 @@
 		"Sp. Atk": "83",
 		"Sp. Def": "113",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "706",
@@ -9175,7 +9175,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "150",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "707",
@@ -9188,7 +9188,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "87",
 		"Speed": "75",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "708",
@@ -9201,7 +9201,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "60",
 		"Speed": "38",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "709",
@@ -9214,7 +9214,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "82",
 		"Speed": "56",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "710",
@@ -9227,7 +9227,7 @@
 		"Sp. Atk": "44",
 		"Sp. Def": "55",
 		"Speed": "51",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "711",
@@ -9240,7 +9240,7 @@
 		"Sp. Atk": "58",
 		"Sp. Def": "75",
 		"Speed": "84",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "712",
@@ -9253,7 +9253,7 @@
 		"Sp. Atk": "32",
 		"Sp. Def": "35",
 		"Speed": "28",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "713",
@@ -9266,7 +9266,7 @@
 		"Sp. Atk": "44",
 		"Sp. Def": "46",
 		"Speed": "28",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "714",
@@ -9279,7 +9279,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "40",
 		"Speed": "55",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "715",
@@ -9292,7 +9292,7 @@
 		"Sp. Atk": "97",
 		"Sp. Def": "80",
 		"Speed": "123",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "716",
@@ -9305,7 +9305,7 @@
 		"Sp. Atk": "131",
 		"Sp. Def": "98",
 		"Speed": "99",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "717",
@@ -9318,7 +9318,7 @@
 		"Sp. Atk": "131",
 		"Sp. Def": "98",
 		"Speed": "99",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "718",
@@ -9331,7 +9331,7 @@
 		"Sp. Atk": "81",
 		"Sp. Def": "95",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "719",
@@ -9344,7 +9344,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "150",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "720",
@@ -9357,7 +9357,7 @@
 		"Sp. Atk": "150",
 		"Sp. Def": "130",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "721",
@@ -9370,7 +9370,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "90",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "722",
@@ -9383,7 +9383,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "42",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "723",
@@ -9396,7 +9396,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "70",
 		"Speed": "52",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "724",
@@ -9409,7 +9409,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "100",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "725",
@@ -9422,7 +9422,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "40",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "726",
@@ -9435,7 +9435,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "50",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "727",
@@ -9448,7 +9448,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "90",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "728",
@@ -9461,7 +9461,7 @@
 		"Sp. Atk": "66",
 		"Sp. Def": "56",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "729",
@@ -9474,7 +9474,7 @@
 		"Sp. Atk": "91",
 		"Sp. Def": "81",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "730",
@@ -9487,7 +9487,7 @@
 		"Sp. Atk": "126",
 		"Sp. Def": "116",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "731",
@@ -9500,7 +9500,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "732",
@@ -9513,7 +9513,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "733",
@@ -9526,7 +9526,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "75",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "734",
@@ -9539,7 +9539,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "30",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "735",
@@ -9552,7 +9552,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "60",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "736",
@@ -9565,7 +9565,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "45",
 		"Speed": "46",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "737",
@@ -9578,7 +9578,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "75",
 		"Speed": "36",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "738",
@@ -9591,7 +9591,7 @@
 		"Sp. Atk": "145",
 		"Sp. Def": "75",
 		"Speed": "43",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "739",
@@ -9604,7 +9604,7 @@
 		"Sp. Atk": "42",
 		"Sp. Def": "47",
 		"Speed": "63",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "740",
@@ -9617,7 +9617,7 @@
 		"Sp. Atk": "62",
 		"Sp. Def": "67",
 		"Speed": "43",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "741",
@@ -9630,7 +9630,7 @@
 		"Sp. Atk": "98",
 		"Sp. Def": "70",
 		"Speed": "93",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "742",
@@ -9643,7 +9643,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "40",
 		"Speed": "84",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "743",
@@ -9656,7 +9656,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "70",
 		"Speed": "124",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "744",
@@ -9669,7 +9669,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "40",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "745",
@@ -9682,7 +9682,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "65",
 		"Speed": "112",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "746",
@@ -9695,7 +9695,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "25",
 		"Speed": "40",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "747",
@@ -9708,7 +9708,7 @@
 		"Sp. Atk": "43",
 		"Sp. Def": "52",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "748",
@@ -9721,7 +9721,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "142",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "749",
@@ -9734,7 +9734,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "55",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "750",
@@ -9747,7 +9747,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "85",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "751",
@@ -9760,7 +9760,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "72",
 		"Speed": "27",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "752",
@@ -9773,7 +9773,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "132",
 		"Speed": "42",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "753",
@@ -9786,7 +9786,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "35",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "754",
@@ -9799,7 +9799,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "90",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "755",
@@ -9812,7 +9812,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "75",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "756",
@@ -9825,7 +9825,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "100",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "757",
@@ -9838,7 +9838,7 @@
 		"Sp. Atk": "71",
 		"Sp. Def": "40",
 		"Speed": "77",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "758",
@@ -9851,7 +9851,7 @@
 		"Sp. Atk": "111",
 		"Sp. Def": "60",
 		"Speed": "117",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "759",
@@ -9864,7 +9864,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "50",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "760",
@@ -9877,7 +9877,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "60",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "761",
@@ -9890,7 +9890,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "38",
 		"Speed": "32",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "762",
@@ -9903,7 +9903,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "48",
 		"Speed": "62",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "763",
@@ -9916,7 +9916,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "98",
 		"Speed": "72",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "764",
@@ -9929,7 +9929,7 @@
 		"Sp. Atk": "82",
 		"Sp. Def": "110",
 		"Speed": "100",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "765",
@@ -9942,7 +9942,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "110",
 		"Speed": "60",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "766",
@@ -9955,7 +9955,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "60",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "767",
@@ -9968,7 +9968,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "30",
 		"Speed": "80",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "768",
@@ -9981,7 +9981,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "90",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "769",
@@ -9994,7 +9994,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "45",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "770",
@@ -10007,7 +10007,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "75",
 		"Speed": "35",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "771",
@@ -10020,7 +10020,7 @@
 		"Sp. Atk": "30",
 		"Sp. Def": "130",
 		"Speed": "5",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "772",
@@ -10033,7 +10033,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "95",
 		"Speed": "59",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "773",
@@ -10046,7 +10046,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "95",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "774",
@@ -10059,7 +10059,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "100",
 		"Speed": "60",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "775",
@@ -10072,7 +10072,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "95",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "776",
@@ -10085,7 +10085,7 @@
 		"Sp. Atk": "91",
 		"Sp. Def": "85",
 		"Speed": "36",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "777",
@@ -10098,7 +10098,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "73",
 		"Speed": "96",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "778",
@@ -10111,7 +10111,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "105",
 		"Speed": "96",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "779",
@@ -10124,7 +10124,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "70",
 		"Speed": "92",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "780",
@@ -10137,7 +10137,7 @@
 		"Sp. Atk": "135",
 		"Sp. Def": "91",
 		"Speed": "36",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "781",
@@ -10150,7 +10150,7 @@
 		"Sp. Atk": "86",
 		"Sp. Def": "90",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "782",
@@ -10163,7 +10163,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "45",
 		"Speed": "45",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "783",
@@ -10176,7 +10176,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "70",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "784",
@@ -10189,7 +10189,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "105",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "785",
@@ -10202,7 +10202,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "75",
 		"Speed": "130",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "786",
@@ -10215,7 +10215,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "115",
 		"Speed": "95",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "787",
@@ -10228,7 +10228,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "95",
 		"Speed": "75",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "788",
@@ -10241,7 +10241,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "130",
 		"Speed": "85",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "789",
@@ -10254,7 +10254,7 @@
 		"Sp. Atk": "29",
 		"Sp. Def": "31",
 		"Speed": "37",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "790",
@@ -10267,7 +10267,7 @@
 		"Sp. Atk": "29",
 		"Sp. Def": "131",
 		"Speed": "37",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "791",
@@ -10280,7 +10280,7 @@
 		"Sp. Atk": "113",
 		"Sp. Def": "89",
 		"Speed": "97",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "792",
@@ -10293,7 +10293,7 @@
 		"Sp. Atk": "137",
 		"Sp. Def": "107",
 		"Speed": "97",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "793",
@@ -10306,7 +10306,7 @@
 		"Sp. Atk": "127",
 		"Sp. Def": "131",
 		"Speed": "103",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "794",
@@ -10319,7 +10319,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "53",
 		"Speed": "79",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "795",
@@ -10332,7 +10332,7 @@
 		"Sp. Atk": "137",
 		"Sp. Def": "37",
 		"Speed": "151",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "796",
@@ -10345,7 +10345,7 @@
 		"Sp. Atk": "173",
 		"Sp. Def": "71",
 		"Speed": "83",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "797",
@@ -10358,7 +10358,7 @@
 		"Sp. Atk": "107",
 		"Sp. Def": "101",
 		"Speed": "61",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "798",
@@ -10371,7 +10371,7 @@
 		"Sp. Atk": "59",
 		"Sp. Def": "31",
 		"Speed": "109",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "799",
@@ -10384,7 +10384,7 @@
 		"Sp. Atk": "97",
 		"Sp. Def": "53",
 		"Speed": "43",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "800",
@@ -10397,7 +10397,7 @@
 		"Sp. Atk": "127",
 		"Sp. Def": "89",
 		"Speed": "79",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "801",
@@ -10410,7 +10410,7 @@
 		"Sp. Atk": "130",
 		"Sp. Def": "115",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "802",
@@ -10423,7 +10423,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "90",
 		"Speed": "125",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "803",
@@ -10436,7 +10436,7 @@
 		"Sp. Atk": "73",
 		"Sp. Def": "67",
 		"Speed": "73",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "804",
@@ -10449,7 +10449,7 @@
 		"Sp. Atk": "127",
 		"Sp. Def": "73",
 		"Speed": "121",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "805",
@@ -10462,7 +10462,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "101",
 		"Speed": "13",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "806",
@@ -10475,7 +10475,7 @@
 		"Sp. Atk": "151",
 		"Sp. Def": "79",
 		"Speed": "107",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "807",
@@ -10488,7 +10488,7 @@
 		"Sp. Atk": "102",
 		"Sp. Def": "80",
 		"Speed": "143",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "808",
@@ -10501,7 +10501,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "35",
 		"Speed": "34",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "809",
@@ -10514,7 +10514,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "65",
 		"Speed": "34",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "810",
@@ -10527,7 +10527,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "65",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "811",
@@ -10540,7 +10540,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "60",
 		"Speed": "80",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "812",
@@ -10553,7 +10553,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "85",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "813",
@@ -10566,7 +10566,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "69",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "814",
@@ -10579,7 +10579,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "60",
 		"Speed": "94",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "815",
@@ -10592,7 +10592,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "75",
 		"Speed": "119",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "816",
@@ -10605,7 +10605,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "40",
 		"Speed": "70",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "817",
@@ -10618,7 +10618,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "55",
 		"Speed": "90",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "818",
@@ -10631,7 +10631,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "65",
 		"Speed": "120",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "819",
@@ -10644,7 +10644,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "35",
 		"Speed": "25",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "820",
@@ -10657,7 +10657,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "75",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "821",
@@ -10670,7 +10670,7 @@
 		"Sp. Atk": "33",
 		"Sp. Def": "35",
 		"Speed": "57",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "822",
@@ -10683,7 +10683,7 @@
 		"Sp. Atk": "43",
 		"Sp. Def": "55",
 		"Speed": "77",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "823",
@@ -10696,7 +10696,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "85",
 		"Speed": "67",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "824",
@@ -10709,7 +10709,7 @@
 		"Sp. Atk": "25",
 		"Sp. Def": "45",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "825",
@@ -10722,7 +10722,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "90",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "826",
@@ -10735,7 +10735,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "120",
 		"Speed": "90",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "827",
@@ -10748,7 +10748,7 @@
 		"Sp. Atk": "47",
 		"Sp. Def": "52",
 		"Speed": "50",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "828",
@@ -10761,7 +10761,7 @@
 		"Sp. Atk": "87",
 		"Sp. Def": "92",
 		"Speed": "90",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "829",
@@ -10774,7 +10774,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "60",
 		"Speed": "10",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "830",
@@ -10787,7 +10787,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "120",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "831",
@@ -10800,7 +10800,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "45",
 		"Speed": "48",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "832",
@@ -10813,7 +10813,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "90",
 		"Speed": "88",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "833",
@@ -10826,7 +10826,7 @@
 		"Sp. Atk": "38",
 		"Sp. Def": "38",
 		"Speed": "44",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "834",
@@ -10839,7 +10839,7 @@
 		"Sp. Atk": "48",
 		"Sp. Def": "68",
 		"Speed": "74",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "835",
@@ -10852,7 +10852,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "26",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "836",
@@ -10865,7 +10865,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "60",
 		"Speed": "121",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "837",
@@ -10878,7 +10878,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "50",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "838",
@@ -10891,7 +10891,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "70",
 		"Speed": "50",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "839",
@@ -10904,7 +10904,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "90",
 		"Speed": "30",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "840",
@@ -10917,7 +10917,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "40",
 		"Speed": "20",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "841",
@@ -10930,7 +10930,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "60",
 		"Speed": "70",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "842",
@@ -10943,7 +10943,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "80",
 		"Speed": "30",
-		"XP Type": "Erratic"
+		"XP Type": "erratic"
 	},
 	{
 		"#": "843",
@@ -10956,7 +10956,7 @@
 		"Sp. Atk": "35",
 		"Sp. Def": "50",
 		"Speed": "46",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "844",
@@ -10969,7 +10969,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "70",
 		"Speed": "71",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "845",
@@ -10982,7 +10982,7 @@
 		"Sp. Atk": "85",
 		"Sp. Def": "95",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "846",
@@ -10995,7 +10995,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "30",
 		"Speed": "66",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "847",
@@ -11008,7 +11008,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "50",
 		"Speed": "136",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "848",
@@ -11021,7 +11021,7 @@
 		"Sp. Atk": "54",
 		"Sp. Def": "35",
 		"Speed": "40",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "849",
@@ -11034,7 +11034,7 @@
 		"Sp. Atk": "114",
 		"Sp. Def": "70",
 		"Speed": "75",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "850",
@@ -11047,7 +11047,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "45",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "851",
@@ -11060,7 +11060,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "90",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "852",
@@ -11073,7 +11073,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "50",
 		"Speed": "32",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "853",
@@ -11086,7 +11086,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "42",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "854",
@@ -11099,7 +11099,7 @@
 		"Sp. Atk": "74",
 		"Sp. Def": "54",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "855",
@@ -11112,7 +11112,7 @@
 		"Sp. Atk": "134",
 		"Sp. Def": "114",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "856",
@@ -11125,7 +11125,7 @@
 		"Sp. Atk": "56",
 		"Sp. Def": "53",
 		"Speed": "39",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "857",
@@ -11138,7 +11138,7 @@
 		"Sp. Atk": "86",
 		"Sp. Def": "73",
 		"Speed": "49",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "858",
@@ -11151,7 +11151,7 @@
 		"Sp. Atk": "136",
 		"Sp. Def": "103",
 		"Speed": "29",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "859",
@@ -11164,7 +11164,7 @@
 		"Sp. Atk": "55",
 		"Sp. Def": "40",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "860",
@@ -11177,7 +11177,7 @@
 		"Sp. Atk": "75",
 		"Sp. Def": "55",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "861",
@@ -11190,7 +11190,7 @@
 		"Sp. Atk": "95",
 		"Sp. Def": "75",
 		"Speed": "60",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "862",
@@ -11203,7 +11203,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "81",
 		"Speed": "95",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "863",
@@ -11216,7 +11216,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "60",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "864",
@@ -11229,7 +11229,7 @@
 		"Sp. Atk": "145",
 		"Sp. Def": "130",
 		"Speed": "30",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "865",
@@ -11242,7 +11242,7 @@
 		"Sp. Atk": "68",
 		"Sp. Def": "82",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "866",
@@ -11255,7 +11255,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "100",
 		"Speed": "70",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "867",
@@ -11268,7 +11268,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "105",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "868",
@@ -11281,7 +11281,7 @@
 		"Sp. Atk": "50",
 		"Sp. Def": "61",
 		"Speed": "34",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "869",
@@ -11294,7 +11294,7 @@
 		"Sp. Atk": "110",
 		"Sp. Def": "121",
 		"Speed": "64",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "870",
@@ -11307,7 +11307,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "60",
 		"Speed": "75",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "871",
@@ -11320,7 +11320,7 @@
 		"Sp. Atk": "91",
 		"Sp. Def": "85",
 		"Speed": "15",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "872",
@@ -11333,7 +11333,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "30",
 		"Speed": "20",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "873",
@@ -11346,7 +11346,7 @@
 		"Sp. Atk": "125",
 		"Sp. Def": "90",
 		"Speed": "65",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "874",
@@ -11359,7 +11359,7 @@
 		"Sp. Atk": "20",
 		"Sp. Def": "20",
 		"Speed": "70",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "875",
@@ -11372,7 +11372,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "90",
 		"Speed": "50",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "876",
@@ -11385,7 +11385,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "95",
 		"Speed": "95",
-		"XP Type": "Fast"
+		"XP Type": "fast"
 	},
 	{
 		"#": "877",
@@ -11398,7 +11398,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "58",
 		"Speed": "97",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "878",
@@ -11411,7 +11411,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "49",
 		"Speed": "40",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "879",
@@ -11424,7 +11424,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "69",
 		"Speed": "30",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "880",
@@ -11437,7 +11437,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "70",
 		"Speed": "75",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "881",
@@ -11450,7 +11450,7 @@
 		"Sp. Atk": "90",
 		"Sp. Def": "80",
 		"Speed": "55",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "882",
@@ -11463,7 +11463,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "80",
 		"Speed": "75",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "883",
@@ -11476,7 +11476,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "90",
 		"Speed": "55",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "884",
@@ -11489,7 +11489,7 @@
 		"Sp. Atk": "120",
 		"Sp. Def": "50",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "885",
@@ -11502,7 +11502,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "30",
 		"Speed": "82",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "886",
@@ -11515,7 +11515,7 @@
 		"Sp. Atk": "60",
 		"Sp. Def": "50",
 		"Speed": "102",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "887",
@@ -11528,7 +11528,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "75",
 		"Speed": "142",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "888",
@@ -11541,7 +11541,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "115",
 		"Speed": "148",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "889",
@@ -11554,7 +11554,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "145",
 		"Speed": "128",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "890",
@@ -11567,7 +11567,7 @@
 		"Sp. Atk": "145",
 		"Sp. Def": "95",
 		"Speed": "130",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "891",
@@ -11580,7 +11580,7 @@
 		"Sp. Atk": "53",
 		"Sp. Def": "50",
 		"Speed": "72",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "892",
@@ -11593,7 +11593,7 @@
 		"Sp. Atk": "63",
 		"Sp. Def": "60",
 		"Speed": "97",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "893",
@@ -11606,7 +11606,7 @@
 		"Sp. Atk": "70",
 		"Sp. Def": "95",
 		"Speed": "105",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "894",
@@ -11619,7 +11619,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "50",
 		"Speed": "200",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "895",
@@ -11632,7 +11632,7 @@
 		"Sp. Atk": "100",
 		"Sp. Def": "50",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "896",
@@ -11645,7 +11645,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "110",
 		"Speed": "30",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "897",
@@ -11658,7 +11658,7 @@
 		"Sp. Atk": "145",
 		"Sp. Def": "80",
 		"Speed": "130",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "898",
@@ -11671,7 +11671,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "80",
 		"Speed": "80",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "899",
@@ -11684,7 +11684,7 @@
 		"Sp. Atk": "105",
 		"Sp. Def": "75",
 		"Speed": "65",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	},
 	{
 		"#": "900",
@@ -11697,7 +11697,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "70",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "901",
@@ -11710,7 +11710,7 @@
 		"Sp. Atk": "45",
 		"Sp. Def": "80",
 		"Speed": "50",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "902",
@@ -11723,7 +11723,7 @@
 		"Sp. Atk": "80",
 		"Sp. Def": "75",
 		"Speed": "78",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "903",
@@ -11736,7 +11736,7 @@
 		"Sp. Atk": "40",
 		"Sp. Def": "80",
 		"Speed": "120",
-		"XP Type": "Medium Slow"
+		"XP Type": "mediumslow"
 	},
 	{
 		"#": "904",
@@ -11749,7 +11749,7 @@
 		"Sp. Atk": "65",
 		"Sp. Def": "65",
 		"Speed": "85",
-		"XP Type": "Medium Fast"
+		"XP Type": "mediumfast"
 	},
 	{
 		"#": "905",
@@ -11762,6 +11762,6 @@
 		"Sp. Atk": "135",
 		"Sp. Def": "80",
 		"Speed": "106",
-		"XP Type": "Slow"
+		"XP Type": "slow"
 	}
 ]
