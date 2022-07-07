@@ -239,7 +239,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 				sp('Invalid choice.')
 			elif choice == '2' and len(save.party) == 1:
 				choice = ''
-				sp('You can\'t switch out your only Pokemon!')
+				sp('You can\'t switch out your only POKéMON!')
 
 		# choose attack
 
@@ -252,7 +252,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 
 		elif choice == '2':
 
-			sp(f'''\nWhich Pokemon should you switch to?\n\n{
+			sp(f'''\nWhich POKéMON should you switch to?\n\n{
 				''.join(f'{f"[{i+1}]" if not save.party[i].checkFainted() else "FAINTED"} - {save.party[i].name} ({save.party[i].stats.chp}/{save.party[i].stats.hp})' for i in range(party1))
 			}''')
 			switchChoice = ''
@@ -265,7 +265,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 						sp('Invalid choice.')
 					elif save.party[int(switchChoice)-1].checkFainted():
 						switchChoice = ''
-						sp('That Pokemon is fainted!')
+						sp('That POKéMON is fainted!')
 				except (TypeError, ValueError):
 					switchChoice = ''
 					sp('Invalid choice.')
