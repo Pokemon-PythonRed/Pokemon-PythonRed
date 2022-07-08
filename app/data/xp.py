@@ -21,4 +21,4 @@ for i in range(100):
 	output['next']['mediumslow'][str(i+1)] = source[i]['Medium Slow next']
 	output['next']['slow'][str(i+1)] = source[i]['Slow next']
 	output['next']['fluctuating'][str(i+1)] = source[i]['Fluctuating next']
-json.dump(output, open(os.path.join(sys.path[0], 'level.json'), 'w'), indent=4)
+json.dump(output, open(os.path.join(sys.path[0], 'level.json'), 'w'), indent=4, ensure_ascii=False)
