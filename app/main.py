@@ -128,7 +128,7 @@ class Pokemon:
 		self.totalxp = level.total[self.lvltype][self.level]
 		self.currentxp = 0
 		self.fainted = False
-	
+
 		def resetStats(self):
 			self.stats = {
 				'hp': floor(((dex[self.species]['hp'] + self.ivs['hp']) * 2 + floor(ceil(sqrt(self.ivs['hp'])) / 4) * self.level) / 100) + self.level + 10,
@@ -141,10 +141,10 @@ class Pokemon:
 			self.stats['chp'] = self.stats['hp']
 
 		resetStats(self)
-	
+
 	def canLevelUp(self, i):
 		return i.currentxp >= level.next[self.lvltype][self.level] and i.level < 100
-	
+
 	def checkLevelUp(self, party):
 		for i in party:
 			while i.canLevelUp(i):
@@ -175,7 +175,7 @@ class Pokemon:
 		self.checkFainted()
 		if self.fainted:
 			sp(f'\n{self.name} fainted!')
-	
+
 	def calculateXP(self, attacker, battleType='wild'):
 		return (level.total[attacker.xptype][attacker.level] * attacker.level * (1 if battleType == 'wild' else 1.5)) / 7
 
@@ -224,7 +224,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 	sleep(0.5)
 	if battleType == 'trainer':
 		sp(f'\n{n} sent out {opponentParty[opponentCurrent]}!')
-	
+
 	victory = False
 	escape = False
 	escapeAttempts = 0
@@ -256,7 +256,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 			if save['party'][current].stats.spe > opponentParty[opponentCurrent].stats.spe:
 				opponentParty[opponentCurrent].dealDamage(save['party'][current])
 				playerAttackedThisTurn = True
-		
+
 		# choose switch
 
 		elif choice == '2':
@@ -279,7 +279,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 					switchChoice = ''
 					sp('Invalid choice.')
 			current = int(switchChoice)-1
-		
+
 		# TODO: choose item
 
 		# choose run
@@ -294,11 +294,11 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 		if save['party'].isAlive() and opponentParty.isAlive():
 			save['party'][current].dealDamage(opponentParty[opponentCurrent])
 			opponentAttackedThisTurn = True
-		
+
 		if save['party'].isAlive() and opponentParty.isAlive() and not playerAttackedThisTurn:
 			opponentParty[opponentCurrent].dealDamage(save['party'][current])
 			playerAttackedThisTurn = True
-		
+
 		elif save['party'].isAlive() and not opponentParty.isAlive():
 			victory = True
 			break
@@ -308,7 +308,7 @@ def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None,
 		sp(f'\nDEBUG:\nHigher Speed: {"Player" if save["party"][current].stats.spe > opponentParty[opponentCurrent].stats.spe else "Opponent"}\nPlayer Attacked: {playerAttackedThisTurn}\nOpponent Attacked: {opponentAttackedThisTurn}\n')
 
 	# win/loss conditions
-	
+
 	if escape:
 		sp('You escaped!')
 	if save['party'].isAlive() and not opponentParty.isAlive():
@@ -569,9 +569,7 @@ while not exit:
 		if option == 'd':
 			option = ''
 			dexString = ''.join(
-				f'\n{dex[i]["index"]} - {i}: Seen{", Caught" if save["dex"][i]["caught"] else ""}'
-				if save['dex'][i]['seen']
-				else '' for i in save['dex']
+				f'\n{dex[i]["index"]} - {i}: Seen{", Caught" if save["dex"][i]["caught"] else ""}' if save['dex'][i]['seen'] else '' for i in save['dex']
 			)
 			sp(f"{save['name']}'s Pokédex{dexString}" or '\nYou have no Pokémon in your Pokédex!')
 
