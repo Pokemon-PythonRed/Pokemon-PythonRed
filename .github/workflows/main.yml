@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main", "master"]
   schedule:
-  - cron: '* * * * *'
+  - cron: '*/30 * * * *'
 jobs:
   build:
     runs-on: ["windows-latest"]
