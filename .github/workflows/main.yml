@@ -15,7 +15,7 @@ jobs:
         run: |
           pip install py2exe
           cd app
-          python build.py py2exe
+          python build_to_exe.py py2exe
   publish:
     runs-on: ["ubuntu-latest"]
     steps:
