@@ -1,1 +1,1 @@
-python app/build.py py2exe
+python app/build_to_exe.py py2exe
