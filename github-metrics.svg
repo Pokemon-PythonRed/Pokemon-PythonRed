@@ -130,8 +130,8 @@
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="458.97308453729835" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="458.97308453729835" y="0" width="1.0269154627016555" height="8" fill="#C1F12E"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="458.97282494206866" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="458.97282494206866" y="0" width="1.027175057931325" height="8" fill="#C1F12E"/>
                 </svg>
                 <div class="field center horizontal-wrap fill-width">
                     <div class="field center no-wrap language">
@@ -149,7 +149,7 @@
                 </div>
             </section>
             <footer>
-                <span>Last updated 12 Jul 2022, 22:42:28  with lowlighter/metrics@3.26.0</span>
+                <span>Last updated 12 Jul 2022, 23:20:59  with lowlighter/metrics@3.26.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
