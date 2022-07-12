@@ -10,7 +10,7 @@ with open(os.path.join(sys.path[0], '../dex.json'), 'a') as output:
 		currentEvolution = next(
 			(
 				evolution[j]['Level'] for j in range(len(evolution))
-		        if source[i]['#'] == evolution[j]['Ndex']
+				if source[i]['#'] == evolution[j]['Ndex']
 			), ''
 		)
 		text = f'''	"{source[i]['Name'].upper()}": {{
