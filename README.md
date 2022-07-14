@@ -14,6 +14,7 @@
 </p>
 <p align="center">
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/main.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/main.yml/badge.svg?branch=master"></a> <!--Main-->
+  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/codeql-analysis.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/codeql-analysis.yml/badge.svg?branch=master"></a> <!--CodeQL-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/open.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/open.yml/badge.svg?branch=master"></a> <!--Open-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/close.yml"><img src="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/actions/workflows/close.yml/badge.svg?branch=master"></a> <!--Close-->
 </p>
