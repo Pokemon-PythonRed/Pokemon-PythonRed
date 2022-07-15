@@ -5,9 +5,9 @@
 <p>
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href='#contributors'><img src='https://img.shields.io/badge/contributors-26-orange'></a>
+<a href='#contributors'><img src='https://img.shields.io/badge/contributors-26-brightgreen'></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END --> <!--Contributors-->
-  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Pokemon-PythonRed/Pokemon-PythonRed"></a> <!--License-->
+  <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Pokemon-PythonRed/Pokemon-PythonRed?color=brightgreen"></a> <!--License-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues"><img src="https://img.shields.io/github/issues/Pokemon-PythonRed/Pokemon-PythonRed"></a> <!--Issues-->
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/pulls"><img src="https://img.shields.io/github/issues-pr/Pokemon-PythonRed/Pokemon-PythonRed"></a> <!--Pulls-->
 </p>
