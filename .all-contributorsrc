@@ -5,7 +5,7 @@
   "imageSize": 100,
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": true,
-  "badgeTemplate": "<a href='#contributors'><img src='https://img.shields.io/badge/contributors-<%= contributors.length %>-orange'></a>",
+  "badgeTemplate": "<a href='#contributors'><img src='https://img.shields.io/badge/contributors-<%= contributors.length %>-brightgreen'></a>",
   "projectOwner": "Pokemon-PythonRed",
   "projectName": "Pokemon-PythonRed",
   "repoType": "github",
