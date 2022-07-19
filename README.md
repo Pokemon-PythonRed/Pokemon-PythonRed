@@ -151,7 +151,7 @@ python -m pip install -r requirements.txt
 - When `>` is shown, press <kbd>⏎ Enter</kbd> to continue. You may need to input text first.
 - When text bullets are shown, you need to enter the character next to the option you choose.
 - In the overworld, navigation bullets are <kbd>WASD</kbd> for directional movement, then lettered for interactions. Other commands might also be available.
-  - Enter the <kbd>M</kbd> from the overworld to open the menu.
+  - Enter the <kbd>M</kbd> command from the overworld to open the menu.
 - When `Y/N` is shown, you can enter <kbd>Y</kbd> or <kbd>N</kbd> for "yes" or "no" respectively.
 - When reading through next normally, you can press any key to proceed.
 
@@ -258,15 +258,13 @@ import json
 save = {
   # Save Data
 }
-print('Would you like to save your progress? Y/N\n')
+print('Would you like to save your progress? Y/N')
   saveOption = ' '
   while saveOption.lower()[0] not in ['y', 'n']:
     saveOption = input('>') + ' '
   if saveOption.lower()[0] in ['y']:
-    open(os.path.join(sys.path[0], 'save.json'), 'w').write(
-      json.dumps(save, indent=4, sort_keys=True)
-    )
-    print('\nGame saved successfully!')
+    open('save.json', 'w').write(json.dumps(save))
+    print('Game saved successfully!')
 ```
 
 #### Save management
