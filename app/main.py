@@ -176,12 +176,9 @@ class Pokemon:
 			self.stats['chp'] = self.stats['hp']
 			self.fainted = False
 
-	def can_level_up(self, i) -> bool:
-		return i.current_xp >= xp['next'][self.level_type][str(self.level)] and i.level < 100
-
 	def check_level_up(self, party) -> None:
 		for i in party:
-			while i.can_level_up(i):
+			while self.current_xp >= xp['next'][self.level_type][str(self.level)] and self.level < 100:
 				i.current_xp -= xp['next'][self.level_type][str(self.level)]
 				self.level_up(i)
 
