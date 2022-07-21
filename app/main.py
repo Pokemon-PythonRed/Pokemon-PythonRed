@@ -128,7 +128,7 @@ def backup() -> None:
 		save_temp = save
 		save_temp['party'] = [dump(i) for i in save['party']]
 		save_temp['box'] = [dump(i) for i in save['box']]
-		open(path.join(syspath[0], 'save.json'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
+		open(path.join(syspath[0], '.ppr-save'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
 		sp('\nGame saved successfully!')
 
 # pokemon class
@@ -509,7 +509,7 @@ while start_option != '2':
 	cls()
 
 	if start_option == '1':
-		if path.isfile(path.join(syspath[0], 'save.json')) and loads(open(path.join(syspath[0], 'save.json')).read())['flag']['hasSaved']:
+		if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['hasSaved']:
 			cls()
 			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 			break
@@ -599,8 +599,8 @@ save_template = {
 # load save file
 
 if start_option == '1':
-	save_temp = {**save_template, **loads(open(path.join(syspath[0], 'save.json'), 'r').read())}
-	open(path.join(syspath[0], 'save.json')).close()
+	save_temp = {**save_template, **loads(open(path.join(syspath[0], '.ppr-save'), 'r').read())}
+	open(path.join(syspath[0], '.ppr-save')).close()
 	save = save_temp
 	save['party'] = [load(i, Pokemon) for i in save_temp['party']]
 	save['box'] = [load(i, Pokemon) for i in save_temp['box']]

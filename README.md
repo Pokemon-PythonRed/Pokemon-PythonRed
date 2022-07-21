@@ -219,7 +219,7 @@ The game has to keep track of the many variables that make up a Save File. These
 - Pokédex
 - Game mechanic settings for accessibility
 
-These are stored in a Python `dictionary` variable, which is then saved to the external file `save.json` via Python's `json` module.
+These are stored in a Python `dictionary` variable, which is then saved to the external file `.ppr-save` via Python's `json` module.
 
 #### Game data
 
@@ -231,7 +231,7 @@ Not to be confused with save data, game data is composed of the numbers and calc
 
 Large sets of data may be stored as `.json` files in the project folder. This is done to keep the program files concise. These files may be added, removed, or changed at any time.
 
-Save file templates contain all the things the game must keep track of between sessions. On each save or load, the player's file is automatically updated with the latest data, in case an update was performed. This means that when the game is updated, the player can copy their `save.json` file into the new version, and the save file will automatically be updated with the latest data.
+Save file templates contain all the things the game must keep track of between sessions. On each save or load, the player's file is automatically updated with the latest data, in case an update was performed. This means that when the game is updated, the player can copy their `.ppr-save` file into the new version, and the save file will automatically be updated with the latest data.
 
 #### Menus
 
@@ -263,13 +263,13 @@ print('Would you like to save your progress? Y/N')
   while saveOption.lower()[0] not in ['y', 'n']:
     saveOption = input('>') + ' '
   if saveOption.lower()[0] in ['y']:
-    open('save.json', 'w').write(json.dumps(save))
+    open('.ppr-save', 'w').write(json.dumps(save))
     print('Game saved successfully!')
 ```
 
 #### Save management
 
-The user can use multiple save files by moving or backing up their `save.json` file to a different directory on their device. This has been implemented in the interest of user-friendliness and safety. Save files can easily be backed up, reset, or shared.
+The user can use multiple save files by moving or backing up their `.ppr-save` file to a different directory on their device. This has been implemented in the interest of user-friendliness and safety. Save files can easily be backed up, reset, or shared.
 
 ---
 
