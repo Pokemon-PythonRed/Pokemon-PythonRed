@@ -1,32 +1,26 @@
 '''
-Pokémon PythonRed
-
-	Project Page - [https://Pokemon-PythonRed.github.io]
-	Repository   - [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed]
-	License      - MIT
-
-Comments Key:
-
-	# comment (with space)
-	#unused code (without space)
+Project Page - [https://Pokemon-PythonRed.github.io]
+Repository   - [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed]
+License      - MIT
 '''
 
 # dependencies
 
-#import datetime
+from datetime import datetime
 from getpass import getuser
-from json import dumps, load, loads
+from json import dumps, loads
+from jsons import dump, load
 from math import ceil, floor, sqrt
 from os import path, system, remove
 from platform import system as platform
-#import playsound
-#import pygame
+# playsound
+# pygame
 from random import choice, randint
-#import string
-from sys import path as syspath, stdout
+# string
+from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
 from webbrowser import open as webopen
-#import winsound
+# winsound
 
 # declare getch
 
@@ -41,298 +35,462 @@ text = {
 	'slow': 0.03,
 	'normal': 0.02,
 	'fast': 0.01,
-	'ultra': 0.005
+	'ultra': 0.005,
+	'debug': 0.0
 }
 
-textSpeed = 'normal'
+text_speed = 'normal'
 
-def reset_sp(s):
+def reset_sp(speed) -> None:
 	global sp, sg
-	def sp(text, g=False):
+	def sp(text, g=False) -> None:
 		for char in f'{text}\n':
-			sleep(s)
+			sleep(speed)
 			stdout.write(char)
 			stdout.flush()
 		if g:
 			getch()
-	def sg(text):
+	def sg(text) -> None:
 		sp(text, g=True)
-reset_sp(text[textSpeed])
+reset_sp(text[text_speed])
 
 # load screen
 
 sp('Loading...')
+
+# input function:
+
+def get() -> str:
+	return input('> ')
 
 # store links
 
 link = {
 	'repository': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed',
 	'installation': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation',
-	'issue': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new'
+	'issue': 'https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new/choose'
 }
 
 # check for required files
 
 if not (path.isfile(path.join(syspath[0], i)) for i in [
-	'dex.json',
-	'level.json',
-	'types.json' # TODO: add more files
+	'data/dex.json',
+	'data/level.json',
+	'data/trainer.json',
+	'data/types.json',
+	'build_to_exe.py'
 ]):
-	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link.installation}]\nfor more information.\n\nPress Enter to exit.\n')
-	input('> ')
-	exit()
+	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link["installation"]}]\nfor more information.\n\nPress Enter to exit.\n')
+	get()
+	sysexit()
 
 # declare clear
 
-platforms = [['darwin', 'clear'], ['java', 'System.out.print("\\033[H\\033[2J");System.out.flush();'], [
-	'linux', 'clear'], ['windows', 'cls']]
+platforms = [
+	['darwin', 'clear'],
+	['java', 'System.out.print("\\033[H\\033[2J");System.out.flush();'],
+	['linux', 'clear'],
+	['windows', 'cls']
+]
 for i in range(len(platforms)):
 	if platform().lower() == (platforms[i][0]):
-		clsCommand = platforms[i][1]
-		def cls(): return system(clsCommand)
+		cls_command = platforms[i][1]
+		def cls(command=cls_command) -> int: return system(command)
 
-exit = menuOpen = optionsOpen = False
-option = ''
+# menu variables
+
+exit = menu_open = options_open = False
 y, n, yn = ['y'], ['n'], ['y', 'n']
 
+types = ['NORMAL', 'FIRE', 'WATER', 'GRASS', 'ELECTRIC', 'ICE', 'FIGHTING', 'POISON', 'GROUND', 'FLYING', 'PSYCHIC', 'BUG', 'ROCK', 'GHOST', 'DARK', 'DRAGON', 'STEEL', 'FAIRY']
 badges = ['Boulder', 'Cascade', 'Thunder', 'Rainbow', 'Soul', 'Marsh', 'Volcano', 'Earth']
 
-def abort(message):
-	sp(f'\nERROR - {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\nNote: your save file will be preserved in the program folder.\n\n[{link.issue}]\n\nPress Enter to exit.')
-	input('> ')
-	exit()
+# battle screen variables
 
-def backup():
-	sp('Would you like to save your progress? Y/N\n')
-	saveOption = ' '
-	while saveOption.lower()[0] not in yn:
-		saveOption = input('> ') + ' '
-	if saveOption.lower()[0] in y:
-		open(path.join(syspath[0], 'save.json'), 'w').write(f'{dumps(save, indent=4)}\n')
+name_length = 15
+bars_length = 20
+
+# misc functions
+
+def abort(message) -> None:
+	print(f'\n\n\n- - - INTERNAL ERROR - - -\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
+	input('\n> ')
+	global exit
+	exit = True
+
+def backup() -> None:
+	sp('Would you like to save your progress? (Y/N)\n')
+	save_option = ' '
+	while save_option.lower()[0] not in yn:
+		save_option = f'{get()} '
+	if save_option.lower()[0] in y:
+		save['flag']['hasSaved'] = True
+		save_temp = save
+		save_temp['party'] = [dump(i) for i in save['party']]
+		save_temp['box'] = [dump(i) for i in save['box']]
+		open(path.join(syspath[0], 'save.json'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
 		sp('\nGame saved successfully!')
 
-class Pokemon:
-	def __init__(self, species, level, ivs):
-		def randomiseIVs(self):
-			for i in ['hp', 'atk', 'def', 'spa', 'spd', 'spe']:
-				self.ivs[i] = randint(0, 31)
-		if ivs == 'random':
-			self.randomiseIVs()
-		self.species = species
-		self.name = dex[self.species].name
-		self.type = dex[self.species].type
-		self.level = level
-		self.ivs = ivs
-		self.atktype = choice(['physical', 'special'])
-		self.lvltype = dex[self.species]['xp']
-		self.totalxp = level.total[self.lvltype][self.level]
-		self.currentxp = 0
-		self.fainted = False
+# pokemon class
 
-		def resetStats(self):
+class Pokemon:
+
+	def __init__(self, species, level, ivs) -> None:
+		self.species = species
+		self.index = dex[self.species]['index']
+		self.name = dex[self.species]['name']
+		self.type = dex[self.species]['type']
+		self.level = level
+		self.ivs = ivs if ivs != 'random' else {i: randint(0, 31) for i in ['hp', 'atk', 'def', 'spa', 'spd', 'spe']}
+		self.atk_type = choice(['physical', 'special'])
+		self.level_type = dex[self.species]['xp']
+		self.total_xp = xp['total'][self.level_type][str(self.level)]
+		self.current_xp = 0
+
+		if self.species not in save['dex']:
+			save['dex'].update({self.species: {'seen': True, 'caught': False}})
+		else:
+			if 'seen' not in save['dex'][self.species]:
+				save['dex'][self.species]['seen'] = True
+			if 'caught' not in save['dex'][self.species]:
+				save['dex'][self.species]['caught'] = False
+		if self.type not in save['flag']['type']:
+			save['flag']['type'].update({self.type: {'seen': True, 'caught': False}})
+		else:
+			if 'seen' not in save['flag']['type'][self.type]:
+				save['flag']['type'][self.species]['seen'] = True
+			if 'caught' not in save['flag']['type'][self.type]:
+				save['flag']['type'][self.species]['caught'] = False
+		
+		self.reset_stats()
+
+	def reset_stats(self) -> None:
 			self.stats = {
 				'hp': floor(((dex[self.species]['hp'] + self.ivs['hp']) * 2 + floor(ceil(sqrt(self.ivs['hp'])) / 4) * self.level) / 100) + self.level + 10,
 				'atk': floor(((dex[self.species]['atk'] + self.ivs['atk']) * 2 + floor(ceil(sqrt(self.ivs['atk'])) / 4) * self.level) / 100) + 5,
 				'def': floor(((dex[self.species]['def'] + self.ivs['def']) * 2 + floor(ceil(sqrt(self.ivs['def'])) / 4) * self.level) / 100) + 5,
 				'spa': floor(((dex[self.species]['spa'] + self.ivs['spa']) * 2 + floor(ceil(sqrt(self.ivs['spa'])) / 4) * self.level) / 100) + 5,
-				'spd': floor(((dex[self.species].spd + self.ivs['spd']) * 2 + floor(ceil(sqrt(self.ivs['spd'])) / 4) * self.level) / 100) + 5,
-				'spe': floor(((dex[self.species].spe + self.ivs['spe']) * 2 + floor(ceil(sqrt(self.ivs['spe'])) / 4) * self.level) / 100) + 5
+				'spd': floor(((dex[self.species]['spd'] + self.ivs['spd']) * 2 + floor(ceil(sqrt(self.ivs['spd'])) / 4) * self.level) / 100) + 5,
+				'spe': floor(((dex[self.species]['spe'] + self.ivs['spe']) * 2 + floor(ceil(sqrt(self.ivs['spe'])) / 4) * self.level) / 100) + 5
 			}
 			self.stats['chp'] = self.stats['hp']
+			self.fainted = False
 
-		resetStats(self)
+	def can_level_up(self, i) -> bool:
+		return i.current_xp >= xp['next'][self.level_type][str(self.level)] and i.level < 100
 
-	def canLevelUp(self, i):
-		return i.currentxp >= level.next[self.lvltype][self.level] and i.level < 100
-
-	def checkLevelUp(self, party):
+	def check_level_up(self, party) -> None:
 		for i in party:
-			while i.canLevelUp(i):
-				i.currentxp -= level.next[self.lvltype][self.level]
-				i.level += 1
-				i.resetStats()
-				sp(f'\n{i.name} grew to level {i.level}!')
+			while i.can_level_up(i):
+				i.current_xp -= xp['next'][self.level_type][str(self.level)]
+				self.level_up(i)
 
-	def checkFainted(self):
-		if self.stats.chp <= 0:
-			self.stats.chp = 0
+	def check_fainted(self) -> bool:
+		if self.stats['chp'] <= 0:
+			self.stats['chp'] = 0
 			self.fainted = True
 			return True
 		return False
 
-	def dealDamage(self, attacker):
+	def deal_damage(self, attacker) -> None:
 		sp(f'\n{attacker.name} used a {attacker.type}-type attack on {self.name}!')
-		if attacker.atktype == 'physical':
-			damage = floor(
-				((((2 * attacker.level / 5 + 2) * attacker.stats.atk * dex[attacker.species].atk) / (dex[self.species]['def'] * 50)) + 2) * randint(85, 100) / 100
-			)
-		elif attacker.atktype == 'special':
-			damage = floor(
-				((((2 * attacker.level / 5 + 2) * attacker.stats.spa * dex[attacker.species].spa) / (dex[self.species].spd * 50)) + 2) * randint(85, 100) / 100
-			)
-		self.stats.chp -= damage
+		critical = randint(0, 255) <= 17
+		attack_defense = ('atk', 'def') if attacker.atk_type == 'physical' else ('spa', 'spd')
+		damage = floor((((((2 * attacker.level / 5)+ 2) * 100 * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if critical else 1) * randint(85, 100) / 100 * (type_effectiveness(attacker, self) if save['flag']['beenToRoute1'] else 1))
+		self.stats['chp'] -= damage
 		sp(f'\n{attacker.name} dealt {damage} damage to {self.name}!')
-		self.checkFainted()
+		if critical:
+			sp('A critical hit!')
+		for i in [
+			(0, 'It had no effect!'),
+			(0.5, 'It\'s super effective!'),
+			(2, 'It\'s not very effective!') 
+		]:
+			if types[self.type][attacker.type] == i[0]:
+				sp(f'{i[1]}')
+		self.check_fainted()
 		if self.fainted:
 			sp(f'\n{self.name} fainted!')
 
-	def calculateXP(self, attacker, battleType='wild'):
-		return (level.total[attacker.xptype][attacker.level] * attacker.level * (1 if battleType == 'wild' else 1.5)) / 7
+	def calculate_xp(self, attacker, battle_type='wild') -> int:
+		return (xp['total'][attacker.level_type][str(attacker.level)] * attacker.level * (1 if battle_type == 'wild' else 1.5)) / 7
+
+	def give_xp(self, attacker, battle_type='wild') -> None:
+		self.current_xp += ceil(self.calculate_xp(attacker, battle_type))
+		sg(f'\n{self.name} gained {self.calculate_xp(attacker, battle_type)} XP!')
+		while self.current_xp >= xp['next'][self.level_type][self.level]:
+			self.current_xp -= xp['next'][self.level_type][self.level]
+			self.level_up(self)
+			if self.level == 100:
+				sp(f'\nCongratulations, {self.name} has reached level 100!')
+				break
+
+	def level_up(self, pokemon):
+		pokemon.level += 1
+		pokemon.reset_stats()
+		sp(f'{pokemon.name} grew to level {pokemon.level}!')
+
+# catch Pokemon
+
+def catch(pokemon) -> None:
+	global save
+	save['party' if len(save['party']) < 6 else 'box'].append(pokemon)
+	if pokemon.species not in save['dex']:
+		save['dex'].update({pokemon.species: {'seen': True, 'caught': True}})
+	else:
+		if 'seen' not in save['dex'][pokemon.species]:
+			save['dex'][pokemon.species]['seen'] = True
+		if 'caught' not in save['dex'][pokemon.species]:
+			save['dex'][pokemon.species]['caught'] = True
+	if pokemon.type not in save['flag']['type']:
+		save['flag']['type'].update({pokemon.type: {'seen': True, 'caught': True}})
+	else:
+		if 'seen' not in save['flag']['type'][pokemon.type]:
+			save['flag']['type'][pokemon.species]['seen'] = True
+		if 'caught' not in save['flag']['type'][pokemon.type]:
+			save['flag']['type'][pokemon.species]['caught'] = True
+	sg(f'\nYou caught {pokemon.name}!')
+	sg(f'\n{pokemon.name} ({pokemon.type}-type) was added to your {"party" if len(save["party"]) < 6 else "box"}.')
 
 # check if party is alive
 
-def isAlive(self):
-	return not (i.checkFainted() for i in self)
+def is_alive(self) -> bool:
+	return any(not i.fainted for i in self)
+
+# use item from bag
+
+def use_item():
+	global save
+	item_used = False
+	sp('\nPlease choose an item to use.')
+	sp('\n'.join(f'{i.name}: {i.quantity}' for i in save['bag']))
+	while not item_used:
+		item = ''
+		while not item:
+			item = get()
+		if item in save['bag']:
+			if save['bag'][item] > 0:
+				save[''] # TODO: finish use item function
+			else:
+				sp('You have none of that item!')
 
 # randomise escape
 
-def escape(self, opponent, escapeAttempts):
-	number = floor((self.stats.spe * 32) / (floor(opponent.stats.spe / 4) % 256)) + 30 * escapeAttempts
-	if number > 255 or floor(opponent.stats.spe / 4) % 256 == 0:
-		return True
+def escape(pokemon, opponent, escape_attempts) -> bool:
+	return floor((pokemon.stats['spe'] * 32) / (floor(opponent.stats['spe'] / 4) % 256)) + 30 * escape_attempts > 255 or floor(opponent.stats['spe'] / 4) % 256 == 0
+
+# calculate type effectiveness
+
+def type_effectiveness(attacker, defender) -> float:
+	return types[attacker.type][defender.type]
+
+# calculate prize money
+
+def prize_money(self=None, type='Pokémon Trainer') -> int:
+	return floor(trainer[type] * max(i.level for i in (save['party'] if self is None else self)))
 
 # create battle process
 
-def battle(opponentParty=None, battleType='wild', name=None, startDiagloue=None, title=None, endDialouge=None, levelLow=None, levelHigh=None, earnXP=True):
+def battle(opponent_party=None, battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
 
-	# sourcery skip: low-code-quality
+	global save
 
-	if opponentParty is None and battleType == 'wild':
-		opponentParty = [Pokemon('BULBASAUR', randint(levelLow, levelHigh), 'random')]
+	debug('Entered battle!')
 
-	party1 = len(save['party'])
-	party2 = len(opponentParty)
+	party_length = len(save['party'])
 
 	current = ''
-	opponentCurrent = 0
-	for i in range(party1):
+	opponent_current = 0
+	for i in range(party_length):
 		while not current:
-			if not save['party'][i].checkFainted():
+			if not save['party'][i].check_fainted():
+				debug(f'{save["party"][i].name} is the first alive Pokemon in the party.')
 				current = i
+				break
 
 	# battle intro
 
-	if battleType == 'trainer':
-		sp(f'\n{name}: {startDiagloue}')
+	if battle_type == 'trainer':
+		sp(f'\n{name}: {start_diagloue}')
 		sp(f'\n{title} {name} wants to fight!')
-	elif battleType == 'wild':
-		sp(f'\nA wild {opponentParty[opponentCurrent].name} appeared!')
+	elif battle_type == 'wild':
+		sp(f'\nA wild {opponent_party[opponent_current].name} appeared!')
 	else:
-		abort('Invalid battle type: neither trainer nor wild.')
+		abort('\nInvalid battle type: neither trainer nor wild.')
 	sleep(0.5)
 	sp(f'\nGo, {save["party"][current].name}!')
 	sleep(0.5)
-	if battleType == 'trainer':
-		sp(f'\n{n} sent out {opponentParty[opponentCurrent]}!')
+	if battle_type == 'trainer':
+		sp(f'\n{name} sent out {opponent_party[opponent_current].name}!')
 
-	victory = False
-	escape = False
-	escapeAttempts = 0
+	escaped_from_battle = False
+	escape_attempts = 0
 
-	while save['party'].isAlive() and opponentParty.isAlive():
+	debug(f'\nPlayer party alive: {is_alive(save["party"])}\nOpponent party alive: {is_alive(opponent_party)}')
 
-		beginCurrent = current
-		playerAttackedThisTurn = False
-		opponentAttackedThisTurn = False
+	while is_alive(save['party']) and is_alive(opponent_party):
 
-		bars = ceil(save['party'][current].stats.chp)*20
-		opponentBars = ceil(opponentParty[opponentCurrent].stats["chp"])*20
+		# player turn
 
-		sp(f'''{save["party"][current].name}{' '*15-len(save['party'][current].name)}[{'='*bars}{' '*(20-bars)}]\n{save["party"][current].type}\n\n{opponentParty[opponentCurrent].name}{' '*15-len(opponentParty[opponentCurrent].name)}[{'='*opponentBars}{' '*(20-opponentBars)}]\n{opponentParty[opponentCurrent].type}''')
-		sp(f'\nWhat should {save["party"][current]} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run')
-		choice = ''
-		while not choice:
-			choice = input('> ')
-			if choice not in ['1', '2', '3', '4']:
-				choice = ''
-				sp('Invalid choice.')
-			elif choice == '2' and len(save['party']) == 1:
-				choice = ''
+		debug('Turn start!')
+
+		player_attacked_this_turn = False
+		opponent_attacked_this_turn = False
+
+		bars = ceil((save['party'][current].stats['chp']/(save['party'][current].stats['hp']))*bars_length)
+		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length)
+
+		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
+		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}')
+
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''')
+		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
+		valid_choice = False
+		while not valid_choice:
+			choice = get()
+			if choice == '2' and len(save['party']) == 1:
 				sp('You can\'t switch out your only Pokémon!')
+			elif choice == '3' and len(save['bag']) == 0:
+				sp('You have no items!')
+			elif choice == '4' and battle_type == 'trainer':
+				sp('You can\'t run from a trainer battle!')
+			elif choice in ['1', '2', '3', '4']:
+				valid_choice = True
 
 		# choose attack
 
 		if choice == '1':
-			if save['party'][current].stats.spe > opponentParty[opponentCurrent].stats.spe:
-				opponentParty[opponentCurrent].dealDamage(save['party'][current])
-				playerAttackedThisTurn = True
+			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']:
+				opponent_party[opponent_current].deal_damage(save['party'][current])
+				player_attacked_this_turn = True
 
 		# choose switch
 
 		elif choice == '2':
 
 			sp(f'''\nWhich Pokémon should you switch to?\n\n{
-				''.join(f'{f"[{i+1}]" if not save["party"][i].checkFainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats.chp}/{save["party"][i].stats.hp})' for i in range(party1))
+				''.join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
 			}''')
-			switchChoice = ''
-			while not switchChoice:
-				while switchChoice == '':
-					switchChoice = input('> ')
+			switch_choice = ''
+			while not switch_choice:
+				while switch_choice == '':
+					switch_choice = get()
 				try:
-					if switchChoice not in [str(i+1) for i in range(party1)]:
-						switchChoice = ''
-						sp('Invalid choice.')
-					elif save['party'][int(switchChoice)-1].checkFainted():
-						switchChoice = ''
+					if switch_choice not in [str(i+1) for i in range(party_length)]:
+						switch_choice = ''
+						sp('\nInvalid choice.')
+					elif save['party'][int(switch_choice)-1].check_fainted():
+						switch_choice = ''
 						sp('That Pokémon is fainted!')
 				except (TypeError, ValueError):
-					switchChoice = ''
-					sp('Invalid choice.')
-			current = int(switchChoice)-1
+					switch_choice = ''
+					sp('\nInvalid choice.')
+			current = int(switch_choice)-1
 
-		# TODO: choose item
+		# choose item
+
+		elif choice == '3':
+			use_item()
 
 		# choose run
 
 		elif choice == '4':
-			if save['party'][current].escape(opponentParty[opponentCurrent], escapeAttempts):
-				escape = True
+			if escape(save['party'][current], opponent_party[opponent_current], escape_attempts):
+				escaped_from_battle = True
 				break
+			else:
+				escape_attempts += 1
 
 		# opponent attack
 
-		if save['party'].isAlive() and opponentParty.isAlive():
-			save['party'][current].dealDamage(opponentParty[opponentCurrent])
-			opponentAttackedThisTurn = True
+		if is_alive(save['party']) and is_alive(opponent_party):
+			save['party'][current].deal_damage(opponent_party[opponent_current])
+			opponent_attacked_this_turn = True
 
-		if save['party'].isAlive() and opponentParty.isAlive() and not playerAttackedThisTurn:
-			opponentParty[opponentCurrent].dealDamage(save['party'][current])
-			playerAttackedThisTurn = True
+		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn:
+			opponent_party[opponent_current].deal_damage(save['party'][current])
+			player_attacked_this_turn = True
 
-		elif save['party'].isAlive() and not opponentParty.isAlive():
-			victory = True
+		elif is_alive(save['party']) and not is_alive(opponent_party):
 			break
 
-		# DEBUG: check attack statuses
-
-		sp(f'\nDEBUG:\nHigher Speed: {"Player" if save["party"][current].stats.spe > opponentParty[opponentCurrent].stats.spe else "Opponent"}\nPlayer Attacked: {playerAttackedThisTurn}\nOpponent Attacked: {opponentAttackedThisTurn}\n')
+		debug(f'Higher Speed: {"Player" if save["party"][current].stats["spe"] > opponent_party[opponent_current].stats["spe"] else "Opponent"}\nPlayer Attacked: {player_attacked_this_turn}\nOpponent Attacked: {opponent_attacked_this_turn}\n')
 
 	# win/loss conditions
 
-	if escape:
+	if escaped_from_battle:
 		sp('You escaped!')
-	if save['party'].isAlive() and not opponentParty.isAlive():
-		if battleType == 'trainer':
-			sp(f'\n{save["party"][current].name} won the battle!')
-		if earnXP == True:
-			save['party'][current].currentxp += save['party'][current].calculateXP(opponentParty[opponentCurrent])
-			save['party'][current].checkLevelUp()
-			sleep(0.5)
-		if battleType == 'trainer':
-			sp(f'\n{name}: {endDialouge}')
-			# TODO: give prize money
+	if is_alive(save['party']) and not is_alive(opponent_party):
+		if save['flag']['beenToRoute1']:
+			if battle_type == 'trainer':
+				sp(f'\n{save["party"][current].name} won the battle!')
+			if earn_xp == True:
+				save['party'][current].current_xp += ceil(save['party'][current].calculate_xp(opponent_party[opponent_current]))
+				save['party'][current].check_level_up(save['party'])
+				sleep(0.5)
+			if battle_type == 'trainer':
+				sp(f'\n{name}: {end_dialouge}')
+				save['money'] += trainer[title]
+				sp(f'You got ¥{trainer[title]}')
+		else:
+			save['flag']['wonFirstBattle'] = True
 
-	elif opponentParty.isAlive() and not save['party'].isAlive():
-		print()
+	elif is_alive(opponent_party) and (not is_alive(save['party'])):
+		if battle_type == 'trainer':
+			if save['flag']['beenToRoute1']:
+				save['money'] -= prize_money()
+				sg('You lost the battle!')
+				sg(f'You gave ¥{str(prize_money())} as prize money.')
+			else:
+				save['flag']['wonFirstBattle'] = False
+		sg('...')
+		sg(f'{save["name"]} blacked out!')
+		save['location'] = save['recentCenter']
+		heal()
 
-cls()
+	else:
+		abort('\nInvalid battle state; neither won, lost, nor escaped. Could not load player turn.')
+
+# pokemon center heal
+
+def heal(pokemon=None, party=None, type='party') -> None:
+	global save
+	if type == 'party':
+		party = party or save['party']
+	elif type == 'single':
+		pokemon = pokemon or save['party'][0]
+		party = [pokemon]
+	else:
+		abort('Invalid heal type: neither party nor single.')
+	sp('')
+	for i in party:
+			i.reset_stats()
+			sp(f'{i.name} was healed to max health.')
+
+# json encoder
+
+def json_encode(obj) -> any:
+	if isinstance(obj, datetime.datetime):
+		return obj.isoformat()
+	elif isinstance(obj, set):
+		return list(obj)
+	elif isinstance(obj, dict):
+		return {k: json_encode(v) for k, v in obj.items()}
+	elif isinstance(obj, list):
+		return [json_encode(v) for v in obj]
+	elif isinstance(obj, Pokemon):
+		return obj.__dict__
+	else:
+		return obj
 
 # title screen
+
+cls()
 
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!']
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
 
-startOption = ''
+start_option = ''
 
 sleep(1)
 print(title[0])
@@ -349,26 +507,26 @@ cls()
 
 print(f'{title[3]}Please choose an option.\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
-while startOption != '2':
-	startOption = input('> ')
+while start_option != '2':
+	start_option = get()
 	cls()
 
-	if startOption == '1':
-		if (path.isfile(path.join(syspath[0], 'save.json')) and loads(open(path.join(syspath[0], 'save.json')).read())['flags']['introComplete']):
+	if start_option == '1':
+		if path.isfile(path.join(syspath[0], 'save.json')) and loads(open(path.join(syspath[0], 'save.json')).read())['flag']['hasSaved']:
 			cls()
-			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 			break
 		print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
-	elif startOption == '2':
+	elif start_option == '2':
 		cls()
 		print(f'{title[3]}Starting game!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
-	elif startOption == '3':
+	elif start_option == '3':
 		try:
-			webopen(link.repository, new=2, autoraise=True)
+			webopen(link['repository'], new=2, autoraise=True)
 		except Exception:
-			print(f'{title[3]}Failed to open website, here\'s the link:\n[{link.repository}]\n')
+			print(f'{title[3]}Failed to open website, here\'s the link:\n[{link["repository"]}]\n')
 		else:
 			print(f'{title[3]}Repository page opened successfully!')
 		finally:
@@ -377,46 +535,46 @@ while startOption != '2':
 	else:
 		print(f'{title[3]}Invalid input!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
-# new game
+# load data from files
 
-if startOption == '2':
-	print('> 2')
-	sg('\nThis will overwrite any previous save data. Please enter the words "new file" to continue.\n\nIf you change your mind, please restart the program.\n')
-	while startOption.lower() != 'new file':
-		startOption = input('> ')
+dex = loads(open(path.join(syspath[0], 'data/dex.json')).read())
+open(path.join(syspath[0], 'data/dex.json')).close()
 
-# import data
+trainer = loads(open(path.join(syspath[0], 'data/trainer.json')).read())
+open(path.join(syspath[0], 'data/trainer.json')).close()
 
-dex = loads(open(path.join(syspath[0], 'dex.json')).read())
-open(path.join(syspath[0], 'dex.json')).close()
+types = loads(open(path.join(syspath[0], 'data/types.json')).read())
+open(path.join(syspath[0], 'data/types.json')).close()
 
-types = loads(open(path.join(syspath[0], 'types.json')).read())
-open(path.join(syspath[0], 'types.json')).close()
-
-level = loads(open(path.join(syspath[0], 'level.json')).read())
-open(path.join(syspath[0], 'level.json')).close()
+xp = loads(open(path.join(syspath[0], 'data/level.json')).read())
+open(path.join(syspath[0], 'data/level.json')).close()
 
 # save file template
 
-saveTemplate = {
+save_template = {
 	'badges': {
 		i: False for i in badges
 	},
 	'bag': {},
 	'box': [],
-	'currentLocation': '',
-	'dex': {},
-	'flags': {
+	'dex': {
+		#i: {'seen': False, 'caught': False} for i in dex
+	},
+	'flag': {
+		'beenToRoute1': False,
 		'chosenStarter': False,
+		'deliveredPackage': False,
 		'eggInDaycare': False,
+		'hasSaved': False,
 		'introComplete': False,
 		'pokemonCaught': 0,
 		'pokemonSeen': 0,
 		'pokemonUncaught': 0,
 		'trainerFought': {},
-		'typeCaught': [],
-		'typeSeen': [],
-		'typeUncaught': []
+		'type': {
+			#i: {'seen': False, 'caught': False} for i in types
+		},
+		'wonFirstBattle': None
 	},
 	'hms': {
 		'cut': False,
@@ -425,37 +583,57 @@ saveTemplate = {
 		'strength': False,
 		'surf': False
 	},
-	'lastPlayed': '',
+	'lastPlayed': None,
+	'location': None,
 	'money': 3000,
-	'mysteryGiftsOpened': {
-		# TODO: add mystery gifts
+	'mysteryGiftOpened': {
+		#i: False for i in mystery_gift
 	},
 	'name': '',
 	'options': {
-		'textSpeed': textSpeed
+		'debug': False,
+		'textSpeed': text_speed
 	},
-	'party': []
+	'party': [],
+	'recentCenter': None,
+	'user': getuser()
 }
 
 # load save file
 
-if startOption == '2':
-	open(path.join(syspath[0], 'save.json'), 'w').write(dumps(saveTemplate, indent=4))
-save = {**saveTemplate, **load(open(path.join(syspath[0], 'save.json')))}
-dumps(open(path.join(syspath[0], 'save.json')).read())
-open(path.join(syspath[0], 'save.json')).close()
+if start_option == '1':
+	save_temp = {**save_template, **loads(open(path.join(syspath[0], 'save.json'), 'r').read())}
+	open(path.join(syspath[0], 'save.json')).close()
+	save = save_temp
+	save['party'] = [load(i, Pokemon) for i in save_temp['party']]
+	save['box'] = [load(i, Pokemon) for i in save_temp['box']]
+else:
+	save = save_template
+
+# debug statements
+
+def debug(text) -> None:
+	if save['options']['debug']:
+		sp(f'DEBUG: {text}')
+
+# test party status
+
+if start_option == '1':
+	for i in range(len(save['party'])):
+		debug(f'{type(save["party"][i])}')
 
 # check for illegal save data
 
-if (
-	len(save['name']) > 15 or
-	save['name'] != save['name'].upper() or
-	save['name'] == '' and save['flags']['introComplete'] or
-	save['name'] != '' and not save['flags']['introComplete'] or
-	save['flags']['chosenStarter'] and save['currentLocation'] == '' or
-	save['flags']['chosenStarter'] and not save['flags']['introComplete']
-):
-	abort()
+if max([
+	len(save['name']) > 15,
+	len(save['party']) > 6,
+	save['name'] != save['name'].upper(),
+	save['name'] == '' and save['flag']['introComplete'],
+	save['name'] != '' and not save['flag']['introComplete'],
+	save['flag']['chosenStarter'] and save['location'] == '',
+	save['flag']['chosenStarter'] and not save['flag']['introComplete'],
+]):
+	abort('Illegal save data detected!')
 
 # reset getch according to options
 
@@ -465,11 +643,11 @@ reset_sp(text[save['options']['textSpeed']])
 
 while not exit:
 
-	option = ''
+	option = dex_string = ''
 
 	# intro
 
-	if save['flags']['introComplete'] == False:
+	if save['flag']['introComplete'] == False:
 
 		sp('(Intro Start!)\n')
 		sg('OAK: Hello there! Welcome to the world of Pokémon!')
@@ -482,20 +660,20 @@ while not exit:
 		introAnswer = ''
 
 		while introAnswer not in ['1', '2']:
-			introAnswer = input('> ')
+			introAnswer = get()
 
 		if introAnswer == '1':
 			playerName = 'PYTHON'
 
 		elif introAnswer == '2':
 			sp('\n(Caps, 15 chars. max)\n')
-			playerName = input('> ')
+			playerName = get()
 
 			while len(playerName) > 15 or playerName == '':
-				playerName = input('> ')
+				playerName = get()
 
 		else:
-			sp('Invalid answer!')
+			sp('\nInvalid answer!')
 
 		playerName = playerName.upper()
 
@@ -503,80 +681,74 @@ while not exit:
 		sg('\nNow, since you\'re so raring to go, I\'ve prepared a rival for you.')
 		sg('He will go on an adventure just like yours, and battle you along the way.')
 		sp('\n...Erm, what is his name again?\n')
-		input('> ')
+		get()
 		sg('\n...')
 		sg('Hoho, just kidding! His name is JOHNNY! You\'ll meet him soon!\n')
 		sg(f'{playerName}! Your very own Pokémon legend is about to unfold! A world of dreams and adventures with Pokémon awaits! Let\'s go!')
 
 		save['name'] = playerName
-		save['currentLocation'] = 'playerHouseUp'
-		save['flags']['introComplete'] = True
+		save['location'] = 'playerHouseUp'
+		save['flag']['introComplete'] = True
 
 		sp('\n(Intro Complete!)')
 
-	elif optionsOpen == True:
+	elif options_open == True:
 		sp('Options Menu\n[1] - Text Speed\n[2] - (Coming Soon)\n[3] - (Coming Soon)\n[4] - Back\n') # TODO: music, sound effects
 
 		while not option:
-			option = input('> ')
+			option = get()
 
 		if option == '1':
 			option = ''
 			while option != '5':
 				sp('\nText Speed\n[1] - Slow\n[2] - Normal\n[3] - Fast\n[4] - Ultra\n[5] - Back\n')
 				option = ''
-				while not option:
-					option = input('> ')
+				while (not option) and option not in ['1', '2', '3', '4', '5']:
+					option = get()
 				if option != '5':
 					sp('')
 				if option == '1':
 					save['options']['textSpeed'] = 'slow'
-					reset_sp(text[save['options']['textSpeed']])
 					sp('Text Speed set to Slow!')
 				elif option == '2':
 					save['options']['textSpeed'] = 'normal'
-					reset_sp(text[save['options']['textSpeed']])
 					sp('Text Speed set to Normal!')
 				elif option == '3':
 					save['options']['textSpeed'] = 'fast'
-					reset_sp(text[save['options']['textSpeed']])
 					sp('Text Speed set to Fast!')
 				elif option == '4':
 					save['options']['textSpeed'] = 'ultra'
-					reset_sp(text[save['options']['textSpeed']])
 					sp('Text Speed set to Ultra!')
-				elif option != '5':
-					sp('Invalid answer!')
+				reset_sp(text[save['options']['textSpeed']])
 
 		elif option in ['2', '3']:
 			sp('Coming Soon!')
 
 		elif option == '4':
-			optionsOpen = False
+			options_open = False
 
 		else:
-			sp('Invalid answer!')
+			sp('\nInvalid answer!')
 
-	elif menuOpen == True:
+	elif menu_open == True:
 		sp(f'Menu\n[d] - Pokédex\n[p] - Pokémon\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
 
 		while not option:
-			option = input('> ')
+			option = get()
 
 		if option not in ['e', 'o']:
 			sp('')
 
 		if option == 'd':
 			option = ''
-			dexString = ''.join(
+			dex_string = ''.join(
 				f'\n{dex[i]["index"]} - {i}: Seen{", Caught" if save["dex"][i]["caught"] else ""}' if save['dex'][i]['seen'] else '' for i in save['dex']
 			)
-			sp(f"{save['name']}'s Pokédex{dexString}" or '\nYou have no Pokémon in your Pokédex!')
+			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 
 		elif option == 'p':
 			if save['party']:
-				for i in range(len(save['party'])):
-					sp(i.name)
+				sp('\n'.join(f'{i.name} ({i.type}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party']))
 			else:
 				sp('Your party is empty!')
 
@@ -589,35 +761,38 @@ while not exit:
 
 		elif option == 't':
 			sp(f'Name: {save["name"]}')
-			sp(f'Money: {"{:,}".format(save["money"])}')
+			sp(f'Money: ¥{"{:,}".format(save["money"])}')
 			sp(f'''Badges: {''.join(f"[{'x' if save['badges'][i] else ' '}]" for i in badges)}''')
 
 		elif option == 's':
 			backup()
 
 		elif option == 'o':
-			optionsOpen = True
+			options_open = True
 
 		elif option == 'e':
-			menuOpen = False
+			menu_open = False
 
 		elif option == 'q':
-			sp('Are you sure you want to quit? Any unsaved progress will be lost. Y/N\n')
+			sp('Are you sure you want to quit? Any unsaved progress will be lost. (Y/N)\n')
 			option = ''
 
 			while option not in yn:
-				option = input('> ')
+				option = get()
 			if option in y:
 				exit = True
 
 		else:
-			sp('Invalid answer!')
+			sp('\nInvalid answer!')
 
-	elif save['currentLocation'] == 'playerHouseUp':
+		if option not in ['e', 'i', 'o', 'p', 's']:
+			sp('')
+
+	elif save['location'] == 'playerHouseUp':
 		sp(f'Current Location: {save["name"]}\'s Room (Upstairs)\n\n[s] - Go Downstairs\n[1] - Computer\n[2] - Notebook\n')
 
 		while option == '':
-			option = input('> ')
+			option = get()
 
 		if option == '1':
 			sg('\n...')
@@ -627,79 +802,223 @@ while not exit:
 			sg('\nThe notebook is open to a page that says:\n\n"Use the [m] command in the overworld to open the menu.\nFrom the menu, you can save your progress, check your Pokémon, and more!"')
 
 		elif option == 's':
-			save['currentLocation'] = 'playerHouseDown'
+			save['location'] = 'playerHouseDown'
 
 		elif option == 'm':
-			menuOpen = True
+			menu_open = True
 
 		else:
-			sp('Invalid answer!')
+			sp('\nInvalid answer!')
 
-	elif save['currentLocation'] == 'playerHouseDown':
+	elif save['location'] == 'playerHouseDown':
 		sp(f'Current Location: {save["name"]}\'s House (Downstairs)\n\n[w] - Go Upstairs\n[d] - Go Outside\n')
 
 		while option == '':
-			option = input('> ')
+			option = get()
 
 		if option == 'd':
-			save['currentLocation'] = 'palletTown'
+			save['location'] = 'pallet'
 
 		elif option == 'w':
-			save['currentLocation'] = 'playerHouseUp'
+			save['location'] = 'playerHouseUp'
 
 		elif option == 'm':
-			menuOpen = True
+			menu_open = True
 
 		else:
-			sp('Invalid answer!')
+			sp('\nInvalid answer!')
 
-	elif save['currentLocation'] == 'palletTown':
+	elif save['location'] == 'pallet':
 		sp(f'Current Location: Pallet Town - "Shades of your journey await!"\n\n[w] - Go to Route 1\n[a] - Go to {save["name"]}\'s House\n[s] - Go to Sea-Route 21\n[d] - Go to OAK\'s LAB\n')
 
 		while option == '':
-			option = input('> ')
+			option = get()
 
 		if option == 'w':
-			if save['flags']['chosenStarter']:
-				save['currentLocation'] = 'route1'
+			if save['flag']['chosenStarter']:
+				save['location'] = 'route1-s'
 			else:
-				sp('\nComing soon!')
+				sg('\nYou take a step into the tall grass north of Pallet Town.')
+				sg('...')
+				sg('Suddenly, you hear a voice shouting from behind you.')
+				sg('\nOAK: Hey! Wait! Don\'t go out!')
+				sg('\nProfessor OAK runs up to you from behind.')
+				sg('\nOAK: It\'s unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for protection. Come with me!')
+				sg('\nProfessor OAK leads you to his laboratory. He walks up to a table with three Poké Balls on it.')
+				sg(f'\nOAK: Here, {save["name"]}! There are three Pokémon here, reserved for new trainers.')
+				while not save['flag']['chosenStarter']:
+					sp('Go ahead and choose one!\n\n[1] - Bulbasaur\n[2] - Charmander\n[3] - Squirtle\n')
+					option = ''
+					while not option and option not in ['1', '2', '3']:
+						option = get()
+					if option in ['1', '2', '3']:
+						sp(f'\nDo you want the {["GRASS", "FIRE", "WATER"][int(option)-1]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
+						confirm = ''
+						while confirm not in yn:
+							confirm = get()
+						if confirm in y:
+							save['flag']['chosenStarter'] = True
+							save['starter'] = ['BULBASAUR', 'CHARMANDER', 'SQUIRTLE'][int(option)-1]
+							save['dex'] = {save['starter']: {'seen': True, 'caught': True}}
+							save['flag']['type'] = {dex[save['starter']]['type']: {'seen': True, 'caught': True}}
+							for i in [('BULBASAUR', 'CHARMANDER'), ('CHARMANDER', 'SQUIRTLE'), ('SQUIRTLE', 'BULBASAUR')]:
+								if save['starter'] == i[0]:
+									save['rivalStarter'] = i[1]
+							save['party'].append(Pokemon(save['starter'], 5, {
+								'hp': 31,
+								'atk': 31,
+								'def': 31,
+								'spa': 31,
+								'spd': 31,
+								'spe': 31
+							}))
+						else:
+							sp('')
+				sg(f'\nOAK: {save["starter"]} looks really energetic!')
+				sg('\nJust as you turn to leave, another young trainer enters the lab.')
+				sg(f'\nOAK: Ah, JOHNNY! Perfect timing! {save["name"]} here has just chosen a Pokémon! Why don\'t you choose one too?')
+				sg(f'\nJOHNNY walks up to the table and thinks for a few seconds, before picking up a Poké Ball containing {save["rivalStarter"].upper()}.')
+				sg(f'\nOAK: {save["starter"]} and {save["rivalStarter"]} are both brilliant choices!')
+				sg('\nJOHNNY nods to you, then turns to walk away. But, before he does, Professor OAK calls him back.')
+				sg(f'\nOAK: JOHNNY! Why don\'t you battle {save["name"]} before you go?')
+				sg('\nJOHNNY stops and looks at you over his shoulder, as if he doesn\'t understand.')
+				sg('\n...Suddenly, he gives a smile and tosses his Poké Ball into the air!')
+				battle([Pokemon(save['rivalStarter'], 5, 'random')], battle_type='trainer', name='JOHNNY', start_diagloue='...', title='Pokémon Trainer', end_dialouge='...')
+				sg(f'\nOAK: A marvellous battle! Congratulations, {save["name"] if save["flag"]["wonFirstBattle"] else "JOHNNY"}!')
+				sg('Let me heal your Pokémon for you.')
+				heal()
+				sg('\nOAK: You can make your Pokémon stronger by training on Route 1.')
+				sg('\nJOHNNY tips his hat to you before taking his leave of the Lab.')
+				sg('You notice that he\'s heading North.')
+				save['location'] = 'oakLab'
 
 		elif option == 'a':
-			save['currentLocation'] = 'playerHouseDown'
+			save['location'] = 'playerHouseDown'
 
 		elif option == 's':
 			sg('\nThe water is a deep, clear blue.')
 			if save['hms']['surf']:
-				sp('\n...Would you like to use Surf? Y/N')
+				sp('\n...Would you like to use Surf? (Y/N)')
 				option = ''
 				while option not in yn:
-					option = input('> ')
+					option = input('\n> ')
 				if option in y:
-					save['currentLocation'] = 'seaRoute21'
+					save['location'] = 'seaRoute21'
 				else:
 					sg('\nYou decided not to use Surf.')
 
 		elif option == 'd':
-			if save['flags']['chosenStarter']:
-				save['currentLocation'] = 'oakLab'
+			if save['flag']['chosenStarter']:
+				save['location'] = 'oakLab'
 			else:
 				sg('\n...')
 				sg('It appears to be locked.')
 
 		elif option == 'm':
-			menuOpen = True
+			menu_open = True
 
 		else:
-			sp('Invalid answer!')
+			sp('\nInvalid answer!')
 
-	elif save['currentLocation'] == 'oakLab':
-		abort('Oak\'s Lab is currently inaccessible.')
+	elif save['location'] == 'oakLab':
+		sp('Current Location: OAK\'s Lab\n\n[a] - Go to Pallet Town\n[1] - Lab Assistant (Left)\n[2] - Lab Assistant (Right)\n[3] - Professor OAK\n[4] - OAK\'s Computer\n')
 
-	elif save['currentLocation'] == 'seaRoute21':
-		abort('Route 21 is currently inaccessible.')
+		while option == '':
+			option = get()
+
+		if option == 'a':
+			save['location'] = 'pallet'
+
+		elif option == '1':
+			sg('\nASSISTANT: I study Pokémon as Professor OAK\'s aide.')
+
+		elif option == '2':
+			sg('\nASSISTANT: Professor OAK is an authority on Pokémon!')
+			sg('Many Pokémon trainers hold him in high regard!')
+
+		elif option == '3':
+			sg('\nOAK: You\'ve caught a total of...')
+			sg(f'\n{sum(1 if i["caught"] else 0 for i in save["dex"])} Pokémon!')
+
+		elif option == '4':
+			sg('\nThere\' an email message here:')
+			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKEMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
+
+		elif option == 'm':
+			menu_open = True
+
+		else:
+			sp('\nInvalid answer!')
+
+	elif save['location'] == 'route1-s':
+		if not save['flag']['beenToRoute1']: save['flag']['beenToRoute1'] = True
+		sp('Current Location: Route 1 (South)\n\n[w] - Go to Route 1 (North)\n[s] - Go to Pallet Town\n')
+
+		while option == '':
+			option = get()
+
+		if option == 'w':
+			save['location'] = 'route1-n'
+			battle([Pokemon(choice(['PIDGEY', 'SPEAROW', 'RATTATA', 'BELLSPROUT']), randint(1, 5), 'random')])
+
+		elif option == 's':
+			save['location'] = 'pallet'
+
+		elif option == 'm':
+			menu_open = True
+
+		else:
+			sp('\nInvalid answer!')
+
+	elif save['location'] == 'route1-n':
+		sp('Current Location: Route 1 (North)\n\n[w] - Go to Viridian City (South)\n[s] - Go to Route 1 (South)\n')
+
+		while option == '':
+			option = get()
+
+		if option == 'w':
+			save['location'] = 'viridian-s'
+
+		elif option == 's':
+			save['location'] = 'route1-s'
+			battle([Pokemon(choice(['PIDGEY', 'SPEAROW', 'RATTATA', 'BELLSPROUT']), randint(1, 5), 'random')])
+
+		elif option == 'm':
+			menu_open = True
+
+		else:
+			sp('\nInvalid answer!')
+
+	elif save['location'] == 'viridian-s':
+		sp('Current Location: Viridian City (South)\n\n[w] - Go to Viridian City (North)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[d] - Viridian Pokémon Centre\n')
+
+		while option == '':
+			option = get()
+
+		if option == 'w':
+			if save['flag']['deliveredPackage']:
+				save['location'] = 'viridian-n'
+			else:
+				sp('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
+				sp('\nMAN: Hey you, get off my property!')
+				sp('\nGIRL: Oh, grandpa! Don\'t be so mean!')
+				sp('\nIt looks like you won\'t be able to pass until later.')
+
+		elif option == 'a':
+			sg('\nComing soon!')
+
+		elif option == 's':
+			save['location'] = 'route1-n'
+
+		elif option == 'd':
+			heal()
+			save['recentCenter'] = 'viridian-s'
+
+		elif option == 'm':
+			menu_open = True
 
 	else:
-		abort()
+		abort(f'The location "{save["location"]}" is not a valid location.')
 
-	sp('')
+	if not dex_string:
+		sp('')
