@@ -4,7 +4,7 @@ Repository   - [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed]
 License      - MIT
 '''
 
-# dependencies
+# system dependencies
 from datetime import datetime
 from getpass import getuser
 from json import dumps, loads
@@ -12,16 +12,19 @@ from math import ceil, floor, sqrt
 from os import path, system, remove
 from platform import system as platform
 from random import choice, randint
-# from string import ...
+# TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
 from webbrowser import open as webopen
 
+# import installed modules
 from jsons import dump, load
-# from pygame import ...
+# TODO: from pygame import ...
 
+# import save file template
 from save_template import save_template
 
+# import getch according to system
 if platform() == "Windows":
 	from msvcrt import getch
 elif platform() == "Linux":
@@ -35,9 +38,7 @@ text = {
 	'ultra': 0.005,
 	'debug': 0.0
 }
-
 text_speed = 'normal'
-
 def reset_sp(speed) -> None:
 	global sp, sg
 	def sp(text, g=False) -> None:
@@ -49,7 +50,7 @@ def reset_sp(speed) -> None:
 			getch()
 	def sg(text) -> None:
 		sp(text, g=True)
-reset_sp(text[text_speed])
+reset_sp(speed=text[text_speed])
 
 # load screen
 sp('Loading...')
@@ -90,9 +91,8 @@ for i in range(len(platforms)):
 		def cls(command=cls_command) -> int: return system(command)
 
 # menu variables
-exit = menu_open = options_open = False
+exit = is_debug = menu_open = options_open = False
 y, n, yn = ['y'], ['n'], ['y', 'n']
-
 types = ['NORMAL', 'FIRE', 'WATER', 'GRASS', 'ELECTRIC', 'ICE', 'FIGHTING', 'POISON', 'GROUND', 'FLYING', 'PSYCHIC', 'BUG', 'ROCK', 'GHOST', 'DARK', 'DRAGON', 'STEEL', 'FAIRY']
 badges = ['Boulder', 'Cascade', 'Thunder', 'Rainbow', 'Soul', 'Marsh', 'Volcano', 'Earth']
 
@@ -453,7 +453,7 @@ def heal(pokemon=None, party=None, type='party') -> None:
 			i.reset_stats()
 			sp(f'{i.name} was healed to max health.')
 
-# title screen display
+# display title screen
 cls()
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!']
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
@@ -509,6 +509,11 @@ open(path.join(syspath[0], 'data/types.json')).close()
 xp = loads(open(path.join(syspath[0], 'data/level.json')).read())
 open(path.join(syspath[0], 'data/level.json')).close()
 
+# debug statements
+def debug(text) -> None:
+	if is_debug:
+		sp(f'DEBUG: {text}')
+
 # load save file
 if start_option == '1':
 	save_temp = {**save_template, **loads(open(path.join(syspath[0], '.ppr-save'), 'r').read())}
@@ -518,13 +523,9 @@ if start_option == '1':
 	save['box'] = [load(i, Pokemon) for i in save_temp['box']]
 else:
 	save = save_template.update({'badges': {i: False for i in badges}})
-	if getuser() not in save['user']:
-		save['user'].append(getuser())
-
-# debug statements
-def debug(text) -> None:
-	if save['options']['debug']:
-		sp(f'DEBUG: {text}')
+if getuser() not in save['user']:
+	save['user'].append(getuser())
+save['options']['debug']
 
 # test party status (debug)
 if start_option == '1':
