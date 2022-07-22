@@ -41,5 +41,5 @@ save_template = {
 	},
 	'party': [],
 	'recentCenter': None,
-	'user': None
+	'user': []
 }
