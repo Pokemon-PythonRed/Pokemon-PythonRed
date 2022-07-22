@@ -2,9 +2,7 @@ save_template = {
 	'badges': {},
 	'bag': {},
 	'box': [],
-	'dex': {
-		#i: {'seen': False, 'caught': False} for i in dex
-	},
+	'dex': {},
 	'flag': {
 		'beenToRoute1': False,
 		'chosenStarter': False,
@@ -16,9 +14,7 @@ save_template = {
 		'pokemonSeen': 0,
 		'pokemonUncaught': 0,
 		'trainerFought': {},
-		'type': {
-			#i: {'seen': False, 'caught': False} for i in types
-		},
+		'type': {},
 		'wonFirstBattle': None
 	},
 	'hms': {
@@ -31,9 +27,7 @@ save_template = {
 	'lastPlayed': None,
 	'location': None,
 	'money': 3000,
-	'mysteryGiftOpened': {
-		#i: False for i in mystery_gift
-	},
+	'mysteryGiftOpened': {},
 	'name': '',
 	'options': {
 		'debug': False,
