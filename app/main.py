@@ -837,6 +837,8 @@ while not exit:
 			menu_open = True
 		else:
 			sp('\nInvalid answer!')
+
+	# viridian city - south
 	elif save['location'] == 'viridian-s':
 		sp('Current Location: Viridian City (South)\n\n[w] - Go to Viridian City (North)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[d] - Viridian Pokémon Centre\n')
 		while option == '':
@@ -866,3 +868,5 @@ while not exit:
 	# end of loop
 	if not dex_string:
 		sp('')
+
+# end program
