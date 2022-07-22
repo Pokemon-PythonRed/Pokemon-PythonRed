@@ -118,6 +118,7 @@ def backup() -> None:
 		save_temp = save
 		save_temp['party'] = [dump(i) for i in save['party']]
 		save_temp['box'] = [dump(i) for i in save['box']]
+		save_temp['lastPlayed'] = None # TODO: save time last played
 		open(path.join(syspath[0], '.ppr-save'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
 		sp('\nGame saved successfully!')
 
@@ -465,8 +466,8 @@ print(title[2])
 getch()
 cls()
 print(f'{title[3]}Please choose an option.\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+start_option = ''
 while start_option != '2':
-	start_option = ''
 	start_option = get()
 	cls()
 
@@ -516,11 +517,9 @@ if start_option == '1':
 	save['party'] = [load(i, Pokemon) for i in save_temp['party']]
 	save['box'] = [load(i, Pokemon) for i in save_temp['box']]
 else:
-	save = save_template.update(
-		{'badges': {i: False for i in badges}}
-	).update(
-		{'user': getuser()}
-	)
+	save = save_template.update({'badges': {i: False for i in badges}})
+	if getuser() not in save['user']:
+		save['user'].append(getuser())
 
 # debug statements
 def debug(text) -> None:
@@ -541,7 +540,7 @@ if max([
 	save['name'] != '' and not save['flag']['introComplete'],
 	save['flag']['chosenStarter'] and save['location'] == '',
 	save['flag']['chosenStarter'] and not save['flag']['introComplete'],
-	max(i.level > 100 for i in save)
+	max(i.level > 100 for i in save['party'])
 ]):
 	abort('Illegal save data detected!')
 
