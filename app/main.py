@@ -522,7 +522,9 @@ if start_option == '1':
 	save['party'] = [load(i, Pokemon) for i in save_temp['party']]
 	save['box'] = [load(i, Pokemon) for i in save_temp['box']]
 else:
-	save = save_template.update({'badges': {i: False for i in badges}})
+	save = save_template
+	save['badges'] = {i: False for i in badges}
+	save['options']['textSpeed'] = 'normal'
 if getuser() not in save['user']:
 	save['user'].append(getuser())
 save['options']['debug']
@@ -540,8 +542,7 @@ if max([
 	save['name'] == '' and save['flag']['introComplete'],
 	save['name'] != '' and not save['flag']['introComplete'],
 	save['flag']['chosenStarter'] and save['location'] == '',
-	save['flag']['chosenStarter'] and not save['flag']['introComplete'],
-	max(i.level > 100 for i in save['party'])
+	save['flag']['chosenStarter'] and not save['flag']['introComplete']
 ]):
 	abort('Illegal save data detected!')
 
@@ -847,10 +848,10 @@ while not exit:
 			if save['flag']['deliveredPackage']:
 				save['location'] = 'viridian-n'
 			else:
-				sp('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
-				sp('\nMAN: Hey you, get off my property!')
-				sp('\nGIRL: Oh, grandpa! Don\'t be so mean!')
-				sp('\nIt looks like you won\'t be able to pass until later.')
+				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
+				sg('\nMAN: Hey you, get off my property!')
+				sg('\nGIRL: Oh, grandpa! Don\'t be so mean!')
+				sg('\nIt looks like you won\'t be able to pass until later.')
 		elif option == 'a':
 			sg('\nComing soon!')
 		elif option == 's':
