@@ -527,7 +527,7 @@ else:
 	save['options']['textSpeed'] = 'normal'
 if getuser() not in save['user']:
 	save['user'].append(getuser())
-save['options']['debug']
+is_debug = save['options']['debug']
 
 # test party status (debug)
 if start_option == '1':
