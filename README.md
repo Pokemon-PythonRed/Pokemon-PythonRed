@@ -179,8 +179,6 @@ Choose an option.
 Type any variant of `yes`, `y`, `no`, or `n`, then press <kbd>⏎ Enter</kbd>:
 
 ```console
-
-```console
 Would you like to save? Y/N
 
 >_
