@@ -4,7 +4,7 @@ Repository   - [https://github.com/Pokemon-PythonRed/Pokemon-PythonRed]
 License      - MIT
 '''
 
-# system dependencies
+# import system modules
 from datetime import datetime
 from getpass import getuser
 from json import dumps, loads
@@ -20,9 +20,6 @@ from webbrowser import open as webopen
 # import installed modules
 from jsons import dump, load
 # TODO: from pygame import ...
-
-# import save file template
-from save_template import save_template
 
 # import getch according to system
 if platform() == "Windows":
@@ -502,6 +499,8 @@ while start_option != '2':
 # load data from files
 dex = loads(open(path.join(syspath[0], 'data/dex.json')).read())
 open(path.join(syspath[0], 'data/dex.json')).close()
+save_template = loads(open(path.join(syspath[0], 'data/save_template.json')).read())
+open(path.join(syspath[0], 'data/save_template.json')).close()
 trainer = loads(open(path.join(syspath[0], 'data/trainer.json')).read())
 open(path.join(syspath[0], 'data/trainer.json')).close()
 types = loads(open(path.join(syspath[0], 'data/types.json')).read())
@@ -538,11 +537,11 @@ if start_option == '1':
 if max([
 	len(save['name']) > 15,
 	len(save['party']) > 6,
-	save['name'] != save['name'].upper(),
-	save['name'] == '' and save['flag']['introComplete'],
-	save['name'] != '' and not save['flag']['introComplete'],
+	save['flag']['chosenStarter'] and not save['flag']['introComplete'],
 	save['flag']['chosenStarter'] and save['location'] == '',
-	save['flag']['chosenStarter'] and not save['flag']['introComplete']
+	save['name'] != '' and not save['flag']['introComplete'],
+	save['name'] != save['name'].upper(),
+	save['name'] == '' and save['flag']['introComplete']
 ]):
 	abort('Illegal save data detected!')
 

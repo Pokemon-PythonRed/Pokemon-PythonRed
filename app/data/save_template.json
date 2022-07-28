@@ -1,0 +1,39 @@
+{
+	"badges": {},
+	"bag": {},
+	"box": [],
+	"dex": {},
+	"flag": {
+		"beenToRoute1": false,
+		"chosenStarter": false,
+		"deliveredPackage": false,
+		"eggInDaycare": false,
+		"hasSaved": false,
+		"introComplete": false,
+		"pokemonCaught": 0,
+		"pokemonSeen": 0,
+		"pokemonUncaught": 0,
+		"trainerFought": {},
+		"type": {},
+		"wonFirstBattle": null
+	},
+	"hms": {
+		"cut": false,
+		"flash": false,
+		"fly": false,
+		"strength": false,
+		"surf": false
+	},
+	"lastPlayed": null,
+	"location": null,
+	"money": 3000,
+	"mysteryGiftOpened": {},
+	"name": "",
+	"options": {
+		"debug": false,
+		"textSpeed": null
+	},
+	"party": [],
+	"recentCenter": null,
+	"user": []
+}
