@@ -123,17 +123,17 @@ def backup() -> None:
 class Pokemon:
 
 	# set internals
-	def __init__(self, species, level, ivs) -> None:
+	def __init__(self, species, level, ivs, chp=None, attack_type=None, current_xp=0, fainted=False) -> None:
 		self.species = species
 		self.index = dex[self.species]['index']
 		self.name = dex[self.species]['name']
 		self.type = dex[self.species]['type']
 		self.level = level
 		self.ivs = ivs if ivs != 'random' else {i: randint(0, 31) for i in ['hp', 'atk', 'def', 'spa', 'spd', 'spe']}
-		self.atk_type = choice(['physical', 'special'])
+		self.atk_type = attack_type or choice(['physical', 'special'])
 		self.level_type = dex[self.species]['xp']
 		self.total_xp = xp['total'][self.level_type][str(self.level)]
-		self.current_xp = 0
+		self.current_xp = current_xp
 
 		# update pokedex
 		if self.species not in save['dex']:
@@ -152,10 +152,10 @@ class Pokemon:
 				save['flag']['type'][self.species]['caught'] = False
 
 		# initialise stats
-		self.reset_stats()
+		self.reset_stats(chp, fainted)
 
 	# reset stats
-	def reset_stats(self) -> None:
+	def reset_stats(self, chp=None, fainted=None) -> None:
 			self.stats = {
 				'hp': floor(((dex[self.species]['hp'] + self.ivs['hp']) * 2 + floor(ceil(sqrt(self.ivs['hp'])) / 4) * self.level) / 100) + self.level + 10,
 				'atk': floor(((dex[self.species]['atk'] + self.ivs['atk']) * 2 + floor(ceil(sqrt(self.ivs['atk'])) / 4) * self.level) / 100) + 5,
@@ -164,8 +164,10 @@ class Pokemon:
 				'spd': floor(((dex[self.species]['spd'] + self.ivs['spd']) * 2 + floor(ceil(sqrt(self.ivs['spd'])) / 4) * self.level) / 100) + 5,
 				'spe': floor(((dex[self.species]['spe'] + self.ivs['spe']) * 2 + floor(ceil(sqrt(self.ivs['spe'])) / 4) * self.level) / 100) + 5
 			}
-			self.stats['chp'] = self.stats['hp']
-			self.fainted = False
+			self.stats['chp'] = chp or self.stats['hp']
+			self.fainted = fainted or self.stats['chp'] <= 0
+			if self.fainted:
+				self.stats['chp'] = 0
 
 	# check levels for entire party
 	def check_level_up(self, party) -> None:
@@ -518,8 +520,8 @@ if start_option == '1':
 	save_temp = {**save_template, **loads(open(path.join(syspath[0], '.ppr-save'), 'r').read())}
 	open(path.join(syspath[0], '.ppr-save')).close()
 	save = save_temp
-	save['party'] = [load(i, Pokemon) for i in save_temp['party']]
-	save['box'] = [load(i, Pokemon) for i in save_temp['box']]
+	for pokemon_location in ['party', 'box']:
+		save[pokemon_location] = [Pokemon(i['species'], i['level'], i['ivs'], i['stats']['chp'], i['atk_type'], i['current_xp'], i['fainted']) for i in save_temp[pokemon_location]]
 else:
 	save = save_template
 	save['badges'] = {i: False for i in badges}
