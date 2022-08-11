@@ -197,7 +197,7 @@ class Pokemon:
 		for i in [
 			(0, 'It had no effect!'),
 			(0.5, 'It\'s super effective!'),
-			(2, 'It\'s not very effective!') 
+			(2, 'It\'s not very effective!')
 		]:
 			if types[self.type][attacker.type] == i[0]:
 				sp(f'{i[1]}')
