@@ -6,16 +6,16 @@ on:
   schedule:
   - cron: '*/30 * * * *'
 jobs:
-  build:
-    runs-on: ["windows-latest"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.4.0
-      - name: Build with py2exe
-        run: |
-          pip install py2exe
-          cd app
-          python build_to_exe.py py2exe
+#  build:
+#    runs-on: ["windows-latest"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2.4.0
+#      - name: Build with py2exe
+#        run: |
+#          pip install py2exe
+#          cd app
+#          python build_to_exe.py py2exe
   publish:
     runs-on: ["ubuntu-latest"]
     steps:
