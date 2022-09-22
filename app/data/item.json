@@ -1,0 +1,142 @@
+{
+	"Escape Rope": {
+		"command": "escape_rope",
+		"price": 550,
+		"sell_price": 275
+	},
+	"Fresh Water": {
+		"command": "fresh_water",
+		"price": 200,
+		"sell_price": 100
+	},
+	"Full Restore": {
+		"command": "full_restore",
+		"price": 3000,
+		"sell_price": 1500
+	},
+	"Great Ball": {
+		"command": "great_ball",
+		"price": 600,
+		"sell_price": 300
+	},
+	"Hyper Potion": {
+		"command": "hyper_potion",
+		"price": 1200,
+		"sell_price": 600
+	},
+	"Leaf Stone": {
+		"command": "leaf_stone",
+		"price": 350,
+		"sell_price": 175
+	},
+	"Lemonade": {
+		"command": "lemonade",
+		"price": 350,
+		"sell_price": 175
+	},
+	"Master Ball": {
+		"command": "master_ball",
+		"price": null,
+		"sell_price": null
+	},
+	"Max Potion": {
+		"command": "max_potion",
+		"price": 2500,
+		"sell_price": 1250
+	},
+	"Max Revive": {
+		"command": "max_revive",
+		"price": null,
+		"sell_price": 2000
+	},
+	"Moon Stone": {
+		"command": "moon_stone",
+		"price": null,
+		"sell_price": null
+	},
+	"Nugget": {
+		"command": null,
+		"price": null,
+		"sell_price": 5000
+	},
+	"Oak's Parcel": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Old Amber": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Poke Ball": {
+		"command": "poke_ball",
+		"price": 200,
+		"sell_price": 100
+	},
+	"Poke Doll": {
+		"command": "poke_doll",
+		"price": 1000,
+		"sell_price": 500
+	},
+	"Potion": {
+		"command": "potion",
+		"price": 300,
+		"sell_price": 150
+	},
+	"Rare Candy": {
+		"command": "rare_candy",
+		"price": null,
+		"sell_price": 2400
+	},
+	"Revive": {
+		"command": "revive",
+		"price": 1500,
+		"sell_price": 750
+	},
+	"S.S. Ticket": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Secret Key": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Silph Scope": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Soda Pop": {
+		"command": "soda_pop",
+		"price": 350,
+		"sell_price": 175
+	},
+	"Super Potion": {
+		"command": "super_potion",
+		"price": 700,
+		"sell_price": 350
+	},
+	"Thunder Stone": {
+		"command": "thunder_stone",
+		"price": 2100,
+		"sell_price": 1050
+	},
+	"Town Map": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Ultra Ball": {
+		"command": "ultra_ball",
+		"price": 1200,
+		"sell_price": 600
+	},
+	"Water Stone": {
+		"command": "water_stone",
+		"price": 2100,
+		"sell_price": 1050
+	}
+}
