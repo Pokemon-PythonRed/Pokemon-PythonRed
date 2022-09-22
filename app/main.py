@@ -21,11 +21,18 @@ from webbrowser import open as webopen
 from jsons import dump, load
 # TODO: from pygame import ...
 
+# abort function to be used before functions that require libraries
+def abort_early() -> None:
+	input('It appears that you are using an unsupported operating system. Please use Windows or Linux.\n\nPress Enter to exit.')
+	system.exit()
+
 # import getch according to system
-if platform() == "Windows":
-	from msvcrt import getch
-elif platform() == "Linux":
-	from getch import getch
+if platform() == 'Windows':
+	from msvcrt import getch # type: ignore
+elif platform() == 'Linux':
+	from getch import getch # type: ignore
+else:
+	abort_early()
 
 # declare timed text output
 text = {
@@ -86,6 +93,11 @@ for i in range(len(platforms)):
 	if platform().lower() == (platforms[i][0]):
 		cls_command = platforms[i][1]
 		def cls(command=cls_command) -> int: return system(command)
+		break
+try:
+	cls() # type: ignore
+except NameError:
+	abort_early()
 
 # menu variables
 exit = is_debug = menu_open = options_open = False
@@ -273,7 +285,7 @@ def escape(pokemon, opponent, escape_attempts) -> bool:
 
 # calculate type effectiveness
 def type_effectiveness(attacker, defender) -> float:
-	return types[attacker.type][defender.type]
+	return types[attacker.type][defender.type] # type: ignore
 
 # calculate prize money
 def prize_money(self=None, type='Pokémon Trainer') -> int:
@@ -298,14 +310,14 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		sp(f'\n{name}: {start_diagloue}')
 		sp(f'\n{title} {name} wants to fight!')
 	elif battle_type == 'wild':
-		sp(f'\nA wild {opponent_party[opponent_current].name} appeared!')
+		sp(f'\nA wild {opponent_party[opponent_current].name} appeared!') # type: ignore
 	else:
 		abort('\nInvalid battle type: neither trainer nor wild.')
 	sleep(0.5)
 	sp(f'\nGo, {save["party"][current].name}!')
 	sleep(0.5)
 	if battle_type == 'trainer':
-		sp(f'\n{name} sent out {opponent_party[opponent_current].name}!')
+		sp(f'\n{name} sent out {opponent_party[opponent_current].name}!') # type: ignore
 
 	# battle variables
 	escaped_from_battle = False
@@ -324,10 +336,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 		# calculate health bars according to ratio (chp:hp)
 		bars = ceil((save['party'][current].stats['chp']/(save['party'][current].stats['hp']))*bars_length)
-		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length)
+		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length) # type: ignore
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
-		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}')
-		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''')
+		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
 		valid_choice = False
 		while not valid_choice:
@@ -342,13 +354,13 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				valid_choice = True
 
 		# choose attack
-		if choice == '1':
-			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']:
-				opponent_party[opponent_current].deal_damage(save['party'][current])
+		if choice == '1': # type: ignore
+			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']: # type: ignore
+				opponent_party[opponent_current].deal_damage(save['party'][current]) # type: ignore
 				player_attacked_this_turn = True
 
 		# choose switch
-		elif choice == '2':
+		elif choice == '2': # type: ignore
 			sp(f'''\nWhich Pokémon should you switch to?\n\n{
 				''.join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
 			}''')
@@ -369,29 +381,29 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			current = int(switch_choice)-1
 
 		# choose item
-		elif choice == '3':
+		elif choice == '3': # type: ignore
 			use_item()
 
 		# choose run
-		elif choice == '4':
-			if escape(save['party'][current], opponent_party[opponent_current], escape_attempts):
+		elif choice == '4': # type: ignore
+			if escape(save['party'][current], opponent_party[opponent_current], escape_attempts): # type: ignore
 				escaped_from_battle = True
 				break
 			else:
 				escape_attempts += 1
 
 		# reset consecutive escape attempts
-		if choice != '4':
+		if choice != '4': # type: ignore
 			escape_attempts = 0
 
 		# opponent attack
 		if is_alive(save['party']) and is_alive(opponent_party):
-			save['party'][current].deal_damage(opponent_party[opponent_current])
+			save['party'][current].deal_damage(opponent_party[opponent_current]) # type: ignore
 			opponent_attacked_this_turn = True
 
 		# player attack if player speed is lower
 		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn:
-			opponent_party[opponent_current].deal_damage(save['party'][current])
+			opponent_party[opponent_current].deal_damage(save['party'][current]) # type: ignore
 			player_attacked_this_turn = True
 
 		# end battle if player wins
@@ -399,7 +411,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			break
 
 		# display turn details
-		debug(f'Higher Speed: {"Player" if save["party"][current].stats["spe"] > opponent_party[opponent_current].stats["spe"] else "Opponent"}\nPlayer Attacked: {player_attacked_this_turn}\nOpponent Attacked: {opponent_attacked_this_turn}\n')
+		debug(f'Higher Speed: {"Player" if save["party"][current].stats["spe"] > opponent_party[opponent_current].stats["spe"] else "Opponent"}\nPlayer Attacked: {player_attacked_this_turn}\nOpponent Attacked: {opponent_attacked_this_turn}\n') # type: ignore
 
 	# upon winning
 	if escaped_from_battle:
@@ -409,7 +421,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			if battle_type == 'trainer':
 				sp(f'\n{save["party"][current].name} won the battle!')
 			if earn_xp == True:
-				save['party'][current].current_xp += ceil(save['party'][current].calculate_xp(opponent_party[opponent_current]))
+				save['party'][current].current_xp += ceil(save['party'][current].calculate_xp(opponent_party[opponent_current])) # type: ignore
 				save['party'][current].check_level_up(save['party'])
 				sleep(0.5)
 			if battle_type == 'trainer':
@@ -448,13 +460,13 @@ def heal(pokemon=None, party=None, type='party') -> None:
 	else:
 		abort('Invalid heal type: neither party nor single.')
 	sp('')
-	for i in party:
+	for i in party: # type: ignore
 			i.reset_stats()
 			sp(f'{i.name} was healed to max health.')
 
 # display title screen
-cls()
-title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!']
+cls() # type: ignore
+title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
 sleep(1)
 print(title[0])
@@ -462,25 +474,25 @@ sleep(2.65)
 print(title[1])
 sleep(1.85)
 print(title[2])
-getch()
-cls()
+getch() # type: ignore
+cls() # type: ignore
 print(f'{title[3]}Please choose an option.\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 start_option = ''
 while start_option != '2':
 	start_option = get()
-	cls()
+	cls() # type: ignore
 
 	# continue from save file
 	if start_option == '1':
 		if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['hasSaved']:
-			cls()
+			cls() # type: ignore
 			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 			break
 		print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	# new game
 	elif start_option == '2':
-		cls()
+		cls() # type: ignore
 		print(f'{title[3]}Starting game!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	# open github link
@@ -575,7 +587,7 @@ while not exit:
 				playerName = get()
 		else:
 			sp('\nInvalid answer!')
-		playerName = playerName.upper()
+		playerName = playerName.upper() # type: ignore
 		sg(f'\nRight! So your name is {playerName}!')
 		sg('\nNow, since you\'re so raring to go, I\'ve prepared a rival for you.')
 		sg('He will go on an adventure just like yours, and battle you along the way.')
