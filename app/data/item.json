@@ -1,6 +1,9 @@
 {
 	"Escape Rope": {
-		"command": "escape_rope",
+		"command": {
+			"battle": null,
+			"overworld": "save['currentLocation'] = save['recentCenter']"
+		},
 		"price": 550,
 		"sell_price": 275
 	},
