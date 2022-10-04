@@ -268,14 +268,15 @@ def use_item():
 	global save
 	item_used = False
 	sp('\nPlease choose an item to use.')
-	sp('\n'.join(f'{i.name}: {i.quantity}' for i in save['bag']))
+	sp('\n'.join(f'{key}: {val}' for key, val in save['bag']))
 	while not item_used:
 		item = ''
 		while not item:
 			item = get()
 		if item in save['bag']:
 			if save['bag'][item] > 0:
-				save[''] # TODO: finish use item function
+				save['bag'][item] -= 1
+				exec(items[item]['command']) # type: ignore
 			else:
 				sp('You have none of that item!')
 
@@ -513,7 +514,7 @@ while start_option != '2':
 # load data from files
 for i in [
 	['dex', 'dex.json'],
-	['item', 'item.json'],
+	['items', 'item.json'],
 	['save_template', 'save_template.json'],
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
@@ -553,6 +554,7 @@ if start_option == '1':
 if max([
 	len(save['name']) > 15,
 	len(save['party']) > 6,
+	save['flag']['beenToRoute1'] and len(save['party']) == 0,
 	save['flag']['chosenStarter'] and not save['flag']['introComplete'],
 	save['flag']['chosenStarter'] and save['location'] == '',
 	save['name'] != '' and not save['flag']['introComplete'],
