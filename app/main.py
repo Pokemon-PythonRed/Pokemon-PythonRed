@@ -241,7 +241,8 @@ class Pokemon:
 # catch Pokemon
 def catch(pokemon) -> None:
 	global save
-	save['party' if len(save['party']) < 6 else 'box'].append(pokemon)
+	location = 'party' if len(save['party']) < 6 else 'box'
+	save[location].append(pokemon)
 	if pokemon.species not in save['dex']:
 		save['dex'].update({pokemon.species: {'seen': True, 'caught': True}})
 	else:
@@ -257,7 +258,7 @@ def catch(pokemon) -> None:
 		if 'caught' not in save['flag']['type'][pokemon.type]:
 			save['flag']['type'][pokemon.species]['caught'] = True
 	sg(f'\nYou caught {pokemon.name}!')
-	sg(f'\n{pokemon.name} ({pokemon.type}-type) was added to your {"party" if len(save["party"]) < 6 else "box"}.')
+	sg(f'\n{pokemon.name} ({pokemon.type}-type) was added to your {location}.')
 
 # check if party is alive
 def is_alive(self) -> bool:
