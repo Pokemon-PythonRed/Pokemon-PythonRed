@@ -270,6 +270,17 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "nasserkessas",
+      "name": "Nasser Kessas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59720679?v=4",
+      "profile": "https://github.com/nasserkessas",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
-  ]
+  ],
+  "commitConvention": "angular"
 }
