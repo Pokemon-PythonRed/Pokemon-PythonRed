@@ -817,7 +817,7 @@ while not exit:
 			sg('Many Pokémon trainers hold him in high regard!')
 		elif option == '3':
 			sg('\nOAK: You\'ve caught a total of...')
-			sg(f'\n{sum(1 if i["caught"] else 0 for i in save["dex"])} Pokémon!')
+			sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
 		elif option == '4':
 			sg('\nThere\' an email message here:')
 			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKEMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
