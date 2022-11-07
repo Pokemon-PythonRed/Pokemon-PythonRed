@@ -109,6 +109,32 @@ badges = ['Boulder', 'Cascade', 'Thunder', 'Rainbow', 'Soul', 'Marsh', 'Volcano'
 name_length = 15
 bars_length = 20
 
+# enables ANSI escape codes in Windows
+system("")
+
+# type colours
+colours = {
+	"NORMAL"  : "\x1b[0;0m",
+	"FIRE"	  : "\x1b[38;5;196m",
+	"WATER"   : "\x1b[38;5;027m",
+	"GRASS"	  : "\x1b[38;5;082m",
+	"ELECTRIC": "\x1b[38;5;184m",
+	"ICE"	  : "\x1b[38;5;159m",
+	"FIGHTING": "\x1b[38;5;167m",
+	"POISON"  : "\x1b[38;5;135m",
+	"GROUND"  : "\x1b[38;5;215m",
+	"FLYING"  : "\x1b[38;5;183m",
+	"PSYCHIC" : "\x1b[38;5;198m",
+	"BUG"	  : "\x1b[38;5;028m",
+	"ROCK"	  : "\x1b[38;5;179m",
+	"GHOST"	  : "\x1b[38;5;126m",
+	"DRAGON"  : "\x1b[38;5;057m",
+	"DARK"    : "\x1b[38;5;095m",
+	"STEEL"   : "\x1b[38;5;250m",
+	"FAIRY"   : "\x1b[38;5;212m",
+	"RESET"	  : "\x1b[0;0m" 
+}
+
 # error message
 def abort(message) -> None:
 	print(f'\n\n\n- - - INTERNAL ERROR - - -\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
@@ -198,7 +224,7 @@ class Pokemon:
 
 	# lower chp when pokemon is attacked
 	def deal_damage(self, attacker) -> None:
-		sp(f'\n{attacker.name} used a {attacker.type}-type attack on {self.name}!')
+		sp(f'\n{attacker.name} used a {colours[attacker.type]}{attacker.type}{colours["RESET"]}-type attack on {self.name}!')
 		critical = randint(0, 255) <= 17
 		attack_defense = ('atk', 'def') if attacker.atk_type == 'physical' else ('spa', 'spd')
 		damage = floor((((((2 * attacker.level / 5)+ 2) * 100 * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if critical else 1) * randint(85, 100) / 100 * (type_effectiveness(attacker, self) if save['flag']['beenToRoute1'] else 1))
@@ -258,7 +284,7 @@ def catch(pokemon) -> None:
 		if 'caught' not in save['flag']['type'][pokemon.type]:
 			save['flag']['type'][pokemon.species]['caught'] = True
 	sg(f'\nYou caught {pokemon.name}!')
-	sg(f'\n{pokemon.name} ({pokemon.type}-type) was added to your {location}.')
+	sg(f'\n{pokemon.name} ({colours[pokemon.type]}{pokemon.type}{colours["RESET"]}-type) was added to your {location}.')
 
 # check if party is alive
 def is_alive(self) -> bool:
@@ -341,7 +367,8 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length) # type: ignore
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
-		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({colours[save["party"][current].type]}{save["party"][current].type}{colours["RESET"]}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({colours[opponent_party[opponent_current].type]}{opponent_party[opponent_current].type}{colours["RESET"]}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
+		#sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
 		valid_choice = False
 		while not valid_choice:
@@ -655,7 +682,7 @@ while not exit:
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
-				sp('\n'.join(f'{i.name} ({i.type}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
+				sp('\n'.join(f'{i.name} ({colours[i.type]}{i.type}{colours["RESET"]}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
 			else:
 				sp('Your party is empty!')
 		elif option == 'i':
@@ -740,7 +767,7 @@ while not exit:
 					while not option and option not in ['1', '2', '3']:
 						option = get()
 					if option in ['1', '2', '3']:
-						sp(f'\nDo you want the {["GRASS", "FIRE", "WATER"][int(option)-1]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
+						sp(f'\nDo you want the {[colours["GRASS"], colours["FIRE"], colours["WATER"]][int(option)-1]}{["GRASS", "FIRE", "WATER"][int(option)-1]}{colours["RESET"]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
 						confirm = ''
 						while confirm not in yn:
 							confirm = get()
