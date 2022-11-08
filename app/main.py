@@ -471,6 +471,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				save['flag']['wonFirstBattle'] = False
 		sg('...')
 		sg(f'{save["name"]} blacked out!')
+		save['money'] = round(save['money'] / 2)
 		save['location'] = save['recentCenter']
 		heal()
 
