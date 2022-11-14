@@ -2,7 +2,7 @@
     {
         "name": "absorb",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Drains half the damage inflicted to heal the user.",
         "power": 20,
@@ -25,7 +25,7 @@
     {
         "name": "acid",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Special Defense by one stage.",
         "power": 40,
@@ -48,7 +48,7 @@
     {
         "name": "acid-armor",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Defense by two stages.",
         "power": null,
@@ -71,7 +71,7 @@
     {
         "name": "aurora-beam",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Attack by one stage.",
         "power": 65,
@@ -94,7 +94,7 @@
     {
         "name": "barrage",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits 2-5 times in one turn.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.",
         "power": 15,
@@ -117,7 +117,7 @@
     {
         "name": "barrier",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Defense by two stages.",
         "power": null,
@@ -140,7 +140,7 @@
     {
         "name": "bind",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 100,
         "effect_description": "Inflicts regular damage.  For the next 2-5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the field, this effect ends.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.\n\nrapid spin cancels this effect.",
         "power": 15,
@@ -163,7 +163,7 @@
     {
         "name": "bite",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 30,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch.",
         "power": 60,
@@ -186,7 +186,7 @@
     {
         "name": "bone-club",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch.",
         "power": 65,
@@ -209,7 +209,7 @@
     {
         "name": "bonemerang",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits twice in one turn.",
         "power": 50,
@@ -232,7 +232,7 @@
     {
         "name": "bubble",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Speed by one stage.",
         "power": 40,
@@ -255,7 +255,7 @@
     {
         "name": "clamp",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 100,
         "effect_description": "Inflicts regular damage.  For the next 2-5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the field, this effect ends.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.\n\nrapid spin cancels this effect.",
         "power": 35,
@@ -278,7 +278,7 @@
     {
         "name": "comet-punch",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits 2-5 times in one turn.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.",
         "power": 18,
@@ -301,7 +301,7 @@
     {
         "name": "confuse-ray",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Confuses the target.",
         "power": null,
@@ -324,7 +324,7 @@
     {
         "name": "confusion",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target.",
         "power": 50,
@@ -347,7 +347,7 @@
     {
         "name": "constrict",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's Speed by one stage.",
         "power": 10,
@@ -370,7 +370,7 @@
     {
         "name": "conversion",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "User's type changes to the type of one of its moves, selected at random.  hidden power and weather ball are treated as normal.  Only moves with a different type are eligible, and curse is never eligible.  If the user has no suitable moves, this move will fail.",
         "power": null,
@@ -393,7 +393,7 @@
     {
         "name": "crabhammer",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  User's critical hit rate is one level higher when using this move.",
         "power": 100,
@@ -416,7 +416,7 @@
     {
         "name": "disable",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Disables the target's last used move, preventing its use for 4-7 turns, selected at random, or until the target leaves the field.  If the target hasn't used a move since entering the field, if it tried to use a move this turn and failed,  if its last used move has 0 PP remaining, or if it already has a move disabled, this move will fail.",
         "power": null,
@@ -439,7 +439,7 @@
     {
         "name": "dizzy-punch",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 20,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target.",
         "power": 70,
@@ -462,7 +462,7 @@
     {
         "name": "double-kick",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits twice in one turn.",
         "power": 30,
@@ -485,7 +485,7 @@
     {
         "name": "double-slap",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits 2-5 times in one turn.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.",
         "power": 15,
@@ -508,7 +508,7 @@
     {
         "name": "drill-peck",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 80,
@@ -531,7 +531,7 @@
     {
         "name": "ember",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to burn the target.",
         "power": 40,
@@ -554,7 +554,7 @@
     {
         "name": "fury-attack",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits 2-5 times in one turn.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.",
         "power": 15,
@@ -577,7 +577,7 @@
     {
         "name": "fury-swipes",
         "accuracy": 80,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits 2-5 times in one turn.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.",
         "power": 18,
@@ -600,7 +600,7 @@
     {
         "name": "glare",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Paralyzes the target.",
         "power": null,
@@ -623,7 +623,7 @@
     {
         "name": "growl",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Lowers the target's Attack by one stage.",
         "power": null,
@@ -646,7 +646,7 @@
     {
         "name": "growth",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Attack and Special Attack by one stage each.  During sunny day, raises both stats by two stages.",
         "power": null,
@@ -669,7 +669,7 @@
     {
         "name": "guillotine",
         "accuracy": 30,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts damage equal to the target's max HP.  Ignores accuracy and evasion modifiers.  This move's accuracy is 30% plus 1% for each level the user is higher than the target.  If the user is a lower level than the target, this move will fail.\n\nBecause this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting.\n\nThe effects of lock on, mind reader, and no guard still apply, as long as the user is equal or higher level than the target.  However, they will not give this move a chance to break through detect or protect.",
         "power": null,
@@ -692,7 +692,7 @@
     {
         "name": "gust",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.\n\nIf the target is under the effect of bounce, fly, or sky drop, this move will hit with double power.",
         "power": 40,
@@ -715,7 +715,7 @@
     {
         "name": "harden",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Defense by one stage.",
         "power": null,
@@ -738,7 +738,7 @@
     {
         "name": "haze",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Removes stat, accuracy, and evasion modifiers from every Pokémon on the field.\n\nThis does not count as a stat reduction for the purposes of clear body or white smoke.",
         "power": null,
@@ -761,7 +761,7 @@
     {
         "name": "high-jump-kick",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage. If this move misses, is blocked by protect or detect, or has no effect, the user takes damage equal to half of its max HP rounded down.\n\nThis move cannot be used while gravity is in effect.",
         "power": 130,
@@ -784,7 +784,7 @@
     {
         "name": "horn-attack",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 65,
@@ -807,7 +807,7 @@
     {
         "name": "hyper-fang",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch.",
         "power": 80,
@@ -830,7 +830,7 @@
     {
         "name": "hypnosis",
         "accuracy": 60,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Puts the target to sleep.",
         "power": null,
@@ -853,7 +853,7 @@
     {
         "name": "jump-kick",
         "accuracy": 95,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage. If this move misses, is blocked by protect or detect, or has no effect, the user takes damage equal to half of its max HP rounded down.\n\nThis move cannot be used while gravity is in effect.",
         "power": 100,
@@ -876,7 +876,7 @@
     {
         "name": "karate-chop",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  User's critical hit rate is one level higher when using this move.",
         "power": 50,
@@ -899,7 +899,7 @@
     {
         "name": "kinesis",
         "accuracy": 80,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Lowers the target's accuracy by one stage.",
         "power": null,
@@ -922,7 +922,7 @@
     {
         "name": "leech-seed",
         "accuracy": 90,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken.  Has no effect on grass Pokémon.  The seed remains until the target leaves the field.\n\nThe user takes damage instead of being healed if the target has liquid ooze.\n\nrapid spin will remove this effect.\n\nThis effect is passed on by baton pass.",
         "power": null,
@@ -945,7 +945,7 @@
     {
         "name": "leer",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": 100,
         "effect_description": "Lowers the target's Defense by one stage.",
         "power": null,
@@ -968,7 +968,7 @@
     {
         "name": "lick",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 30,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.",
         "power": 30,
@@ -991,7 +991,7 @@
     {
         "name": "lovely-kiss",
         "accuracy": 75,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Puts the target to sleep.",
         "power": null,
@@ -1014,7 +1014,7 @@
     {
         "name": "meditate",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Attack by one stage.",
         "power": null,
@@ -1037,7 +1037,7 @@
     {
         "name": "minimize",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's evasion by two stages.\n\nstomp and steamroller have double power against Pokémon that have used this move since entering the field.",
         "power": null,
@@ -1060,7 +1060,7 @@
     {
         "name": "mirror-move",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Uses the last move targeted at the user by a Pokémon still on the field.  A move counts as targeting the user even if it hit multiple Pokémon, as long as the user was one of them; however, moves targeting the field itself do not count.  If the user has not been targeted by an appropriate move since entering the field, or if no Pokémon that targeted the user remains on the field, this move will fail.\n\nMoves that failed, missed, had no effect, or were blocked are still copied.\n\nAssist moves, time-delayed moves, “meta” moves that operate on other moves/Pokémon/abilities, and some other special moves cannot be copied and are ignored; if the last move to hit the user was such a move, the previous move will be used instead.  The full list of ignored moves is: acid armor, acupressure, after you, agility, ally switch, amnesia, aqua ring, aromatherapy, aromatic mist, assist, autotomize, barrier, baton pass, belch, belly drum, bide, bulk up, calm mind, camouflage, celebrate, charge, coil, conversion, conversion 2, copycat, cosmic power, cotton guard, counter, crafty shield, curse, defend order, defense curl, destiny bond, detect, doom desire, double team, dragon dance, electric terrain, endure, final gambit, flower shield, focus energy, focus punch, follow me, future sight, geomancy, grassy terrain, gravity, growth, grudge, guard split, hail, happy hour, harden, haze, heal bell, heal order, heal pulse, healing wish, helping hand, hold hands, hone claws, howl, imprison, ingrain, ion deluge, iron defense, kings shield, light screen, lucky chant, lunar dance, magic coat, magnet rise, magnetic flux, mat block, me first, meditate, metronome, milk drink, mimic, minimize, mirror coat, mirror move, mist, misty terrain, moonlight, morning sun, mud sport, nasty plot, nature power, perish song, power split, power trick, protect, psych up, quick guard, quiver dance, rage powder, rain dance, recover, recycle, reflect, reflect type, refresh, rest, rock polish, role play, roost, rototiller, safeguard, sandstorm, shadow blast, shadow bolt, shadow half, shadow rush, shadow shed, shadow sky, shadow storm, shadow wave, sharpen, shell smash, shift gear, sketch, slack off, sleep talk, snatch, soft boiled, spikes, spiky shield, spit up, splash, stealth rock, sticky web, stockpile, struggle, substitute, sunny day, swallow, swords dance, synthesis, tail glow, tailwind, teleport, toxic spikes, transform, water sport, wide guard, wish, withdraw and work up.\n\nThis move cannot be selected by assist, metronome, or sleep talk, nor forced by encore.",
         "power": null,
@@ -1083,7 +1083,7 @@
     {
         "name": "mist",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Pokémon on the user's side of the field are immune to stat-lowering effects for five turns.\n\nguard swap, heart swap, and power swap may still be used.\n\ndefog used by an opponent will end this effect.",
         "power": null,
@@ -1106,7 +1106,7 @@
     {
         "name": "night-shade",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": null,
         "effect_description": "Inflicts damage equal to the user's level.  Type immunity applies, but other type effects are ignored.",
         "power": null,
@@ -1129,7 +1129,7 @@
     {
         "name": "peck",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 35,
@@ -1152,7 +1152,7 @@
     {
         "name": "petal-dance",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  User is forced to attack with this move for 2-3 turns,selected at random.  After the last hit, the user becomes confused.\n\nsafeguard does not protect against the confusion from this move.",
         "power": 120,
@@ -1175,7 +1175,7 @@
     {
         "name": "poison-gas",
         "accuracy": 90,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Poisons the target.",
         "power": null,
@@ -1198,7 +1198,7 @@
     {
         "name": "poison-powder",
         "accuracy": 75,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Poisons the target.",
         "power": null,
@@ -1221,7 +1221,7 @@
     {
         "name": "poison-sting",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 30,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to poison the target.",
         "power": 15,
@@ -1244,7 +1244,7 @@
     {
         "name": "pound",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 40,
@@ -1267,7 +1267,7 @@
     {
         "name": "psybeam",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target.",
         "power": 65,
@@ -1290,7 +1290,7 @@
     {
         "name": "quick-attack",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 40,
@@ -1313,7 +1313,7 @@
     {
         "name": "razor-leaf",
         "accuracy": 95,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  User's critical hit rate is one level higher when using this move.",
         "power": 55,
@@ -1336,7 +1336,7 @@
     {
         "name": "recover",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Heals the user for half its max HP.",
         "power": null,
@@ -1359,7 +1359,7 @@
     {
         "name": "rock-throw",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 50,
@@ -1382,7 +1382,7 @@
     {
         "name": "rolling-kick",
         "accuracy": 85,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 30,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch.",
         "power": 60,
@@ -1405,7 +1405,7 @@
     {
         "name": "sand-attack",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Lowers the target's accuracy by one stage.",
         "power": null,
@@ -1428,7 +1428,7 @@
     {
         "name": "scratch",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 40,
@@ -1451,7 +1451,7 @@
     {
         "name": "sharpen",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Attack by one stage.",
         "power": null,
@@ -1474,7 +1474,7 @@
     {
         "name": "sing",
         "accuracy": 55,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Puts the target to sleep.",
         "power": null,
@@ -1497,7 +1497,7 @@
     {
         "name": "slam",
         "accuracy": 75,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 80,
@@ -1520,7 +1520,7 @@
     {
         "name": "slash",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  User's critical hit rate is one level higher when using this move.",
         "power": 70,
@@ -1543,7 +1543,7 @@
     {
         "name": "sleep-powder",
         "accuracy": 75,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Puts the target to sleep.",
         "power": null,
@@ -1566,7 +1566,7 @@
     {
         "name": "sludge",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 30,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to poison the target.",
         "power": 65,
@@ -1589,7 +1589,7 @@
     {
         "name": "smog",
         "accuracy": 70,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 40,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to poison the target.",
         "power": 30,
@@ -1612,7 +1612,7 @@
     {
         "name": "smokescreen",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Lowers the target's accuracy by one stage.",
         "power": null,
@@ -1635,7 +1635,7 @@
     {
         "name": "sonic-boom",
         "accuracy": 90,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": null,
         "effect_description": "Inflicts exactly 20 damage.",
         "power": null,
@@ -1658,7 +1658,7 @@
     {
         "name": "spike-cannon",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  Hits 2-5 times in one turn.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.",
         "power": 20,
@@ -1681,7 +1681,7 @@
     {
         "name": "splash",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Does nothing.\n\nThis move cannot be used while gravity is in effect.",
         "power": null,
@@ -1704,7 +1704,7 @@
     {
         "name": "spore",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Puts the target to sleep.",
         "power": null,
@@ -1727,7 +1727,7 @@
     {
         "name": "stomp",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 30,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch.\n\nPower is doubled against Pokémon that have used minimize since entering the field.",
         "power": 65,
@@ -1750,7 +1750,7 @@
     {
         "name": "string-shot",
         "accuracy": 95,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Lowers the target's Speed by two stages.",
         "power": null,
@@ -1773,7 +1773,7 @@
     {
         "name": "struggle",
         "accuracy": null,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts typeless regular damage.  User takes 1/4 its max HP in recoil.  Ignores accuracy and evasion modifiers.\n\nThis move is used automatically when a Pokémon cannot use any other move legally, e.g., due to having no PP remaining or being under the effect of both encore and torment at the same time.\n\nThis move's recoil is not treated as recoil for the purposes of anything that affects recoil, such as the ability rock head.  It also is not prevented by magic guard.\n\nThis move cannot be copied by mimic, mirror move, or sketch, nor selected by assist or metronome, nor forced by encore.",
         "power": 50,
@@ -1796,7 +1796,7 @@
     {
         "name": "stun-spore",
         "accuracy": 75,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Paralyzes the target.",
         "power": null,
@@ -1819,7 +1819,7 @@
     {
         "name": "super-fang",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts typeless damage equal to half the target's remaining HP.",
         "power": null,
@@ -1842,7 +1842,7 @@
     {
         "name": "supersonic",
         "accuracy": 55,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Confuses the target.",
         "power": null,
@@ -1865,7 +1865,7 @@
     {
         "name": "tackle",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 40,
@@ -1888,7 +1888,7 @@
     {
         "name": "tail-whip",
         "accuracy": 100,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Lowers the target's Defense by one stage.",
         "power": null,
@@ -1911,7 +1911,7 @@
     {
         "name": "thrash",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.  User is forced to attack with this move for 2-3 turns,selected at random.  After the last hit, the user becomes confused.\n\nsafeguard does not protect against the confusion from this move.",
         "power": 120,
@@ -1934,7 +1934,7 @@
     {
         "name": "thunder-shock",
         "accuracy": 100,
-        "danage_class": "special",
+        "damage_class": "special",
         "effect_chance": 10,
         "effect_description": "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.",
         "power": 40,
@@ -1957,7 +1957,7 @@
     {
         "name": "transform",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "User copies the target's species, weight, type, ability, calculated stats (except HP), and moves.  Copied moves will all have 5 PP remaining.  IVs are copied for the purposes of hidden power, but stats are not recalculated.\n\nchoice band, choice scarf, and choice specs stay in effect, and the user must select a new move.\n\nThis move cannot be copied by mirror move, nor forced by encore.",
         "power": null,
@@ -1980,7 +1980,7 @@
     {
         "name": "twineedle",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 20,
         "effect_description": "Inflicts regular damage.  Hits twice in the same turn.  Has a $effect_chance% chance to poison the target.",
         "power": 25,
@@ -2003,7 +2003,7 @@
     {
         "name": "vice-grip",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 55,
@@ -2026,7 +2026,7 @@
     {
         "name": "vine-whip",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 45,
@@ -2049,7 +2049,7 @@
     {
         "name": "wing-attack",
         "accuracy": 100,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": null,
         "effect_description": "Inflicts regular damage.",
         "power": 60,
@@ -2072,7 +2072,7 @@
     {
         "name": "withdraw",
         "accuracy": null,
-        "danage_class": "status",
+        "damage_class": "status",
         "effect_chance": null,
         "effect_description": "Raises the user's Defense by one stage.",
         "power": null,
@@ -2095,7 +2095,7 @@
     {
         "name": "wrap",
         "accuracy": 90,
-        "danage_class": "physical",
+        "damage_class": "physical",
         "effect_chance": 100,
         "effect_description": "Inflicts regular damage.  For the next 2-5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the field, this effect ends.\n\nHas a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.\n\nrapid spin cancels this effect.",
         "power": 15,
