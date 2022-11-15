@@ -76,6 +76,7 @@ if not (path.isfile(path.join(syspath[0], i)) for i in [
 	'data/level.json',
 	'data/trainer.json',
 	'data/types.json',
+	'data/moves.json',
 	'build_to_exe.py'
 ]):
 	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link["installation"]}]\nfor more information.\n\nPress Enter to exit.\n')
@@ -161,17 +162,17 @@ def backup() -> None:
 class Pokemon:
 
 	# set internals
-	def __init__(self, species, level, ivs, chp=None, attack_type=None, current_xp=0, fainted=False) -> None:
+	def __init__(self, species, level, ivs, moves=None, chp=None, current_xp=0, fainted=False) -> None:
 		self.species = species
 		self.index = dex[self.species]['index'] # type: ignore
 		self.name = dex[self.species]['name'] # type: ignore
 		self.type = dex[self.species]['type'] # type: ignore
 		self.level = level
 		self.ivs = ivs if ivs != 'random' else {i: randint(0, 31) for i in ['hp', 'atk', 'def', 'spa', 'spd', 'spe']}
-		self.atk_type = attack_type or choice(['physical', 'special'])
 		self.level_type = dex[self.species]['xp'] # type: ignore
 		self.total_xp = xp['total'][self.level_type][str(self.level)] # type: ignore
 		self.current_xp = current_xp
+		self.moves = moves if moves else find_moves(self.species, self.level)				
 
 		# update pokedex
 		if self.species not in save['dex']:
@@ -223,25 +224,31 @@ class Pokemon:
 		return False
 
 	# lower chp when pokemon is attacked
-	def deal_damage(self, attacker) -> None:
-		sp(f'\n{attacker.name} used a {colours[attacker.type]}{attacker.type}{colours["RESET"]}-type attack on {self.name}!')
-		critical = randint(0, 255) <= 17
-		attack_defense = ('atk', 'def') if attacker.atk_type == 'physical' else ('spa', 'spd')
-		damage = floor((((((2 * attacker.level / 5)+ 2) * 100 * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if critical else 1) * randint(85, 100) / 100 * (type_effectiveness(attacker, self) if save['flag']['beenToRoute1'] else 1))
-		self.stats['chp'] -= damage
-		sp(f'\n{attacker.name} dealt {damage} damage to {self.name}!')
-		if critical:
-			sp('A critical hit!')
-		for i in [
-			(0, 'It had no effect!'),
-			(0.5, 'It\'s super effective!'),
-			(2, 'It\'s not very effective!')
-		]:
-			if types[self.type][attacker.type] == i[0]:
-				sp(f'{i[1]}')
-		self.check_fainted()
-		if self.fainted:
-			sp(f'\n{self.name} fainted!')
+	def deal_damage(self, attacker, move) -> None:
+		move_entry = list(filter(lambda m: m['name'] == move, moves))[0]
+		sp(f'\n{attacker.name} used {move.upper()}!')
+		if move_entry['damage_class'] == 'status':
+			# TODO: Implement status conditions
+			sp('It is a status move')
+		else:
+			critical = randint(0, 255) <= 17
+			attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
+			damage = floor((((((2 * attacker.level * (2 if critical else 1) / 5)+ 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['beenToRoute1'] else 1))
+			self.stats['chp'] -= damage
+			if damage > 0: 
+				sp(f'\n{attacker.name} dealt {damage} damage to {self.name}!')
+			if critical:
+				sp('A critical hit!')
+			for i in [
+				(0, 'It had no effect!'),
+				(0.5, 'It\'s super effective!'),
+				(2, 'It\'s not very effective!')
+			]:
+				if types[self.type][move_entry['type'].upper()] == i[0]:
+					sp(f'{i[1]}')
+			self.check_fainted()
+			if self.fainted:
+				sp(f'\n{self.name} fainted!')
 
 	# calculate xp rewarded after battle
 	def calculate_xp(self, attacker, battle_type='wild') -> int:
@@ -312,12 +319,23 @@ def escape(pokemon, opponent, escape_attempts) -> bool:
 	return floor((pokemon.stats['spe'] * 32) / (floor(opponent.stats['spe'] / 4) % 256)) + 30 * escape_attempts > 255 or floor(opponent.stats['spe'] / 4) % 256 == 0
 
 # calculate type effectiveness
-def type_effectiveness(attacker, defender) -> float:
-	return types[attacker.type][defender.type] # type: ignore
+def type_effectiveness(move, defender) -> float:
+	return types[move['type'].upper()][defender.type] # type: ignore
 
 # calculate prize money
 def prize_money(self=None, type='Pokémon Trainer') -> int:
 	return floor(trainer[type] * max(i.level for i in (save['party'] if self is None else self))) # type: ignore
+
+def find_moves(name, level) -> list:
+	learned_moves = []
+	for move in dex[name]['moves']:
+		if move['level'] <= level:
+			learned_moves.append({**move,"pp": list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']})
+	learned_moves = sorted(learned_moves, key=lambda m: m['level'], reverse=True)
+	if len(learned_moves) >= 4:
+		return list(map(lambda m: m['name'], learned_moves[0:4]))
+	else:
+		return list(map(lambda m: m['name'], learned_moves))
 
 # create battle process
 def battle(opponent_party=None, battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
@@ -328,6 +346,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	opponent_current = 0
 	for i in range(party_length):
 		while not current:
+			# print(save['party'][i])
 			if not save['party'][i].check_fainted():
 				debug(f'{save["party"][i].name} is the first alive Pokemon in the party.')
 				current = i
@@ -361,6 +380,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		debug('Turn start!')
 		player_attacked_this_turn = False
 		opponent_attacked_this_turn = False
+		player_move = None
 
 		# calculate health bars according to ratio (chp:hp)
 		bars = ceil((save['party'][current].stats['chp']/(save['party'][current].stats['hp']))*bars_length)
@@ -368,28 +388,38 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
 		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({colours[save["party"][current].type]}{save["party"][current].type}{colours["RESET"]}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({colours[opponent_party[opponent_current].type]}{opponent_party[opponent_current].type}{colours["RESET"]}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
-		#sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
+		
 		valid_choice = False
 		while not valid_choice:
-			choice = get()
-			if choice == '2' and len(save['party']) == 1:
+			user_choice = get()
+			if user_choice == '2' and len(save['party']) == 1:
 				sp('You can\'t switch out your only Pokémon!')
-			elif choice == '3' and len(save['bag']) == 0:
+			elif user_choice == '3' and len(save['bag']) == 0:
 				sp('You have no items!')
-			elif choice == '4' and battle_type == 'trainer':
+			elif user_choice == '4' and battle_type == 'trainer':
 				sp('You can\'t run from a trainer battle!')
-			elif choice in ['1', '2', '3', '4']:
+			elif user_choice in ['1', '2', '3', '4']:
 				valid_choice = True
 
 		# choose attack
-		if choice == '1': # type: ignore
+		if user_choice == '1': # type: ignore
+			options = []
+			for i in range(len(save["party"][current].moves)):
+				sp(f'[{i+1}] - {save["party"][current].moves[i].upper().replace("-"," ")}') # type and pp here
+				options.append(str(i+1))
+			valid_choice = False
+			while not valid_choice:
+				move_choice = get()
+				if move_choice in options:
+					valid_choice = True
+
 			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']: # type: ignore
-				opponent_party[opponent_current].deal_damage(save['party'][current]) # type: ignore
+				opponent_party[opponent_current].deal_damage(save['party'][current], save["party"][current].moves[int(move_choice)-1]) # type: ignore
 				player_attacked_this_turn = True
 
 		# choose switch
-		elif choice == '2': # type: ignore
+		elif user_choice == '2': # type: ignore
 			sp(f'''\nWhich Pokémon should you switch to?\n\n{
 				''.join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
 			}''')
@@ -401,6 +431,8 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					if switch_choice not in [str(i+1) for i in range(party_length)]:
 						switch_choice = ''
 						sp('\nInvalid choice.')
+					elif move_choice == "a":
+						break
 					elif save['party'][int(switch_choice)-1].check_fainted():
 						switch_choice = ''
 						sp('That Pokémon is fainted!')
@@ -410,11 +442,11 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			current = int(switch_choice)-1
 
 		# choose item
-		elif choice == '3': # type: ignore
+		elif user_choice == '3': # type: ignore
 			use_item()
 
 		# choose run
-		elif choice == '4': # type: ignore
+		elif user_choice == '4': # type: ignore
 			if escape(save['party'][current], opponent_party[opponent_current], escape_attempts): # type: ignore
 				escaped_from_battle = True
 				break
@@ -422,17 +454,17 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				escape_attempts += 1
 
 		# reset consecutive escape attempts
-		if choice != '4': # type: ignore
+		if user_choice != '4': # type: ignore
 			escape_attempts = 0
 
 		# opponent attack
 		if is_alive(save['party']) and is_alive(opponent_party):
-			save['party'][current].deal_damage(opponent_party[opponent_current]) # type: ignore
+			save['party'][current].deal_damage(opponent_party[opponent_current], choice(opponent_party[opponent_current].moves)) # type: ignore
 			opponent_attacked_this_turn = True
 
 		# player attack if player speed is lower
 		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn:
-			opponent_party[opponent_current].deal_damage(save['party'][current]) # type: ignore
+			opponent_party[opponent_current].deal_damage(save['party'][current], save["party"][current].moves[int(move_choice)-1]) # type: ignore
 			player_attacked_this_turn = True
 
 		# end battle if player wins
@@ -498,11 +530,11 @@ def heal(pokemon=None, party=None, type='party') -> None:
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
-sleep(1)
+# sleep(1)
 print(title[0])
-sleep(2.65)
+# sleep(2.65)
 print(title[1])
-sleep(1.85)
+# sleep(1.85)
 print(title[2])
 getch() # type: ignore
 cls() # type: ignore
@@ -547,7 +579,8 @@ for i in [
 	['save_template', 'save_template.json'],
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
-	['xp', 'level.json']
+	['xp', 'level.json'],
+	['moves', 'moves.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}")).read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
@@ -565,7 +598,7 @@ if start_option == '1':
 	open(path.join(syspath[0], '.ppr-save')).close()
 	save = save_temp
 	for pokemon_location in ['party', 'box']:
-		save[pokemon_location] = [Pokemon(i['species'], i['level'], i['ivs'], i['stats']['chp'], i['atk_type'], i['current_xp'], i['fainted']) for i in save_temp[pokemon_location]]
+		save[pokemon_location] = [Pokemon(i['species'], i['level'], i['ivs'], i['moves'], i['stats']['chp'], i['current_xp'], i['fainted']) for i in save_temp[pokemon_location]]
 else:
 	save = save_template # type: ignore
 	save['badges'] = {i: False for i in badges}
@@ -754,14 +787,14 @@ while not exit:
 			if save['flag']['chosenStarter']:
 				save['location'] = 'route1-s'
 			else:
-				sg('\nYou take a step into the tall grass north of Pallet Town.')
-				sg('...')
-				sg('Suddenly, you hear a voice shouting from behind you.')
-				sg('\nOAK: Hey! Wait! Don\'t go out!')
-				sg('\nProfessor OAK runs up to you from behind.')
-				sg('\nOAK: It\'s unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for protection. Come with me!')
-				sg('\nProfessor OAK leads you to his laboratory. He walks up to a table with three Poké Balls on it.')
-				sg(f'\nOAK: Here, {save["name"]}! There are three Pokémon here, reserved for new trainers.')
+				# sg('\nYou take a step into the tall grass north of Pallet Town.')
+				# sg('...')
+				# sg('Suddenly, you hear a voice shouting from behind you.')
+				# sg('\nOAK: Hey! Wait! Don\'t go out!')
+				# sg('\nProfessor OAK runs up to you from behind.')
+				# sg('\nOAK: It\'s unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for protection. Come with me!')
+				# sg('\nProfessor OAK leads you to his laboratory. He walks up to a table with three Poké Balls on it.')
+				# sg(f'\nOAK: Here, {save["name"]}! There are three Pokémon here, reserved for new trainers.')
 				while not save['flag']['chosenStarter']:
 					sp('Go ahead and choose one!\n\n[1] - Bulbasaur\n[2] - Charmander\n[3] - Squirtle\n')
 					option = ''
@@ -780,6 +813,7 @@ while not exit:
 							for i in [('BULBASAUR', 'CHARMANDER'), ('CHARMANDER', 'SQUIRTLE'), ('SQUIRTLE', 'BULBASAUR')]:
 								if save['starter'] == i[0]:
 									save['rivalStarter'] = i[1]
+						
 							save['party'].append(Pokemon(save['starter'], 5, {
 								'hp': 31,
 								'atk': 31,
@@ -787,19 +821,20 @@ while not exit:
 								'spa': 31,
 								'spd': 31,
 								'spe': 31
-							}))
+							}, find_moves(save['starter'], 5) ))
+
 						else:
 							sp('')
-				sg(f'\nOAK: {save["starter"]} looks really energetic!')
-				sg('\nJust as you turn to leave, another young trainer enters the lab.')
-				sg(f'\nOAK: Ah, JOHNNY! Perfect timing! {save["name"]} here has just chosen a Pokémon! Why don\'t you choose one too?')
-				sg(f'\nJOHNNY walks up to the table and thinks for a few seconds, before picking up a Poké Ball containing {save["rivalStarter"].upper()}.')
-				sg(f'\nOAK: {save["starter"]} and {save["rivalStarter"]} are both brilliant choices!')
-				sg('\nJOHNNY nods to you, then turns to walk away. But, before he does, Professor OAK calls him back.')
-				sg(f'\nOAK: JOHNNY! Why don\'t you battle {save["name"]} before you go?')
-				sg('\nJOHNNY stops and looks at you over his shoulder, as if he doesn\'t understand.')
-				sg('\n...Suddenly, he gives a smile and tosses his Poké Ball into the air!')
-				battle([Pokemon(save['rivalStarter'], 5, 'random')], battle_type='trainer', name='JOHNNY', start_diagloue='...', title='Pokémon Trainer', end_dialouge='...')
+				# sg(f'\nOAK: {save["starter"]} looks really energetic!')
+				# sg('\nJust as you turn to leave, another young trainer enters the lab.')
+				# sg(f'\nOAK: Ah, JOHNNY! Perfect timing! {save["name"]} here has just chosen a Pokémon! Why don\'t you choose one too?')
+				# sg(f'\nJOHNNY walks up to the table and thinks for a few seconds, before picking up a Poké Ball containing {save["rivalStarter"].upper()}.')
+				# sg(f'\nOAK: {save["starter"]} and {save["rivalStarter"]} are both brilliant choices!')
+				# sg('\nJOHNNY nods to you, then turns to walk away. But, before he does, Professor OAK calls him back.')
+				# sg(f'\nOAK: JOHNNY! Why don\'t you battle {save["name"]} before you go?')
+				# sg('\nJOHNNY stops and looks at you over his shoulder, as if he doesn\'t understand.')
+				# sg('\n...Suddenly, he gives a smile and tosses his Poké Ball into the air!')
+				battle([Pokemon(save['rivalStarter'], 5, 'random', find_moves(save['rivalStarter'], 5))], battle_type='trainer', name='JOHNNY', start_diagloue='...', title='Pokémon Trainer', end_dialouge='...')
 				sg(f'\nOAK: A marvellous battle! Congratulations, {save["name"] if save["flag"]["wonFirstBattle"] else "JOHNNY"}!')
 				sg('Let me heal your Pokémon for you.')
 				heal()
