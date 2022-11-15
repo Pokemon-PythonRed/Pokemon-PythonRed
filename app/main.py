@@ -530,11 +530,11 @@ def heal(pokemon=None, party=None, type='party') -> None:
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
-# sleep(1)
+sleep(1)
 print(title[0])
-# sleep(2.65)
+sleep(2.65)
 print(title[1])
-# sleep(1.85)
+sleep(1.85)
 print(title[2])
 getch() # type: ignore
 cls() # type: ignore
@@ -787,14 +787,14 @@ while not exit:
 			if save['flag']['chosenStarter']:
 				save['location'] = 'route1-s'
 			else:
-				# sg('\nYou take a step into the tall grass north of Pallet Town.')
-				# sg('...')
-				# sg('Suddenly, you hear a voice shouting from behind you.')
-				# sg('\nOAK: Hey! Wait! Don\'t go out!')
-				# sg('\nProfessor OAK runs up to you from behind.')
-				# sg('\nOAK: It\'s unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for protection. Come with me!')
-				# sg('\nProfessor OAK leads you to his laboratory. He walks up to a table with three Poké Balls on it.')
-				# sg(f'\nOAK: Here, {save["name"]}! There are three Pokémon here, reserved for new trainers.')
+				sg('\nYou take a step into the tall grass north of Pallet Town.')
+				sg('...')
+				sg('Suddenly, you hear a voice shouting from behind you.')
+				sg('\nOAK: Hey! Wait! Don\'t go out!')
+				sg('\nProfessor OAK runs up to you from behind.')
+				sg('\nOAK: It\'s unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for protection. Come with me!')
+				sg('\nProfessor OAK leads you to his laboratory. He walks up to a table with three Poké Balls on it.')
+				sg(f'\nOAK: Here, {save["name"]}! There are three Pokémon here, reserved for new trainers.')
 				while not save['flag']['chosenStarter']:
 					sp('Go ahead and choose one!\n\n[1] - Bulbasaur\n[2] - Charmander\n[3] - Squirtle\n')
 					option = ''
@@ -825,15 +825,15 @@ while not exit:
 
 						else:
 							sp('')
-				# sg(f'\nOAK: {save["starter"]} looks really energetic!')
-				# sg('\nJust as you turn to leave, another young trainer enters the lab.')
-				# sg(f'\nOAK: Ah, JOHNNY! Perfect timing! {save["name"]} here has just chosen a Pokémon! Why don\'t you choose one too?')
-				# sg(f'\nJOHNNY walks up to the table and thinks for a few seconds, before picking up a Poké Ball containing {save["rivalStarter"].upper()}.')
-				# sg(f'\nOAK: {save["starter"]} and {save["rivalStarter"]} are both brilliant choices!')
-				# sg('\nJOHNNY nods to you, then turns to walk away. But, before he does, Professor OAK calls him back.')
-				# sg(f'\nOAK: JOHNNY! Why don\'t you battle {save["name"]} before you go?')
-				# sg('\nJOHNNY stops and looks at you over his shoulder, as if he doesn\'t understand.')
-				# sg('\n...Suddenly, he gives a smile and tosses his Poké Ball into the air!')
+				sg(f'\nOAK: {save["starter"]} looks really energetic!')
+				sg('\nJust as you turn to leave, another young trainer enters the lab.')
+				sg(f'\nOAK: Ah, JOHNNY! Perfect timing! {save["name"]} here has just chosen a Pokémon! Why don\'t you choose one too?')
+				sg(f'\nJOHNNY walks up to the table and thinks for a few seconds, before picking up a Poké Ball containing {save["rivalStarter"].upper()}.')
+				sg(f'\nOAK: {save["starter"]} and {save["rivalStarter"]} are both brilliant choices!')
+				sg('\nJOHNNY nods to you, then turns to walk away. But, before he does, Professor OAK calls him back.')
+				sg(f'\nOAK: JOHNNY! Why don\'t you battle {save["name"]} before you go?')
+				sg('\nJOHNNY stops and looks at you over his shoulder, as if he doesn\'t understand.')
+				sg('\n...Suddenly, he gives a smile and tosses his Poké Ball into the air!')
 				battle([Pokemon(save['rivalStarter'], 5, 'random', find_moves(save['rivalStarter'], 5))], battle_type='trainer', name='JOHNNY', start_diagloue='...', title='Pokémon Trainer', end_dialouge='...')
 				sg(f'\nOAK: A marvellous battle! Congratulations, {save["name"] if save["flag"]["wonFirstBattle"] else "JOHNNY"}!')
 				sg('Let me heal your Pokémon for you.')
