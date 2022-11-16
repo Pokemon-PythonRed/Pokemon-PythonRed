@@ -172,7 +172,7 @@ class Pokemon:
 		self.level_type = dex[self.species]['xp'] # type: ignore
 		self.total_xp = xp['total'][self.level_type][str(self.level)] # type: ignore
 		self.current_xp = current_xp
-		self.moves = moves if moves else find_moves(self.species, self.level)				
+		self.moves = moves if moves else find_moves(self.species, self.level)
 
 		# update pokedex
 		if self.species not in save['dex']:
@@ -225,8 +225,8 @@ class Pokemon:
 
 	# lower chp when pokemon is attacked
 	def deal_damage(self, attacker, move) -> None:
-		move_entry = list(filter(lambda m: m['name'] == move, moves))[0]
-		sp(f'\n{attacker.name} used {move.upper()}!')
+		move_entry = list(filter(lambda m: m['name'] == move['name'], moves))[0]
+		sp(f'\n{attacker.name} used {move["name"].upper()}!')
 		if move_entry['damage_class'] == 'status':
 			# TODO: Implement status conditions
 			sp('It is a status move')
@@ -270,6 +270,42 @@ class Pokemon:
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sp(f'{pokemon.name} grew to level {pokemon.level}!')
+		for m in dex[pokemon.species]['moves']:
+			if m['level'] == pokemon.level:
+				if len(pokemon.moves) == 4:
+					print(f'{pokemon.name} wants to learn {m["name"].upper()}!')
+					print(f'But {pokemon.name} already knows 4 moves')
+					all_moves = [*pokemon.moves, m['name']]
+					move_forgotten = False
+					while not move_forgotten:
+						print(f'Which move should {pokemon.name} forget?')
+						for i in range(5):
+							print(f'[{i+1}] - {all_moves[i].upper()}')
+						forget_move = ''
+						while not forget_move:
+							forget_move = get()
+							if forget_move not in ['1', '2', '3', '4', '5']:
+								forget_move = ''
+							else:
+								if all_moves[int(forget_move)-1] == m['name']:
+									print(f'\nAre you sure you want {pokemon.name} to not learn {m["name"].upper()}? (Y/N)')
+								else:
+									print(f'\nAre you sure you want {pokemon.name} to forget {all_moves[int(forget_move)-1].upper()}? (Y/N)')
+								option = ''
+								while option not in ['y','n']:
+									option = get()
+								if option in ['y']:
+									if all_moves[int(forget_move)-1] == m['name']:
+										print(f'\n{pokemon.name} didn\'t learn {m["name"].upper()}')
+									else:
+										print(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1].upper()}\n')
+										print(f'\n{pokemon.name} learned {m["name"].upper()}')
+										pokemon.moves = [m for m in pokemon.moves if not (m['name'] == all_moves[int(forget_move)-1])]
+										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']})
+									move_forgotten = True
+				else:
+					print(f'{pokemon.name} learned {m["name"].upper()}')
+					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']})
 
 # catch Pokemon
 def catch(pokemon) -> None:
@@ -333,9 +369,9 @@ def find_moves(name, level) -> list:
 			learned_moves.append({**move,"pp": list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']})
 	learned_moves = sorted(learned_moves, key=lambda m: m['level'], reverse=True)
 	if len(learned_moves) >= 4:
-		return list(map(lambda m: m['name'], learned_moves[0:4]))
+		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves[0:4]))
 	else:
-		return list(map(lambda m: m['name'], learned_moves))
+		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
 
 # create battle process
 def battle(opponent_party=None, battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
@@ -405,9 +441,11 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# choose attack
 		if user_choice == '1': # type: ignore
 			options = []
+			sp('')
 			for i in range(len(save["party"][current].moves)):
-				sp(f'[{i+1}] - {save["party"][current].moves[i].upper().replace("-"," ")}') # type and pp here
+				sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}') # type and pp here
 				options.append(str(i+1))
+			sp('')
 			valid_choice = False
 			while not valid_choice:
 				move_choice = get()
