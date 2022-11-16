@@ -233,24 +233,27 @@ class Pokemon:
 			# TODO: Implement status conditions
 			sp('It is a status move')
 		else:
-			critical = randint(0, 255) <= 17
-			attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
-			damage = floor((((((2 * attacker.level * (2 if critical else 1) / 5)+ 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['beenToRoute1'] else 1))
-			self.stats['chp'] -= damage
-			if damage > 0: 
-				sp(f'\n{attacker.name} dealt {damage} damage to {self.name}!')
-			if critical:
-				sp('A critical hit!')
-			for i in [
-				(0, 'It had no effect!'),
-				(0.5, 'It\'s super effective!'),
-				(2, 'It\'s not very effective!')
-			]:
-				if types[self.type][move_entry['type'].upper()] == i[0]:
-					sp(f'{i[1]}')
-			self.check_fainted()
-			if self.fainted:
-				sp(f'\n{self.name} fainted!')
+			if randint(1,100) <= move_entry["accuracy"]:
+				critical = randint(0, 255) <= 17
+				attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
+				damage = floor((((((2 * attacker.level * (2 if critical else 1) / 5)+ 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['beenToRoute1'] else 1))
+				self.stats['chp'] -= damage
+				if damage > 0: 
+					sp(f'\n{attacker.name} dealt {damage} damage to {self.name}!')
+				if critical:
+					sp('A critical hit!')
+				for i in [
+					(0, 'It had no effect!'),
+					(0.5, 'It\'s super effective!'),
+					(2, 'It\'s not very effective!')
+				]:
+					if types[self.type][move_entry['type'].upper()] == i[0]:
+						sp(f'{i[1]}')
+				self.check_fainted()
+				if self.fainted:
+					sp(f'\n{self.name} fainted!')
+			else:
+				sp(f'{attacker.name} missed!')
 
 	# calculate xp rewarded after battle
 	def calculate_xp(self, attacker, battle_type='wild') -> int:
