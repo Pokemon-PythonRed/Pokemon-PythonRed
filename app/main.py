@@ -162,7 +162,7 @@ def backup() -> None:
 class Pokemon:
 
 	# set internals
-	def __init__(self, species, level, ivs, moves=None, chp=None, current_xp=0, fainted=False) -> None:
+	def __init__(self, species, level, ivs, moves=None, chp=None, current_xp=0, fainted=False, player_pokemon = False) -> None:
 		self.species = species
 		self.index = dex[self.species]['index'] # type: ignore
 		self.name = dex[self.species]['name'] # type: ignore
@@ -191,10 +191,10 @@ class Pokemon:
 				save['flag']['type'][self.species]['caught'] = False
 
 		# initialise stats
-		self.reset_stats(chp, fainted)
+		self.reset_stats(chp, fainted, player_pokemon)
 
 	# reset stats
-	def reset_stats(self, chp=None, fainted=None) -> None:
+	def reset_stats(self, chp=None, fainted=None, player_pokemon = False) -> None:
 			self.stats = {
 				'hp': floor(((dex[self.species]['hp'] + self.ivs['hp']) * 2 + floor(ceil(sqrt(self.ivs['hp'])) / 4) * self.level) / 100) + self.level + 10, # type: ignore
 				'atk': floor(((dex[self.species]['atk'] + self.ivs['atk']) * 2 + floor(ceil(sqrt(self.ivs['atk'])) / 4) * self.level) / 100) + 5, # type: ignore
@@ -203,8 +203,9 @@ class Pokemon:
 				'spd': floor(((dex[self.species]['spd'] + self.ivs['spd']) * 2 + floor(ceil(sqrt(self.ivs['spd'])) / 4) * self.level) / 100) + 5, # type: ignore
 				'spe': floor(((dex[self.species]['spe'] + self.ivs['spe']) * 2 + floor(ceil(sqrt(self.ivs['spe'])) / 4) * self.level) / 100) + 5 # type: ignore
 			}
-			for move in self.moves:
-				move['pp'] = list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']
+			if player_pokemon == False:
+				for move in self.moves:
+					move['pp'] = list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']
 			self.stats['chp'] = chp or self.stats['hp']
 			self.fainted = fainted or self.stats['chp'] <= 0
 			if self.fainted:
@@ -254,6 +255,14 @@ class Pokemon:
 					sp(f'\n{self.name} fainted!')
 			else:
 				sp(f'{attacker.name} missed!')
+			return damage
+
+	def deal_struggle_damage(self, damage):
+		sp(f'{self.name} is hit with recoil!')
+		self.stats['chp'] -= floor(damage / 2)
+		self.check_fainted()
+		if self.fainted:
+			sp(f'\n{self.name} fainted!')
 
 	# calculate xp rewarded after battle
 	def calculate_xp(self, attacker, battle_type='wild') -> int:
@@ -445,32 +454,46 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 		# choose attack
 		if user_choice == '1': # type: ignore
-			options = []
-			sp('')
-			move_names = []
-			type_names = []
-			for i in save["party"][current].moves:
-				move_names.append(i['name'])
-				type_names.append(list(filter(lambda m: m["name"] == i["name"], moves))[0]['type'])
-			longest_move_name_length = len(max(move_names, key=len))
-			longest_type_name_length = len(max(type_names, key=len))
+			struggle = True
+			for x in save["party"][current].moves:
+				if x['pp'] > 0:
+					struggle = False
+			if struggle:
+				sp(f'{save["party"][current].name} has no moves left!')
+				chosen_move = {"name":"struggle"}
+			else:
+				options = []
+				sp('')
+				move_names = []
+				type_names = []
+				for i in save["party"][current].moves:
+					move_names.append(i['name'])
+					type_names.append(list(filter(lambda m: m["name"] == i["name"], moves))[0]['type'])
+				longest_move_name_length = len(max(move_names, key=len))
+				longest_type_name_length = len(max(type_names, key=len))
 
-			for i in range(len(save["party"][current].moves)):
-				move_entry = list(filter(lambda m: m["name"] == save["party"][current].moves[i]["name"], moves))[0]
-				sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
-				options.append(str(i+1))
-			sp('')
-			valid_choice = False
-			while not valid_choice:
-				move_choice = get()
-				if move_choice in options:
-					if save["party"][current].moves[int(move_choice)-1]['pp'] == 0:
-						sp(f'{save["party"][current].name} cannot use {save["party"][current].moves[int(move_choice)-1]["name"]}')
-					else: valid_choice = True
+				for i in range(len(save["party"][current].moves)):
+					move_entry = list(filter(lambda m: m["name"] == save["party"][current].moves[i]["name"], moves))[0]
+					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
+					options.append(str(i+1))
+				sp('')
+				valid_choice = False
+				while not valid_choice:
+					move_choice = get()
+					if move_choice in options:
+						if save["party"][current].moves[int(move_choice)-1]['pp'] == 0:
+							sp(f'{save["party"][current].name} cannot use {save["party"][current].moves[int(move_choice)-1]["name"]}')
+						else: valid_choice = True
+				
+				chosen_move = save["party"][current].moves[int(move_choice)-1]
 
 			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']: # type: ignore
-				opponent_party[opponent_current].deal_damage(save['party'][current], save["party"][current].moves[int(move_choice)-1]) # type: ignore
-				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+				damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
+				if chosen_move["name"] == "struggle":
+					save['party'][current].deal_struggle_damage(damage)
+				else:
+					save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+
 				player_attacked_this_turn = True
 
 		# choose switch
@@ -519,8 +542,11 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 		# player attack if player speed is lower
 		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn:
-			opponent_party[opponent_current].deal_damage(save['party'][current], save["party"][current].moves[int(move_choice)-1]) # type: ignore
-			save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+			damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
+			if chosen_move["name"] == "struggle":
+				save['party'][current].deal_struggle_damage(damage)
+			else:
+				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
 			player_attacked_this_turn = True
 
 		# end battle if player wins
@@ -654,7 +680,7 @@ if start_option == '1':
 	open(path.join(syspath[0], '.ppr-save')).close()
 	save = save_temp
 	for pokemon_location in ['party', 'box']:
-		save[pokemon_location] = [Pokemon(i['species'], i['level'], i['ivs'], i['moves'], i['stats']['chp'], i['current_xp'], i['fainted']) for i in save_temp[pokemon_location]]
+		save[pokemon_location] = [Pokemon(i['species'], i['level'], i['ivs'], i['moves'], i['stats']['chp'], i['current_xp'], i['fainted'], player_pokemon = True) for i in save_temp[pokemon_location]]
 else:
 	save = save_template # type: ignore
 	save['badges'] = {i: False for i in badges}
