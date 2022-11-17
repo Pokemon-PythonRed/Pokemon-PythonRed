@@ -172,7 +172,7 @@ class Pokemon:
 		self.level_type = dex[self.species]['xp'] # type: ignore
 		self.total_xp = xp['total'][self.level_type][str(self.level)] # type: ignore
 		self.current_xp = current_xp
-		self.moves = moves if moves else find_moves(self.species, self.level)
+		self.moves = moves or find_moves(self.species, self.level)
 
 		# update pokedex
 		if self.species not in save['dex']:
@@ -314,7 +314,12 @@ class Pokemon:
 									else:
 										print(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1].upper()}\n')
 										print(f'\n{pokemon.name} learned {m["name"].upper()}')
-										pokemon.moves = [m for m in pokemon.moves if not (m['name'] == all_moves[int(forget_move)-1])]
+										pokemon.moves = [
+											m
+											for m in pokemon.moves
+											if m['name'] != all_moves[int(forget_move) - 1]
+										]
+
 										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']})
 									move_forgotten = True
 				else:
@@ -377,13 +382,23 @@ def prize_money(self=None, type='Pokémon Trainer') -> int:
 	return floor(trainer[type] * max(i.level for i in (save['party'] if self is None else self))) # type: ignore
 
 def find_moves(name, level) -> list:
-	learned_moves = []
-	for move in dex[name]['moves']:
-		if move['level'] <= level:
-			learned_moves.append({**move,"pp": list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']})
+	learned_moves = [
+		{
+			**move,
+			"pp": list(filter(lambda m: m['name'] == move['name'], moves))[0][
+				'pp'
+			],
+		}
+		for move in dex[name]['moves']
+		if move['level'] <= level
+	]
+
 	learned_moves = sorted(learned_moves, key=lambda m: m['level'], reverse=True)
 	if len(learned_moves) >= 4:
-		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves[0:4]))
+		return list(
+			map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves[:4])
+		)
+
 	else:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
 
