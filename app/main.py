@@ -541,7 +541,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			opponent_attacked_this_turn = True
 
 		# player attack if player speed is lower
-		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn:
+		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn and escape_attempts == 0:
 			damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
 			if chosen_move["name"] == "struggle":
 				save['party'][current].deal_struggle_damage(damage)
