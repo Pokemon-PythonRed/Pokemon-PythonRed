@@ -111,29 +111,29 @@ name_length = 15
 bars_length = 20
 
 # enables ANSI escape codes in Windows
-system("")
+system('')
 
 # type colours
 colours = {
-	"NORMAL"  : "\x1b[0;0m",
-	"FIRE"	  : "\x1b[38;5;196m",
-	"WATER"   : "\x1b[38;5;027m",
-	"GRASS"	  : "\x1b[38;5;082m",
-	"ELECTRIC": "\x1b[38;5;184m",
-	"ICE"	  : "\x1b[38;5;159m",
-	"FIGHTING": "\x1b[38;5;167m",
-	"POISON"  : "\x1b[38;5;135m",
-	"GROUND"  : "\x1b[38;5;215m",
-	"FLYING"  : "\x1b[38;5;183m",
-	"PSYCHIC" : "\x1b[38;5;198m",
-	"BUG"	  : "\x1b[38;5;028m",
-	"ROCK"	  : "\x1b[38;5;179m",
-	"GHOST"	  : "\x1b[38;5;126m",
-	"DRAGON"  : "\x1b[38;5;057m",
-	"DARK"    : "\x1b[38;5;095m",
-	"STEEL"   : "\x1b[38;5;250m",
-	"FAIRY"   : "\x1b[38;5;212m",
-	"RESET"	  : "\x1b[0;0m" 
+	'NORMAL': '\x1b[0;0m',
+	'FIRE': '\x1b[38;5;196m',
+	'WATER': '\x1b[38;5;027m',
+	'GRASS': '\x1b[38;5;082m',
+	'ELECTRIC': '\x1b[38;5;184m',
+	'ICE': '\x1b[38;5;159m',
+	'FIGHTING': '\x1b[38;5;167m',
+	'POISON': '\x1b[38;5;135m',
+	'GROUND': '\x1b[38;5;215m',
+	'FLYING': '\x1b[38;5;183m',
+	'PSYCHIC': '\x1b[38;5;198m',
+	'BUG': '\x1b[38;5;028m',
+	'ROCK': '\x1b[38;5;179m',
+	'GHOST': '\x1b[38;5;126m',
+	'DRAGON': '\x1b[38;5;057m',
+	'DARK': '\x1b[38;5;095m',
+	'STEEL': '\x1b[38;5;250m',
+	'FAIRY': '\x1b[38;5;212m',
+	'RESET': '\x1b[0;0m'
 }
 
 # error message
@@ -172,7 +172,7 @@ class Pokemon:
 		self.level_type = dex[self.species]['xp'] # type: ignore
 		self.total_xp = xp['total'][self.level_type][str(self.level)] # type: ignore
 		self.current_xp = current_xp
-		self.moves = moves if moves else find_moves(self.species, self.level)
+		self.moves = moves or find_moves(self.species, self.level)
 
 		# update pokedex
 		if self.species not in save['dex']:
@@ -205,7 +205,7 @@ class Pokemon:
 			}
 			if player_pokemon == False:
 				for move in self.moves:
-					move['pp'] = list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']
+					move['pp'] = list(filter(lambda m, move=move: m['name'] == move['name'], moves))[0]['pp'] # type: ignore
 			self.stats['chp'] = chp or self.stats['hp']
 			self.fainted = fainted or self.stats['chp'] <= 0
 			if self.fainted:
@@ -227,8 +227,8 @@ class Pokemon:
 		return False
 
 	# lower chp when pokemon is attacked
-	def deal_damage(self, attacker, move) -> None:
-		move_entry = list(filter(lambda m: m['name'] == move['name'], moves))[0]
+	def deal_damage(self, attacker, move) -> int:
+		move_entry = list(filter(lambda m: m['name'] == move['name'], moves))[0] # type: ignore
 		sp(f'\n{attacker.name} used {move["name"].upper()}!')
 		if move_entry['damage_class'] == 'status':
 			# TODO: Implement status conditions
@@ -284,7 +284,7 @@ class Pokemon:
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sp(f'{pokemon.name} grew to level {pokemon.level}!')
-		for m in dex[pokemon.species]['moves']:
+		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
 				if len(pokemon.moves) == 4:
 					print(f'{pokemon.name} wants to learn {m["name"].upper()}!')
@@ -314,12 +314,13 @@ class Pokemon:
 									else:
 										print(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1].upper()}\n')
 										print(f'\n{pokemon.name} learned {m["name"].upper()}')
-										pokemon.moves = [m for m in pokemon.moves if not (m['name'] == all_moves[int(forget_move)-1])]
-										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']})
+										pokemon.moves = [m for m in pokemon.moves if m['name'] != all_moves[int(forget_move) - 1]]
+
+										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
 									move_forgotten = True
 				else:
 					print(f'{pokemon.name} learned {m["name"].upper()}')
-					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']})
+					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv, m=m: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
 
 # catch Pokemon
 def catch(pokemon) -> None:
@@ -377,13 +378,11 @@ def prize_money(self=None, type='Pokémon Trainer') -> int:
 	return floor(trainer[type] * max(i.level for i in (save['party'] if self is None else self))) # type: ignore
 
 def find_moves(name, level) -> list:
-	learned_moves = []
-	for move in dex[name]['moves']:
-		if move['level'] <= level:
-			learned_moves.append({**move,"pp": list(filter(lambda m: m['name'] == move['name'], moves))[0]['pp']})
+	learned_moves = [{**move, "pp": list(filter(lambda m, move=move: m['name'] == move['name'], moves))[0]['pp']} for move in dex[name]['moves'] if move['level'] <= level] # type: ignore
+
 	learned_moves = sorted(learned_moves, key=lambda m: m['level'], reverse=True)
 	if len(learned_moves) >= 4:
-		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves[0:4]))
+		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves[:4]))
 	else:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
 
@@ -430,7 +429,6 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		debug('Turn start!')
 		player_attacked_this_turn = False
 		opponent_attacked_this_turn = False
-		player_move = None
 
 		# calculate health bars according to ratio (chp:hp)
 		bars = ceil((save['party'][current].stats['chp']/(save['party'][current].stats['hp']))*bars_length)
@@ -468,12 +466,12 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				type_names = []
 				for i in save["party"][current].moves:
 					move_names.append(i['name'])
-					type_names.append(list(filter(lambda m: m["name"] == i["name"], moves))[0]['type'])
+					type_names.append(list(filter(lambda m, i=i: m["name"] == i["name"], moves))[0]['type']) # type: ignore
 				longest_move_name_length = len(max(move_names, key=len))
 				longest_type_name_length = len(max(type_names, key=len))
 
 				for i in range(len(save["party"][current].moves)):
-					move_entry = list(filter(lambda m: m["name"] == save["party"][current].moves[i]["name"], moves))[0]
+					move_entry = list(filter(lambda m, i=i: m["name"] == save["party"][current].moves[i]["name"], moves))[0] # type: ignore
 					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
 					options.append(str(i+1))
 				sp('')
@@ -665,9 +663,9 @@ for i in [
 	['moves', 'moves.json']
 ]:
 	try:
-		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}")).read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
+		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
 	except Exception:
-		abort(f'Failed to load {i} data!')
+		abort(f'Failed to load {i[1]}!')
 
 # debug statements
 def debug(text) -> None:
