@@ -232,7 +232,7 @@ class Pokemon:
 		sp(f'\n{attacker.name} used {move["name"].upper()}!')
 		if move_entry['damage_class'] == 'status':
 			# TODO: Implement status conditions
-			sp('It is a status move')
+			sp(f'(Note: {move["name"].upper()} is a status move)')
 		else:
 			if randint(1,100) <= move_entry["accuracy"]:
 				critical = randint(0, 255) <= 17
@@ -390,6 +390,7 @@ def find_moves(name, level) -> list:
 def battle(opponent_party=None, battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
 	global save
 	debug('Entered battle!')
+	debug(f'Party: {save["party"]}')
 	party_length = len(save['party'])
 	current = ''
 	opponent_current = 0
@@ -678,7 +679,7 @@ if start_option == '1':
 	open(path.join(syspath[0], '.ppr-save')).close()
 	save = save_temp
 	for pokemon_location in ['party', 'box']:
-		save[pokemon_location] = [Pokemon(i['species'], i['level'], i['ivs'], i['moves'], i['stats']['chp'], i['current_xp'], i['fainted'], player_pokemon = True) for i in save_temp[pokemon_location]]
+		save[pokemon_location] = [Pokemon(species=i['species'], level=i['level'], ivs=i['ivs'], moves=i['moves'], chp=i['stats']['chp'], current_xp=i['current_xp'], fainted=i['fainted'], player_pokemon=True) for i in save_temp[pokemon_location]]
 else:
 	save = save_template # type: ignore
 	save['badges'] = {i: False for i in badges}
