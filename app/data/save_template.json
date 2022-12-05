@@ -4,18 +4,18 @@
 	"box": [],
 	"dex": {},
 	"flag": {
-		"beenToRoute1": false,
-		"chosenStarter": false,
-		"deliveredPackage": false,
-		"eggInDaycare": false,
-		"hasSaved": false,
-		"introComplete": false,
-		"pokemonCaught": 0,
-		"pokemonSeen": 0,
-		"pokemonUncaught": 0,
-		"trainerFought": {},
+		"been_to_route_1": false,
+		"chosen_starter": false,
+		"delivered_package": false,
+		"egg_in_daycare": false,
+		"has_saved": false,
+		"intro_complete": false,
+		"pokemon_caught": 0,
+		"pokemon_seen": 0,
+		"pokemon_uncaught": 0,
+		"trainer_fought": {},
 		"type": {},
-		"wonFirstBattle": null
+		"won_first_battle": null
 	},
 	"hms": {
 		"cut": false,
@@ -24,16 +24,16 @@
 		"strength": false,
 		"surf": false
 	},
-	"lastPlayed": null,
+	"last_played": null,
 	"location": null,
 	"money": 3000,
-	"mysteryGiftOpened": {},
+	"mystery_gift_opened": {},
 	"name": "",
 	"options": {
 		"debug": false,
 		"textSpeed": null
 	},
 	"party": [],
-	"recentCenter": "playerHouseUp",
+	"recent_center": "playerHouseUp",
 	"user": []
 }

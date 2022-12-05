@@ -155,11 +155,11 @@ def backup() -> None:
 
 # save data to file
 def save_data_to_file():
-	save['flag']['hasSaved'] = True
+	save['flag']['has_saved'] = True
 	save_temp = save
 	save_temp['party'] = [dump(i) for i in save['party']]
 	save_temp['box'] = [dump(i) for i in save['box']]
-	save_temp['lastPlayed'] = None # TODO: save time last played
+	save_temp['last_played'] = None # TODO: save time last played
 	open(path.join(syspath[0], '.ppr-save'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
 	sp('\nGame saved successfully!')
 
@@ -253,7 +253,7 @@ class Pokemon:
 	def damage_calc(self, move_entry, attacker):
 		is_critical = critical()
 		attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
-		result = floor((((((2 * attacker.level * (2 if is_critical else 1) / 5) + 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['beenToRoute1'] else 1))
+		result = floor((((((2 * attacker.level * (2 if is_critical else 1) / 5) + 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['been_to_route_1'] else 1))
 
 		self.stats['chp'] -= result
 		if result > 0: 
@@ -574,7 +574,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	if escaped_from_battle:
 		sp('You escaped!')
 	if is_alive(save['party']) and not is_alive(opponent_party):
-		if save['flag']['beenToRoute1']:
+		if save['flag']['been_to_route_1']:
 			if battle_type == 'trainer':
 				sp(f'\n{save["party"][current].name} won the battle!')
 			if earn_xp == True:
@@ -586,21 +586,21 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				save['money'] += trainer[title] # type: ignore
 				sp(f'You got ¥{trainer[title]}') # type: ignore
 		else:
-			save['flag']['wonFirstBattle'] = True
+			save['flag']['won_first_battle'] = True
 
 	# upon losing
 	elif is_alive(opponent_party) and (not is_alive(save['party'])):
 		if battle_type == 'trainer':
-			if save['flag']['beenToRoute1']:
+			if save['flag']['been_to_route_1']:
 				save['money'] -= prize_money()
 				sg('You lost the battle!')
 				sg(f'You gave ¥{str(prize_money())} as prize money.')
 			else:
-				save['flag']['wonFirstBattle'] = False
+				save['flag']['won_first_battle'] = False
 		sg('...')
 		sg(f'{save["name"]} blacked out!')
 		save['money'] = round(save['money'] / 2)
-		save['location'] = save['recentCenter']
+		save['location'] = save['recent_center']
 		heal()
 
 	# if battle is neither won nor lost
@@ -642,7 +642,7 @@ while start_option != '2':
 
 	# continue from save file
 	if start_option == '1':
-		if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['hasSaved']:
+		if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
 			cls() # type: ignore
 			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 			break
@@ -712,12 +712,12 @@ if start_option == '1':
 if max([
 	len(save['name']) > 15,
 	len(save['party']) > 6,
-	save['flag']['beenToRoute1'] and len(save['party']) == 0,
-	save['flag']['chosenStarter'] and not save['flag']['introComplete'],
-	save['flag']['chosenStarter'] and save['location'] == '',
-	save['name'] != '' and not save['flag']['introComplete'],
+	save['flag']['been_to_route_1'] and len(save['party']) == 0,
+	save['flag']['chosen_starter'] and not save['flag']['intro_complete'],
+	save['flag']['chosen_starter'] and save['location'] == '',
+	save['name'] != '' and not save['flag']['intro_complete'],
 	save['name'] != save['name'].upper(),
-	save['name'] == '' and save['flag']['introComplete']
+	save['name'] == '' and save['flag']['intro_complete']
 ]):
 	abort('Illegal save data detected!')
 
@@ -729,7 +729,7 @@ while not exit:
 	option = dex_string = ''
 
 	# intro
-	if save['flag']['introComplete'] == False:
+	if save['flag']['intro_complete'] == False:
 		sp('(Intro Start!)\n')
 		sg('OAK: Hello there! Welcome to the world of Pokémon!')
 		sg('My name is OAK! People call me the Pokémon Professor!')
@@ -760,7 +760,7 @@ while not exit:
 		sg(f'{playerName}! Your very own Pokémon legend is about to unfold! A world of dreams and adventures with Pokémon awaits! Let\'s go!')
 		save['name'] = playerName
 		save['location'] = 'playerHouseUp'
-		save['flag']['introComplete'] = True
+		save['flag']['intro_complete'] = True
 		sp('\n(Intro Complete!)')
 
 	# options menu
@@ -880,7 +880,7 @@ while not exit:
 		while option == '':
 			option = get()
 		if option == 'w':
-			if save['flag']['chosenStarter']:
+			if save['flag']['chosen_starter']:
 				save['location'] = 'route1-s'
 			else:
 				sg('\nYou take a step into the tall grass north of Pallet Town.')
@@ -891,7 +891,7 @@ while not exit:
 				sg('\nOAK: It\'s unsafe! Wild Pokémon live in tall grass! You need your own Pokémon for protection. Come with me!')
 				sg('\nProfessor OAK leads you to his laboratory. He walks up to a table with three Poké Balls on it.')
 				sg(f'\nOAK: Here, {save["name"]}! There are three Pokémon here, reserved for new trainers.')
-				while not save['flag']['chosenStarter']:
+				while not save['flag']['chosen_starter']:
 					sp('Go ahead and choose one!\n\n[1] - Bulbasaur\n[2] - Charmander\n[3] - Squirtle\n')
 					option = ''
 					while not option and option not in ['1', '2', '3']:
@@ -902,7 +902,7 @@ while not exit:
 						while confirm not in yn:
 							confirm = get()
 						if confirm in y:
-							save['flag']['chosenStarter'] = True
+							save['flag']['chosen_starter'] = True
 							save['starter'] = ['BULBASAUR', 'CHARMANDER', 'SQUIRTLE'][int(option)-1]
 							save['dex'] = {save['starter']: {'seen': True, 'caught': True}}
 							save['flag']['type'] = {dex[save['starter']]['type']: {'seen': True, 'caught': True}} # type: ignore
@@ -931,7 +931,7 @@ while not exit:
 				sg('\nJOHNNY stops and looks at you over his shoulder, as if he doesn\'t understand.')
 				sg('\n...Suddenly, he gives a smile and tosses his Poké Ball into the air!')
 				battle([Pokemon(save['rivalStarter'], 5, 'random', find_moves(save['rivalStarter'], 5))], battle_type='trainer', name='JOHNNY', start_diagloue='...', title='Pokémon Trainer', end_dialouge='...')
-				sg(f'\nOAK: A marvellous battle! Congratulations, {save["name"] if save["flag"]["wonFirstBattle"] else "JOHNNY"}!')
+				sg(f'\nOAK: A marvellous battle! Congratulations, {save["name"] if save["flag"]["won_first_battle"] else "JOHNNY"}!')
 				sg('Let me heal your Pokémon for you.')
 				heal()
 				sg('\nOAK: You can make your Pokémon stronger by training on Route 1.')
@@ -952,7 +952,7 @@ while not exit:
 				else:
 					sg('\nYou decided not to use Surf.')
 		elif option == 'd':
-			if save['flag']['chosenStarter']:
+			if save['flag']['chosen_starter']:
 				save['location'] = 'oakLab'
 			else:
 				sg('\n...')
@@ -987,7 +987,7 @@ while not exit:
 
 	# route 1 - south
 	elif save['location'] == 'route1-s':
-		if not save['flag']['beenToRoute1']: save['flag']['beenToRoute1'] = True
+		if not save['flag']['been_to_route_1']: save['flag']['been_to_route_1'] = True
 		sp('Current Location: Route 1 (South)\n\n[w] - Go to Route 1 (North)\n[s] - Go to Pallet Town\n')
 		while option == '':
 			option = get()
@@ -1022,7 +1022,7 @@ while not exit:
 		while option == '':
 			option = get()
 		if option == 'w':
-			if save['flag']['deliveredPackage']:
+			if save['flag']['delivered_package']:
 				save['location'] = 'viridian-n'
 			else:
 				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
@@ -1035,7 +1035,7 @@ while not exit:
 			save['location'] = 'route1-n'
 		elif option == 'd':
 			heal()
-			save['recentCenter'] = 'viridian-s'
+			save['recent_center'] = 'viridian-s'
 		elif option == 'm':
 			menu_open = True
 
