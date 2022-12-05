@@ -15,6 +15,7 @@ from random import choice, randint
 # TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
+from typing import Optional
 from webbrowser import open as webopen
 
 # import installed modules
@@ -150,13 +151,21 @@ def backup() -> None:
 	while save_option.lower()[0] not in yn:
 		save_option = f'{get()} '
 	if save_option.lower()[0] in y:
-		save['flag']['hasSaved'] = True
-		save_temp = save
-		save_temp['party'] = [dump(i) for i in save['party']]
-		save_temp['box'] = [dump(i) for i in save['box']]
-		save_temp['lastPlayed'] = None # TODO: save time last played
-		open(path.join(syspath[0], '.ppr-save'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
-		sp('\nGame saved successfully!')
+		save_data_to_file()
+
+# save data to file
+def save_data_to_file():
+	save['flag']['hasSaved'] = True
+	save_temp = save
+	save_temp['party'] = [dump(i) for i in save['party']]
+	save_temp['box'] = [dump(i) for i in save['box']]
+	save_temp['lastPlayed'] = None # TODO: save time last played
+	open(path.join(syspath[0], '.ppr-save'), 'w').write(f'{dumps(save_temp, indent=4, sort_keys=True)}\n')
+	sp('\nGame saved successfully!')
+
+# decide if damage is critical
+def critical() -> bool:
+	return randint(0, 255) <= 17
 
 # pokemon class
 class Pokemon:
@@ -227,7 +236,7 @@ class Pokemon:
 		return False
 
 	# lower chp when pokemon is attacked
-	def deal_damage(self, attacker, move) -> int:
+	def deal_damage(self, attacker, move) -> Optional[int]:
 		move_entry = list(filter(lambda m: m['name'] == move['name'], moves))[0] # type: ignore
 		sp(f'\n{attacker.name} used {move["name"].upper()}!')
 		if move_entry['damage_class'] == 'status':
@@ -235,27 +244,33 @@ class Pokemon:
 			sp(f'(Note: {move["name"].upper()} is a status move)')
 		else:
 			if randint(1,100) <= move_entry["accuracy"]:
-				critical = randint(0, 255) <= 17
-				attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
-				damage = floor((((((2 * attacker.level * (2 if critical else 1) / 5)+ 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['beenToRoute1'] else 1))
-				self.stats['chp'] -= damage
-				if damage > 0: 
-					sp(f'\n{attacker.name} dealt {damage} damage to {self.name}!')
-				if critical:
-					sp('A critical hit!')
-				for i in [
-					(0, 'It had no effect!'),
-					(0.5, 'It\'s super effective!'),
-					(2, 'It\'s not very effective!')
-				]:
-					if types[self.type][move_entry['type'].upper()] == i[0]:
-						sp(f'{i[1]}')
-				self.check_fainted()
-				if self.fainted:
-					sp(f'\n{self.name} fainted!')
+				damage = self.damage_calc(move_entry, attacker)
 			else:
 				sp(f'{attacker.name} missed!')
-			return damage
+			return damage # type: ignore
+
+	# TODO Rename this here and in `deal_damage`
+	def damage_calc(self, move_entry, attacker):
+		is_critical = critical()
+		attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
+		result = floor((((((2 * attacker.level * (2 if is_critical else 1) / 5) + 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['beenToRoute1'] else 1))
+
+		self.stats['chp'] -= result
+		if result > 0: 
+			sp(f'\n{attacker.name} dealt {result} damage to {self.name}!')
+		if is_critical:
+			sp('A critical hit!')
+		for i in [
+			(0, 'It had no effect!'),
+			(0.5, 'It\'s super effective!'),
+			(2, 'It\'s not very effective!')
+		]:
+			if types[self.type][move_entry['type'].upper()] == i[0]:
+				sp(f'{i[1]}')
+		self.check_fainted()
+		if self.fainted:
+			sp(f'\n{self.name} fainted!')
+		return result
 
 	def deal_struggle_damage(self, damage):
 		sp(f'{self.name} is hit with recoil!')
@@ -454,25 +469,25 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# choose attack
 		if user_choice == '1': # type: ignore
 			struggle = True
-			for x in save["party"][current].moves:
-				if x['pp'] > 0:
+			for move_iter in save['party'][current].moves:
+				if move_iter['pp'] > 0:
 					struggle = False
 			if struggle:
 				sp(f'{save["party"][current].name} has no moves left!')
-				chosen_move = {"name":"struggle"}
+				chosen_move = {'name': 'struggle'}
 			else:
 				options = []
 				sp('')
 				move_names = []
 				type_names = []
-				for i in save["party"][current].moves:
+				for i in save['party'][current].moves:
 					move_names.append(i['name'])
-					type_names.append(list(filter(lambda m, i=i: m["name"] == i["name"], moves))[0]['type']) # type: ignore
+					type_names.append(list(filter(lambda m, i=i: m['name'] == i['name'], moves))[0]['type']) # type: ignore
 				longest_move_name_length = len(max(move_names, key=len))
 				longest_type_name_length = len(max(type_names, key=len))
 
-				for i in range(len(save["party"][current].moves)):
-					move_entry = list(filter(lambda m, i=i: m["name"] == save["party"][current].moves[i]["name"], moves))[0] # type: ignore
+				for i in range(len(save['party'][current].moves)):
+					move_entry = list(filter(lambda m, i=i: m['name'] == save['party'][current].moves[i]['name'], moves))[0] # type: ignore
 					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
 					options.append(str(i+1))
 				sp('')
@@ -480,7 +495,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				while not valid_choice:
 					move_choice = get()
 					if move_choice in options:
-						if save["party"][current].moves[int(move_choice)-1]['pp'] == 0:
+						if save['party'][current].moves[int(move_choice)-1]['pp'] == 0:
 							sp(f'{save["party"][current].name} cannot use {save["party"][current].moves[int(move_choice)-1]["name"]}')
 						else: valid_choice = True
 				
