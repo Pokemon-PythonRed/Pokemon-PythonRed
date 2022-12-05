@@ -6,7 +6,7 @@ If you'd like to contribute, here are some things you could do:
 
 - Test the game with [the Installation guide](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation) and [leave some feedback](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions)
 - Make a [feature request](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new/choose)
-- Help with [programming](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tree/master/app)
+- Help with [programming](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tree/master/app) (please see [our conventions page](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONVENTIONS.md))
 - Create some art (ASCII text)
 - Check for incorrect data in the [JSON databases](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/tree/master/app)
 
