@@ -578,7 +578,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	# upon winning
 	if escaped_from_battle:
 		sp('You escaped!')
-	if is_alive(save['party']) and not is_alive(opponent_party):
+	elif is_alive(save['party']) and not is_alive(opponent_party):
 		if save['flag']['been_to_route_1']:
 			if battle_type == 'trainer':
 				sp(f'\n{save["party"][current].name} won the battle!')
