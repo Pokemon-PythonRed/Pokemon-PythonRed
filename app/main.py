@@ -490,7 +490,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					move_entry = list(filter(lambda m, i=i: m['name'] == save['party'][current].moves[i]['name'], moves))[0] # type: ignore
 					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
 					options.append(str(i+1))
-				sp('')
+				sp(f'[e] - Back\n')
 				valid_choice = False
 				while not valid_choice:
 					move_choice = get()
@@ -498,7 +498,12 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 						if save['party'][current].moves[int(move_choice)-1]['pp'] == 0:
 							sp(f'{save["party"][current].name} cannot use {save["party"][current].moves[int(move_choice)-1]["name"]}')
 						else: valid_choice = True
+					elif move_choice == "e":
+						valid_choice = True
 				
+				if move_choice == "e":
+					continue
+
 				chosen_move = save["party"][current].moves[int(move_choice)-1]
 
 			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']: # type: ignore
