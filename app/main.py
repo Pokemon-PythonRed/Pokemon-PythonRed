@@ -139,7 +139,7 @@ colours = {
 
 # error message
 def abort(message) -> None:
-	print(f'\n\n\n- - - INTERNAL ERROR - - -\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
+	print(f'\n{colours["FIRE"]}INTERNAL ERROR{colours["RESET"]}\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
 	input('\n> ')
 	global exit
 	exit = True
@@ -914,7 +914,6 @@ while not exit:
 							for i in [('BULBASAUR', 'CHARMANDER'), ('CHARMANDER', 'SQUIRTLE'), ('SQUIRTLE', 'BULBASAUR')]:
 								if save['starter'] == i[0]:
 									save['rivalStarter'] = i[1]
-						
 							save['party'].append(Pokemon(save['starter'], 5, {
 								'hp': 31,
 								'atk': 31,
@@ -923,7 +922,6 @@ while not exit:
 								'spd': 31,
 								'spe': 31
 							}, find_moves(save['starter'], 5) ))
-
 						else:
 							sp('')
 				sg(f'\nOAK: {save["starter"]} looks really energetic!')
