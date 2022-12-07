@@ -635,8 +635,7 @@ def get_encounter(loc, type) -> dict:
 		for i in range(len(rates[loc][type][chance])):
 			pokemon.append(rates[loc][type][chance][i])
 			weights.append(int(chance)/255)
-	encounter = choices(pokemon, weights)[0]
-	return encounter
+	return choices(pokemon, weights)[0]
 
 # display title screen
 cls() # type: ignore
