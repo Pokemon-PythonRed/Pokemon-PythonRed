@@ -11,7 +11,7 @@ from json import dumps, loads
 from math import ceil, floor, sqrt
 from os import path, system, remove
 from platform import system as platform
-from random import choice, randint, choices
+from random import choice, choices, randint
 # TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
@@ -629,8 +629,7 @@ def heal(pokemon=None, party=None, type='party') -> None:
 			sp(f'{i.name} was healed to max health.')
 
 def get_encounter(loc, type) -> dict:
-	weights = []
-	pokemon = []
+	pokemon = weights = []
 	for chance in rates[loc][type]:
 		for i in range(len(rates[loc][type][chance])):
 			pokemon.append(rates[loc][type][chance][i])
@@ -657,11 +656,15 @@ while start_option != '2':
 
 	# continue from save file
 	if start_option == '1':
-		if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
-			cls() # type: ignore
-			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
-			break
-		print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		try:
+			if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
+				cls() # type: ignore
+				print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
+				break
+		except KeyError:
+			print(f'{title[3]}Your save file is outdated and the game cannot load it.\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		else:
+			print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	# new game
 	elif start_option == '2':
@@ -687,12 +690,12 @@ while start_option != '2':
 for i in [
 	['dex', 'dex.json'],
 	['items', 'item.json'],
+	['moves', 'moves.json'],
+	['rates', 'map.json'],
 	['save_template', 'save_template.json'],
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
-	['xp', 'level.json'],
-	['moves', 'moves.json'],
-	['rates', 'map.json']
+	['xp', 'level.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
