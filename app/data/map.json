@@ -1,0 +1,216 @@
+{
+    "pallet": {
+        "old-rod": {
+            "256": [
+                {
+                    "pokemon": "MAGIKARP",
+                    "level": 5
+                }
+            ]
+        },
+        "good-rod": {
+            "128": [
+                {
+                    "pokemon": "GOLDEEN",
+                    "level": 10
+                },
+                {
+                    "pokemon": "POLIWAG",
+                    "level": 10
+                }
+            ]
+        },
+        "super-rod": {
+            "128": [
+                {
+                    "pokemon": "TENTACOOL",
+                    "level": 15
+                },
+                {
+                    "pokemon": "POLIWAG",
+                    "level": 15
+                }
+            ]
+        }
+    },
+    "route1-s": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                },
+                {
+                    "pokemon": "RATTATA",
+                    "level": 3
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 3
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 2
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 2
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                },
+                {
+                    "pokemon": "RATTATA",
+                    "level": 4
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 4
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 5
+                }
+            ]
+        }
+    },
+    "route1-n": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                },
+                {
+                    "pokemon": "RATTATA",
+                    "level": 3
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 3
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 2
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 2
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                },
+                {
+                    "pokemon": "RATTATA",
+                    "level": 4
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 4
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 5
+                }
+            ]
+        }
+    },
+    "viridian-s": {
+        "old-rod": {
+            "256": [
+                {
+                    "pokemon": "MAGIKARP",
+                    "level": 5
+                }
+            ]
+        },
+        "good-rod": {
+            "128": [
+                {
+                    "pokemon": "GOLDEEN",
+                    "level": 10
+                },
+                {
+                    "pokemon": "POLIWAG",
+                    "level": 10
+                }
+            ]
+        },
+        "super-rod": {
+            "128": [
+                {
+                    "pokemon": "TENTACOOL",
+                    "level": 15
+                },
+                {
+                    "pokemon": "POLIWAG",
+                    "level": 15
+                }
+            ]
+        }
+    },
+    "viridian-n": {
+        "old-rod": {
+            "256": [
+                {
+                    "pokemon": "MAGIKARP",
+                    "level": 5
+                }
+            ]
+        },
+        "good-rod": {
+            "128": [
+                {
+                    "pokemon": "GOLDEEN",
+                    "level": 10
+                },
+                {
+                    "pokemon": "POLIWAG",
+                    "level": 10
+                }
+            ]
+        },
+        "super-rod": {
+            "128": [
+                {
+                    "pokemon": "TENTACOOL",
+                    "level": 15
+                },
+                {
+                    "pokemon": "POLIWAG",
+                    "level": 15
+                }
+            ]
+        }
+    }
+}
