@@ -11,7 +11,7 @@ from json import dumps, loads
 from math import ceil, floor, sqrt
 from os import path, system, remove
 from platform import system as platform
-from random import choice, randint
+from random import choice, randint, choices
 # TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
@@ -78,6 +78,7 @@ if not (path.isfile(path.join(syspath[0], i)) for i in [
 	'data/trainer.json',
 	'data/types.json',
 	'data/moves.json',
+	'data/map.json',
 	'build_to_exe.py'
 ]):
 	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link["installation"]}]\nfor more information.\n\nPress Enter to exit.\n')
@@ -627,6 +628,16 @@ def heal(pokemon=None, party=None, type='party') -> None:
 			i.reset_stats()
 			sp(f'{i.name} was healed to max health.')
 
+def get_encounter(loc, type) -> dict:
+	weights = []
+	pokemon = []
+	for chance in rates[loc][type]:
+		for i in range(len(rates[loc][type][chance])):
+			pokemon.append(rates[loc][type][chance][i])
+			weights.append(int(chance)/255)
+	encounter = choices(pokemon, weights)[0]
+	return encounter
+
 # display title screen
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
@@ -681,7 +692,8 @@ for i in [
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
 	['xp', 'level.json'],
-	['moves', 'moves.json']
+	['moves', 'moves.json'],
+	['rates', 'map.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
@@ -996,7 +1008,8 @@ while not exit:
 			option = get()
 		if option == 'w':
 			save['location'] = 'route1-n'
-			battle([Pokemon(choice(['PIDGEY', 'SPEAROW', 'RATTATA', 'BELLSPROUT']), randint(1, 5), 'random')])
+			encounter = get_encounter('route1-n', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 's':
 			save['location'] = 'pallet'
 		elif option == 'm':
@@ -1013,7 +1026,8 @@ while not exit:
 			save['location'] = 'viridian-s'
 		elif option == 's':
 			save['location'] = 'route1-s'
-			battle([Pokemon(choice(['PIDGEY', 'SPEAROW', 'RATTATA', 'BELLSPROUT']), randint(1, 5), 'random')])
+			encounter = get_encounter('route1-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 'm':
 			menu_open = True
 		else:
