@@ -46,11 +46,10 @@ Add any other context or screenshots about the feature request here, if applicab
 
 <!--
 - Decline contribution acknowledgement -
-To tick the checkbox, fill it with an 'x', eg. '- [x]'.
 
-NOTE: THIS OPTION DISALLOWS US FROM PUBLICLY ACKNOWLEDGING YOUR CONTRIBUTION.
+If you wish to NOT be acknowledged for your contributions, please let us know here.
 -->
 
-- [ ] I **decline** to being added to the Contributors list.
+> 
 
 <!-- Thank you for your time! We'll get back to you as soon as possible. -->
