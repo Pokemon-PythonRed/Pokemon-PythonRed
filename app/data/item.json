@@ -1,4 +1,69 @@
 {
+	"Antidote": {
+		"command": "antidote",
+		"price": 100,
+		"sell_price": 50
+	},
+	"Awakening": {
+		"command": "awakening",
+		"price": 200,
+		"sell_price": 125
+	},
+	"Bicycle": {
+		"command": "bicycle",
+		"price": null,
+		"sell_price": null
+	},
+	"Bike Voucher": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Burn Heal": {
+		"command": "burn_heal",
+		"price": 250,
+		"sell_price": 125
+	},
+	"Calcium": {
+		"command": "calcium",
+		"price": 9800,
+		"sell_price": 4900
+	},
+	"Carbos": {
+		"command": "carbos",
+		"price": 9800,
+		"sell_price": 4900
+	},
+	"Card Key": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Coin": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Coin Case": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Dire Hit": {
+		"command": "dire_hit",
+		"price": 650,
+		"sell_price": 375
+	},
+	"Dome Fossil": {
+		"command": "null",
+		"price": null,
+		"sell_price": null
+	},
+	"Elixir": {
+		"command": "elixir",
+		"price": null,
+		"sell_price": null
+	},
 	"Escape Rope": {
 		"command": {
 			"battle": null,
@@ -7,38 +72,113 @@
 		"price": 550,
 		"sell_price": 275
 	},
+	"Ether": {
+		"command": "ether",
+		"price": null,
+		"sell_price": null
+	},
+	"EXP. All": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Fire Stone": {
+		"command": "fire_stone",
+		"price": 2100,
+		"sell_price": 1050
+	},
 	"Fresh Water": {
 		"command": "fresh_water",
 		"price": 200,
 		"sell_price": 100
+	},
+	"Full Heal": {
+		"command": "full_heal",
+		"price": 600,
+		"sell_price": 300
 	},
 	"Full Restore": {
 		"command": "full_restore",
 		"price": 3000,
 		"sell_price": 1500
 	},
+	"Gold Teeth": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"Good Rod": {
+		"command": "good_rod",
+		"price": null,
+		"sell_price": null
+	},
 	"Great Ball": {
 		"command": "great_ball",
 		"price": 600,
 		"sell_price": 300
+	},
+	"Guard Spec.": {
+		"command": "gurad_spec",
+		"price": 700,
+		"sell_price": 350
+	},
+	"Helix Fossil": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
+	"HP Up": {
+		"command": "hp_up",
+		"price": 9800,
+		"sell_price": 4900
 	},
 	"Hyper Potion": {
 		"command": "hyper_potion",
 		"price": 1200,
 		"sell_price": 600
 	},
+	"Ice Heal": {
+		"command": "ice_heal",
+		"price": 250,
+		"sell_price": 125
+	},
+	"Iron": {
+		"command": "iron",
+		"price": 9800,
+		"sell_price": 4900
+	},
+	"Item Finder": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
 	"Leaf Stone": {
 		"command": "leaf_stone",
-		"price": 350,
-		"sell_price": 175
+		"price": 2100,
+		"sell_price": 1050
 	},
 	"Lemonade": {
 		"command": "lemonade",
 		"price": 350,
 		"sell_price": 175
 	},
+	"Lift Key": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
 	"Master Ball": {
 		"command": "master_ball",
+		"price": null,
+		"sell_price": null
+	},
+	"Max Elixir": {
+		"command": "max_elixir",
+		"price": null,
+		"sell_price": null
+	},
+	"Max Ether": {
+		"command": "max_ether",
 		"price": null,
 		"sell_price": null
 	},
@@ -46,6 +186,11 @@
 		"command": "max_potion",
 		"price": 2500,
 		"sell_price": 1250
+	},
+	"Max Repel": {
+		"command": "max_repel",
+		"price": 700,
+		"sell_price": 350
 	},
 	"Max Revive": {
 		"command": "max_revive",
@@ -72,6 +217,16 @@
 		"price": null,
 		"sell_price": null
 	},
+	"Old Rod": {
+		"command": "old_rod",
+		"price": null,
+		"sell_price": null
+	},
+	"Paralyze Heal": {
+		"command": "paralyze_heal",
+		"price": 200,
+		"sell_price": 100
+	},
 	"Poke Ball": {
 		"command": "poke_ball",
 		"price": 200,
@@ -82,15 +237,35 @@
 		"price": 1000,
 		"sell_price": 500
 	},
+	"Poke Flute": {
+		"command": "poke_flute",
+		"price": null,
+		"sell_price": null
+	},
 	"Potion": {
 		"command": "potion",
 		"price": 300,
 		"sell_price": 150
 	},
+	"PP Up": {
+		"command": "pp_up",
+		"price": null,
+		"sell_price": null
+	},
+	"Protein": {
+		"command": "protein",
+		"price": 9800,
+		"sell_price": 4900
+	},
 	"Rare Candy": {
 		"command": "rare_candy",
 		"price": null,
 		"sell_price": 2400
+	},
+	"Repel": {
+		"command": "repel",
+		"price": 350,
+		"sell_price": 175
 	},
 	"Revive": {
 		"command": "revive",
@@ -122,6 +297,16 @@
 		"price": 700,
 		"sell_price": 350
 	},
+	"Super Repel": {
+		"command": "super_repel",
+		"price": 500,
+		"sell_price": 250
+	},
+	"Super rod": {
+		"command": "super_rod",
+		"price": null,
+		"sell_price": null
+	},
 	"Thunder Stone": {
 		"command": "thunder_stone",
 		"price": 2100,
@@ -141,5 +326,30 @@
 		"command": "water_stone",
 		"price": 2100,
 		"sell_price": 1050
+	},
+	"X Accuracy": {
+		"command": "x_accuracy",
+		"price": 950,
+		"sell_price": 475
+	},
+	"X Attack": {
+		"command": "x_attack",
+		"price": 500,
+		"sell_price": 250
+	},
+	"X Defend": {
+		"command": "x_defend",
+		"price": 550,
+		"sell_price": 275
+	},
+	"X Special": {
+		"command": "x_special",
+		"price": 350,
+		"sell_price": 175
+	},
+	"X Speed": {
+		"command": "x_speed",
+		"price": 350,
+		"sell_price": 175
 	}
 }
