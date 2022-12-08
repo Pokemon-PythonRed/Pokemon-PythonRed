@@ -118,7 +118,7 @@
 		"sell_price": 300
 	},
 	"Guard Spec.": {
-		"command": "gurad_spec",
+		"command": "guard_spec",
 		"price": 700,
 		"sell_price": 350
 	},
