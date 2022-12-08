@@ -662,7 +662,7 @@ while start_option != '2':
 				print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 				break
 		except KeyError:
-			print(f'{title[3]}Your save file is outdated and the game cannot load it.\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+			print(f'{title[3]}Your save file is outdated and the game cannot load it. Please back up your save file and contact us with option [3].\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 		else:
 			print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
