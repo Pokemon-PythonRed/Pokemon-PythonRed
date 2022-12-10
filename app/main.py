@@ -79,6 +79,7 @@ if not (path.isfile(path.join(syspath[0], i)) for i in [
 	'data/types.json',
 	'data/moves.json',
 	'data/map.json',
+	'data/pokemart.json',
 	'build_to_exe.py'
 ]):
 	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link["installation"]}]\nfor more information.\n\nPress Enter to exit.\n')
@@ -637,15 +638,133 @@ def get_encounter(loc, type) -> dict:
 			weights.append(int(chance)/255)
 	return choices(pokemon, weights)[0]
 
+def display_pokemart(loc) -> None:
+	choice = ''
+	action_choice = ''
+	exit = False
+	while not exit:
+		while not action_choice:
+			while not action_choice:
+				sp("\n[b] - Buy\n[s] - Sell\n[e] - Back\n")
+				action_choice = get()
+			if action_choice not in ['b', 's', 'e']:
+				action_choice = ''
+		if action_choice == 'e':
+			exit = True
+		elif action_choice == 's':
+			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
+			while not choice:
+				i = 1
+				options = ['e']
+				max_name_length = (len(max(pokemart[loc], key=len)))
+				for item in pokemart[loc]:
+					options.append(str(i))
+					price_len = len("{:,}".format(items[item]["price"]))
+					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["sell_price"])}')
+					i+=1
+				sp(f'[e] - Back\n')
+				while not choice:
+					choice = get()
+				if choice not in options:
+					choice = ''
+			if choice == "e":
+				action_choice = ''
+				choice = ''
+			else:
+				amount = 0
+				try:
+					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
+				except:
+					in_bag = 0
+				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})')
+				sp("Description coming soon")
+				sp("How many would you like to sell(1-99)? (press 'e' to go back)\n")
+				while not amount:
+					while not amount:
+						amount = get()
+					if amount == 'e':
+						break
+					if not amount.isnumeric():
+						amount = ''
+					elif int(amount) > 99 or int(amount) < 1:
+						amount = ''
+				if amount == 'e':
+					choice = ''
+					amount = ''
+				else:
+					if in_bag < int(amount):
+						sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
+						amount = ''
+					else:
+						save['bag'][pokemart[loc][int(choice)-1]] -= int(amount)
+						save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)
+						debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}')
+						choice = ''
+						
+		elif action_choice == 'b':
+			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
+			while not choice:
+				i = 1
+				options = ['e']
+				max_name_length = (len(max(pokemart[loc], key=len)))
+				for item in pokemart[loc]:
+					options.append(str(i))
+					price_len = len("{:,}".format(items[item]["price"]))
+					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["price"])}')
+					i+=1
+				sp(f'[e] - Back\n')
+				while not choice:
+					choice = get()
+				if choice not in options:
+					choice = ''
+			if choice == "e":
+				action_choice = ''
+				choice = ''
+			else:
+				amount = 0
+				try:
+					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
+				except:
+					in_bag = 0
+
+				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})')
+				sp("Description coming soon")
+				sp("How many would you like to buy(1-99)? (press 'e' to go back)\n")
+				while not amount:
+					while not amount:
+						amount = get()
+					if amount == 'e':
+						break
+					if not amount.isnumeric():
+						amount = ''
+					elif int(amount) > 99 or int(amount) < 1:
+						amount = ''
+				if amount == 'e':
+					choice = ''
+					amount = ''
+				else:
+					required_money = items[pokemart[loc][int(choice)-1]]["price"]*int(amount)
+					if required_money > save['money']:
+						sp(f'\nYou do not have enough money (you need ¥{required_money-save["money"]} more)')
+						amount = ''
+					else:
+						if pokemart[loc][int(choice)-1] not in save['bag']:
+							save['bag'][pokemart[loc][int(choice)-1]] = 1
+						else:
+							save['bag'][pokemart[loc][int(choice)-1]] += 1
+						save['money'] -= required_money
+						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)')
+						choice = ''
+
 # display title screen
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
-sleep(1)
+# sleep(1)
 print(title[0])
-sleep(2.65)
+# sleep(2.65)
 print(title[1])
-sleep(1.85)
+# sleep(1.85)
 print(title[2])
 getch() # type: ignore
 cls() # type: ignore
@@ -692,7 +811,8 @@ for i in [
 	['types', 'types.json'],
 	['xp', 'level.json'],
 	['moves', 'moves.json'],
-	['rates', 'map.json']
+	['rates', 'map.json'],
+	['pokemart', 'pokemart.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
@@ -1034,7 +1154,7 @@ while not exit:
 
 	# viridian city - south
 	elif save['location'] == 'viridian-s':
-		sp('Current Location: Viridian City (South)\n\n[w] - Go to Viridian City (North)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[d] - Viridian Pokémon Centre\n')
+		sp('Current Location: Viridian City (South)\n\n[w] - Go to Viridian City (North)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n')
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1049,9 +1169,18 @@ while not exit:
 			sg('\nComing soon!')
 		elif option == 's':
 			save['location'] = 'route1-n'
-		elif option == 'd':
+		elif option == '1':
 			heal()
 			save['recent_center'] = 'viridian-s'
+		elif option == '2':
+			if save['flag']['delivered_package']:
+				display_pokemart('viridian')
+			else:
+				sg('CLERK: Hey! You came from PALLET TOWN? You know PROF.OAK, right?')
+				sg('His order came in. Will you take it to him?')
+				save['bag']['Oak\'s Parcel'] = 1
+				sg(f'\n{save["name"]} recieved Oak\'s Parcel!\n')
+				sg('Okay! Say hi to PROF.OAK for me!')
 		elif option == 'm':
 			menu_open = True
 
