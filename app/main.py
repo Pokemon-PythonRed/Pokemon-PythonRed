@@ -643,8 +643,8 @@ def get_encounter(loc, type) -> dict:
 def display_pokemart(loc) -> None:
 	choice = ''
 	action_choice = ''
-	exit = False
-	while not exit:
+	pokemart_exit = False
+	while not pokemart_exit:
 		while not action_choice:
 			while not action_choice:
 				sp("\n[b] - Buy\n[s] - Sell\n[e] - Back\n")
@@ -652,7 +652,7 @@ def display_pokemart(loc) -> None:
 			if action_choice not in ['b', 's', 'e']:
 				action_choice = ''
 		if action_choice == 'e':
-			exit = True
+			pokemart_exit = True
 		elif action_choice == 's':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
@@ -674,7 +674,7 @@ def display_pokemart(loc) -> None:
 				amount = 0
 				try:
 					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
-				except:
+				except KeyError:
 					in_bag = 0
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})')
 				sp("Description coming soon")
@@ -721,7 +721,7 @@ def display_pokemart(loc) -> None:
 				amount = 0
 				try:
 					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
-				except:
+				except KeyError:
 					in_bag = 0
 
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})')
@@ -812,7 +812,7 @@ for i in [
 	['save_template', 'save_template.json'],
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
-	['xp', 'level.json']
+	['xp', 'level.json'],
 	['pokemart', 'pokemart.json']
 ]:
 	try:
