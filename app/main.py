@@ -813,7 +813,7 @@ for i in [
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
 	['xp', 'level.json']
-  ['pokemart', 'pokemart.json']
+	['pokemart', 'pokemart.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
