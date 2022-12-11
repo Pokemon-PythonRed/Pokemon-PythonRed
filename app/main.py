@@ -656,14 +656,12 @@ def display_pokemart(loc) -> None:
 		elif action_choice == 's':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
-				i = 1
 				options = ['e']
 				max_name_length = (len(max(pokemart[loc], key=len)))
-				for item in pokemart[loc]:
+				for i, item in enumerate(pokemart[loc], start=1):
 					options.append(str(i))
 					price_len = len("{:,}".format(items[item]["price"]))
 					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["sell_price"])}')
-					i+=1
 				sp(f'[e] - Back\n')
 				while not choice:
 					choice = get()
@@ -693,27 +691,24 @@ def display_pokemart(loc) -> None:
 				if amount == 'e':
 					choice = ''
 					amount = ''
+				elif in_bag < int(amount):
+					sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
+					amount = ''
 				else:
-					if in_bag < int(amount):
-						sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
-						amount = ''
-					else:
-						save['bag'][pokemart[loc][int(choice)-1]] -= int(amount)
-						save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)
-						debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}')
-						choice = ''
-						
+					save['bag'][pokemart[loc][int(choice)-1]] -= int(amount)
+					save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)
+					debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}')
+					choice = ''
+
 		elif action_choice == 'b':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
-				i = 1
 				options = ['e']
 				max_name_length = (len(max(pokemart[loc], key=len)))
-				for item in pokemart[loc]:
+				for i, item in enumerate(pokemart[loc], start=1):
 					options.append(str(i))
 					price_len = len("{:,}".format(items[item]["price"]))
 					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["price"])}')
-					i+=1
 				sp(f'[e] - Back\n')
 				while not choice:
 					choice = get()
