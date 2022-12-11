@@ -232,6 +232,11 @@
 		"price": 200,
 		"sell_price": 100
 	},
+	"Pokedex": {
+		"command": null,
+		"price": null,
+		"sell_price": null
+	},
 	"Poke Doll": {
 		"command": "poke_doll",
 		"price": 1000,

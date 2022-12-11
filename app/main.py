@@ -542,7 +542,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 		# choose item
 		elif user_choice == '3': # type: ignore
-			use_item()
+			if save['bag']:
+				use_item()
+			else:
+				sp("You have no items!")
 
 		# choose run
 		elif user_choice == '4': # type: ignore
@@ -935,12 +938,13 @@ while not exit:
 
 	# pause menu
 	elif menu_open == True:
-		sp(f'Menu\n[d] - Pokédex\n[p] - Pokémon\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n')
+		menu = f'Menu\n[d] - Pokédex\n[p] - Pokémon\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n' if 'Pokedex' in save['bag'] else f'Menu\n[p] - Pokémon\n[i] - Item\n[t] - {save["name"]}\n[s] - Save Game\n[o] - Options\n[e] - Exit Menu\n[q] - Quit Game\n'
+		sp(menu)
 		while not option:
 			option = get()
 		if option not in ['e', 'o']:
 			sp('')
-		if option == 'd':
+		if option == 'd' and 'Pokedex' in save['bag']:
 			option = ''
 			dex_string = ''.join(
 				f'\n{dex[i]["index"]} - {i}: Seen{", Caught" if save["dex"][i]["caught"] else ""}' if save['dex'][i]['seen'] else '' for i in save['dex'] # type: ignore
@@ -1109,8 +1113,35 @@ while not exit:
 			sg('\nASSISTANT: Professor OAK is an authority on Pokémon!')
 			sg('Many Pokémon trainers hold him in high regard!')
 		elif option == '3':
-			sg('\nOAK: You\'ve caught a total of...')
-			sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
+			if 'Oak\'s Parcel' in save['bag']:
+				sg(f'OAK: Oh, {save["name"]}! How is my old POKEMON? Well, it seems to like you a lot.')
+				sg('OAK: You must be talented as a POKEMON trainer!')
+				sg('OAK: What? You have something for me?')
+				sg(f'\n{save["name"]} delivered Oak\'s Parcel.\n')
+				save['flag']['delivered_package'] = True
+				save['bag'].pop('Oak\'s Parcel')
+				sg('OAK: Ah! This is the custom POKE BALL I ordered! Thank you!')
+				sg('JOHNNY enters the building.')
+				sg('JOHNNY: Gramps! What did you call me for?')
+				sg('OAK: Oh right! I have a request of you two.')
+				sg('OAK: On the desk there is my invention, POKEDEX!')
+				sg('OAK: It automatically records data on POKEMON you\'ve seen or caught!')
+				sg('OAK: It\'s a hi-tech encyclopedia!')
+				sg(f'OAK: {save["name"]} and JOHNNY! Take these with you!')
+				sg(f'\n{save["name"]} obtained the POKEDEX!\n')
+				save['bag']['Pokedex'] = 1
+				sg('OAK: To make a complete guide on all the POKEMON in the world...')
+				sg('OAK: That was my dream! But, I\'m too old! I can\'t do it!')
+				sg('OAK: So, I want you two to fulfill my dream for me!')
+				sg('OAK: Get moving, you two! This is a great undertaking in POKEMON history!')
+				sg('JOHNNY: Alright Gramps! Leave it all to me!')
+				sg(f'JOHNNY: {save["name"]}, I hate to say it, but I don\'t need you!')
+				sg(f'JOHNNY: I know! I\'ll borrow a TOWN MAP from my sis! I\'ll tell her not to lend you one, {save["name"]}! Hahaha!')
+				sg(f'OAK: POKEMON around the world wait for you, {save["name"]}!')
+				
+			else:
+				sg('\nOAK: You\'ve caught a total of...')
+				sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
 		elif option == '4':
 			sg('\nThere\' an email message here:')
 			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKEMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
@@ -1175,8 +1206,10 @@ while not exit:
 		elif option == '2':
 			if save['flag']['delivered_package']:
 				display_pokemart('viridian')
+			elif 'Oak\'s Parcel' in save['bag']:
+				sg("...") # Not sure what to put here
 			else:
-				sg('CLERK: Hey! You came from PALLET TOWN? You know PROF.OAK, right?')
+				sg('\nCLERK: Hey! You came from PALLET TOWN? You know PROF.OAK, right?')
 				sg('His order came in. Will you take it to him?')
 				save['bag']['Oak\'s Parcel'] = 1
 				sg(f'\n{save["name"]} recieved Oak\'s Parcel!\n')
