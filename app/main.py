@@ -484,12 +484,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	current = ''
 	opponent_current = 0
 	for i in range(party_length):
-		while not current:
-			# print(save['party'][i])
-			if not save['party'][i].check_fainted():
-				debug(f'{save["party"][i].name} is the first alive Pokemon in the party.')
-				current = i
-				break
+		if not save['party'][i].check_fainted():
+			debug(f'{save["party"][i].name} is the first alive Pokemon in the party.')
+			current = i
+			break
 
 	# battle intro
 	if battle_type == 'trainer':
