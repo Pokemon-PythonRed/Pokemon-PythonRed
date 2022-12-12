@@ -16,7 +16,7 @@ A clear and concise description of what the bug is.
 
 **Bug Description**:
 
-
+- 
 
 <!--
 - To reproduce -
@@ -25,7 +25,7 @@ Steps to reproduce the behaviour. If possible, you should also write a code bloc
 
 **Steps To Reproduce**:
 
-
+- 
 
 <!--
 - Expected behaviour -
@@ -34,7 +34,7 @@ A clear and concise description of what you expected to happen.
 
 **Expected Behaviour**:
 
-
+- 
 
 <!--
 - Context -
@@ -56,7 +56,7 @@ Add any other context about the problem here.
 
 **Additional Information**:
 
-
+- 
 
 <!--
 - Decline contribution acknowledgement -
