@@ -833,7 +833,7 @@ if start_option == '1':
 else:
 	save = save_template # type: ignore
 	save['badges'] = {i: False for i in badges}
-	save['options']['textSpeed'] = 'normal'
+	save['options']['text_speed'] = 'normal'
 if getuser() not in save['user']:
 	save['user'].append(getuser())
 is_debug = save['options']['debug']
@@ -860,7 +860,7 @@ except KeyError:
 	abort('Illegal or outdated save data detected!')
 
 # reset getch according to options
-reset_sp(text[save['options']['textSpeed']])
+reset_sp(text[save['options']['text_speed']])
 
 # main loop
 while not exit:
@@ -916,18 +916,18 @@ while not exit:
 				if option != '5':
 					sp('')
 				if option == '1':
-					save['options']['textSpeed'] = 'slow'
+					save['options']['text_speed'] = 'slow'
 					sp('Text Speed set to Slow!')
 				elif option == '2':
-					save['options']['textSpeed'] = 'normal'
+					save['options']['text_speed'] = 'normal'
 					sp('Text Speed set to Normal!')
 				elif option == '3':
-					save['options']['textSpeed'] = 'fast'
+					save['options']['text_speed'] = 'fast'
 					sp('Text Speed set to Fast!')
 				elif option == '4':
-					save['options']['textSpeed'] = 'ultra'
+					save['options']['text_speed'] = 'ultra'
 					sp('Text Speed set to Ultra!')
-				reset_sp(text[save['options']['textSpeed']])
+				reset_sp(text[save['options']['text_speed']])
 		elif option in ['2', '3']:
 			sp('Coming Soon!')
 		elif option == '4':
@@ -1113,8 +1113,8 @@ while not exit:
 			sg('Many Pokémon trainers hold him in high regard!')
 		elif option == '3':
 			if 'Oak\'s Parcel' in save['bag']:
-				sg(f'OAK: Oh, {save["name"]}! How is my old POKéMON? Well, it seems to like you a lot.')
-				sg('You must be talented as a POKéMON trainer!')
+				sg(f'OAK: Oh, {save["name"]}! How is my old Pokémon? Well, it seems to like you a lot.')
+				sg('You must be talented as a Pokémon trainer!')
 				sg('\n(You hold the parcel out to Professor OAK.)')
 				sg('\nOAK: What? You have something for me?')
 				sg(f'\n{save["name"]} delivered Oak\'s Parcel.\n')
@@ -1125,23 +1125,23 @@ while not exit:
 				sg('\nOAK: JOHNNY! You\'re just in time!')
 				sg('I have a request of you two.')
 				sg('On the desk there is my invention, POKEDEX!')
-				sg('It automatically records data on POKéMON you\'ve seen or caught, like a hi-tech encyclopedia!')
+				sg('It automatically records data on Pokémon you\'ve seen or caught, like a hi-tech encyclopedia!')
 				sg(f'\n{save["name"]} and JOHNNY! Take these with you!')
 				sg(f'({save["name"]} obtained the POKEDEX!)\n')
 				save['bag']['Pokedex'] = 1
-				sg('\nOAK: To make a complete guide on all the POKéMON in the world...')
+				sg('\nOAK: To make a complete guide on all the Pokémon in the world...')
 				sg('That was my dream! But, I\'m too old! I can\'t do it!')
 				sg('So, I want you two to fulfill my dream for me!')
-				sg('Get moving, you two! This is a great undertaking in POKéMON history!')
+				sg('Get moving, you two! This is a great undertaking in Pokémon history!')
 				sg('\nJOHNNY nods and takes his leave.')
-				sg(f'\nOAK: POKéMON around the world wait for you, {save["name"]}!')
+				sg(f'\nOAK: Pokémon around the world wait for you, {save["name"]}!')
 				
 			else:
 				sg('\nOAK: You\'ve caught a total of...')
 				sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
 		elif option == '4':
 			sg('\nThere\' an email message here:')
-			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKéMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
+			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPokémon LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
 		elif option == 'm':
 			menu_open = True
 		else:
@@ -1173,8 +1173,8 @@ while not exit:
 			save['location'] = 'viridian-s'
 		elif option == 's':
 			save['location'] = 'route1-s'
-			encounter = get_encounter('route1-s', 'tall-grass')
-			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			with get_encounter('route1-s', 'tall-grass')[0] as encounter:
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 'm':
 			menu_open = True
 		else:
@@ -1209,8 +1209,8 @@ while not exit:
 				sg('\nCLERK: Hey! You came from PALLET TOWN? You know Professor OAK, right?')
 				sg('His order came in. Will you take it to him?')
 				save['bag']['Oak\'s Parcel'] = 1
-				sg(f'\n{save["name"]} recieved Oak\'s Parcel!\n')
-				sg('Okay! Say hi to the Professor for me!')
+				sg(f'\n({save["name"]} recieved Oak\'s Parcel!)\n')
+				sg('CLERK: Okay! Say hi to the Professor for me!')
 		elif option == 'm':
 			menu_open = True
 
