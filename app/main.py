@@ -427,6 +427,7 @@ def type_effectiveness(move, defender) -> float:
 def prize_money(self=None, type='Pokémon Trainer') -> int:
 	return floor(trainer[type] * max(i.level for i in (save['party'] if self is None else self))) # type: ignore
 
+# find moves of a wild pokemon
 def find_moves(name, level) -> list:
 	learned_moves = [{**move, "pp": list(filter(lambda m, move=move: m['name'] == move['name'], moves))[0]['pp']} for move in dex[name]['moves'] if move['level'] <= level] # type: ignore
 
@@ -435,6 +436,29 @@ def find_moves(name, level) -> list:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves[:4]))
 	else:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
+
+# switch pokemon in battle
+def switch_pokemon(party_length: int) -> int:
+	sp(f'''\nWhich Pokémon should you switch to?\n\n{
+				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
+			}''')
+	switch_choice = ''
+	while not switch_choice:
+		while switch_choice == '':
+			switch_choice = get()
+		try:
+			if switch_choice not in [str(i+1) for i in range(party_length)]:
+				switch_choice = ''
+				sp('\nInvalid choice.')
+			elif switch_choice == "a":
+				break
+			elif save['party'][int(switch_choice)-1].check_fainted():
+				switch_choice = ''
+				sp('That Pokémon is fainted!')
+		except (TypeError, ValueError):
+			switch_choice = ''
+			sp('\nInvalid choice.')
+	return int(switch_choice)
 
 # create battle process
 def battle(opponent_party=None, battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
@@ -556,25 +580,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 		# choose switch
 		elif user_choice == '2': # type: ignore
-			sp(f'''\nWhich Pokémon should you switch to?\n\n{
-				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
-			}''')
-			switch_choice = ''
-			while not switch_choice:
-				while switch_choice == '':
-					switch_choice = get()
-				try:
-					if switch_choice not in [str(i+1) for i in range(party_length)]:
-						switch_choice = ''
-						sp('\nInvalid choice.')
-					elif switch_choice == "a":
-						break
-					elif save['party'][int(switch_choice)-1].check_fainted():
-						switch_choice = ''
-						sp('That Pokémon is fainted!')
-				except (TypeError, ValueError):
-					switch_choice = ''
-					sp('\nInvalid choice.')
+			switch_choice = switch_pokemon(party_length)
 			if int(switch_choice)-1 == current:
 				continue
 
@@ -638,6 +644,14 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# end battle if player wins
 		elif is_alive(save['party']) and not is_alive(opponent_party):
 			break
+
+		elif save['party'][current].check_fainted():
+			participating_pokemon = list(filter(lambda p: save['party'][p].name != save['party'][current].name, participating_pokemon))
+			switch_choice = switch_pokemon(party_length)
+			current = int(switch_choice)-1
+			switched = True
+			if int(switch_choice)-1 not in participating_pokemon:
+				participating_pokemon.append(current)
 
 		# display turn details
 		debug(f'Higher Speed: {"Player" if save["party"][current].stats["spe"] > opponent_party[opponent_current].stats["spe"] else "Opponent"}\nPlayer Attacked: {player_attacked_this_turn}\nOpponent Attacked: {opponent_attacked_this_turn}\n') # type: ignore
