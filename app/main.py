@@ -635,7 +635,8 @@ def heal(pokemon=None, party=None, type='party') -> None:
 			sp(f'{i.name} was healed to max health.')
 
 def get_encounter(loc, type) -> dict:
-	pokemon = weights = []
+	pokemon = []
+	weights = []
 	for chance in rates[loc][type]: # type: ignore
 		for i in range(len(rates[loc][type][chance])): # type: ignore
 			pokemon.append(rates[loc][type][chance][i]) # type: ignore
@@ -1173,8 +1174,8 @@ while not exit:
 			save['location'] = 'viridian-s'
 		elif option == 's':
 			save['location'] = 'route1-s'
-			with get_encounter('route1-s', 'tall-grass')[0] as encounter:
-				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			encounter = get_encounter('route1-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 'm':
 			menu_open = True
 		else:
