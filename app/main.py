@@ -744,9 +744,9 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 						amount = ''
 					else:
 						if pokemart[loc][int(choice)-1] not in save['bag']: # type: ignore
-							save['bag'][pokemart[loc][int(choice)-1]] = 1 # type: ignore
+							save['bag'][pokemart[loc][int(choice)-1]] = int(amount) # type: ignore
 						else:
-							save['bag'][pokemart[loc][int(choice)-1]] += 1 # type: ignore
+							save['bag'][pokemart[loc][int(choice)-1]] += int(amount) # type: ignore
 						save['money'] -= required_money
 						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)') # type: ignore
 						choice = ''
