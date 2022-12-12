@@ -2,67 +2,80 @@
 	"Antidote": {
 		"command": "antidote",
 		"price": 100,
-		"sell_price": 50
+		"sell_price": 50,
+		"battle": true
 	},
 	"Awakening": {
 		"command": "awakening",
 		"price": 200,
-		"sell_price": 125
+		"sell_price": 125,
+		"battle": true
 	},
 	"Bicycle": {
 		"command": "bicycle",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Bike Voucher": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Burn Heal": {
 		"command": "burn_heal",
 		"price": 250,
-		"sell_price": 125
+		"sell_price": 125,
+		"battle": true
 	},
 	"Calcium": {
 		"command": "calcium",
 		"price": 9800,
-		"sell_price": 4900
+		"sell_price": 4900,
+		"battle": false
 	},
 	"Carbos": {
 		"command": "carbos",
 		"price": 9800,
-		"sell_price": 4900
+		"sell_price": 4900,
+		"battle": false
 	},
 	"Card Key": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Coin": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Coin Case": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Dire Hit": {
 		"command": "dire_hit",
 		"price": 650,
-		"sell_price": 375
+		"sell_price": 375,
+		"battle": true
 	},
 	"Dome Fossil": {
 		"command": "null",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Elixir": {
 		"command": "elixir",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": true
 	},
 	"Escape Rope": {
 		"command": {
@@ -70,291 +83,349 @@
 			"overworld": "save['currentLocation'] = save['recent_center']"
 		},
 		"price": 550,
-		"sell_price": 275
+		"sell_price": 275,
+		"battle": false
 	},
 	"Ether": {
 		"command": "ether",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": true
 	},
 	"EXP. All": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Fire Stone": {
 		"command": "fire_stone",
 		"price": 2100,
-		"sell_price": 1050
+		"sell_price": 1050,
+		"battle": false
 	},
 	"Fresh Water": {
 		"command": "fresh_water",
 		"price": 200,
-		"sell_price": 100
+		"sell_price": 100,
+		"battle": true
 	},
 	"Full Heal": {
 		"command": "full_heal",
 		"price": 600,
-		"sell_price": 300
+		"sell_price": 300,
+		"battle": true
 	},
 	"Full Restore": {
 		"command": "full_restore",
 		"price": 3000,
-		"sell_price": 1500
+		"sell_price": 1500,
+		"battle": true
 	},
 	"Gold Teeth": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Good Rod": {
 		"command": "good_rod",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Great Ball": {
 		"command": "great_ball",
 		"price": 600,
-		"sell_price": 300
+		"sell_price": 300,
+		"battle": true
 	},
 	"Guard Spec.": {
 		"command": "guard_spec",
 		"price": 700,
-		"sell_price": 350
+		"sell_price": 350,
+		"battle": true
 	},
 	"Helix Fossil": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"HP Up": {
 		"command": "hp_up",
 		"price": 9800,
-		"sell_price": 4900
+		"sell_price": 4900,
+		"battle": false
 	},
 	"Hyper Potion": {
 		"command": "hyper_potion",
 		"price": 1200,
-		"sell_price": 600
+		"sell_price": 600,
+		"battle": true
 	},
 	"Ice Heal": {
 		"command": "ice_heal",
 		"price": 250,
-		"sell_price": 125
+		"sell_price": 125,
+		"battle": true
 	},
 	"Iron": {
 		"command": "iron",
 		"price": 9800,
-		"sell_price": 4900
+		"sell_price": 4900,
+		"battle": false
 	},
 	"Item Finder": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Leaf Stone": {
 		"command": "leaf_stone",
 		"price": 2100,
-		"sell_price": 1050
+		"sell_price": 1050,
+		"battle": false
 	},
 	"Lemonade": {
 		"command": "lemonade",
 		"price": 350,
-		"sell_price": 175
+		"sell_price": 175,
+		"battle": true
 	},
 	"Lift Key": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Master Ball": {
 		"command": "master_ball",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": true
 	},
 	"Max Elixir": {
 		"command": "max_elixir",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": true
 	},
 	"Max Ether": {
 		"command": "max_ether",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": true
 	},
 	"Max Potion": {
 		"command": "max_potion",
 		"price": 2500,
-		"sell_price": 1250
+		"sell_price": 1250,
+		"battle": true
 	},
 	"Max Repel": {
 		"command": "max_repel",
 		"price": 700,
-		"sell_price": 350
+		"sell_price": 350,
+		"battle": false
 	},
 	"Max Revive": {
 		"command": "max_revive",
 		"price": null,
-		"sell_price": 2000
+		"sell_price": 2000,
+		"battle": true
 	},
 	"Moon Stone": {
 		"command": "moon_stone",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Nugget": {
 		"command": null,
 		"price": null,
-		"sell_price": 5000
+		"sell_price": 5000,
+		"battle": false
 	},
 	"Oak's Parcel": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Old Amber": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Old Rod": {
 		"command": "old_rod",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Paralyze Heal": {
 		"command": "paralyze_heal",
 		"price": 200,
-		"sell_price": 100
+		"sell_price": 100,
+		"battle": true
 	},
 	"Poke Ball": {
 		"command": "poke_ball",
 		"price": 200,
-		"sell_price": 100
+		"sell_price": 100,
+		"battle": true
 	},
 	"Pokedex": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Poke Doll": {
 		"command": "poke_doll",
 		"price": 1000,
-		"sell_price": 500
+		"sell_price": 500,
+		"battle": false
 	},
 	"Poke Flute": {
 		"command": "poke_flute",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Potion": {
 		"command": "potion",
 		"price": 300,
-		"sell_price": 150
+		"sell_price": 150,
+		"battle": true
 	},
 	"PP Up": {
 		"command": "pp_up",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Protein": {
 		"command": "protein",
 		"price": 9800,
-		"sell_price": 4900
+		"sell_price": 4900,
+		"battle": false
 	},
 	"Rare Candy": {
 		"command": "rare_candy",
 		"price": null,
-		"sell_price": 2400
+		"sell_price": 2400,
+		"battle": false
 	},
 	"Repel": {
 		"command": "repel",
 		"price": 350,
-		"sell_price": 175
+		"sell_price": 175,
+		"battle": false
 	},
 	"Revive": {
 		"command": "revive",
 		"price": 1500,
-		"sell_price": 750
+		"sell_price": 750,
+		"battle": true
 	},
 	"S.S. Ticket": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Secret Key": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Silph Scope": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Soda Pop": {
 		"command": "soda_pop",
 		"price": 350,
-		"sell_price": 175
+		"sell_price": 175,
+		"battle": true
 	},
 	"Super Potion": {
 		"command": "super_potion",
 		"price": 700,
-		"sell_price": 350
+		"sell_price": 350,
+		"battle": true
 	},
 	"Super Repel": {
 		"command": "super_repel",
 		"price": 500,
-		"sell_price": 250
+		"sell_price": 250,
+		"battle": false
 	},
 	"Super rod": {
 		"command": "super_rod",
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Thunder Stone": {
 		"command": "thunder_stone",
 		"price": 2100,
-		"sell_price": 1050
+		"sell_price": 1050,
+		"battle": false
 	},
 	"Town Map": {
 		"command": null,
 		"price": null,
-		"sell_price": null
+		"sell_price": null,
+		"battle": false
 	},
 	"Ultra Ball": {
 		"command": "ultra_ball",
 		"price": 1200,
-		"sell_price": 600
+		"sell_price": 600,
+		"battle": true
 	},
 	"Water Stone": {
 		"command": "water_stone",
 		"price": 2100,
-		"sell_price": 1050
+		"sell_price": 1050,
+		"battle": false
 	},
 	"X Accuracy": {
 		"command": "x_accuracy",
 		"price": 950,
-		"sell_price": 475
+		"sell_price": 475,
+		"battle": true
 	},
 	"X Attack": {
 		"command": "x_attack",
 		"price": 500,
-		"sell_price": 250
+		"sell_price": 250,
+		"battle": true
 	},
 	"X Defend": {
 		"command": "x_defend",
 		"price": 550,
-		"sell_price": 275
+		"sell_price": 275,
+		"battle": true
 	},
 	"X Special": {
 		"command": "x_special",
 		"price": 350,
-		"sell_price": 175
+		"sell_price": 175,
+		"battle": true
 	},
 	"X Speed": {
 		"command": "x_speed",
 		"price": 350,
-		"sell_price": 175
+		"sell_price": 175,
+		"battle": true
 	}
 }
