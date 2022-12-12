@@ -16,7 +16,7 @@ A clear and concise description of the proposed change.
 
 **Proposed Change**:
 
-
+- 
 
 <!--
 - Reasoning -
@@ -25,23 +25,23 @@ Why should this change be made?
 
 **Reasoning**:
 
-
+- 
 
 <!--
 - Issue link -
 Is this PR related to an Issue? If so, link it here.
 -->
 
-**Issue Link**:
+**Issue Link**: 
 
 <!--
 - Additional information -
 Add any other context about the problem here.
 -->
 
-**Additional Information**:
+**Additional Information**: 
 
-
+- 
 
 <!--
 - Decline contribution acknowledgement -

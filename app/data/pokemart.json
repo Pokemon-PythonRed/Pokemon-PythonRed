@@ -1,0 +1,113 @@
+{
+    "viridian": [
+        "Poke Ball",
+        "Antidote",
+        "Paralyze Heal",
+        "Burn Heal"
+    ],
+    "pewter": [
+        "Poke Ball",
+        "Potion",
+        "Escape Rope",
+        "Antidote",
+        "Burn Heal",
+        "Awakening",
+        "Paralyze Heal"
+    ],
+    "cerulean": [
+        "Poke Ball",
+        "Potion",
+        "Escape Rope",
+        "Antidote",
+        "Burn Heal",
+        "Awakening",
+        "Paralyze Heal"
+    ],
+    "vermillion": [
+        "Poke Ball",
+        "Super Potion",
+        "Ice Heal",
+        "Awakening",
+        "Paralyze Heal",
+        "Repel"
+    ],
+    "lavender": [
+        "Great Ball",
+        "Super Potion",
+        "Revive",
+        "Escape Rope",
+        "Super Repel",
+        "Antidote",
+        "Burn Heal",
+        "Ice Heal",
+        "Paralyze Heal"
+    ],
+    "celadon-2f": [
+        "Great Ball",
+        "Super Potion",
+        "Revive",
+        "Super Repel",
+        "Antidote",
+        "Burn Heal",
+        "Ice Heal",
+        "Awakening",
+        "Paralyze Heal"
+    ],
+    "celdaon-4f": [
+        "Poke Doll",
+        "Fire Stone",
+        "Leaf Stone",
+        "Thunder Stone",
+        "Water Stone",
+        "Leaf Stone"
+    ],
+    "celadon-5f": [
+        "X Accuracy",
+        "Guard Spec.",
+        "Dire Hit",
+        "X Attack",
+        "X Defend",
+        "X Speed",
+        "X Special",
+        "HP Up",
+        "Protein",
+        "Iron",
+        "Carbos",
+        "Calcium"
+    ],
+    "celadon-game-corner": [],
+    "saffron": [
+        "Great Ball",
+        "Hyper Potion",
+        "Max Repel",
+        "Escape Rope",
+        "Full Heal",
+        "Revive"
+    ],
+    "fuchsia": [
+        "Ultra Ball",
+        "Great Ball",
+        "Super Potion",
+        "Revive",
+        "Full Heal",
+        "Super Repel"
+    ],
+    "cinnabar": [
+        "Ultra Ball",
+        "Great Ball",
+        "Hyper Potion",
+        "Max Repel",
+        "Escape Rope",
+        "Full Heal",
+        "Revive"
+    ],
+    "indigo": [
+        "Ultra Ball",
+        "Great Ball",
+        "Full Restore",
+        "Max Potion",
+        "Full Heal",
+        "Revive",
+        "Max Repel"
+    ]
+}
