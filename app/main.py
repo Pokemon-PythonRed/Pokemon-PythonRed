@@ -398,11 +398,14 @@ def is_alive(self) -> bool:
 	return any(not i.fainted for i in self)
 
 # use item from bag
-def use_item() -> str:
+def use_item(battle=False) -> str:
 	global save
 	item_used = False
 	sp('\nPlease choose an item to use.')
-	sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag']))
+	if battle:
+		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag'] if items[key]['battle']))
+	else:
+		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag']))
 	while not item_used:
 		item = ''
 		while not item:
@@ -591,7 +594,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 		# choose item
 		elif user_choice == '3': # type: ignore
-			item = use_item()
+			item = use_item(battle=True)
 			if (item == 'Poke Ball' or item == 'Great Ball' or item == 'Ultra Ball' or item == 'Master Ball') and battle_type == 'trainer':
 				sp("You can't catch another trainer's Pokémon!")
 			elif item == 'Poke Ball':
