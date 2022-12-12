@@ -35,6 +35,29 @@ elif platform() == 'Linux':
 else:
 	abort_early()
 
+# type colours
+colours = {
+	'NORMAL': '\x1b[0;0m',
+	'FIRE': '\x1b[38;5;196m',
+	'WATER': '\x1b[38;5;027m',
+	'GRASS': '\x1b[38;5;082m',
+	'ELECTRIC': '\x1b[38;5;184m',
+	'ICE': '\x1b[38;5;159m',
+	'FIGHTING': '\x1b[38;5;167m',
+	'POISON': '\x1b[38;5;135m',
+	'GROUND': '\x1b[38;5;215m',
+	'FLYING': '\x1b[38;5;183m',
+	'PSYCHIC': '\x1b[38;5;198m',
+	'BUG': '\x1b[38;5;028m',
+	'ROCK': '\x1b[38;5;179m',
+	'GHOST': '\x1b[38;5;126m',
+	'DRAGON': '\x1b[38;5;057m',
+	'DARK': '\x1b[38;5;095m',
+	'STEEL': '\x1b[38;5;250m',
+	'FAIRY': '\x1b[38;5;212m',
+	'RESET': '\x1b[0;0m'
+}
+
 # declare timed text output
 text = {
 	'slow': 0.03,
@@ -47,6 +70,8 @@ text_speed = 'normal'
 def reset_sp(speed) -> None:
 	global sp, sg
 	def sp(text, g=False) -> None:
+		for key in colours.keys():
+			text = text.replace(f'{key}', f'{colours[key]}{key}{colours["RESET"]}')
 		for char in f'{text}\n':
 			sleep(speed)
 			stdout.write(char)
@@ -115,29 +140,6 @@ bars_length = 20
 
 # enables ANSI escape codes in Windows
 system('')
-
-# type colours
-colours = {
-	'NORMAL': '\x1b[0;0m',
-	'FIRE': '\x1b[38;5;196m',
-	'WATER': '\x1b[38;5;027m',
-	'GRASS': '\x1b[38;5;082m',
-	'ELECTRIC': '\x1b[38;5;184m',
-	'ICE': '\x1b[38;5;159m',
-	'FIGHTING': '\x1b[38;5;167m',
-	'POISON': '\x1b[38;5;135m',
-	'GROUND': '\x1b[38;5;215m',
-	'FLYING': '\x1b[38;5;183m',
-	'PSYCHIC': '\x1b[38;5;198m',
-	'BUG': '\x1b[38;5;028m',
-	'ROCK': '\x1b[38;5;179m',
-	'GHOST': '\x1b[38;5;126m',
-	'DRAGON': '\x1b[38;5;057m',
-	'DARK': '\x1b[38;5;095m',
-	'STEEL': '\x1b[38;5;250m',
-	'FAIRY': '\x1b[38;5;212m',
-	'RESET': '\x1b[0;0m'
-}
 
 # error message
 def abort(message) -> None:
@@ -340,7 +342,7 @@ class Pokemon:
 					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv, m=m: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
 
 # catch Pokemon
-def catch(pokemon) -> None:
+def catch(pokemon: Pokemon) -> None:
 	global save
 	location = 'party' if len(save['party']) < 6 else 'box'
 	save[location].append(pokemon)
@@ -359,7 +361,7 @@ def catch(pokemon) -> None:
 		if 'caught' not in save['flag']['type'][pokemon.type]:
 			save['flag']['type'][pokemon.species]['caught'] = True
 	sg(f'\nYou caught {pokemon.name}!')
-	sg(f'\n{pokemon.name} ({colours[pokemon.type]}{pokemon.type}{colours["RESET"]}-type) was added to your {location}.')
+	sg(f'\n{pokemon.name} ({pokemon.type}-type) was added to your {location}.')
 
 # check if party is alive
 def is_alive(self) -> bool:
@@ -453,7 +455,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length) # type: ignore
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
-		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({colours[save["party"][current].type]}{save["party"][current].type}{colours["RESET"]}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({colours[opponent_party[opponent_current].type]}{opponent_party[opponent_current].type}{colours["RESET"]}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
 		
 		valid_choice = False
@@ -490,7 +492,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 				for i in range(len(save['party'][current].moves)):
 					move_entry = list(filter(lambda m, i=i: m['name'] == save['party'][current].moves[i]['name'], moves))[0] # type: ignore
-					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
+					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {move_entry["type"].upper()}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
 					options.append(str(i+1))
 				sp(f'[e] - Back\n')
 				valid_choice = False
@@ -946,7 +948,7 @@ while not exit:
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
-				sp('\n'.join(f'{i.name} ({colours[i.type]}{i.type}{colours["RESET"]}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
+				sp('\n'.join(f'{i.name} ({i.type}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
 			else:
 				sp('Your party is empty!')
 		elif option == 'i':
@@ -1031,7 +1033,7 @@ while not exit:
 					while not option and option not in ['1', '2', '3']:
 						option = get()
 					if option in ['1', '2', '3']:
-						sp(f'\nDo you want the {[colours["GRASS"], colours["FIRE"], colours["WATER"]][int(option)-1]}{["GRASS", "FIRE", "WATER"][int(option)-1]}{colours["RESET"]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
+						sp(f'\nDo you want the {["GRASS", "FIRE", "WATER"][int(option)-1]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
 						confirm = ''
 						while confirm not in yn:
 							confirm = get()
