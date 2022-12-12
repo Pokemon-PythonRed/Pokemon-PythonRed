@@ -696,7 +696,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				sp(f'\n{save["party"][current].name} won the battle!')
 			if earn_xp == True:
 				total_xp = ceil(opponent_party[opponent_current].calculate_xp())
-				print(total_xp)
+				debug(f'total xp: {total_xp}')
 				if 'EXP. All' in save['bag']:
 					for p in participating_pokemon:
 						save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
