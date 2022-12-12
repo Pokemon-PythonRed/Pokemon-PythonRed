@@ -668,7 +668,9 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	elif is_alive(save['party']) and not is_alive(opponent_party):
 		if save['flag']['been_to_route_1']:
 			if battle_type == 'trainer':
-				sp(f'\n{save["party"][current].name} won the battle!')
+				sg(f'\n{save["party"][current].name} won the battle!')
+				save['money'] += prize_money()
+				sg(f'You recieved ¥{str(prize_money())} as prize money.')
 			if earn_xp == True:
 				total_xp = ceil(opponent_party[opponent_current].calculate_xp())
 				debug(f'total xp: {total_xp}')
@@ -706,7 +708,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			if save['flag']['been_to_route_1']:
 				save['money'] -= prize_money()
 				sg('You lost the battle!')
-				sg(f'You gave ¥{str(prize_money())} as prize money.')
+				sg(f'You gave ¥{round(save["money"] / 2)} as prize money.')
 			else:
 				save['flag']['won_first_battle'] = False
 		sg('...')
