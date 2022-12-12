@@ -406,10 +406,13 @@ def use_item(battle=False) -> str:
 		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag'] if items[key]['battle']))
 	else:
 		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag']))
+	sp('[e] - Back\n')
 	while not item_used:
 		item = ''
 		while not item:
 			item = get()
+		if item == "e":
+			return "exit"
 		if item in save['bag']:
 			if save['bag'][item] > 0:
 				save['bag'][item] -= 1
@@ -595,6 +598,8 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# choose item
 		elif user_choice == '3': # type: ignore
 			item = use_item(battle=True)
+			if item == "exit":
+				continue
 			if (item == 'Poke Ball' or item == 'Great Ball' or item == 'Ultra Ball' or item == 'Master Ball') and battle_type == 'trainer':
 				sp("You can't catch another trainer's Pokémon!")
 			elif item == 'Poke Ball':
