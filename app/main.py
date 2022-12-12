@@ -444,20 +444,21 @@ def find_moves(name, level) -> list:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
 
 # switch pokemon in battle
-def switch_pokemon(party_length: int) -> int:
+def switch_pokemon(party_length: int) -> int or str:
 	sp(f'''\nWhich Pokémon should you switch to?\n\n{
 				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
 			}''')
+	sp('[e] - Back\n')
 	switch_choice = ''
 	while not switch_choice:
 		while switch_choice == '':
 			switch_choice = get()
+		if switch_choice == "e":
+			return "exit"
 		try:
 			if switch_choice not in [str(i+1) for i in range(party_length)]:
 				switch_choice = ''
 				sp('\nInvalid choice.')
-			elif switch_choice == "a":
-				break
 			elif save['party'][int(switch_choice)-1].check_fainted():
 				switch_choice = ''
 				sp('That Pokémon is fainted!')
@@ -587,6 +588,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# choose switch
 		elif user_choice == '2': # type: ignore
 			switch_choice = switch_pokemon(party_length)
+
+			if switch_choice == "exit":
+				continue
+
 			if int(switch_choice)-1 == current:
 				continue
 
