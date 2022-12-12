@@ -1210,7 +1210,7 @@ while not exit:
 				sg('His order came in. Will you take it to him?')
 				save['bag']['Oak\'s Parcel'] = 1
 				sg(f'\n({save["name"]} recieved Oak\'s Parcel!)\n')
-				sg('CLERK: Okay! Say hi to the Professor for me!')
+				sg('\nCLERK: Okay! Say hi to the Professor for me!')
 		elif option == 'm':
 			menu_open = True
 
