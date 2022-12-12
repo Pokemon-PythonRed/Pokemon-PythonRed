@@ -184,6 +184,14 @@ class Pokemon:
 		self.total_xp = xp['total'][self.level_type][str(self.level)] # type: ignore
 		self.current_xp = current_xp
 		self.moves = moves or find_moves(self.species, self.level)
+		self.status = {
+			'paralysis': False,
+			'sleep': False,
+			'freeze': False,
+			'burn': False,
+			'posion': False,
+			'confusion': False
+		}
 
 		# update pokedex
 		if self.species not in save['dex']:
@@ -342,7 +350,9 @@ class Pokemon:
 	def catch(self, ball: str) -> bool:
 		global save
 
-		status = 0
+		if self.status['freeze'] or self.status['sleep']: status = 25
+		elif self.status['burn'] or self.status['poison'] or self.status['paralysis']: status = 12
+		else: status = 0
 
 		C = dex[self.species]['catch']
 
