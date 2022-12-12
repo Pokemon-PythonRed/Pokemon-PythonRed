@@ -282,8 +282,8 @@ class Pokemon:
 			sp(f'\n{self.name} fainted!')
 
 	# calculate xp rewarded after battle
-	def calculate_xp(self, attacker, battle_type='wild') -> int:
-		return (xp['total'][attacker.level_type][str(attacker.level)] * attacker.level * (1 if battle_type == 'wild' else 1.5)) / 7 # type: ignore
+	def calculate_xp(self, battle_type='wild') -> int:
+		return (self.total_xp * self.level * (1 if battle_type == 'wild' else 1.5)) / 7 # type: ignore
 
 	# level up pokemon in context of battle
 	def give_xp(self, attacker, battle_type='wild') -> None:
@@ -509,6 +509,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	caught = False
 	catch_attempt = False
 	switched = False
+	participating_pokemon = [current]
 
 	# check if parties are alive
 	debug(f'\nPlayer party alive: {is_alive(save["party"])}\nOpponent party alive: {is_alive(opponent_party)}')
@@ -613,8 +614,13 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				except (TypeError, ValueError):
 					switch_choice = ''
 					sp('\nInvalid choice.')
+			if int(switch_choice)-1 == current:
+				continue
+
 			current = int(switch_choice)-1
 			switched = True
+			if int(switch_choice)-1 not in participating_pokemon:
+				participating_pokemon.append(current)
 
 		# choose item
 		elif user_choice == '3': # type: ignore
@@ -689,8 +695,28 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			if battle_type == 'trainer':
 				sp(f'\n{save["party"][current].name} won the battle!')
 			if earn_xp == True:
-				save['party'][current].current_xp += ceil(save['party'][current].calculate_xp(opponent_party[opponent_current])) # type: ignore
-				save['party'][current].check_level_up(save['party'])
+				total_xp = ceil(opponent_party[opponent_current].calculate_xp())
+				print(total_xp)
+				if 'EXP. All' in save['bag']:
+					for p in participating_pokemon:
+						save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
+						sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} xp')
+						save['party'][p].check_level_up(save['party'])
+
+					other_pokemon = []
+					for i in save['party']:
+						if i not in participating_pokemon: other_pokemon.append(i)
+					for o in other_pokemon:
+						save['party'][o].current_xp += floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))
+						sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} xp')
+						save['party'][o].check_level_up(save['party'])
+
+				else:
+					for p in participating_pokemon:
+						save['party'][p].current_xp += floor(total_xp / len(participating_pokemon))
+						sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} xp')
+						save['party'][p].check_level_up(save['party'])
+					sp("")
 				sleep(0.5)
 			if battle_type == 'trainer':
 				sp(f'\n{name}: {end_dialouge}')
