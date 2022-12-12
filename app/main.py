@@ -374,25 +374,12 @@ class Pokemon:
 			location = 'party' if len(save['party']) < 6 else 'box'
 			save[location].append(self)
 			save['dex'][self.species] = {'seen': True, 'caught': True}
-			# if self.species not in save['dex']:
-			# 	save['dex'].update({self.species: {'seen': True, 'caught': True}})
-			# elif 'seen' not in save['dex'][self.species]:
-			# 	save['dex'][self.species]['seen'] = True
-			# elif 'caught' not in save['dex'][self.species]:
-			# 	save['dex'][self.species]['caught'] = True
 			save['flag']['type'][self.type] = {'seen': True, 'caught': True}
-			# if self.type not in save['flag']['type']:
-			# 	save['flag']['type'].update({self.type: {'seen': True, 'caught': True}})
-			# else:
-			# 	if 'seen' not in save['flag']['type'][self.type]:
-			# 		save['flag']['type'][self.species]['seen'] = True
-			# 	if 'caught' not in save['flag']['type'][self.type]:
-			# 		save['flag']['type'][self.species]['caught'] = True
 			sg(f'\nYou caught {self.name}!')
 			sg(f'\n{self.name} ({colours[self.type]}{self.type}{colours["RESET"]}-type) was added to your {location}.')
 			return True
 		else:
-			if floor(C * 100 / B) > 255: # 3 wobbles
+			if floor(C * 100 / ball_modifier) > 255: # 3 wobbles
 				sp('Shoot! It was so close too!')
 			else:
 				wobble_chance = floor(C * 100 * min(255, floor(floor(self.stats['chp'] * 255 / 8 if ball == "Great Ball" else 12) / max(1, floor(self.stats['hp'] / 4)))) / 255) + status
