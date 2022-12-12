@@ -297,7 +297,7 @@ class Pokemon:
 				break
 
 	# raw level up
-	def level_up(self, pokemon):
+	def level_up(self, pokemon): # sourcery skip: low-code-quality
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sp(f'{pokemon.name} grew to level {pokemon.level}!')
@@ -503,17 +503,17 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					elif move_choice == "e":
 						valid_choice = True
 				
-				if move_choice == "e":
+				if move_choice == "e": # type: ignore
 					continue
 
-				chosen_move = save["party"][current].moves[int(move_choice)-1]
+				chosen_move = save["party"][current].moves[int(move_choice)-1] # type: ignore
 
 			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']: # type: ignore
 				damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
 				if chosen_move["name"] == "struggle":
 					save['party'][current].deal_struggle_damage(damage)
 				else:
-					save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+					save["party"][current].moves[int(move_choice)-1]['pp'] -= 1 # type: ignore
 
 				player_attacked_this_turn = True
 
@@ -530,7 +530,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					if switch_choice not in [str(i+1) for i in range(party_length)]:
 						switch_choice = ''
 						sp('\nInvalid choice.')
-					elif move_choice == "a":
+					elif move_choice == "a": # type: ignore
 						break
 					elif save['party'][int(switch_choice)-1].check_fainted():
 						switch_choice = ''
@@ -567,10 +567,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# player attack if player speed is lower
 		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn and escape_attempts == 0:
 			damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
-			if chosen_move["name"] == "struggle":
+			if chosen_move["name"] == "struggle": # type: ignore
 				save['party'][current].deal_struggle_damage(damage)
 			else:
-				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1 # type: ignore
 			player_attacked_this_turn = True
 
 		# end battle if player wins
@@ -634,17 +634,17 @@ def heal(pokemon=None, party=None, type='party') -> None:
 
 def get_encounter(loc, type) -> dict:
 	pokemon = weights = []
-	for chance in rates[loc][type]:
-		for i in range(len(rates[loc][type][chance])):
-			pokemon.append(rates[loc][type][chance][i])
+	for chance in rates[loc][type]: # type: ignore
+		for i in range(len(rates[loc][type][chance])): # type: ignore
+			pokemon.append(rates[loc][type][chance][i]) # type: ignore
 			weights.append(int(chance)/255)
 	return choices(pokemon, weights)[0]
 
-def display_pokemart(loc) -> None:
+def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 	choice = ''
 	action_choice = ''
-	exit = False
-	while not exit:
+	pokemart_exit = False
+	while not pokemart_exit:
 		while not action_choice:
 			while not action_choice:
 				sp("\n[b] - Buy\n[s] - Sell\n[e] - Back\n")
@@ -652,18 +652,16 @@ def display_pokemart(loc) -> None:
 			if action_choice not in ['b', 's', 'e']:
 				action_choice = ''
 		if action_choice == 'e':
-			exit = True
+			pokemart_exit = True
 		elif action_choice == 's':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
-				i = 1
 				options = ['e']
-				max_name_length = (len(max(pokemart[loc], key=len)))
-				for item in pokemart[loc]:
+				max_name_length = (len(max(pokemart[loc], key=len))) # type: ignore
+				for i, item in enumerate(pokemart[loc], start=1): # type: ignore
 					options.append(str(i))
-					price_len = len("{:,}".format(items[item]["price"]))
-					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["sell_price"])}')
-					i+=1
+					price_len = len("{:,}".format(items[item]["price"])) # type: ignore
+					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["sell_price"])}') # type: ignore
 				sp(f'[e] - Back\n')
 				while not choice:
 					choice = get()
@@ -675,10 +673,10 @@ def display_pokemart(loc) -> None:
 			else:
 				amount = 0
 				try:
-					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
-				except:
+					in_bag = save['bag'][pokemart[loc][int(choice)-1]] # type: ignore
+				except KeyError:
 					in_bag = 0
-				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})')
+				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})') # type: ignore
 				sp("Description coming soon")
 				sp("How many would you like to sell(1-99)? (press 'e' to go back)\n")
 				while not amount:
@@ -686,34 +684,29 @@ def display_pokemart(loc) -> None:
 						amount = get()
 					if amount == 'e':
 						break
-					if not amount.isnumeric():
-						amount = ''
-					elif int(amount) > 99 or int(amount) < 1:
+					if (not amount.isnumeric()) or int(amount) > 99 or int(amount) < 1:
 						amount = ''
 				if amount == 'e':
 					choice = ''
 					amount = ''
+				elif in_bag < int(amount):
+					sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
+					amount = ''
 				else:
-					if in_bag < int(amount):
-						sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
-						amount = ''
-					else:
-						save['bag'][pokemart[loc][int(choice)-1]] -= int(amount)
-						save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)
-						debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}')
-						choice = ''
-						
+					save['bag'][pokemart[loc][int(choice)-1]] -= int(amount) # type: ignore
+					save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount) # type: ignore
+					debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}') # type: ignore
+					choice = ''
+
 		elif action_choice == 'b':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
-				i = 1
 				options = ['e']
-				max_name_length = (len(max(pokemart[loc], key=len)))
-				for item in pokemart[loc]:
+				max_name_length = (len(max(pokemart[loc], key=len))) # type: ignore
+				for i, item in enumerate(pokemart[loc], start=1): # type: ignore
 					options.append(str(i))
-					price_len = len("{:,}".format(items[item]["price"]))
-					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["price"])}')
-					i+=1
+					price_len = len("{:,}".format(items[item]["price"])) # type: ignore
+					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["price"])}') # type: ignore
 				sp(f'[e] - Back\n')
 				while not choice:
 					choice = get()
@@ -725,11 +718,11 @@ def display_pokemart(loc) -> None:
 			else:
 				amount = 0
 				try:
-					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
-				except:
+					in_bag = save['bag'][pokemart[loc][int(choice)-1]] # type: ignore
+				except KeyError:
 					in_bag = 0
 
-				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})')
+				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})') # type: ignore
 				sp("Description coming soon")
 				sp("How many would you like to buy(1-99)? (press 'e' to go back)\n")
 				while not amount:
@@ -737,36 +730,34 @@ def display_pokemart(loc) -> None:
 						amount = get()
 					if amount == 'e':
 						break
-					if not amount.isnumeric():
-						amount = ''
-					elif int(amount) > 99 or int(amount) < 1:
+					if (not amount.isnumeric()) or int(amount) > 99 or int(amount) < 1:
 						amount = ''
 				if amount == 'e':
 					choice = ''
 					amount = ''
 				else:
-					required_money = items[pokemart[loc][int(choice)-1]]["price"]*int(amount)
+					required_money = items[pokemart[loc][int(choice)-1]]["price"]*int(amount) # type: ignore
 					if required_money > save['money']:
 						sp(f'\nYou do not have enough money (you need ¥{required_money-save["money"]} more)')
 						amount = ''
 					else:
-						if pokemart[loc][int(choice)-1] not in save['bag']:
-							save['bag'][pokemart[loc][int(choice)-1]] = 1
+						if pokemart[loc][int(choice)-1] not in save['bag']: # type: ignore
+							save['bag'][pokemart[loc][int(choice)-1]] = 1 # type: ignore
 						else:
-							save['bag'][pokemart[loc][int(choice)-1]] += 1
+							save['bag'][pokemart[loc][int(choice)-1]] += 1 # type: ignore
 						save['money'] -= required_money
-						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)')
+						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)') # type: ignore
 						choice = ''
 
 # display title screen
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
-# sleep(1)
+sleep(1)
 print(title[0])
-# sleep(2.65)
+sleep(2.65)
 print(title[1])
-# sleep(1.85)
+sleep(1.85)
 print(title[2])
 getch() # type: ignore
 cls() # type: ignore
@@ -817,8 +808,8 @@ for i in [
 	['save_template', 'save_template.json'],
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
-	['xp', 'level.json']
-  ['pokemart', 'pokemart.json']
+	['xp', 'level.json'],
+	['pokemart', 'pokemart.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
