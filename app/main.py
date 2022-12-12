@@ -306,32 +306,32 @@ class Pokemon:
 				if len(pokemon.moves) == 4:
 					sg(f'{pokemon.name} wants to learn {m["name"].upper()}!')
 					sg(f'But {pokemon.name} already knows 4 moves')
-					all_moves = [*pokemon.moves, m['name']]
+					all_moves = [*pokemon.moves, m]
 					move_forgotten = False
 					while not move_forgotten:
 						sp(f'Which move should {pokemon.name} forget?')
 						for i in range(5):
-							print(f'[{i+1}] - {all_moves[i].upper()}')
+							print(f'[{i+1}] - {all_moves[i]["name"].upper().replace("-", " ")}')
 						forget_move = ''
 						while not forget_move:
 							forget_move = get()
 							if forget_move not in ['1', '2', '3', '4', '5']:
 								forget_move = ''
 							else:
-								if all_moves[int(forget_move)-1] == m['name']:
+								if forget_move == '5':
 									sp(f'\nAre you sure you want {pokemon.name} to not learn {m["name"].upper()}? (Y/N)')
 								else:
-									sp(f'\nAre you sure you want {pokemon.name} to forget {all_moves[int(forget_move)-1].upper()}? (Y/N)')
+									sp(f'\nAre you sure you want {pokemon.name} to forget {all_moves[int(forget_move)-1]["name"].upper()}? (Y/N)')
 								option = ''
 								while option not in ['y','n']:
 									option = get()
 								if option in ['y']:
-									if all_moves[int(forget_move)-1] == m['name']:
+									if forget_move == '5':
 										sp(f'\n{pokemon.name} didn\'t learn {m["name"].upper()}')
 									else:
-										sp(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1].upper()}\n')
+										sp(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1]["name"].upper()}\n')
 										sp(f'\n{pokemon.name} learned {m["name"].upper()}!')
-										pokemon.moves = [m for m in pokemon.moves if m['name'] != all_moves[int(forget_move) - 1]]
+										pokemon.moves = [m for m in pokemon.moves if m['name'] != all_moves[int(forget_move) - 1]['name']]
 
 										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
 									move_forgotten = True
@@ -1317,7 +1317,8 @@ while not exit:
 			option = get()
 		if option == 'w':
 			if save['flag']['delivered_package']:
-				save['location'] = 'viridian-n'
+				sg('\nComing soon!')
+				# save['location'] = 'viridian-n'
 			else:
 				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
 				sg('\nMAN: Hey you, get off my property!')
