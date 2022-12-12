@@ -1136,7 +1136,6 @@ while not exit:
 				sg('Get moving, you two! This is a great undertaking in Pokémon history!')
 				sg('\nJOHNNY nods and takes his leave.')
 				sg(f'\nOAK: Pokémon around the world wait for you, {save["name"]}!')
-				
 			else:
 				sg('\nOAK: You\'ve caught a total of...')
 				sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
