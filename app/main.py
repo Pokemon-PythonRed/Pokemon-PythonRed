@@ -304,12 +304,12 @@ class Pokemon:
 		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
 				if len(pokemon.moves) == 4:
-					print(f'{pokemon.name} wants to learn {m["name"].upper()}!')
-					print(f'But {pokemon.name} already knows 4 moves')
+					sg(f'{pokemon.name} wants to learn {m["name"].upper()}!')
+					sg(f'But {pokemon.name} already knows 4 moves')
 					all_moves = [*pokemon.moves, m['name']]
 					move_forgotten = False
 					while not move_forgotten:
-						print(f'Which move should {pokemon.name} forget?')
+						sp(f'Which move should {pokemon.name} forget?')
 						for i in range(5):
 							print(f'[{i+1}] - {all_moves[i].upper()}')
 						forget_move = ''
@@ -319,58 +319,129 @@ class Pokemon:
 								forget_move = ''
 							else:
 								if all_moves[int(forget_move)-1] == m['name']:
-									print(f'\nAre you sure you want {pokemon.name} to not learn {m["name"].upper()}? (Y/N)')
+									sp(f'\nAre you sure you want {pokemon.name} to not learn {m["name"].upper()}? (Y/N)')
 								else:
-									print(f'\nAre you sure you want {pokemon.name} to forget {all_moves[int(forget_move)-1].upper()}? (Y/N)')
+									sp(f'\nAre you sure you want {pokemon.name} to forget {all_moves[int(forget_move)-1].upper()}? (Y/N)')
 								option = ''
 								while option not in ['y','n']:
 									option = get()
 								if option in ['y']:
 									if all_moves[int(forget_move)-1] == m['name']:
-										print(f'\n{pokemon.name} didn\'t learn {m["name"].upper()}')
+										sp(f'\n{pokemon.name} didn\'t learn {m["name"].upper()}')
 									else:
-										print(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1].upper()}\n')
-										print(f'\n{pokemon.name} learned {m["name"].upper()}')
+										sp(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1].upper()}\n')
+										sp(f'\n{pokemon.name} learned {m["name"].upper()}!')
 										pokemon.moves = [m for m in pokemon.moves if m['name'] != all_moves[int(forget_move) - 1]]
 
 										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
 									move_forgotten = True
 				else:
-					print(f'{pokemon.name} learned {m["name"].upper()}')
+					sg(f'{pokemon.name} learned {m["name"].upper()}')
 					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv, m=m: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
+	# catch Pokemon
+	def catch(self, ball: str) -> bool:
+		global save
 
-# catch Pokemon
-def catch(pokemon) -> None:
-	global save
-	location = 'party' if len(save['party']) < 6 else 'box'
-	save[location].append(pokemon)
-	if pokemon.species not in save['dex']:
-		save['dex'].update({pokemon.species: {'seen': True, 'caught': True}})
-	else:
-		if 'seen' not in save['dex'][pokemon.species]:
-			save['dex'][pokemon.species]['seen'] = True
-		if 'caught' not in save['dex'][pokemon.species]:
-			save['dex'][pokemon.species]['caught'] = True
-	if pokemon.type not in save['flag']['type']:
-		save['flag']['type'].update({pokemon.type: {'seen': True, 'caught': True}})
-	else:
-		if 'seen' not in save['flag']['type'][pokemon.type]:
-			save['flag']['type'][pokemon.species]['seen'] = True
-		if 'caught' not in save['flag']['type'][pokemon.type]:
-			save['flag']['type'][pokemon.species]['caught'] = True
-	sg(f'\nYou caught {pokemon.name}!')
-	sg(f'\n{pokemon.name} ({colours[pokemon.type]}{pokemon.type}{colours["RESET"]}-type) was added to your {location}.')
+		status = 0
+
+		C = dex[self.species]['catch']
+
+		if ball == "Poke Ball":
+			if self.stats['hp'] / 3 >= self.stats['chp'] and (status + C + 1) / 256 >= 1:
+				catch = True
+			else:
+				B = 256
+				X = randint(0, B-1)
+				if X < status:
+					catch = True
+				elif X > status + C:
+					catch = False
+				else:
+					if min(255, floor(floor(self.stats['hp'] * 255 / 12) / max(1, floor(self.stats['chp'] / 4)))) < randint(0,255):
+						catch = False
+					else:
+						catch = True
+
+		elif ball == "Great Ball":
+			if self.stats['hp'] / 2 >= self.stats['chp'] and (status + C + 1) / 201 >= 1:
+					catch = True
+			else:
+				B = 201
+				X = randint(0,B+1)
+				if X < status:
+					catch = True
+				elif X > status + C:
+					catch = False
+				else:
+					if min(255, floor(floor(self.stats['hp'] * 255 / 8) / max(1, floor(self.stats['chp'] / 4)))) < randint(0,255):
+						catch = False
+					else:
+						catch = True
+		elif ball == "Ultra Ball":
+			if self.stats['hp'] / 3 >= self.stats['chp'] and (status + C + 1) / 151 >= 1:
+					catch = True
+			else:
+				B = 151
+				X = randint(0, B+1)
+				if X < status:
+					catch = True
+				elif X > status + C:
+					catch = False
+				else:
+					if min(255, floor(floor(self.stats['hp'] * 255 / 12) / max(1, floor(self.stats['chp'] / 4)))) < randint(0,255):
+						catch = False
+					else:
+						catch = True
+		elif ball == "Master Ball":
+			catch = True
+		else: print(ball)
+
+		if catch:
+			location = 'party' if len(save['party']) < 6 else 'box'
+			save[location].append(self)
+			save['dex'][self.species] = {'seen': True, 'caught': True}
+			# if self.species not in save['dex']:
+			# 	save['dex'].update({self.species: {'seen': True, 'caught': True}})
+			# elif 'seen' not in save['dex'][self.species]:
+			# 	save['dex'][self.species]['seen'] = True
+			# elif 'caught' not in save['dex'][self.species]:
+			# 	save['dex'][self.species]['caught'] = True
+			save['flag']['type'][self.type] = {'seen': True, 'caught': True}
+			# if self.type not in save['flag']['type']:
+			# 	save['flag']['type'].update({self.type: {'seen': True, 'caught': True}})
+			# else:
+			# 	if 'seen' not in save['flag']['type'][self.type]:
+			# 		save['flag']['type'][self.species]['seen'] = True
+			# 	if 'caught' not in save['flag']['type'][self.type]:
+			# 		save['flag']['type'][self.species]['caught'] = True
+			sg(f'\nYou caught {self.name}!')
+			sg(f'\n{self.name} ({colours[self.type]}{self.type}{colours["RESET"]}-type) was added to your {location}.')
+			return True
+		else:
+			if floor(C * 100 / B) > 255: # 3 wobbles
+				sp('Shoot! It was so close too!')
+			else:
+				wobble_chance = floor(C * 100 * min(255, floor(floor(self.stats['chp'] * 255 / 8 if ball == "Great Ball" else 12) / max(1, floor(self.stats['hp'] / 4)))) / 255) + status
+				if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
+					sp('The ball missed the Pokémon!')
+				elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
+					sp('Darn! The Pokémon broke free!')
+				elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
+					sp('Aww! It appeared to be caught!')
+				elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
+					sp('Shoot! It was so close too!')					
+			return False
 
 # check if party is alive
 def is_alive(self) -> bool:
 	return any(not i.fainted for i in self)
 
 # use item from bag
-def use_item():
+def use_item() -> str:
 	global save
 	item_used = False
 	sp('\nPlease choose an item to use.')
-	sp('\n'.join(f'{key}: {val}' for key, val in save['bag']))
+	sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag']))
 	while not item_used:
 		item = ''
 		while not item:
@@ -378,7 +449,8 @@ def use_item():
 		if item in save['bag']:
 			if save['bag'][item] > 0:
 				save['bag'][item] -= 1
-				exec(items[item]['command']) # type: ignore
+				# exec(items[item]['command']) # type: ignore
+				return item
 			else:
 				sp('You have none of that item!')
 
@@ -436,6 +508,9 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	# battle variables
 	escaped_from_battle = False
 	escape_attempts = 0
+	caught = False
+	catch_attempt = False
+	switched = False
 
 	# check if parties are alive
 	debug(f'\nPlayer party alive: {is_alive(save["party"])}\nOpponent party alive: {is_alive(opponent_party)}')
@@ -447,6 +522,8 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		debug('Turn start!')
 		player_attacked_this_turn = False
 		opponent_attacked_this_turn = False
+		catch_attempt = False
+		switched = False
 
 		# calculate health bars according to ratio (chp:hp)
 		bars = ceil((save['party'][current].stats['chp']/(save['party'][current].stats['hp']))*bars_length)
@@ -520,7 +597,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# choose switch
 		elif user_choice == '2': # type: ignore
 			sp(f'''\nWhich Pokémon should you switch to?\n\n{
-				''.join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
+				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
 			}''')
 			switch_choice = ''
 			while not switch_choice:
@@ -530,7 +607,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					if switch_choice not in [str(i+1) for i in range(party_length)]:
 						switch_choice = ''
 						sp('\nInvalid choice.')
-					elif move_choice == "a":
+					elif switch_choice == "a":
 						break
 					elif save['party'][int(switch_choice)-1].check_fainted():
 						switch_choice = ''
@@ -539,13 +616,33 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					switch_choice = ''
 					sp('\nInvalid choice.')
 			current = int(switch_choice)-1
+			switched = True
 
 		# choose item
 		elif user_choice == '3': # type: ignore
-			if save['bag']:
-				use_item()
-			else:
-				sp("You have no items!")
+			item = use_item()
+			if (item == 'Poke Ball' or item == 'Great Ball' or item == 'Ultra Ball' or item == 'Master Ball') and battle_type == 'trainer':
+				sp("You can't catch another trainer's Pokémon!")
+			elif item == 'Poke Ball':
+				if opponent_party[opponent_current].catch("Poke Ball"):
+					caught = True
+					break
+				else: catch_attempt = True
+			elif item == 'Great Ball':
+				if opponent_party[opponent_current].catch("Great Ball"):
+					caught = True
+					break
+				else: catch_attempt = True
+			elif item == 'Ultra Ball':
+				if opponent_party[opponent_current].catch("Ultra Ball"):
+					caught = True
+					break
+				else: catch_attempt = True
+			elif item == 'Master Ball':
+				if opponent_party[opponent_current].catch("Master Ball"):
+					caught = True
+					break
+				else: catch_attempt = True
 
 		# choose run
 		elif user_choice == '4': # type: ignore
@@ -565,7 +662,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			opponent_attacked_this_turn = True
 
 		# player attack if player speed is lower
-		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn and escape_attempts == 0:
+		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn and escape_attempts == 0 and not catch_attempt and not switched:
 			damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
 			if chosen_move["name"] == "struggle":
 				save['party'][current].deal_struggle_damage(damage)
@@ -580,9 +677,15 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# display turn details
 		debug(f'Higher Speed: {"Player" if save["party"][current].stats["spe"] > opponent_party[opponent_current].stats["spe"] else "Opponent"}\nPlayer Attacked: {player_attacked_this_turn}\nOpponent Attacked: {opponent_attacked_this_turn}\n') # type: ignore
 
-	# upon winning
+	# upon escaping
 	if escaped_from_battle:
 		sp('You escaped!')
+	
+	# upon catching
+	elif caught:
+		pass
+
+	# upon winning
 	elif is_alive(save['party']) and not is_alive(opponent_party):
 		if save['flag']['been_to_route_1']:
 			if battle_type == 'trainer':
@@ -615,7 +718,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 	# if battle is neither won nor lost
 	else:
-		abort('\nInvalid battle state; neither won, lost, nor escaped. Could not load player turn.')
+		abort('\nInvalid battle state; neither won, lost, caught, nor escaped. Could not load player turn.')
 
 # pokemon center heal
 def heal(pokemon=None, party=None, type='party') -> None:
@@ -952,7 +1055,7 @@ while not exit:
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
-				sp('\n'.join(f'{i.name} ({colours[i.type]}{i.type}{colours["RESET"]}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
+				sp('\n'.join(f'{i.name} ({colours[i.type]}{i.type}{colours["RESET"]}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP\n' for i in save['party'])) # type: ignore
 			else:
 				sp('Your party is empty!')
 		elif option == 'i':
