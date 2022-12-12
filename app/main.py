@@ -143,7 +143,7 @@ system('')
 
 # error message
 def abort(message) -> None:
-	print(f'\n{colours["FIRE"]}INTERNAL ERROR{colours["RESET"]}\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
+	print(f'\n{colours["FIRE"]}- - - INTERNAL ERROR - - -{colours["RESET"]}\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
 	input('\n> ')
 	global exit
 	exit = True
@@ -844,17 +844,20 @@ if start_option == '1':
 		debug(f'{type(save["party"][i])}')
 
 # check for illegal save data
-if max([
-	len(save['name']) > 15,
-	len(save['party']) > 6,
-	save['flag']['been_to_route_1'] and len(save['party']) == 0,
-	save['flag']['chosen_starter'] and not save['flag']['intro_complete'],
-	save['flag']['chosen_starter'] and save['location'] == '',
-	save['name'] != '' and not save['flag']['intro_complete'],
-	save['name'] != save['name'].upper(),
-	save['name'] == '' and save['flag']['intro_complete']
-]):
-	abort('Illegal save data detected!')
+try:
+	if max([
+		len(save['name']) > 15,
+		len(save['party']) > 6,
+		save['flag']['been_to_route_1'] and len(save['party']) == 0,
+		save['flag']['chosen_starter'] and not save['flag']['intro_complete'],
+		save['flag']['chosen_starter'] and save['location'] == '',
+		save['name'] != '' and not save['flag']['intro_complete'],
+		save['name'] != save['name'].upper(),
+		save['name'] == '' and save['flag']['intro_complete']
+	]):
+		abort('Illegal or outdated save data detected!')
+except KeyError:
+	abort('Illegal or outdated save data detected!')
 
 # reset getch according to options
 reset_sp(text[save['options']['textSpeed']])
@@ -1110,37 +1113,35 @@ while not exit:
 			sg('Many Pokémon trainers hold him in high regard!')
 		elif option == '3':
 			if 'Oak\'s Parcel' in save['bag']:
-				sg(f'OAK: Oh, {save["name"]}! How is my old POKEMON? Well, it seems to like you a lot.')
-				sg('OAK: You must be talented as a POKEMON trainer!')
-				sg('OAK: What? You have something for me?')
+				sg(f'OAK: Oh, {save["name"]}! How is my old POKéMON? Well, it seems to like you a lot.')
+				sg('You must be talented as a POKéMON trainer!')
+				sg('\n(You hold the parcel out to Professor OAK.)')
+				sg('\nOAK: What? You have something for me?')
 				sg(f'\n{save["name"]} delivered Oak\'s Parcel.\n')
 				save['flag']['delivered_package'] = True
 				save['bag'].pop('Oak\'s Parcel')
 				sg('OAK: Ah! This is the custom POKE BALL I ordered! Thank you!')
-				sg('JOHNNY enters the building.')
-				sg('JOHNNY: Gramps! What did you call me for?')
-				sg('OAK: Oh right! I have a request of you two.')
-				sg('OAK: On the desk there is my invention, POKEDEX!')
-				sg('OAK: It automatically records data on POKEMON you\'ve seen or caught!')
-				sg('OAK: It\'s a hi-tech encyclopedia!')
-				sg(f'OAK: {save["name"]} and JOHNNY! Take these with you!')
-				sg(f'\n{save["name"]} obtained the POKEDEX!\n')
+				sg('\nJust at that moment, JOHNNY enters the building. OAK notices and calls him over.')
+				sg('\nOAK: JOHNNY! You\'re just in time!')
+				sg('I have a request of you two.')
+				sg('On the desk there is my invention, POKEDEX!')
+				sg('It automatically records data on POKéMON you\'ve seen or caught, like a hi-tech encyclopedia!')
+				sg(f'\n{save["name"]} and JOHNNY! Take these with you!')
+				sg(f'({save["name"]} obtained the POKEDEX!)\n')
 				save['bag']['Pokedex'] = 1
-				sg('OAK: To make a complete guide on all the POKEMON in the world...')
-				sg('OAK: That was my dream! But, I\'m too old! I can\'t do it!')
-				sg('OAK: So, I want you two to fulfill my dream for me!')
-				sg('OAK: Get moving, you two! This is a great undertaking in POKEMON history!')
-				sg('JOHNNY: Alright Gramps! Leave it all to me!')
-				sg(f'JOHNNY: {save["name"]}, I hate to say it, but I don\'t need you!')
-				sg(f'JOHNNY: I know! I\'ll borrow a TOWN MAP from my sis! I\'ll tell her not to lend you one, {save["name"]}! Hahaha!')
-				sg(f'OAK: POKEMON around the world wait for you, {save["name"]}!')
+				sg('\nOAK: To make a complete guide on all the POKéMON in the world...')
+				sg('That was my dream! But, I\'m too old! I can\'t do it!')
+				sg('So, I want you two to fulfill my dream for me!')
+				sg('Get moving, you two! This is a great undertaking in POKéMON history!')
+				sg('\nJOHNNY nods and takes his leave.')
+				sg(f'\nOAK: POKéMON around the world wait for you, {save["name"]}!')
 				
 			else:
 				sg('\nOAK: You\'ve caught a total of...')
 				sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
 		elif option == '4':
 			sg('\nThere\' an email message here:')
-			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKEMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
+			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKéMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
 		elif option == 'm':
 			menu_open = True
 		else:
@@ -1203,13 +1204,13 @@ while not exit:
 			if save['flag']['delivered_package']:
 				display_pokemart('viridian')
 			elif 'Oak\'s Parcel' in save['bag']:
-				sg("...") # Not sure what to put here
+				sg('CLERK: Please deliver Oak\'s Parcel!')
 			else:
-				sg('\nCLERK: Hey! You came from PALLET TOWN? You know PROF.OAK, right?')
+				sg('\nCLERK: Hey! You came from PALLET TOWN? You know Professor OAK, right?')
 				sg('His order came in. Will you take it to him?')
 				save['bag']['Oak\'s Parcel'] = 1
 				sg(f'\n{save["name"]} recieved Oak\'s Parcel!\n')
-				sg('Okay! Say hi to PROF.OAK for me!')
+				sg('Okay! Say hi to the Professor for me!')
 		elif option == 'm':
 			menu_open = True
 
