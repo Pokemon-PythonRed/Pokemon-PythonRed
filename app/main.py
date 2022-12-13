@@ -11,7 +11,7 @@ from json import dumps, loads
 from math import ceil, floor, sqrt
 from os import path, system, remove
 from platform import system as platform
-from random import choice, randint, choices
+from random import choice, choices, randint
 # TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
@@ -35,6 +35,29 @@ elif platform() == 'Linux':
 else:
 	abort_early()
 
+# type colours
+colours = {
+	'NORMAL': '\x1b[0;0m',
+	'FIRE': '\x1b[38;5;196m',
+	'WATER': '\x1b[38;5;027m',
+	'GRASS': '\x1b[38;5;082m',
+	'ELECTRIC': '\x1b[38;5;184m',
+	'ICE': '\x1b[38;5;159m',
+	'FIGHTING': '\x1b[38;5;167m',
+	'POISON': '\x1b[38;5;135m',
+	'GROUND': '\x1b[38;5;215m',
+	'FLYING': '\x1b[38;5;183m',
+	'PSYCHIC': '\x1b[38;5;198m',
+	'BUG': '\x1b[38;5;028m',
+	'ROCK': '\x1b[38;5;179m',
+	'GHOST': '\x1b[38;5;126m',
+	'DRAGON': '\x1b[38;5;057m',
+	'DARK': '\x1b[38;5;095m',
+	'STEEL': '\x1b[38;5;250m',
+	'FAIRY': '\x1b[38;5;212m',
+	'RESET': '\x1b[0;0m'
+}
+
 # declare timed text output
 text = {
 	'slow': 0.03,
@@ -47,6 +70,8 @@ text_speed = 'normal'
 def reset_sp(speed) -> None:
 	global sp, sg
 	def sp(text, g=False) -> None:
+		for key in colours.keys():
+			text = text.replace(f'{key}', f'{colours[key]}{key}{colours["RESET"]}')
 		for char in f'{text}\n':
 			sleep(speed)
 			stdout.write(char)
@@ -116,32 +141,9 @@ bars_length = 20
 # enables ANSI escape codes in Windows
 system('')
 
-# type colours
-colours = {
-	'NORMAL': '\x1b[0;0m',
-	'FIRE': '\x1b[38;5;196m',
-	'WATER': '\x1b[38;5;027m',
-	'GRASS': '\x1b[38;5;082m',
-	'ELECTRIC': '\x1b[38;5;184m',
-	'ICE': '\x1b[38;5;159m',
-	'FIGHTING': '\x1b[38;5;167m',
-	'POISON': '\x1b[38;5;135m',
-	'GROUND': '\x1b[38;5;215m',
-	'FLYING': '\x1b[38;5;183m',
-	'PSYCHIC': '\x1b[38;5;198m',
-	'BUG': '\x1b[38;5;028m',
-	'ROCK': '\x1b[38;5;179m',
-	'GHOST': '\x1b[38;5;126m',
-	'DRAGON': '\x1b[38;5;057m',
-	'DARK': '\x1b[38;5;095m',
-	'STEEL': '\x1b[38;5;250m',
-	'FAIRY': '\x1b[38;5;212m',
-	'RESET': '\x1b[0;0m'
-}
-
 # error message
 def abort(message) -> None:
-	print(f'\n{colours["FIRE"]}INTERNAL ERROR{colours["RESET"]}\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
+	print(f'\n{colours["FIRE"]}- - - INTERNAL ERROR - - -{colours["RESET"]}\n\nERROR MESSAGE: {message}\n\nIf you have not edited any files, feel free to create an issue on the repository by going to the link below.\n\nNote: your save file will be preserved in the program folder. Any unsaved progress will be lost (sorry).\n\n[{link["issue"]}]\n\nPress Enter to exit.')
 	input('\n> ')
 	global exit
 	exit = True
@@ -305,7 +307,7 @@ class Pokemon:
 				break
 
 	# raw level up
-	def level_up(self, pokemon):
+	def level_up(self, pokemon): # sourcery skip: low-code-quality
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sp(f'{pokemon.name} grew to level {pokemon.level}!')
@@ -346,6 +348,7 @@ class Pokemon:
 				else:
 					sg(f'{pokemon.name} learned {m["name"].upper()}')
 					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv, m=m: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
+
 	# catch Pokemon
 	def catch(self, ball: str) -> bool:
 		global save
@@ -531,7 +534,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length) # type: ignore
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
-		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({colours[save["party"][current].type]}{save["party"][current].type}{colours["RESET"]}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({colours[opponent_party[opponent_current].type]}{opponent_party[opponent_current].type}{colours["RESET"]}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
 		
 		valid_choice = False
@@ -568,7 +571,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 				for i in range(len(save['party'][current].moves)):
 					move_entry = list(filter(lambda m, i=i: m['name'] == save['party'][current].moves[i]['name'], moves))[0] # type: ignore
-					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {colours[move_entry["type"].upper()]}{move_entry["type"].upper()}{colours["RESET"]}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
+					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {move_entry["type"].upper()}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
 					options.append(str(i+1))
 				sp(f'[e] - Back\n')
 				valid_choice = False
@@ -581,17 +584,17 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 					elif move_choice == "e":
 						valid_choice = True
 				
-				if move_choice == "e":
+				if move_choice == "e": # type: ignore
 					continue
 
-				chosen_move = save["party"][current].moves[int(move_choice)-1]
+				chosen_move = save["party"][current].moves[int(move_choice)-1] # type: ignore
 
 			if save['party'][current].stats['spe'] >= opponent_party[opponent_current].stats['spe']: # type: ignore
 				damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
 				if chosen_move["name"] == "struggle":
 					save['party'][current].deal_struggle_damage(damage)
 				else:
-					save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+					save["party"][current].moves[int(move_choice)-1]['pp'] -= 1 # type: ignore
 
 				player_attacked_this_turn = True
 
@@ -658,10 +661,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# player attack if player speed is lower
 		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn and escape_attempts == 0 and not catch_attempt and not switched:
 			damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
-			if chosen_move["name"] == "struggle":
+			if chosen_move["name"] == "struggle": # type: ignore
 				save['party'][current].deal_struggle_damage(damage)
 			else:
-				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1
+				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1 # type: ignore
 			player_attacked_this_turn = True
 
 		# end battle if player wins
@@ -760,19 +763,19 @@ def heal(pokemon=None, party=None, type='party') -> None:
 			sp(f'{i.name} was healed to max health.')
 
 def get_encounter(loc, type) -> dict:
-	weights = []
 	pokemon = []
-	for chance in rates[loc][type]:
-		for i in range(len(rates[loc][type][chance])):
-			pokemon.append(rates[loc][type][chance][i])
+	weights = []
+	for chance in rates[loc][type]: # type: ignore
+		for i in range(len(rates[loc][type][chance])): # type: ignore
+			pokemon.append(rates[loc][type][chance][i]) # type: ignore
 			weights.append(int(chance)/255)
 	return choices(pokemon, weights)[0]
 
-def display_pokemart(loc) -> None:
+def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 	choice = ''
 	action_choice = ''
-	exit = False
-	while not exit:
+	pokemart_exit = False
+	while not pokemart_exit:
 		while not action_choice:
 			while not action_choice:
 				sp("\n[b] - Buy\n[s] - Sell\n[e] - Back\n")
@@ -780,18 +783,16 @@ def display_pokemart(loc) -> None:
 			if action_choice not in ['b', 's', 'e']:
 				action_choice = ''
 		if action_choice == 'e':
-			exit = True
+			pokemart_exit = True
 		elif action_choice == 's':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
-				i = 1
 				options = ['e']
-				max_name_length = (len(max(pokemart[loc], key=len)))
-				for item in pokemart[loc]:
+				max_name_length = (len(max(pokemart[loc], key=len))) # type: ignore
+				for i, item in enumerate(pokemart[loc], start=1): # type: ignore
 					options.append(str(i))
-					price_len = len("{:,}".format(items[item]["price"]))
-					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["sell_price"])}')
-					i+=1
+					price_len = len("{:,}".format(items[item]["price"])) # type: ignore
+					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["sell_price"])}') # type: ignore
 				sp(f'[e] - Back\n')
 				while not choice:
 					choice = get()
@@ -803,10 +804,10 @@ def display_pokemart(loc) -> None:
 			else:
 				amount = 0
 				try:
-					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
-				except:
+					in_bag = save['bag'][pokemart[loc][int(choice)-1]] # type: ignore
+				except KeyError:
 					in_bag = 0
-				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})')
+				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})') # type: ignore
 				sp("Description coming soon")
 				sp("How many would you like to sell(1-99)? (press 'e' to go back)\n")
 				while not amount:
@@ -814,34 +815,29 @@ def display_pokemart(loc) -> None:
 						amount = get()
 					if amount == 'e':
 						break
-					if not amount.isnumeric():
-						amount = ''
-					elif int(amount) > 99 or int(amount) < 1:
+					if (not amount.isnumeric()) or int(amount) > 99 or int(amount) < 1:
 						amount = ''
 				if amount == 'e':
 					choice = ''
 					amount = ''
+				elif in_bag < int(amount):
+					sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
+					amount = ''
 				else:
-					if in_bag < int(amount):
-						sp(f'\nYou do not have enough items (you need {int(amount)-in_bag} more)')
-						amount = ''
-					else:
-						save['bag'][pokemart[loc][int(choice)-1]] -= int(amount)
-						save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)
-						debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}')
-						choice = ''
-						
+					save['bag'][pokemart[loc][int(choice)-1]] -= int(amount) # type: ignore
+					save['money'] += items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount) # type: ignore
+					debug(f'Sold {amount} {pokemart[loc][int(choice)-1]}s for ¥{items[pokemart[loc][int(choice)-1]]["sell_price"]*int(amount)}') # type: ignore
+					choice = ''
+
 		elif action_choice == 'b':
 			sp(f'\nMoney: ¥{"{:,}".format(save["money"])}')
 			while not choice:
-				i = 1
 				options = ['e']
-				max_name_length = (len(max(pokemart[loc], key=len)))
-				for item in pokemart[loc]:
+				max_name_length = (len(max(pokemart[loc], key=len))) # type: ignore
+				for i, item in enumerate(pokemart[loc], start=1): # type: ignore
 					options.append(str(i))
-					price_len = len("{:,}".format(items[item]["price"]))
-					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["price"])}')
-					i+=1
+					price_len = len("{:,}".format(items[item]["price"])) # type: ignore
+					sp(f'[{i}] - {item}{" "*(max_name_length-len(item))}{" "*(8-price_len)}¥{"{:,}".format(items[item]["price"])}') # type: ignore
 				sp(f'[e] - Back\n')
 				while not choice:
 					choice = get()
@@ -853,11 +849,11 @@ def display_pokemart(loc) -> None:
 			else:
 				amount = 0
 				try:
-					in_bag = save['bag'][pokemart[loc][int(choice)-1]]
-				except:
+					in_bag = save['bag'][pokemart[loc][int(choice)-1]] # type: ignore
+				except KeyError:
 					in_bag = 0
 
-				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})')
+				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})') # type: ignore
 				sp("Description coming soon")
 				sp("How many would you like to buy(1-99)? (press 'e' to go back)\n")
 				while not amount:
@@ -865,36 +861,34 @@ def display_pokemart(loc) -> None:
 						amount = get()
 					if amount == 'e':
 						break
-					if not amount.isnumeric():
-						amount = ''
-					elif int(amount) > 99 or int(amount) < 1:
+					if (not amount.isnumeric()) or int(amount) > 99 or int(amount) < 1:
 						amount = ''
 				if amount == 'e':
 					choice = ''
 					amount = ''
 				else:
-					required_money = items[pokemart[loc][int(choice)-1]]["price"]*int(amount)
+					required_money = items[pokemart[loc][int(choice)-1]]["price"]*int(amount) # type: ignore
 					if required_money > save['money']:
 						sp(f'\nYou do not have enough money (you need ¥{required_money-save["money"]} more)')
 						amount = ''
 					else:
-						if pokemart[loc][int(choice)-1] not in save['bag']:
-							save['bag'][pokemart[loc][int(choice)-1]] = 1
+						if pokemart[loc][int(choice)-1] not in save['bag']: # type: ignore
+							save['bag'][pokemart[loc][int(choice)-1]] = int(amount) # type: ignore
 						else:
-							save['bag'][pokemart[loc][int(choice)-1]] += 1
+							save['bag'][pokemart[loc][int(choice)-1]] += int(amount) # type: ignore
 						save['money'] -= required_money
-						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)')
+						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)') # type: ignore
 						choice = ''
 
 # display title screen
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
 title.append(f'{title[0]}\n{title[1]}\n{title[2]}\n\n')
-# sleep(1)
+sleep(1)
 print(title[0])
-# sleep(2.65)
+sleep(2.65)
 print(title[1])
-# sleep(1.85)
+sleep(1.85)
 print(title[2])
 getch() # type: ignore
 cls() # type: ignore
@@ -906,11 +900,15 @@ while start_option != '2':
 
 	# continue from save file
 	if start_option == '1':
-		if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
-			cls() # type: ignore
-			print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
-			break
-		print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		try:
+			if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
+				cls() # type: ignore
+				print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
+				break
+		except KeyError:
+			print(f'{title[3]}Your save file is outdated and the game cannot load it. Please back up your save file and contact us with option [3].\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		else:
+			print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
 	# new game
 	elif start_option == '2':
@@ -936,12 +934,12 @@ while start_option != '2':
 for i in [
 	['dex', 'dex.json'],
 	['items', 'item.json'],
+	['moves', 'moves.json'],
+	['rates', 'map.json'],
 	['save_template', 'save_template.json'],
 	['trainer', 'trainer.json'],
 	['types', 'types.json'],
 	['xp', 'level.json'],
-	['moves', 'moves.json'],
-	['rates', 'map.json'],
 	['pokemart', 'pokemart.json']
 ]:
 	try:
@@ -964,7 +962,7 @@ if start_option == '1':
 else:
 	save = save_template # type: ignore
 	save['badges'] = {i: False for i in badges}
-	save['options']['textSpeed'] = 'normal'
+	save['options']['text_speed'] = 'normal'
 if getuser() not in save['user']:
 	save['user'].append(getuser())
 is_debug = save['options']['debug']
@@ -975,20 +973,23 @@ if start_option == '1':
 		debug(f'{type(save["party"][i])}')
 
 # check for illegal save data
-if max([
-	len(save['name']) > 15,
-	len(save['party']) > 6,
-	save['flag']['been_to_route_1'] and len(save['party']) == 0,
-	save['flag']['chosen_starter'] and not save['flag']['intro_complete'],
-	save['flag']['chosen_starter'] and save['location'] == '',
-	save['name'] != '' and not save['flag']['intro_complete'],
-	save['name'] != save['name'].upper(),
-	save['name'] == '' and save['flag']['intro_complete']
-]):
-	abort('Illegal save data detected!')
+try:
+	if max([
+		len(save['name']) > 15,
+		len(save['party']) > 6,
+		save['flag']['been_to_route_1'] and len(save['party']) == 0,
+		save['flag']['chosen_starter'] and not save['flag']['intro_complete'],
+		save['flag']['chosen_starter'] and save['location'] == '',
+		save['name'] != '' and not save['flag']['intro_complete'],
+		save['name'] != save['name'].upper(),
+		save['name'] == '' and save['flag']['intro_complete']
+	]):
+		abort('Illegal or outdated save data detected!')
+except KeyError:
+	abort('Illegal or outdated save data detected!')
 
 # reset getch according to options
-reset_sp(text[save['options']['textSpeed']])
+reset_sp(text[save['options']['text_speed']])
 
 # main loop
 while not exit:
@@ -1044,18 +1045,18 @@ while not exit:
 				if option != '5':
 					sp('')
 				if option == '1':
-					save['options']['textSpeed'] = 'slow'
+					save['options']['text_speed'] = 'slow'
 					sp('Text Speed set to Slow!')
 				elif option == '2':
-					save['options']['textSpeed'] = 'normal'
+					save['options']['text_speed'] = 'normal'
 					sp('Text Speed set to Normal!')
 				elif option == '3':
-					save['options']['textSpeed'] = 'fast'
+					save['options']['text_speed'] = 'fast'
 					sp('Text Speed set to Fast!')
 				elif option == '4':
-					save['options']['textSpeed'] = 'ultra'
+					save['options']['text_speed'] = 'ultra'
 					sp('Text Speed set to Ultra!')
-				reset_sp(text[save['options']['textSpeed']])
+				reset_sp(text[save['options']['text_speed']])
 		elif option in ['2', '3']:
 			sp('Coming Soon!')
 		elif option == '4':
@@ -1079,7 +1080,7 @@ while not exit:
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
-				sp('\n'.join(f'{i.name} ({colours[i.type]}{i.type}{colours["RESET"]}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP\n' for i in save['party'])) # type: ignore
+				sp('\n'.join(f'{i.name} ({i.type}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
 			else:
 				sp('Your party is empty!')
 		elif option == 'i':
@@ -1164,7 +1165,7 @@ while not exit:
 					while not option and option not in ['1', '2', '3']:
 						option = get()
 					if option in ['1', '2', '3']:
-						sp(f'\nDo you want the {[colours["GRASS"], colours["FIRE"], colours["WATER"]][int(option)-1]}{["GRASS", "FIRE", "WATER"][int(option)-1]}{colours["RESET"]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
+						sp(f'\nDo you want the {["GRASS", "FIRE", "WATER"][int(option)-1]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
 						confirm = ''
 						while confirm not in yn:
 							confirm = get()
@@ -1241,37 +1242,34 @@ while not exit:
 			sg('Many Pokémon trainers hold him in high regard!')
 		elif option == '3':
 			if 'Oak\'s Parcel' in save['bag']:
-				sg(f'OAK: Oh, {save["name"]}! How is my old POKEMON? Well, it seems to like you a lot.')
-				sg('OAK: You must be talented as a POKEMON trainer!')
-				sg('OAK: What? You have something for me?')
+				sg(f'OAK: Oh, {save["name"]}! How is my old Pokémon? Well, it seems to like you a lot.')
+				sg('You must be talented as a Pokémon trainer!')
+				sg('\n(You hold the parcel out to Professor OAK.)')
+				sg('\nOAK: What? You have something for me?')
 				sg(f'\n{save["name"]} delivered Oak\'s Parcel.\n')
 				save['flag']['delivered_package'] = True
 				save['bag'].pop('Oak\'s Parcel')
 				sg('OAK: Ah! This is the custom POKE BALL I ordered! Thank you!')
-				sg('JOHNNY enters the building.')
-				sg('JOHNNY: Gramps! What did you call me for?')
-				sg('OAK: Oh right! I have a request of you two.')
-				sg('OAK: On the desk there is my invention, POKEDEX!')
-				sg('OAK: It automatically records data on POKEMON you\'ve seen or caught!')
-				sg('OAK: It\'s a hi-tech encyclopedia!')
-				sg(f'OAK: {save["name"]} and JOHNNY! Take these with you!')
-				sg(f'\n{save["name"]} obtained the POKEDEX!\n')
+				sg('\nJust at that moment, JOHNNY enters the building. OAK notices and calls him over.')
+				sg('\nOAK: JOHNNY! You\'re just in time!')
+				sg('I have a request of you two.')
+				sg('On the desk there is my invention, POKEDEX!')
+				sg('It automatically records data on Pokémon you\'ve seen or caught, like a hi-tech encyclopedia!')
+				sg(f'\n{save["name"]} and JOHNNY! Take these with you!')
+				sg(f'({save["name"]} obtained the POKEDEX!)\n')
 				save['bag']['Pokedex'] = 1
-				sg('OAK: To make a complete guide on all the POKEMON in the world...')
-				sg('OAK: That was my dream! But, I\'m too old! I can\'t do it!')
-				sg('OAK: So, I want you two to fulfill my dream for me!')
-				sg('OAK: Get moving, you two! This is a great undertaking in POKEMON history!')
-				sg('JOHNNY: Alright Gramps! Leave it all to me!')
-				sg(f'JOHNNY: {save["name"]}, I hate to say it, but I don\'t need you!')
-				sg(f'JOHNNY: I know! I\'ll borrow a TOWN MAP from my sis! I\'ll tell her not to lend you one, {save["name"]}! Hahaha!')
-				sg(f'OAK: POKEMON around the world wait for you, {save["name"]}!')
-				
+				sg('\nOAK: To make a complete guide on all the Pokémon in the world...')
+				sg('That was my dream! But, I\'m too old! I can\'t do it!')
+				sg('So, I want you two to fulfill my dream for me!')
+				sg('Get moving, you two! This is a great undertaking in Pokémon history!')
+				sg('\nJOHNNY nods and takes his leave.')
+				sg(f'\nOAK: Pokémon around the world wait for you, {save["name"]}!')
 			else:
 				sg('\nOAK: You\'ve caught a total of...')
 				sg(f'\n{sum(1 if save["dex"][i]["caught"] else 0 for i in save["dex"])} Pokémon!')
 		elif option == '4':
 			sg('\nThere\' an email message here:')
-			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPOKEMON LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
+			sg('"Calling all Pokémon trainers!\nThe elite trainers of Pokémon League are ready to take on all comers! Bring your best Pokémon and see how you rate as a trainer!\nPokémon LEAGUE HQ INDIGO PLATEAU\nPS: Professor OAK, please visit us!"')
 		elif option == 'm':
 			menu_open = True
 		else:
@@ -1335,13 +1333,13 @@ while not exit:
 			if save['flag']['delivered_package']:
 				display_pokemart('viridian')
 			elif 'Oak\'s Parcel' in save['bag']:
-				sg("...") # Not sure what to put here
+				sg('CLERK: Please deliver Oak\'s Parcel!')
 			else:
-				sg('\nCLERK: Hey! You came from PALLET TOWN? You know PROF.OAK, right?')
+				sg('\nCLERK: Hey! You came from PALLET TOWN? You know Professor OAK, right?')
 				sg('His order came in. Will you take it to him?')
 				save['bag']['Oak\'s Parcel'] = 1
-				sg(f'\n{save["name"]} recieved Oak\'s Parcel!\n')
-				sg('Okay! Say hi to PROF.OAK for me!')
+				sg(f'\n({save["name"]} recieved Oak\'s Parcel!)\n')
+				sg('\nCLERK: Okay! Say hi to the Professor for me!')
 		elif option == 'm':
 			menu_open = True
 

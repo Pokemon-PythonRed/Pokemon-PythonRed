@@ -16,7 +16,7 @@ A clear and concise description of what the bug is.
 
 **Bug Description**:
 
-
+- 
 
 <!--
 - To reproduce -
@@ -25,7 +25,7 @@ Steps to reproduce the behaviour. If possible, you should also write a code bloc
 
 **Steps To Reproduce**:
 
-
+- 
 
 <!--
 - Expected behaviour -
@@ -34,7 +34,7 @@ A clear and concise description of what you expected to happen.
 
 **Expected Behaviour**:
 
-
+- 
 
 <!--
 - Context -
@@ -56,15 +56,14 @@ Add any other context about the problem here.
 
 **Additional Information**:
 
-
+- 
 
 <!--
 - Decline contribution acknowledgement -
-To tick the checkbox, fill it with an 'x', eg. '- [x]'.
 
-NOTE: THIS OPTION DISALLOWS US FROM PUBLICLY ACKNOWLEDGING YOUR CONTRIBUTION.
+If you wish to NOT be acknowledged for your contributions, please let us know here.
 -->
 
-- [ ] I **decline** to being added to the Contributors list.
+> 
 
 <!-- Thank you for your time! We'll get back to you as soon as possible. -->

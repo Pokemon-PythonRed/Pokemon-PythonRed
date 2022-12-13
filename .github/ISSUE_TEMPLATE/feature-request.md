@@ -17,14 +17,25 @@ A new location? More customisation?
 
 **Feature Description**:
 
+- 
+
 <!--
 - OPTIONAL: Describe alternatives you've considered -
-A clear and concise description of any alternative solutions or features you've considered. What implementation options do we have?
+A clear and concise description of any alternative solutions or features you've considered.
 -->
 
 **Alternatives**:
 
+- 
 
+<!--
+- OPTIONAL: Describe how we might achieve this feature -
+A clear and concise description of what implementation options we have.
+-->
+
+**Implementation Ideas**:
+
+- 
 
 <!--
 - Reasoning behind the request -
@@ -33,7 +44,7 @@ Why should this be considered? Is it a mechanic from another Pokémon game? Woul
 
 **Reasoning**:
 
-
+- 
 
 <!--
 - Additional information -
@@ -42,15 +53,14 @@ Add any other context or screenshots about the feature request here, if applicab
 
 **Additional Information**:
 
-
+- 
 
 <!--
 - Decline contribution acknowledgement -
-To tick the checkbox, fill it with an 'x', eg. '- [x]'.
 
-NOTE: THIS OPTION DISALLOWS US FROM PUBLICLY ACKNOWLEDGING YOUR CONTRIBUTION.
+If you wish to NOT be acknowledged for your contributions, please let us know here.
 -->
 
-- [ ] I **decline** to being added to the Contributors list.
+> 
 
 <!-- Thank you for your time! We'll get back to you as soon as possible. -->
