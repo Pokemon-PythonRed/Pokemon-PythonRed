@@ -354,32 +354,32 @@ class Pokemon:
 		elif self.status['burn'] or self.status['poison'] or self.status['paralysis']: status = 12
 		else: status = 0
 
-		C = dex[self.species]['catch']
-
-		if ball == "Poke Ball":
-			ball_modifier = 256
-		elif ball == "Great Ball":
+		if ball == "Great Ball":
 			ball_modifier = 201
+		elif ball == "Poke Ball":
+			ball_modifier = 256
 		elif ball == "Ultra Ball":
 			ball_modifier = 151
-		
+
+		C = dex[self.species]['catch']
 		if ball == "Master Ball":
 			catch = True
+		elif self.stats['hp'] / (2 if ball == "Great Ball" else 3) >= self.stats['chp'] and (status + C + 1) / ball_modifier >= 1:
+			catch = True
 		else:
-			if self.stats['hp'] / (2 if ball == "Great Ball" else 3) >= self.stats['chp'] and (status + C + 1) / ball_modifier >= 1:
+			X = randint(0, ball_modifier-1)
+			if X < status:
 				catch = True
+			elif X > status + C:
+				catch = False
 			else:
-				X = randint(0, ball_modifier-1)
-				if X < status:
-					catch = True
-				elif X > status + C:
-					catch = False
-				else:
-					if min(255, floor(floor(self.stats['hp'] * 255 / (8 if ball == "Great Ball" else 12)) / max(1, floor(self.stats['chp'] / 4)))) < randint(0,255):
-						catch = False
-					else:
-						catch = True
-
+				catch = min(
+					255,
+					floor(
+						floor(self.stats['hp'] * 255 / (8 if ball == "Great Ball" else 12))
+						/ max(1, floor(self.stats['chp'] / 4))
+					),
+				) >= randint(0, 255)
 		if catch:
 			location = 'party' if len(save['party']) < 6 else 'box'
 			save[location].append(self)
