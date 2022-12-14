@@ -160,7 +160,7 @@ def backup() -> None:
 # save data to file
 def save_data_to_file():
 	save['flag']['has_saved'] = True
-	save_temp = save
+	save_temp = {**save}
 	save_temp['party'] = [dump(i) for i in save['party']]
 	save_temp['box'] = [dump(i) for i in save['box']]
 	save_temp['last_played'] = None # TODO: save time last played
