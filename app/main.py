@@ -15,7 +15,7 @@ from random import choice, choices, randint
 # TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep
-from typing import Optional
+from typing import Optional, Union
 from webbrowser import open as webopen
 
 # import installed modules
@@ -187,12 +187,12 @@ class Pokemon:
 		self.current_xp = current_xp
 		self.moves = moves or find_moves(self.species, self.level)
 		self.status = {
-			'paralysis': False,
-			'sleep': False,
-			'freeze': False,
 			'burn': False,
-			'posion': False,
-			'confusion': False
+			'confusion': False,
+			'freeze': False,
+			'paralysis': False,
+			'poison': False,
+			'sleep': False
 		}
 
 		# update pokedex
@@ -293,12 +293,12 @@ class Pokemon:
 
 	# calculate xp rewarded after battle
 	def calculate_xp(self, battle_type='wild') -> int:
-		return (self.total_xp * self.level * (1 if battle_type == 'wild' else 1.5)) / 7 # type: ignore
+		return ceil((self.total_xp * self.level * (1 if battle_type == 'wild' else 1.5)) / 7) # type: ignore
 
 	# level up pokemon in context of battle
-	def give_xp(self, attacker, battle_type='wild') -> None:
-		self.current_xp += ceil(self.calculate_xp(attacker, battle_type))
-		sg(f'\n{self.name} gained {self.calculate_xp(attacker, battle_type)} XP!')
+	def give_xp(self, battle_type='wild') -> None:
+		self.current_xp += self.calculate_xp(battle_type)
+		sg(f'\n{self.name} gained {self.calculate_xp(battle_type)} XP!')
 		while self.current_xp >= xp['next'][self.level_type][self.level]: # type: ignore
 			self.current_xp -= xp['next'][self.level_type][self.level] # type: ignore
 			self.level_up(self)
@@ -342,7 +342,6 @@ class Pokemon:
 										sp(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1]["name"].upper()}\n')
 										sp(f'\n{pokemon.name} learned {m["name"].upper()}!')
 										pokemon.moves = [m for m in pokemon.moves if m['name'] != all_moves[int(forget_move) - 1]['name']]
-
 										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
 									move_forgotten = True
 				else:
@@ -352,24 +351,31 @@ class Pokemon:
 	# catch Pokemon
 	def catch(self, ball: str) -> bool:
 		global save
-		if self.status['freeze'] or self.status['sleep']: status = 25
-		elif self.status['burn'] or self.status['poison'] or self.status['paralysis']: status = 12
-		else: status = 0
+		if max(bool(self.status[i]) for i in ['freeze', 'sleep']):
+			status = 25
+		elif max(bool(self.status[i]) for i in ['burn', 'poison', 'paralysis']):
+			status = 12
+		else:
+			status = 0
 
+		# find Poke Ball type
 		if ball == "Great Ball":
 			ball_modifier = 201
 		elif ball == "Poke Ball":
 			ball_modifier = 256
 		elif ball == "Ultra Ball":
 			ball_modifier = 151
+		else:
+			abort(f'Invalid ball: {ball}')
 
-		C = dex[self.species]['catch']
+		# decide whether caught
+		C = dex[self.species]['catch'] # type: ignore
 		if ball == "Master Ball":
 			catch = True
-		elif self.stats['hp'] / (2 if ball == "Great Ball" else 3) >= self.stats['chp'] and (status + C + 1) / ball_modifier >= 1:
+		elif self.stats['hp'] / (2 if ball == "Great Ball" else 3) >= self.stats['chp'] and (status + C + 1) / ball_modifier >= 1: # type: ignore
 			catch = True
 		else:
-			X = randint(0, ball_modifier-1)
+			X = randint(0, ball_modifier-1) # type: ignore
 			if X < status:
 				catch = True
 			elif X > status + C:
@@ -383,16 +389,19 @@ class Pokemon:
 					),
 				) >= randint(0, 255)
 
+		# catch Pokemon process
 		if catch:
 			location = 'party' if len(save['party']) < 6 else 'box'
 			save[location].append(self)
 			save['dex'][self.species] = {'seen': True, 'caught': True}
 			save['flag']['type'][self.type] = {'seen': True, 'caught': True}
 			sg(f'\nYou caught {self.name}!')
-			sg(f'\n{self.name} ({colours[self.type]}{self.type}{colours["RESET"]}-type) was added to your {location}.')
+			sg(f'\n{self.name} ({self.type}-type) was added to your {location}.')
 			return True
 		else:
-			if floor(C * 100 / ball_modifier) > 255: # 3 wobbles
+			if floor(
+				C * 100 / ball_modifier # type: ignore
+			) > 255: # 3 wobbles
 				sp('Shoot! It was so close too!')
 			else:
 				wobble_chance = floor(C * 100 * min(255, floor(floor(self.stats['chp'] * 255 / 8 if ball == "Great Ball" else 12) / max(1, floor(self.stats['hp'] / 4)))) / 255) + status
@@ -403,7 +412,7 @@ class Pokemon:
 				elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
 					sp('Aww! It appeared to be caught!')
 				elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
-					sp('Shoot! It was so close too!')					
+					sp('Shoot! It was so close too!')
 			return False
 
 # check if party is alive
@@ -411,12 +420,12 @@ def is_alive(self) -> bool:
 	return any(not i.fainted for i in self)
 
 # use item from bag
-def use_item(battle=False) -> str:
+def use_item(battle=False) -> str: # type: ignore
 	global save
 	item_used = False
 	sp('\nPlease choose an item to use.')
 	if battle:
-		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag'] if items[key]['battle']))
+		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag'] if items[key]['battle'])) # type: ignore
 	else:
 		sp('\n'.join(f'{key}: {save["bag"][key]}' for key in save['bag']))
 	sp('[e] - Back\n')
@@ -457,7 +466,7 @@ def find_moves(name, level) -> list:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
 
 # switch pokemon in battle
-def switch_pokemon(party_length: int) -> int or str:
+def switch_pokemon(party_length: int) -> Union[int, str]:
 	sp(f'''\nWhich Pokémon should you switch to?\n\n{
 				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
 			}''')
@@ -466,8 +475,8 @@ def switch_pokemon(party_length: int) -> int or str:
 	while not switch_choice:
 		while switch_choice == '':
 			switch_choice = get()
-		if switch_choice == "e":
-			return "exit"
+		if switch_choice == 'e':
+			return 'exit'
 		try:
 			if switch_choice not in [str(i+1) for i in range(party_length)]:
 				switch_choice = ''
@@ -621,22 +630,22 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			if (item == 'Poke Ball' or item == 'Great Ball' or item == 'Ultra Ball' or item == 'Master Ball') and battle_type == 'trainer':
 				sp("You can't catch another trainer's Pokémon!")
 			elif item == 'Poke Ball':
-				if opponent_party[opponent_current].catch("Poke Ball"):
+				if opponent_party[opponent_current].catch("Poke Ball"): # type: ignore
 					caught = True
 					break
 				else: catch_attempt = True
 			elif item == 'Great Ball':
-				if opponent_party[opponent_current].catch("Great Ball"):
+				if opponent_party[opponent_current].catch("Great Ball"): # type: ignore
 					caught = True
 					break
 				else: catch_attempt = True
 			elif item == 'Ultra Ball':
-				if opponent_party[opponent_current].catch("Ultra Ball"):
+				if opponent_party[opponent_current].catch("Ultra Ball"): # type: ignore
 					caught = True
 					break
 				else: catch_attempt = True
 			elif item == 'Master Ball':
-				if opponent_party[opponent_current].catch("Master Ball"):
+				if opponent_party[opponent_current].catch("Master Ball"): # type: ignore
 					caught = True
 					break
 				else: catch_attempt = True
@@ -672,7 +681,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			break
 
 		elif save['party'][current].check_fainted():
-			participating_pokemon = list(filter(lambda p: save['party'][p].name != save['party'][current].name, participating_pokemon))
+			participating_pokemon = list(filter(lambda p, current=current: save['party'][p].name != save['party'][current].name, participating_pokemon))
 			switch_choice = switch_pokemon(party_length)
 			current = int(switch_choice)-1
 			switched = True
@@ -688,7 +697,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	
 	# upon catching
 	elif caught:
-		pass
+		pass # type: ignore
 
 	# upon winning
 	elif is_alive(save['party']) and not is_alive(opponent_party):
@@ -698,12 +707,12 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				save['money'] += prize_money()
 				sg(f'You recieved ¥{str(prize_money())} as prize money.')
 			if earn_xp == True:
-				total_xp = ceil(opponent_party[opponent_current].calculate_xp())
+				total_xp = ceil(opponent_party[opponent_current].calculate_xp()) # type: ignore
 				debug(f'total xp: {total_xp}')
 				if 'EXP. All' in save['bag']:
 					for p in participating_pokemon:
 						save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
-						sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} xp')
+						sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} XP!')
 						save['party'][p].check_level_up(save['party'])
 
 					other_pokemon = []
@@ -711,13 +720,13 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 						if i not in participating_pokemon: other_pokemon.append(i)
 					for o in other_pokemon:
 						save['party'][o].current_xp += floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))
-						sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} xp')
+						sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} XP!')
 						save['party'][o].check_level_up(save['party'])
 
 				else:
 					for p in participating_pokemon:
 						save['party'][p].current_xp += floor(total_xp / len(participating_pokemon))
-						sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} xp')
+						sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} XP!')
 						save['party'][p].check_level_up(save['party'])
 					sp("")
 				sleep(0.5)
@@ -950,7 +959,7 @@ for i in [
 # debug statements
 def debug(text) -> None:
 	if is_debug:
-		sp(f'DEBUG: {text}')
+		sp(f'{colours["GROUND"]}Debug: {text}{colours["RESET"]}')
 
 # load save file
 if start_option == '1':
@@ -1242,11 +1251,11 @@ while not exit:
 			sg('Many Pokémon trainers hold him in high regard!')
 		elif option == '3':
 			if 'Oak\'s Parcel' in save['bag']:
-				sg(f'OAK: Oh, {save["name"]}! How is my old Pokémon? Well, it seems to like you a lot.')
+				sg(f'\nOAK: Oh, {save["name"]}! How is my old Pokémon? Well, it seems to like you a lot.')
 				sg('You must be talented as a Pokémon trainer!')
 				sg('\n(You hold the parcel out to Professor OAK.)')
 				sg('\nOAK: What? You have something for me?')
-				sg(f'\n{save["name"]} delivered Oak\'s Parcel.\n')
+				sg(f'\n{save["name"]} delivered Oak\'s Parcel.')
 				save['flag']['delivered_package'] = True
 				save['bag'].pop('Oak\'s Parcel')
 				sg('OAK: Ah! This is the custom POKE BALL I ordered! Thank you!')
@@ -1256,7 +1265,7 @@ while not exit:
 				sg('On the desk there is my invention, POKEDEX!')
 				sg('It automatically records data on Pokémon you\'ve seen or caught, like a hi-tech encyclopedia!')
 				sg(f'\n{save["name"]} and JOHNNY! Take these with you!')
-				sg(f'({save["name"]} obtained the POKEDEX!)\n')
+				sg(f'({save["name"]} obtained the POKEDEX!)')
 				save['bag']['Pokedex'] = 1
 				sg('\nOAK: To make a complete guide on all the Pokémon in the world...')
 				sg('That was my dream! But, I\'m too old! I can\'t do it!')
@@ -1315,8 +1324,7 @@ while not exit:
 			option = get()
 		if option == 'w':
 			if save['flag']['delivered_package']:
-				sg('\nComing soon!')
-				# save['location'] = 'viridian-n'
+				sg('\nComing soon!') # will become: save['location'] = 'viridian-n'
 			else:
 				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
 				sg('\nMAN: Hey you, get off my property!')
@@ -1333,7 +1341,7 @@ while not exit:
 			if save['flag']['delivered_package']:
 				display_pokemart('viridian')
 			elif 'Oak\'s Parcel' in save['bag']:
-				sg('CLERK: Please deliver Oak\'s Parcel!')
+				sg('\nCLERK: Please deliver Oak\'s Parcel!')
 			else:
 				sg('\nCLERK: Hey! You came from PALLET TOWN? You know Professor OAK, right?')
 				sg('His order came in. Will you take it to him?')
