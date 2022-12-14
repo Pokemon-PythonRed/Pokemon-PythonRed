@@ -545,7 +545,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
 		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
-		
+
 		valid_choice = False
 		while not valid_choice:
 			user_choice = get()
@@ -592,7 +592,6 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 						else: valid_choice = True
 					elif move_choice == "e":
 						valid_choice = True
-				
 				if move_choice == "e": # type: ignore
 					continue
 
@@ -694,7 +693,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	# upon escaping
 	if escaped_from_battle:
 		sp('You escaped!')
-	
+
 	# upon catching
 	elif caught:
 		pass # type: ignore
