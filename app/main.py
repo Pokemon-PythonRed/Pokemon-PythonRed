@@ -1079,9 +1079,12 @@ while not exit:
 			sp('')
 		if option == 'd' and 'Pokedex' in save['bag']:
 			option = ''
-			dex_string = ''.join(
-				f'\n{dex[i]["index"]} - {i}: Seen{", Caught" if save["dex"][i]["caught"] else ""}' if save['dex'][i]['seen'] else '' for i in save['dex'] # type: ignore
-			)
+			dex_string = ''
+			for i in dex.keys(): # type: ignore
+				if i in save['dex'].keys():
+					dex_string += f'\n{dex[i]["index"]} - {i}: Seen' if save['dex'][i]['seen'] else '' # type: ignore
+					if save['dex'][i]['caught']:
+						dex_string += ', Caught'
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
