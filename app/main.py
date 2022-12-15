@@ -1080,7 +1080,6 @@ while not exit:
 		if option == 'd' and 'Pokedex' in save['bag']:
 			option = ''
 			dex_string = ''
-			debug(dex.keys()) # type: ignore
 			for i in dex.keys(): # type: ignore
 				if i in save['dex'].keys():
 					dex_string += f'\n{dex[i]["index"]} - {i}: Seen' if save['dex'][i]['seen'] else '' # type: ignore
