@@ -490,7 +490,7 @@ def switch_pokemon(party_length: int) -> Union[int, str]:
 def battle(opponent_party=None, battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
 	global save
 	debug('Entered battle!')
-	debug(f'Party: {save["party"]}')
+	debug(f'Party: {[i.name for i in save["party"]]}')
 	party_length = len(save['party'])
 	current = ''
 	opponent_current = 0
@@ -975,7 +975,7 @@ is_debug = save['options']['debug']
 # test party status (debug)
 if start_option == '1':
 	for i in range(len(save['party'])):
-		debug(f'{type(save["party"][i])}')
+		debug(f'{save["party"][i].name} is type {type(save["party"][i])}')
 
 # check for illegal save data
 try:
