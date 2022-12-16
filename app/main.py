@@ -906,12 +906,15 @@ while start_option != '2':
 	# continue from save file
 	if start_option == '1':
 		try:
-			if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
+			has_saved = loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']
+			if path.isfile(path.join(syspath[0], '.ppr-save')) and has_saved:
 				cls() # type: ignore
 				print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 				break
 		except KeyError:
 			print(f'{title[3]}Your save file is outdated and the game cannot load it. Please back up your save file and contact us with option [3].\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		except ValueError:
+			print(f'{title[3]}Your save file is empty and cannot be loaded!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 		else:
 			print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
