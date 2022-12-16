@@ -148,13 +148,16 @@ def abort(message) -> None:
 	global exit
 	exit = True
 
-# save from pause menu
-def backup() -> None:
-	sp('Would you like to save your progress? (Y/N)\n')
-	save_option = ' '
-	while save_option.lower()[0] not in yn:
-		save_option = f'{get()} '
-	if save_option.lower()[0] in y:
+# save from pause menu or pokemon centre
+def backup(pokemon_centre = False) -> None:
+	if not pokemon_centre:
+		sp('Would you like to save your progress? (Y/N)\n')
+		save_option = ' '
+		while save_option.lower()[0] not in yn:
+			save_option = f'{get()} '
+		if save_option.lower()[0] in y:
+			save_data_to_file()
+	else:
 		save_data_to_file()
 
 # save data to file
@@ -770,6 +773,9 @@ def heal(pokemon=None, party=None, type='party') -> None:
 	for i in party: # type: ignore
 			i.reset_stats()
 			sp(f'{i.name} was healed to max health.')
+	
+	if type == 'party':
+		backup(pokemon_centre=True)
 
 def get_encounter(loc, type) -> dict:
 	pokemon = []
