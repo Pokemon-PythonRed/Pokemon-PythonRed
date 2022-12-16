@@ -676,6 +676,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		elif is_alive(save['party']) and not is_alive(opponent_party):
 			break
 
+		# end battle if player loses
+		elif not is_alive(save['party']):
+			break
+
 		elif save['party'][current].check_fainted():
 			participating_pokemon = list(filter(lambda p, current=current: save['party'][p].name != save['party'][current].name, participating_pokemon))
 			switch_choice = switch_pokemon(party_length)
