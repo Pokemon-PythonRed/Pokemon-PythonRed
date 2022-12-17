@@ -1319,7 +1319,7 @@ while not exit:
 		while option == '':
 			option = get()
 		if option == 'w':
-			save['location'] = 'viridian-s'
+			save['location'] = 'viridian'
 		elif option == 's':
 			save['location'] = 'route1-s'
 			encounter = get_encounter('route1-s', 'tall-grass')
@@ -1329,14 +1329,14 @@ while not exit:
 		else:
 			sp('\nInvalid answer!')
 
-	# viridian city - south
-	elif save['location'] == 'viridian-s':
-		sp('Current Location: Viridian City (South)\n\n[w] - Go to Viridian City (North)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n')
+	# viridian city
+	elif save['location'] == 'viridian':
+		sp('Current Location: Viridian City\n\n[w] - Go to Route 2 (South)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n[3] - Viridian Pokemon Gym')
 		while option == '':
 			option = get()
 		if option == 'w':
 			if save['flag']['delivered_package']:
-				sg('\nComing soon!') # will become: save['location'] = 'viridian-n'
+				sg('\nComing soon!') # will become: save['location'] = 'route2-s'
 			else:
 				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
 				sg('\nMAN: Hey you, get off my property!')
@@ -1348,7 +1348,7 @@ while not exit:
 			save['location'] = 'route1-n'
 		elif option == '1':
 			heal()
-			save['recent_center'] = 'viridian-s'
+			save['recent_center'] = 'viridian'
 		elif option == '2':
 			if save['flag']['delivered_package']:
 				display_pokemart('viridian')
@@ -1360,6 +1360,12 @@ while not exit:
 				save['bag']['Oak\'s Parcel'] = 1
 				sg(f'\n({save["name"]} recieved Oak\'s Parcel!)\n')
 				sg('\nCLERK: Okay! Say hi to the Professor for me!')
+		elif option == '3':
+			if save['badges']['Boulder'] and save['badges']['Cascade'] and save['badges']['Volcano'] and save['badges']['Marsh'] and save['badges']['Rainbow'] and save['badges']['Soul'] and save['badges']['Thunder']:
+				save['location'] = 'viridian-gym'
+			else:
+				sg("\nThe gym is closed")
+				sg('\nYou won\'t be able to enter until later.')
 		elif option == 'm':
 			menu_open = True
 
