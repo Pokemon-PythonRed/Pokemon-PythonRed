@@ -3,13 +3,15 @@
 		"command": "antidote",
 		"price": 100,
 		"sell_price": 50,
-		"battle": true
+		"battle": true,
+		"description": "Cures your Pokemon of Poison."
 	},
 	"Awakening": {
 		"command": "awakening",
 		"price": 200,
 		"sell_price": 125,
-		"battle": true
+		"battle": true,
+		"description": "Cures your Pokemon of Sleep."
 	},
 	"Bicycle": {
 		"command": "bicycle",
@@ -27,19 +29,22 @@
 		"command": "burn_heal",
 		"price": 250,
 		"sell_price": 125,
-		"battle": true
+		"battle": true,
+		"description": "Cures your Pokemon of Burn."
 	},
 	"Calcium": {
 		"command": "calcium",
 		"price": 9800,
 		"sell_price": 4900,
-		"battle": false
+		"battle": false,
+		"description": "Permanently raises your Pokemon's Special Attack and Special Defense."
 	},
 	"Carbos": {
 		"command": "carbos",
 		"price": 9800,
 		"sell_price": 4900,
-		"battle": false
+		"battle": false,
+		"description": "Permanently raises your Pokemon's Speed."
 	},
 	"Card Key": {
 		"command": null,
@@ -63,7 +68,8 @@
 		"command": "dire_hit",
 		"price": 650,
 		"sell_price": 375,
-		"battle": true
+		"battle": true,
+		"description": "Raises your Pokemon's Critical Hit Ratio in battle."
 	},
 	"Dome Fossil": {
 		"command": "null",
@@ -114,13 +120,15 @@
 		"command": "full_heal",
 		"price": 600,
 		"sell_price": 300,
-		"battle": true
+		"battle": true,
+		"description": "Cures your Pokemon of any status change (Poison, Paralysis, Sleep, Burn, Frozen)."
 	},
 	"Full Restore": {
 		"command": "full_restore",
 		"price": 3000,
 		"sell_price": 1500,
-		"battle": true
+		"battle": true,
+		"description": "Heals all of your Pokemon's HP, and all status changes (Poison, Paralysis, Sleep, Burn, Frozen)."
 	},
 	"Gold Teeth": {
 		"command": null,
@@ -138,13 +146,15 @@
 		"command": "great_ball",
 		"price": 600,
 		"sell_price": 300,
-		"battle": true
+		"battle": true,
+		"description": "Better than a Poke Ball, but still just used to catch weakened Pokemon. Great Balls should be used on medium level Pokemon."
 	},
 	"Guard Spec.": {
 		"command": "guard_spec",
 		"price": 700,
 		"sell_price": 350,
-		"battle": true
+		"battle": true,
+		"description": "Prevents your Pokemon from any stat reduction in battle."
 	},
 	"Helix Fossil": {
 		"command": null,
@@ -156,25 +166,29 @@
 		"command": "hp_up",
 		"price": 9800,
 		"sell_price": 4900,
-		"battle": false
+		"battle": false,
+		"description": "Permanently raises your Pokemon's HP amount."
 	},
 	"Hyper Potion": {
 		"command": "hyper_potion",
 		"price": 1200,
 		"sell_price": 600,
-		"battle": true
+		"battle": true,
+		"description": "Heals your Pokemon by 200 HP."
 	},
 	"Ice Heal": {
 		"command": "ice_heal",
 		"price": 250,
 		"sell_price": 125,
-		"battle": true
+		"battle": true,
+		"description": "Cures your Pokemon of Frozen."
 	},
 	"Iron": {
 		"command": "iron",
 		"price": 9800,
 		"sell_price": 4900,
-		"battle": false
+		"battle": false,
+		"description": "Permanently raises your Pokemon's Defense."
 	},
 	"Item Finder": {
 		"command": null,
@@ -192,7 +206,8 @@
 		"command": "lemonade",
 		"price": 350,
 		"sell_price": 175,
-		"battle": true
+		"battle": true,
+		"description": "Heals your Pokemon by 80 HP."
 	},
 	"Lift Key": {
 		"command": null,
@@ -222,13 +237,15 @@
 		"command": "max_potion",
 		"price": 2500,
 		"sell_price": 1250,
-		"battle": true
+		"battle": true,
+		"description": "Heals your Pokemon by all of its HP."
 	},
 	"Max Repel": {
 		"command": "max_repel",
 		"price": 700,
 		"sell_price": 350,
-		"battle": false
+		"battle": false,
+		"description": "Repels all Pokemon."
 	},
 	"Max Revive": {
 		"command": "max_revive",
@@ -270,13 +287,15 @@
 		"command": "paralyze_heal",
 		"price": 200,
 		"sell_price": 100,
-		"battle": true
+		"battle": true,
+		"description": "Cures your Pokemon of Paralysis."
 	},
 	"Poke Ball": {
 		"command": "poke_ball",
 		"price": 200,
 		"sell_price": 100,
-		"battle": true
+		"battle": true,
+		"description": "Used to catch Pokemon when weakened."
 	},
 	"Pokedex": {
 		"command": null,
@@ -288,7 +307,8 @@
 		"command": "poke_doll",
 		"price": 1000,
 		"sell_price": 500,
-		"battle": false
+		"battle": false,
+		"description": "If you can't escape from a wild Pokemon, use this to get away from it."
 	},
 	"Poke Flute": {
 		"command": "poke_flute",
@@ -300,7 +320,8 @@
 		"command": "potion",
 		"price": 300,
 		"sell_price": 150,
-		"battle": true
+		"battle": true,
+		"description": "Heals your Pokemon by 20 HP."
 	},
 	"PP Up": {
 		"command": "pp_up",
@@ -312,7 +333,8 @@
 		"command": "protein",
 		"price": 9800,
 		"sell_price": 4900,
-		"battle": false
+		"battle": false,
+		"description": "Permanently raises your Pokemon's Attack."
 	},
 	"Rare Candy": {
 		"command": "rare_candy",
@@ -324,7 +346,8 @@
 		"command": "repel",
 		"price": 350,
 		"sell_price": 175,
-		"battle": false
+		"battle": false,
+		"description": "Repels some Pokemon."
 	},
 	"Revive": {
 		"command": "revive",
@@ -354,19 +377,22 @@
 		"command": "soda_pop",
 		"price": 350,
 		"sell_price": 175,
-		"battle": true
+		"battle": true,
+		"description": "Heals your Pokemon by 60 HP."
 	},
 	"Super Potion": {
 		"command": "super_potion",
 		"price": 700,
 		"sell_price": 350,
-		"battle": true
+		"battle": true,
+		"description": "Heals your Pokemon by 50 HP."
 	},
 	"Super Repel": {
 		"command": "super_repel",
 		"price": 500,
 		"sell_price": 250,
-		"battle": false
+		"battle": false,
+		"description": "Repels all Pokemon of a lower level than the first Pokemon in your party."
 	},
 	"Super rod": {
 		"command": "super_rod",
@@ -390,7 +416,8 @@
 		"command": "ultra_ball",
 		"price": 1200,
 		"sell_price": 600,
-		"battle": true
+		"battle": true,
+		"description": "Better than a Great Ball, but still just used to catch weakened Pokemon. Ultra Balls should be used on high level Pokemon."
 	},
 	"Water Stone": {
 		"command": "water_stone",
@@ -402,30 +429,35 @@
 		"command": "x_accuracy",
 		"price": 950,
 		"sell_price": 475,
-		"battle": true
+		"battle": true,
+		"description": "Raises your Pokemon's accuracy in battle."
 	},
 	"X Attack": {
 		"command": "x_attack",
 		"price": 500,
 		"sell_price": 250,
-		"battle": true
+		"battle": true,
+		"description": "Raises your Pokemon's Attack in battle."
 	},
 	"X Defend": {
 		"command": "x_defend",
 		"price": 550,
 		"sell_price": 275,
-		"battle": true
+		"battle": true,
+		"description": "Raises your Pokemon's Defense in battle."
 	},
 	"X Special": {
 		"command": "x_special",
 		"price": 350,
 		"sell_price": 175,
-		"battle": true
+		"battle": true,
+		"description": "Raises your Pokemon's Special Attack and Special Defense in battle."
 	},
 	"X Speed": {
 		"command": "x_speed",
 		"price": 350,
 		"sell_price": 175,
-		"battle": true
+		"battle": true,
+		"description": "Raises your Pokemon's Speed in battle."
 	}
 }
