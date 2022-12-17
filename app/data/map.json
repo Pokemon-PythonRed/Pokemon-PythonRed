@@ -145,41 +145,7 @@
             ]
         }
     },
-    "viridian-s": {
-        "old-rod": {
-            "256": [
-                {
-                    "pokemon": "MAGIKARP",
-                    "level": 5
-                }
-            ]
-        },
-        "good-rod": {
-            "128": [
-                {
-                    "pokemon": "GOLDEEN",
-                    "level": 10
-                },
-                {
-                    "pokemon": "POLIWAG",
-                    "level": 10
-                }
-            ]
-        },
-        "super-rod": {
-            "128": [
-                {
-                    "pokemon": "TENTACOOL",
-                    "level": 15
-                },
-                {
-                    "pokemon": "POLIWAG",
-                    "level": 15
-                }
-            ]
-        }
-    },
-    "viridian-n": {
+    "viridian": {
         "old-rod": {
             "256": [
                 {
