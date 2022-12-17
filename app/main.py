@@ -148,13 +148,16 @@ def abort(message) -> None:
 	global exit
 	exit = True
 
-# save from pause menu
-def backup() -> None:
-	sp('Would you like to save your progress? (Y/N)\n')
-	save_option = ' '
-	while save_option.lower()[0] not in yn:
-		save_option = f'{get()} '
-	if save_option.lower()[0] in y:
+# save from pause menu or pokemon centre
+def backup(pokemon_centre = False) -> None:
+	if not pokemon_centre:
+		sp('Would you like to save your progress? (Y/N)\n')
+		save_option = ' '
+		while save_option.lower()[0] not in yn:
+			save_option = f'{get()} '
+		if save_option.lower()[0] in y:
+			save_data_to_file()
+	else:
 		save_data_to_file()
 
 # save data to file
@@ -676,6 +679,10 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		elif is_alive(save['party']) and not is_alive(opponent_party):
 			break
 
+		# end battle if player loses
+		elif not is_alive(save['party']):
+			break
+
 		elif save['party'][current].check_fainted():
 			participating_pokemon = list(filter(lambda p, current=current: save['party'][p].name != save['party'][current].name, participating_pokemon))
 			switch_choice = switch_pokemon(party_length)
@@ -766,6 +773,9 @@ def heal(pokemon=None, party=None, type='party') -> None:
 	for i in party: # type: ignore
 			i.reset_stats()
 			sp(f'{i.name} was healed to max health.')
+	
+	if type == 'party':
+		backup(pokemon_centre=True)
 
 def get_encounter(loc, type) -> dict:
 	pokemon = []
@@ -813,7 +823,7 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 				except KeyError:
 					in_bag = 0
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})') # type: ignore
-				sp("Description coming soon")
+				sp(items[pokemart[loc][int(choice)-1]]["description"])
 				sp("How many would you like to sell(1-99)? (press 'e' to go back)\n")
 				while not amount:
 					while not amount:
@@ -859,7 +869,7 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 					in_bag = 0
 
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})') # type: ignore
-				sp("Description coming soon")
+				sp(items[pokemart[loc][int(choice)-1]]["description"])
 				sp("How many would you like to buy(1-99)? (press 'e' to go back)\n")
 				while not amount:
 					while not amount:
@@ -906,12 +916,15 @@ while start_option != '2':
 	# continue from save file
 	if start_option == '1':
 		try:
-			if path.isfile(path.join(syspath[0], '.ppr-save')) and loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']:
+			has_saved = loads(open(path.join(syspath[0], '.ppr-save')).read())['flag']['has_saved']
+			if path.isfile(path.join(syspath[0], '.ppr-save')) and has_saved:
 				cls() # type: ignore
 				print(f'{title[3]}Loading save file!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n\n> 1\n')
 				break
 		except KeyError:
 			print(f'{title[3]}Your save file is outdated and the game cannot load it. Please back up your save file and contact us with option [3].\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
+		except ValueError:
+			print(f'{title[3]}Your save file is empty and cannot be loaded!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 		else:
 			print(f'{title[3]}No previous save file found!\n\n[1] - Continue Game\n[2] - New Game\n[3] - GitHub Repository\n')
 
