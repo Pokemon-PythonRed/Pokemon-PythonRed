@@ -823,7 +823,7 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 				except KeyError:
 					in_bag = 0
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})') # type: ignore
-				sp(items[pokemart[loc][int(choice)-1]]["description"])
+				sp(items[pokemart[loc][int(choice)-1]]["description"]) # type: ignore
 				sp("How many would you like to sell(1-99)? (press 'e' to go back)\n")
 				while not amount:
 					while not amount:
@@ -869,7 +869,7 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 					in_bag = 0
 
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})') # type: ignore
-				sp(items[pokemart[loc][int(choice)-1]]["description"])
+				sp(items[pokemart[loc][int(choice)-1]]["description"]) # type: ignore
 				sp("How many would you like to buy(1-99)? (press 'e' to go back)\n")
 				while not amount:
 					while not amount:
