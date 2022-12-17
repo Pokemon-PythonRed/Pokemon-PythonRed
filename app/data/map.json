@@ -178,5 +178,117 @@
                 }
             ]
         }
+    },
+    "route2-s": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 3
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 4
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 4
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 5
+                },
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 3
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 2
+                },
+                {
+                    "pokemon": "RATTATA",
+                    "level": 5
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 4
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 5
+                }
+            ]
+        }
+    },
+    "route2-n": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 3
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 3
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 4
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 4
+                },
+                {
+                    "pokemon": "PIDGEY",
+                    "level": 5
+                },
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 3
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "RATTATA",
+                    "level": 2
+                },
+                {
+                    "pokemon": "RATTATA",
+                    "level": 5
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 4
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 5
+                }
+            ]
+        }
     }
 }
