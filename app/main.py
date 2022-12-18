@@ -79,10 +79,7 @@ def reset_sp(speed) -> None:
 			if char == '`':
 				if not coloured:
 					colour_char = True
-				if coloured:
-					coloured = False
-				else:
-					coloured = True
+				coloured = not coloured
 				continue
 			elif coloured and char == '[':
 				colour_char = True
@@ -98,6 +95,7 @@ def reset_sp(speed) -> None:
 			stdout.flush()
 		if g:
 			getch()
+
 	def sg(text) -> None:
 		sp(text, g=True)
 reset_sp(speed=text[text_speed])
