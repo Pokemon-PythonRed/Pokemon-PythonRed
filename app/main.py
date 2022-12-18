@@ -1339,6 +1339,8 @@ while not exit:
 		if option == 'w':
 			if save['flag']['delivered_package']:
 				save['location'] = 'route2-s'
+				encounter = get_encounter('route2-s', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 			else:
 				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
 				sg('\nMAN: Hey you, get off my property!')
@@ -1374,23 +1376,100 @@ while not exit:
 			menu_open = True
 
 	elif save['location'] == 'route2-s':
-		encounter = get_encounter('route2-s', 'tall-grass')
-		battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		sp('Current Location: Route 2 (South)\n\n[w] - Go to Viridian Forest (South)\n[s] - Go to Viridian City\n[d] - Go to Route 2 (North)')
 		while option == '':
 			option = get()
 		if option == 'w':
-			sp('\nComing Soon')# Will become: save['location'] = 'viridian-forest-s'
+			save['location'] = 'viridian-forest-s'
+			encounter = get_encounter('viridian-forest-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 's':
 			save['location'] = 'viridian'
 		elif option == 'd':
 			if save['hms']['cut']:
-				save['location'] = 'route2-n'
+				save['location'] = 'route2-w'
 			else:
 				sg('\nThere is a tree in the way')
 				sg('\nMaybe a Pokémon could cut it down?')
 		elif option == 'm':
 			menu_open = True
+
+		elif save['location'] == 'viridian-forest-s':
+			sp('Current Location: Viridian Forest (South)\n\n[a] - Go to Viridian Forest (West)\n[s] - Go to Route 2 (South)\n[d] - Go to Viridian Forest (East)')
+			while option == '':
+				option = get()
+			if option == 's':
+				save['location'] = 'route2-s'
+				encounter = get_encounter('route2-s', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			elif option == 'a':
+				save['location'] = 'viridian-forest-w'
+				encounter = get_encounter('viridian-forest-w', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			elif option == 'd':
+				save['location'] = 'viridian-forest-e'
+				encounter = get_encounter('viridian-forest-e', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			elif option == 'm':
+				menu_open = True
+
+		elif save['location'] == 'viridian-forest-w':
+			sp('Current Location: Viridian Forest (West)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[d] - Go to Viridian Forest (East)')
+			while option == '':
+				option = get()
+			if option == 's':
+				save['location'] = 'viridian-forest-s'
+				encounter = get_encounter('viridian-forest-s', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			elif option == 'w':
+				save['location'] = 'viridian-forest-n'
+				encounter = get_encounter('viridian-forest-n', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			elif option == 'd':
+				save['location'] = 'viridian-forest-e'
+				encounter = get_encounter('viridian-forest-e', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+			elif option == 'm':
+				menu_open = True
+
+			elif save['location'] == 'viridian-forest-e':
+				sp('Current Location: Viridian Forest (East)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[a] - Go to Viridian Forest (West)')
+				while option == '':
+					option = get()
+				if option == 's':
+					save['location'] = 'viridian-forest-s'
+					encounter = get_encounter('viridian-forest-s', 'tall-grass')
+					battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+				elif option == 'w':
+					save['location'] = 'viridian-forest-n'
+					encounter = get_encounter('viridian-forest-n', 'tall-grass')
+					battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+				elif option == 'a':
+					save['location'] = 'viridian-forest-w'
+					encounter = get_encounter('viridian-forest-w', 'tall-grass')
+					battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+				elif option == 'm':
+					menu_open = True
+
+			elif save['location'] == 'viridian-forest-n':
+				sp('Current Location: Viridian Forest (North)\n\n[w] - Go to Route 2 (North)\n[a] - Go to Viridian Forest (West)\n[d] - Go to Viridian Forest (East)')
+				while option == '':
+					option = get()
+				if option == 'w':
+					save['location'] = 'route2-n'
+					encounter = get_encounter('route2-n', 'tall-grass')
+					battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+				elif option == 'a':
+					save['location'] = 'viridian-forest-w'
+					encounter = get_encounter('viridian-forest-w', 'tall-grass')
+					battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+				elif option == 'd':
+					save['location'] = 'viridian-forest-e'
+					encounter = get_encounter('viridian-forest-e', 'tall-grass')
+					battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+				elif option == 'm':
+					menu_open = True
+
 	# invalid location
 	else:
 		abort(f'The location "{save["location"]}" is not a valid location.')
