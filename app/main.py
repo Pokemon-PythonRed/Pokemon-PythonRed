@@ -1333,7 +1333,7 @@ while not exit:
 
 	# viridian city
 	elif save['location'] == 'viridian':
-		sp('Current Location: Viridian City\n\n[w] - Go to Route 2 (South)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n[3] - Viridian Pokemon Gym')
+		sp('Current Location: Viridian City\n\n[w] - Go to Route 2 (South)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n[3] - Viridian Pokemon Gym\n')
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1376,7 +1376,7 @@ while not exit:
 			menu_open = True
 
 	elif save['location'] == 'route2-s':
-		sp('Current Location: Route 2 (South)\n\n[w] - Go to Viridian Forest (South)\n[s] - Go to Viridian City\n[d] - Go to Route 2 (North)')
+		sp('Current Location: Route 2 (South)\n\n[w] - Go to Viridian Forest (South)\n[s] - Go to Viridian City\n[d] - Go to Route 2 (North)\n')
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1395,7 +1395,7 @@ while not exit:
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-s':
-		sp('Current Location: Viridian Forest (South)\n\n[a] - Go to Viridian Forest (West)\n[s] - Go to Route 2 (South)\n[d] - Go to Viridian Forest (East)')
+		sp('Current Location: Viridian Forest (South)\n\n[a] - Go to Viridian Forest (West)\n[s] - Go to Route 2 (South)\n[d] - Go to Viridian Forest (East)\n')
 		while option == '':
 			option = get()
 		if option == 's':
@@ -1414,7 +1414,7 @@ while not exit:
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-w':
-		sp('Current Location: Viridian Forest (West)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[d] - Go to Viridian Forest (East)')
+		sp('Current Location: Viridian Forest (West)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[d] - Go to Viridian Forest (East)\n')
 		while option == '':
 			option = get()
 		if option == 's':
@@ -1433,7 +1433,7 @@ while not exit:
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-e':
-		sp('Current Location: Viridian Forest (East)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[a] - Go to Viridian Forest (West)')
+		sp('Current Location: Viridian Forest (East)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[a] - Go to Viridian Forest (West)\n')
 		while option == '':
 			option = get()
 		if option == 's':
@@ -1452,11 +1452,11 @@ while not exit:
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-n':
-		sp('Current Location: Viridian Forest (North)\n\n[w] - Go to Route 2 (North)\n[a] - Go to Viridian Forest (West)\n[d] - Go to Viridian Forest (East)')
+		sp('Current Location: Viridian Forest (North)\n\n[w] - Go to Route 2 (North)\n[a] - Go to Viridian Forest (West)\n[d] - Go to Viridian Forest (East)\n')
 		while option == '':
 			option = get()
 		if option == 'w':
-			save['location'] = 'route2-n'
+			sg("Coming soon") # Will become save['location'] = 'route2-n'
 			encounter = get_encounter('route2-n', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 'a':
