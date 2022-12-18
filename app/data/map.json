@@ -290,5 +290,229 @@
                 }
             ]
         }
+    },
+    "viridian-forest-s": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 5
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 3
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 5
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 6
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "METAPOD",
+                    "level": 4
+                },
+                {
+                    "pokemon": "CATERPIE",
+                    "level": 3
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 3
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 5
+                }
+            ]
+        }
+    },
+    "viridian-forest-w": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 5
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 3
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 5
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 6
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "METAPOD",
+                    "level": 4
+                },
+                {
+                    "pokemon": "CATERPIE",
+                    "level": 3
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 3
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 5
+                }
+            ]
+        }
+    },
+    "viridian-forest-e": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 5
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 3
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 5
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 6
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "METAPOD",
+                    "level": 4
+                },
+                {
+                    "pokemon": "CATERPIE",
+                    "level": 3
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 3
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 5
+                }
+            ]
+        }
+    },
+    "viridian-forest-n": {
+        "tall-grass": {
+            "51": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 5
+                }
+            ],
+            "39": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 3
+                }
+            ],
+            "25": [
+                {
+                    "pokemon": "WEEDLE",
+                    "level": 5
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 4
+                },
+                {
+                    "pokemon": "KAKUNA",
+                    "level": 6
+                }
+            ],
+            "13": [
+                {
+                    "pokemon": "METAPOD",
+                    "level": 4
+                },
+                {
+                    "pokemon": "CATERPIE",
+                    "level": 3
+                }
+            ],
+            "11": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 3
+                }
+            ],
+            "3": [
+                {
+                    "pokemon": "PIKACHU",
+                    "level": 5
+                }
+            ]
+        }
     }
 }
