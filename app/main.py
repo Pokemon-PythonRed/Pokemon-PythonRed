@@ -416,7 +416,7 @@ class Pokemon:
 			save['dex'][self.species] = {'seen': True, 'caught': True}
 			save['flag']['type'][self.type] = {'seen': True, 'caught': True}
 			sg(f'\nYou caught {self.name}!')
-			sg(f'\n{self.name} ({self.type}-type) was added to your {location}.')
+			sg(f'\n{self.name} (`{self.type}`-type) was added to your {location}.')
 			return True
 		else:
 			if floor(
@@ -563,7 +563,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length) # type: ignore
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
-		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} (`{save["party"][current].type}`) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} (`{opponent_party[opponent_current].type}`) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
 
 		valid_choice = False
@@ -1121,7 +1121,7 @@ while not exit:
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
-				sp('\n'.join(f'{i.name} ({i.type}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
+				sp('\n'.join(f'{i.name} (`{i.type}`-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
 			else:
 				sp('Your party is empty!')
 		elif option == 'i':
