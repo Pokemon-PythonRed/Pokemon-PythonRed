@@ -55,7 +55,7 @@ colours = {
 	'DARK': '\x1b[38;5;095m',
 	'STEEL': '\x1b[38;5;250m',
 	'FAIRY': '\x1b[38;5;212m',
-	'RESET': '\x1b[0;0m'
+	'RESET': '\x1b[00;0;000m'
 }
 
 # declare timed text output
@@ -71,9 +71,29 @@ def reset_sp(speed) -> None:
 	global sp, sg
 	def sp(text, g=False) -> None:
 		for key in colours.keys():
-			text = text.replace(f'{key}', f'{colours[key]}{key}{colours["RESET"]}')
+			text = text.replace(f'`{key}`', f'`{colours[key]}{key}{colours["RESET"]}`')
+		coloured = False
+		colour_char = False
+		i = 0
 		for char in f'{text}\n':
-			sleep(speed)
+			if char == '`':
+				if not coloured:
+					colour_char = True
+				if coloured:
+					coloured = False
+				else:
+					coloured = True
+				continue
+			elif coloured and char == '[':
+				colour_char = True
+			elif not colour_char:
+				sleep(speed)
+			elif i>=10:
+				i = 0
+				colour_char = False
+				sleep(speed)
+			else:
+				i+=1
 			stdout.write(char)
 			stdout.flush()
 		if g:
