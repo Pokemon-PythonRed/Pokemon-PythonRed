@@ -383,6 +383,8 @@ class Pokemon:
 			ball_modifier = 256
 		elif ball == "Ultra Ball":
 			ball_modifier = 151
+		elif ball == "Master Ball":
+			pass
 		else:
 			abort(f'Invalid ball: {ball}')
 
@@ -401,11 +403,8 @@ class Pokemon:
 			else:
 				catch = min(
 					255,
-					floor(
-						floor(self.stats['hp'] * 255 / (8 if ball == "Great Ball" else 12))
-						/ max(1, floor(self.stats['chp'] / 4))
-					),
-				) >= randint(0, 255)
+					self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4))
+					) >= randint(0, 255)
 
 		# catch Pokemon process
 		if catch:
@@ -417,20 +416,17 @@ class Pokemon:
 			sg(f'\n{self.name} (`{self.type}`-type) was added to your {location}.')
 			return True
 		else:
-			if floor(
-				C * 100 / ball_modifier # type: ignore
-			) > 255: # 3 wobbles
+			wobble_chance = ((C * 100) // ball_modifier * min(255, self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4)))) // 255 + status # type: ignore
+			debug(wobble_chance)
+			
+			if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
+				sp('The ball missed the Pokémon!')
+			elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
+				sp('Darn! The Pokémon broke free!')
+			elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
+				sp('Aww! It appeared to be caught!')
+			elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
 				sp('Shoot! It was so close too!')
-			else:
-				wobble_chance = floor(C * 100 * min(255, floor(floor(self.stats['chp'] * 255 / 8 if ball == "Great Ball" else 12) / max(1, floor(self.stats['hp'] / 4)))) / 255) + status
-				if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
-					sp('The ball missed the Pokémon!')
-				elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
-					sp('Darn! The Pokémon broke free!')
-				elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
-					sp('Aww! It appeared to be caught!')
-				elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
-					sp('Shoot! It was so close too!')
 			return False
 
 # check if party is alive
