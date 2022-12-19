@@ -326,6 +326,8 @@ class Pokemon:
 
 	# evolve pokemon
 	def evolve(self):
+		# TODO: stop evolution with 'b'
+		# TODO: update dex
 		sg(f'\nWhat? {self.name} is evolving!')
 		self.index += 1
 		old_name = self.name
@@ -333,8 +335,48 @@ class Pokemon:
 			if dex[p]['index'] == self.index: # type: ignore
 				self.species = p
 				self.name = dex[self.species]['name'] # type: ignore
+		self.reset_stats()
 		sg(f'\n{old_name} evolved into {self.species}!') # type: ignore
+		for move in dex[self.species]['moves']: # type: ignore
+			# TODO: Possibly keep track of moves that were forgotten too and not reprompt to learn as well?
+			if move['level'] <= self.level and move['name'] not in (m['name'] for m in self.moves):
+				self.learn_move(move)
 
+	def learn_move(self, move):
+		if len(self.moves) == 4:
+			sg(f'{self.name} wants to learn {move["name"].upper()}!')
+			sg(f'But {self.name} already knows 4 moves')
+			all_moves = [*self.moves, move]
+			move_forgotten = False
+			while not move_forgotten:
+				sp(f'Which move should {self.name} forget?\n')
+				for i in range(5):
+					print(f'[{i+1}] - {all_moves[i]["name"].upper().replace("-", " ")}')
+				forget_move = ''
+				while not forget_move:
+					forget_move = get()
+					if forget_move not in ['1', '2', '3', '4', '5']:
+						forget_move = ''
+					else:
+						if forget_move == '5':
+							sp(f'\nAre you sure you want {self.name} to not learn {move["name"].upper()}? (Y/N)')
+						else:
+							sp(f'\nAre you sure you want {self.name} to forget {all_moves[int(forget_move)-1]["name"].upper()}? (Y/N)')
+						option = ''
+						while option not in ['y','n']:
+							option = get()
+						if option in ['y']:
+							if forget_move == '5':
+								sp(f'\n{self.name} didn\'t learn {move["name"].upper()}')
+							else:
+								sp(f'\n{self.name} forgot {all_moves[int(forget_move)-1]["name"].upper()}\n')
+								sp(f'\n{self.name} learned {move["name"].upper()}!')
+								self.moves = [move for move in self.moves if move['name'] != all_moves[int(forget_move) - 1]['name']]
+								self.moves.append({"name": move['name'], "pp": list(filter(lambda mv: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
+							move_forgotten = True
+		else:
+			sg(f'{self.name} learned {move["name"].upper()}')
+			pokemon.moves.append({"name": move['name'], "pp": list(filter(lambda mv, move=move: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
 
 	# raw level up
 	def level_up(self, pokemon): # sourcery skip: low-code-quality
@@ -342,44 +384,11 @@ class Pokemon:
 		pokemon.reset_stats()
 		sp(f'{pokemon.name} grew to level {pokemon.level}!')
 		if 'evolution' in dex[pokemon.species]: # type: ignore
-			if pokemon.level == dex[pokemon.species]['evolution']: # type: ignore
+			if pokemon.level >= dex[pokemon.species]['evolution']: # type: ignore
 				pokemon.evolve()
 		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
-				if len(pokemon.moves) == 4:
-					sg(f'{pokemon.name} wants to learn {m["name"].upper()}!')
-					sg(f'But {pokemon.name} already knows 4 moves')
-					all_moves = [*pokemon.moves, m]
-					move_forgotten = False
-					while not move_forgotten:
-						sp(f'Which move should {pokemon.name} forget?')
-						for i in range(5):
-							print(f'[{i+1}] - {all_moves[i]["name"].upper().replace("-", " ")}')
-						forget_move = ''
-						while not forget_move:
-							forget_move = get()
-							if forget_move not in ['1', '2', '3', '4', '5']:
-								forget_move = ''
-							else:
-								if forget_move == '5':
-									sp(f'\nAre you sure you want {pokemon.name} to not learn {m["name"].upper()}? (Y/N)')
-								else:
-									sp(f'\nAre you sure you want {pokemon.name} to forget {all_moves[int(forget_move)-1]["name"].upper()}? (Y/N)')
-								option = ''
-								while option not in ['y','n']:
-									option = get()
-								if option in ['y']:
-									if forget_move == '5':
-										sp(f'\n{pokemon.name} didn\'t learn {m["name"].upper()}')
-									else:
-										sp(f'\n{pokemon.name} forgot {all_moves[int(forget_move)-1]["name"].upper()}\n')
-										sp(f'\n{pokemon.name} learned {m["name"].upper()}!')
-										pokemon.moves = [m for m in pokemon.moves if m['name'] != all_moves[int(forget_move) - 1]['name']]
-										pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
-									move_forgotten = True
-				else:
-					sg(f'{pokemon.name} learned {m["name"].upper()}')
-					pokemon.moves.append({"name": m['name'], "pp": list(filter(lambda mv, m=m: mv['name'] == m['name'], moves))[0]['pp']}) # type: ignore
+				pokemon.learn_move(m)
 
 	# catch Pokemon
 	def catch(self, ball: str) -> bool:
