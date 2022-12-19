@@ -2263,9 +2263,9 @@
 			}
 		]
 	},
-	"NIDORAN\u00e2\u2122\u20ac": {
+	"NIDORAN♀": {
 		"index": 29,
-		"name": "Nidoran\u00e2\u2122\u20ac",
+		"name": "Nidoran♀",
 		"type": "POISON",
 		"catch": 90,
 		"xp": "mediumslow",
@@ -2524,9 +2524,9 @@
 			}
 		]
 	},
-	"NIDORAN\u00e2\u2122\u201a": {
+	"NIDORAN♂": {
 		"index": 32,
-		"name": "Nidoran\u00e2\u2122\u201a",
+		"name": "Nidoran♂",
 		"type": "POISON",
 		"catch": 45,
 		"xp": "mediumslow",
@@ -56997,9 +56997,9 @@
 			}
 		]
 	},
-	"FLAB\u00c3\u2030B\u00c3\u2030": {
+	"FLABÉBÉ": {
 		"index": 669,
-		"name": "Flab\u00c3\u00a9b\u00c3\u00a9",
+		"name": "Flabébé",
 		"type": "FAIRY",
 		"catch": 220,
 		"xp": "mediumfast",
