@@ -324,11 +324,26 @@ class Pokemon:
 				sp(f'\nCongratulations, {self.name} has reached level 100!')
 				break
 
+	# evolve pokemon
+	def evolve(self):
+		sg(f'\nWhat? {self.name} is evolving!')
+		self.index += 1
+		old_name = self.name
+		for p in dex.keys(): # type: ignore
+			if dex[p]['index'] == self.index: # type: ignore
+				self.species = p
+				self.name = dex[self.species]['name'] # type: ignore
+		sg(f'\n{old_name} evolved into {self.species}!') # type: ignore
+
+
 	# raw level up
 	def level_up(self, pokemon): # sourcery skip: low-code-quality
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sp(f'{pokemon.name} grew to level {pokemon.level}!')
+		if 'evolution' in dex[pokemon.species]: # type: ignore
+			if pokemon.level == dex[pokemon.species]['evolution']: # type: ignore
+				pokemon.evolve()
 		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
 				if len(pokemon.moves) == 4:
