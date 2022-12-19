@@ -383,9 +383,7 @@ class Pokemon:
 			ball_modifier = 256
 		elif ball == "Ultra Ball":
 			ball_modifier = 151
-		elif ball == "Master Ball":
-			pass
-		else:
+		elif ball != "Master Ball":
 			abort(f'Invalid ball: {ball}')
 
 		# decide whether caught
@@ -418,7 +416,7 @@ class Pokemon:
 		else:
 			wobble_chance = ((C * 100) // ball_modifier * min(255, self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4)))) // 255 + status # type: ignore
 			debug(wobble_chance)
-			
+
 			if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
 				sp('The ball missed the Pokémon!')
 			elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
