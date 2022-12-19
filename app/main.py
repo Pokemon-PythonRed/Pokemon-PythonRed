@@ -277,6 +277,7 @@ class Pokemon:
 				damage = self.damage_calc(move_entry, attacker)
 			else:
 				sp(f'{attacker.name} missed!')
+				damage = 0
 			return damage # type: ignore
 
 	# TODO Rename this here and in `deal_damage`
