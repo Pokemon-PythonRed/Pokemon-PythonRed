@@ -14,7 +14,7 @@ from platform import system as platform
 from random import choice, choices, randint
 # TODO: from string import ...
 from sys import exit as sysexit, path as syspath, stdout
-from time import sleep
+from time import sleep, time
 from typing import Optional, Union
 from webbrowser import open as webopen
 
@@ -326,8 +326,17 @@ class Pokemon:
 
 	# evolve pokemon
 	def evolve(self):
-		# TODO: stop evolution with 'b'
-		sg(f'\nWhat? {self.name} is evolving!')
+		sp(f'\nWhat? {self.name} is evolving!')
+		input = getch()
+		# for _ in range(3):
+		if input in ['e','b']:
+			sg(f'{self.name} didn\'t evolve')
+			return
+
+		sleep(0.5)
+		print("...")
+		sleep(2)
+
 		self.index += 1
 		old_name = self.name
 		for p in dex.keys(): # type: ignore
@@ -339,7 +348,6 @@ class Pokemon:
 
 		save['dex'][self.species] = {'seen': True, 'caught': True}
 		save['flag']['type'][self.type] = {'seen': True, 'caught': True}
-		
 		for move in dex[self.species]['moves']: # type: ignore
 			# TODO: Possibly keep track of moves that were forgotten too and not reprompt to learn as well?
 			if move['level'] <= self.level and move['name'] not in (m['name'] for m in self.moves):
@@ -385,7 +393,7 @@ class Pokemon:
 	def level_up(self, pokemon): # sourcery skip: low-code-quality
 		pokemon.level += 1
 		pokemon.reset_stats()
-		sp(f'{pokemon.name} grew to level {pokemon.level}!')
+		sg(f'{pokemon.name} grew to level {pokemon.level}!')
 		if 'evolution' in dex[pokemon.species]: # type: ignore
 			if pokemon.level >= dex[pokemon.species]['evolution']: # type: ignore
 				pokemon.evolve()
