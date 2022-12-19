@@ -327,7 +327,6 @@ class Pokemon:
 	# evolve pokemon
 	def evolve(self):
 		# TODO: stop evolution with 'b'
-		# TODO: update dex
 		sg(f'\nWhat? {self.name} is evolving!')
 		self.index += 1
 		old_name = self.name
@@ -337,6 +336,10 @@ class Pokemon:
 				self.name = dex[self.species]['name'] # type: ignore
 		self.reset_stats()
 		sg(f'\n{old_name} evolved into {self.species}!') # type: ignore
+
+		save['dex'][self.species] = {'seen': True, 'caught': True}
+		save['flag']['type'][self.type] = {'seen': True, 'caught': True}
+		
 		for move in dex[self.species]['moves']: # type: ignore
 			# TODO: Possibly keep track of moves that were forgotten too and not reprompt to learn as well?
 			if move['level'] <= self.level and move['name'] not in (m['name'] for m in self.moves):
