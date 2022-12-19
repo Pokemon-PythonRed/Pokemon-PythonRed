@@ -55,7 +55,7 @@ colours = {
 	'DARK': '\x1b[38;5;095m',
 	'STEEL': '\x1b[38;5;250m',
 	'FAIRY': '\x1b[38;5;212m',
-	'RESET': '\x1b[0;0m'
+	'RESET': '\x1b[00;0;000m'
 }
 
 # declare timed text output
@@ -71,13 +71,31 @@ def reset_sp(speed) -> None:
 	global sp, sg
 	def sp(text, g=False) -> None:
 		for key in colours.keys():
-			text = text.replace(f'{key}', f'{colours[key]}{key}{colours["RESET"]}')
+			text = text.replace(f'`{key}`', f'`{colours[key]}{key}{colours["RESET"]}`')
+		coloured = False
+		colour_char = False
+		i = 0
 		for char in f'{text}\n':
-			sleep(speed)
+			if char == '`':
+				if not coloured:
+					colour_char = True
+				coloured = not coloured
+				continue
+			elif coloured and char == '[':
+				colour_char = True
+			elif not colour_char:
+				sleep(speed)
+			elif i>=10:
+				i = 0
+				colour_char = False
+				sleep(speed)
+			else:
+				i+=1
 			stdout.write(char)
 			stdout.flush()
 		if g:
 			getch()
+
 	def sg(text) -> None:
 		sp(text, g=True)
 reset_sp(speed=text[text_speed])
@@ -365,7 +383,7 @@ class Pokemon:
 			ball_modifier = 256
 		elif ball == "Ultra Ball":
 			ball_modifier = 151
-		else:
+		elif ball != "Master Ball":
 			abort(f'Invalid ball: {ball}')
 
 		# decide whether caught
@@ -383,11 +401,8 @@ class Pokemon:
 			else:
 				catch = min(
 					255,
-					floor(
-						floor(self.stats['hp'] * 255 / (8 if ball == "Great Ball" else 12))
-						/ max(1, floor(self.stats['chp'] / 4))
-					),
-				) >= randint(0, 255)
+					self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4))
+					) >= randint(0, 255)
 
 		# catch Pokemon process
 		if catch:
@@ -396,23 +411,20 @@ class Pokemon:
 			save['dex'][self.species] = {'seen': True, 'caught': True}
 			save['flag']['type'][self.type] = {'seen': True, 'caught': True}
 			sg(f'\nYou caught {self.name}!')
-			sg(f'\n{self.name} ({self.type}-type) was added to your {location}.')
+			sg(f'\n{self.name} (`{self.type}`-type) was added to your {location}.')
 			return True
 		else:
-			if floor(
-				C * 100 / ball_modifier # type: ignore
-			) > 255: # 3 wobbles
+			wobble_chance = ((C * 100) // ball_modifier * min(255, self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4)))) // 255 + status # type: ignore
+			debug(wobble_chance)
+
+			if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
+				sp('The ball missed the Pokémon!')
+			elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
+				sp('Darn! The Pokémon broke free!')
+			elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
+				sp('Aww! It appeared to be caught!')
+			elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
 				sp('Shoot! It was so close too!')
-			else:
-				wobble_chance = floor(C * 100 * min(255, floor(floor(self.stats['chp'] * 255 / 8 if ball == "Great Ball" else 12) / max(1, floor(self.stats['hp'] / 4)))) / 255) + status
-				if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
-					sp('The ball missed the Pokémon!')
-				elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
-					sp('Darn! The Pokémon broke free!')
-				elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
-					sp('Aww! It appeared to be caught!')
-				elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
-					sp('Shoot! It was so close too!')
 			return False
 
 # check if party is alive
@@ -543,7 +555,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		opponent_bars = ceil((opponent_party[opponent_current].stats['chp']/(opponent_party[opponent_current].stats['hp']))*bars_length) # type: ignore
 		debug(f'Player bars: {bars}\nOpponent bars: {opponent_bars}')
 		debug(f'Player level: {save["party"][current].level}\nOpponent level: {opponent_party[opponent_current].level}') # type: ignore
-		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} ({save["party"][current].type}) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} ({opponent_party[opponent_current].type}) Lv. {opponent_party[opponent_current].level}''') # type: ignore
+		sp(f'''\n{save["party"][current].name}{' '*(name_length-len(save['party'][current].name))}[{'='*bars}{' '*(bars_length-bars)}] {str(save['party'][current].stats['chp'])}/{save['party'][current].stats['hp']} (`{save["party"][current].type}`) Lv. {save["party"][current].level}\n{opponent_party[opponent_current].name}{' '*(name_length-len(opponent_party[opponent_current].name))}[{'='*opponent_bars}{' '*(bars_length-opponent_bars)}] {opponent_party[opponent_current].stats['chp']}/{opponent_party[opponent_current].stats['hp']} (`{opponent_party[opponent_current].type}`) Lv. {opponent_party[opponent_current].level}''') # type: ignore
 		sp(f'\nWhat should {save["party"][current].name} do?\n\n[1] - Attack\n[2] - Switch\n[3] - Item\n[4] - Run\n')
 
 		valid_choice = False
@@ -580,7 +592,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 				for i in range(len(save['party'][current].moves)):
 					move_entry = list(filter(lambda m, i=i: m['name'] == save['party'][current].moves[i]['name'], moves))[0] # type: ignore
-					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | {move_entry["type"].upper()}{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
+					sp(f'[{i+1}] - {save["party"][current].moves[i]["name"].upper().replace("-"," ")}{" "*(longest_move_name_length-len(save["party"][current].moves[i]["name"].upper().replace("-"," ")))} | `{move_entry["type"].upper()}`{" "*(longest_type_name_length-len(move_entry["type"].upper()))} - {save["party"][current].moves[i]["pp"]}/{move_entry["pp"]}')
 					options.append(str(i+1))
 				sp(f'[e] - Back\n')
 				valid_choice = False
@@ -823,7 +835,7 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 				except KeyError:
 					in_bag = 0
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["sell_price"])} (in bag: {in_bag})') # type: ignore
-				sp(items[pokemart[loc][int(choice)-1]]["description"])
+				sp(items[pokemart[loc][int(choice)-1]]["description"]) # type: ignore
 				sp("How many would you like to sell(1-99)? (press 'e' to go back)\n")
 				while not amount:
 					while not amount:
@@ -869,7 +881,7 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 					in_bag = 0
 
 				sp(f'\n{pokemart[loc][int(choice)-1]}: ¥{"{:,}".format(items[pokemart[loc][int(choice)-1]]["price"])} (in bag: {in_bag})') # type: ignore
-				sp(items[pokemart[loc][int(choice)-1]]["description"])
+				sp(items[pokemart[loc][int(choice)-1]]["description"]) # type: ignore
 				sp("How many would you like to buy(1-99)? (press 'e' to go back)\n")
 				while not amount:
 					while not amount:
@@ -1101,7 +1113,7 @@ while not exit:
 			sp(f'{save["name"]}\'s Pokédex{dex_string}' if dex_string else '\nYou have no Pokémon in your Pokédex!')
 		elif option == 'p':
 			if save['party']:
-				sp('\n'.join(f'{i.name} ({i.type}-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
+				sp('\n'.join(f'{i.name} (`{i.type}`-type)\nLevel {i.level} ({i.current_xp}/{str(xp["next"][i.level_type][str(i.level)])} XP to next level)\n{i.stats["chp"]}/{i.stats["hp"]} HP' for i in save['party'])) # type: ignore
 			else:
 				sp('Your party is empty!')
 		elif option == 'i':
@@ -1171,6 +1183,8 @@ while not exit:
 		if option == 'w':
 			if save['flag']['chosen_starter']:
 				save['location'] = 'route1-s'
+				encounter = get_encounter('route1-s', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 			else:
 				sg('\nYou take a step into the tall grass north of Pallet Town.')
 				sg('...')
@@ -1315,11 +1329,11 @@ while not exit:
 
 	# route 1 - north
 	elif save['location'] == 'route1-n':
-		sp('Current Location: Route 1 (North)\n\n[w] - Go to Viridian City (South)\n[s] - Go to Route 1 (South)\n')
+		sp('Current Location: Route 1 (North)\n\n[w] - Go to Viridian City\n[s] - Go to Route 1 (South)\n')
 		while option == '':
 			option = get()
 		if option == 'w':
-			save['location'] = 'viridian-s'
+			save['location'] = 'viridian'
 		elif option == 's':
 			save['location'] = 'route1-s'
 			encounter = get_encounter('route1-s', 'tall-grass')
@@ -1329,14 +1343,16 @@ while not exit:
 		else:
 			sp('\nInvalid answer!')
 
-	# viridian city - south
-	elif save['location'] == 'viridian-s':
-		sp('Current Location: Viridian City (South)\n\n[w] - Go to Viridian City (North)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n')
+	# viridian city
+	elif save['location'] == 'viridian':
+		sp('Current Location: Viridian City\n\n[w] - Go to Route 2 (South)\n[a] - Go to Route 22 (East)\n[s] - Go to Route 1 (North)\n[1] - Viridian Pokémon Centre\n[2] - Viridian Pokémart\n[3] - Viridian Pokemon Gym\n')
 		while option == '':
 			option = get()
 		if option == 'w':
 			if save['flag']['delivered_package']:
-				sg('\nComing soon!') # will become: save['location'] = 'viridian-n'
+				save['location'] = 'route2-s'
+				encounter = get_encounter('route2-s', 'tall-grass')
+				battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 			else:
 				sg('\nAn old man is blocking the way, accompanied by an apologetic young lady.')
 				sg('\nMAN: Hey you, get off my property!')
@@ -1346,9 +1362,11 @@ while not exit:
 			sg('\nComing soon!')
 		elif option == 's':
 			save['location'] = 'route1-n'
+			encounter = get_encounter('route1-n', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == '1':
 			heal()
-			save['recent_center'] = 'viridian-s'
+			save['recent_center'] = 'viridian'
 		elif option == '2':
 			if save['flag']['delivered_package']:
 				display_pokemart('viridian')
@@ -1360,6 +1378,120 @@ while not exit:
 				save['bag']['Oak\'s Parcel'] = 1
 				sg(f'\n({save["name"]} recieved Oak\'s Parcel!)\n')
 				sg('\nCLERK: Okay! Say hi to the Professor for me!')
+		elif option == '3':
+			if save['badges']['Boulder'] and save['badges']['Cascade'] and save['badges']['Volcano'] and save['badges']['Marsh'] and save['badges']['Rainbow'] and save['badges']['Soul'] and save['badges']['Thunder']:
+				save['location'] = 'viridian-gym'
+			else:
+				sg("\nThe gym is closed")
+				sg('\nYou won\'t be able to enter until later.')
+		elif option == 'm':
+			menu_open = True
+
+	elif save['location'] == 'route2-s':
+		sp('Current Location: Route 2 (South)\n\n[w] - Go to Viridian Forest (South)\n[s] - Go to Viridian City\n[d] - Go to Route 2 (North)\n')
+		while option == '':
+			option = get()
+		if option == 'w':
+			save['location'] = 'viridian-forest-s'
+			encounter = get_encounter('viridian-forest-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 's':
+			save['location'] = 'viridian'
+		elif option == 'd':
+			if save['hms']['cut']:
+				save['location'] = 'route2-w'
+			else:
+				sg('\nThere is a tree in the way')
+				sg('\nMaybe a Pokémon could cut it down?')
+		elif option == 'm':
+			menu_open = True
+
+	elif save['location'] == 'viridian-forest-s':
+		sp('Current Location: Viridian Forest (South)\n\n[a] - Go to Viridian Forest (West)\n[s] - Go to Route 2 (South)\n[d] - Go to Viridian Forest (East)\n')
+		while option == '':
+			option = get()
+		if option == 's':
+			save['location'] = 'route2-s'
+			encounter = get_encounter('route2-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'a':
+			save['location'] = 'viridian-forest-w'
+			encounter = get_encounter('viridian-forest-w', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'd':
+			save['location'] = 'viridian-forest-e'
+			encounter = get_encounter('viridian-forest-e', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'm':
+			menu_open = True
+
+	elif save['location'] == 'viridian-forest-w':
+		sp('Current Location: Viridian Forest (West)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[d] - Go to Viridian Forest (East)\n')
+		while option == '':
+			option = get()
+		if option == 's':
+			save['location'] = 'viridian-forest-s'
+			encounter = get_encounter('viridian-forest-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'w':
+			save['location'] = 'viridian-forest-n'
+			encounter = get_encounter('viridian-forest-n', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'd':
+			save['location'] = 'viridian-forest-e'
+			encounter = get_encounter('viridian-forest-e', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'm':
+			menu_open = True
+
+	elif save['location'] == 'viridian-forest-e':
+		sp('Current Location: Viridian Forest (East)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[a] - Go to Viridian Forest (West)\n')
+		while option == '':
+			option = get()
+		if option == 's':
+			save['location'] = 'viridian-forest-s'
+			encounter = get_encounter('viridian-forest-s', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'w':
+			save['location'] = 'viridian-forest-n'
+			encounter = get_encounter('viridian-forest-n', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'a':
+			save['location'] = 'viridian-forest-w'
+			encounter = get_encounter('viridian-forest-w', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'm':
+			menu_open = True
+
+	elif save['location'] == 'viridian-forest-n':
+		sp('Current Location: Viridian Forest (North)\n\n[w] - Go to Route 2 (North)\n[a] - Go to Viridian Forest (West)\n[d] - Go to Viridian Forest (East)\n')
+		while option == '':
+			option = get()
+		if option == 'w':
+			save['location'] = 'route2-n'
+			encounter = get_encounter('route2-n', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'a':
+			save['location'] = 'viridian-forest-w'
+			encounter = get_encounter('viridian-forest-w', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'd':
+			save['location'] = 'viridian-forest-e'
+			encounter = get_encounter('viridian-forest-e', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option == 'm':
+			menu_open = True
+
+	elif save['location'] == "route2-n":
+		sp('Current Location: Route 2 (North)\n\n[w] - Go to Pewter City\n[s] - Go to Viridian Forest (North)\n')
+		while option == '':
+			option = get()
+		if option == 'w':
+			sg("Coming soon") # Will become save['location'] = 'pewter'
+		elif option == 's':
+			save['location'] = 'viridian-forest-n'
+			encounter = get_encounter('viridian-forest-n', 'tall-grass')
+			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 'm':
 			menu_open = True
 
