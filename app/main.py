@@ -394,9 +394,11 @@ class Pokemon:
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sg(f'{pokemon.name} grew to level {pokemon.level}!')
-		if 'evolution' in dex[pokemon.species]: # type: ignore
-			if pokemon.level >= dex[pokemon.species]['evolution']: # type: ignore
-				pokemon.evolve()
+		if (
+			'evolution' in dex[pokemon.species]
+			and pokemon.level >= dex[pokemon.species]['evolution']
+		):
+			pokemon.evolve()
 		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
 				pokemon.learn_move(m)
