@@ -274,11 +274,9 @@ class Pokemon:
 			sp(f'(Note: {move["name"].upper()} is a status move)')
 		else:
 			if randint(1,100) <= move_entry["accuracy"]:
-				damage = self.damage_calc(move_entry, attacker)
-			else:
-				sp(f'{attacker.name} missed!')
-				damage = 0
-			return damage # type: ignore
+				return self.damage_calc(move_entry, attacker)
+			sp(f'{attacker.name} missed!')
+			return 0
 
 	# TODO Rename this here and in `deal_damage`
 	def damage_calc(self, move_entry, attacker):
@@ -395,9 +393,11 @@ class Pokemon:
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sg(f'{pokemon.name} grew to level {pokemon.level}!')
-		if 'evolution' in dex[pokemon.species]: # type: ignore
-			if pokemon.level >= dex[pokemon.species]['evolution']: # type: ignore
-				pokemon.evolve()
+		if (
+			'evolution' in dex[pokemon.species]
+			and pokemon.level >= dex[pokemon.species]['evolution']
+		):
+			pokemon.evolve()
 		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
 				pokemon.learn_move(m)
