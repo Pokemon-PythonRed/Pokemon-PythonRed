@@ -2,6 +2,10 @@
     "viridian-forest-s": [
         {
             "trainer_class": "Bug Catcher",
+            "name": "",
+            "before_dialouge": "Hey! You have Pokémon! Come on! Let's battle'em!",
+            "win_dialouge": "No! CATERPIE can't cut it!",
+            "after_battling_dialouge": "Ssh! You'll scare the bugs away!",
             "pokemon": [
                 {
                     "species": "WEEDLE",
@@ -17,6 +21,10 @@
     "viridian-forest-w": [
         {
             "trainer_class": "Bug Catcher",
+            "name": "",
+            "before_dialouge": "Yo! You can't jam out if you're a Pokémon trainer!",
+            "win_dialouge": "Huh? I ran out of Pokémon!",
+            "after_battling_dialouge": "Darn! I'm going to catch some stronger ones!",
             "pokemon": [
                 {
                     "species": "WEEDLE",
@@ -36,6 +44,10 @@
     "viridian-forest-n": [
         {
             "trainer_class": "Bug Catcher",
+            "name": "",
+            "before_dialouge": "Hey, wait up! What's the hurry?",
+            "win_dialouge": "I give! You're good at this!",
+            "after_battling_dialouge": "Sometimes, you can find stuff on the ground! I'm looking for the stuff I dropped!",
             "pokemon": [
                 {
                     "species": "WEEDLE",
