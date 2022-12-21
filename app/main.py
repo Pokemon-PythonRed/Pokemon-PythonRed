@@ -250,12 +250,13 @@ class Pokemon:
 			if self.fainted:
 				self.stats['chp'] = 0
 
-	# check levels for entire party
-	def check_level_up(self, party) -> None:
-		for i in party:
-			while self.current_xp >= xp['next'][self.level_type][str(self.level)] and self.level < 100: # type: ignore
-				i.current_xp -= xp['next'][self.level_type][str(self.level)] # type: ignore
-				self.level_up(i)
+	def check_level_up(self) -> None:
+		while self.current_xp >= xp['next'][self.level_type][str(self.level)]: # type: ignore
+			self.current_xp -= xp['next'][self.level_type][str(self.level)] # type: ignore
+			self.level_up(self)
+			if self.level == 100:
+				sp(f'\nCongratulations, {self.name} has reached level 100!')
+				break
 
 	# check if pokemon is fainted
 	def check_fainted(self) -> bool:
@@ -312,16 +313,29 @@ class Pokemon:
 	def calculate_xp(self, battle_type='wild') -> int:
 		return ceil((self.total_xp * self.level * (1 if battle_type == 'wild' else 1.5)) / 7) # type: ignore
 
-	# level up pokemon in context of battle
-	def give_xp(self, battle_type='wild') -> None:
-		self.current_xp += self.calculate_xp(battle_type)
-		sg(f'\n{self.name} gained {self.calculate_xp(battle_type)} XP!')
-		while self.current_xp >= xp['next'][self.level_type][self.level]: # type: ignore
-			self.current_xp -= xp['next'][self.level_type][self.level] # type: ignore
-			self.level_up(self)
-			if self.level == 100:
-				sp(f'\nCongratulations, {self.name} has reached level 100!')
-				break
+	# give xp from opponent pokemon to party in battle
+	def give_xp(self, participating_pokemon, type="wild"):
+		total_xp = self.calculate_xp(type) # type: ignore
+		debug(f'total xp: {total_xp}')
+		if 'EXP. ALL' in save['bag']:
+			for p in participating_pokemon:
+				save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
+				sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} XP!')
+				save['party'][p].check_level_up()
+
+			other_pokemon = [pokemon for pokemon in save['party'] if pokemon not in participating_pokemon]
+			for o in other_pokemon:
+				save['party'][o].current_xp += floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))
+				sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} XP!')
+				save['party'][o].check_level_up()
+
+		else:
+			for p in participating_pokemon:
+				save['party'][p].current_xp += floor(total_xp / len(participating_pokemon))
+				sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} XP!')
+				save['party'][p].check_level_up()
+			sp("")
+		sleep(0.5)
 
 	# evolve pokemon
 	def evolve(self):
@@ -386,7 +400,7 @@ class Pokemon:
 							move_forgotten = True
 		else:
 			sg(f'{self.name} learned {move["name"].upper()}')
-			pokemon.moves.append({"name": move['name'], "pp": list(filter(lambda mv, move=move: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
+			self.moves.append({"name": move['name'], "pp": list(filter(lambda mv, move=move: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
 
 	# raw level up
 	def level_up(self, pokemon): # sourcery skip: low-code-quality
@@ -720,15 +734,14 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1 # type: ignore
 			player_attacked_this_turn = True
 
-		# end battle if player wins
-		if is_alive(save['party']) and not is_alive(opponent_party):
+		if opponent_party[opponent_current].check_fainted() and earn_xp == True: # type: ignore
+			opponent_party[opponent_current].give_xp(participating_pokemon, battle_type) # type: ignore
+
+		# end battle if player wins or loses
+		if is_alive(save['party']) and not is_alive(opponent_party) or not is_alive(save['party']):
 			break
 
-		# end battle if player loses
-		elif not is_alive(save['party']):
-			break
-
-		elif save['party'][current].check_fainted():
+		if save['party'][current].check_fainted():
 			participating_pokemon = list(filter(lambda p, current=current: save['party'][p].name != save['party'][current].name, participating_pokemon))
 			switch_choice = switch_pokemon(party_length)
 			current = int(switch_choice)-1
@@ -745,6 +758,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 	# upon catching
 	elif caught:
+		# TODO: earn xp
 		pass # type: ignore
 
 	# upon winning
@@ -754,34 +768,7 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				sg(f'\n{save["party"][current].name} won the battle!')
 				save['money'] += prize_money()
 				sg(f'You recieved ¥{str(prize_money())} as prize money.')
-			if earn_xp == True:
-				total_xp = ceil(opponent_party[opponent_current].calculate_xp()) # type: ignore
-				debug(f'total xp: {total_xp}')
-				if 'EXP. All' in save['bag']:
-					for p in participating_pokemon:
-						save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
-						sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} XP!')
-						save['party'][p].check_level_up(save['party'])
-
-					other_pokemon = []
-					for i in save['party']:
-						if i not in participating_pokemon: other_pokemon.append(i)
-					for o in other_pokemon:
-						save['party'][o].current_xp += floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))
-						sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} XP!')
-						save['party'][o].check_level_up(save['party'])
-
-				else:
-					for p in participating_pokemon:
-						save['party'][p].current_xp += floor(total_xp / len(participating_pokemon))
-						sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} XP!')
-						save['party'][p].check_level_up(save['party'])
-					sp("")
-				sleep(0.5)
-			if battle_type == 'trainer':
 				sp(f'\n{name}: {end_dialouge}')
-				save['money'] += trainer[title] # type: ignore
-				sp(f'You got ¥{trainer[title]}') # type: ignore
 		else:
 			save['flag']['won_first_battle'] = True
 
@@ -1233,7 +1220,7 @@ while not exit:
 					while not option and option not in ['1', '2', '3']:
 						option = get()
 					if option in ['1', '2', '3']:
-						sp(f'\nDo you want the {["GRASS", "FIRE", "WATER"][int(option)-1]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
+						sp(f'\nDo you want the `{["GRASS", "FIRE", "WATER"][int(option)-1]}`-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
 						confirm = ''
 						while confirm not in yn:
 							confirm = get()
