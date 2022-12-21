@@ -13,7 +13,7 @@
 		"pokemon_caught": 0,
 		"pokemon_seen": 0,
 		"pokemon_uncaught": 0,
-		"trainer_fought": {},
+		"trainer_fought": [],
 		"type": {},
 		"won_first_battle": null
 	},
