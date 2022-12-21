@@ -1,0 +1,47 @@
+{
+    "viridian-forest-s": [
+        {
+            "trainer_class": "Bug Catcher",
+            "pokemon": [
+                {
+                    "species": "WEEDLE",
+                    "level": 6
+                },
+                {
+                    "species": "CATERPIE",
+                    "level": 6
+                }
+            ]
+        }
+    ],
+    "viridian-forest-w": [
+        {
+            "trainer_class": "Bug Catcher",
+            "pokemon": [
+                {
+                    "species": "WEEDLE",
+                    "level": 7
+                },
+                {
+                    "species": "KAKUNA",
+                    "level": 7
+                },
+                {
+                    "species": "WEEDLE",
+                    "level": 7
+                }
+            ]
+        }
+    ],
+    "viridian-forest-n": [
+        {
+            "trainer_class": "Bug Catcher",
+            "pokemon": [
+                {
+                    "species": "WEEDLE",
+                    "level": 9
+                }
+            ]
+        }
+    ]
+}
