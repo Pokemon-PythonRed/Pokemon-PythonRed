@@ -1,6 +1,20 @@
 {
+    "route1-n": [
+        {
+            "type": "character",
+            "name": "Pokémart Clerk",
+            "leave_after_speaking": true,
+            "text": [
+                "Hi! I work at a Pokémon Mart. It's a convenient shop, so please visit us in VIRIDIAN CITY.",
+                "I know, I'll give you a sample! Here you go!",
+                "`Potion:1`",
+                "We also carry Poke Balls for catching Pokémon!"
+            ]
+        }
+    ],
     "viridian-forest-s": [
         {
+            "type": "trainer",
             "trainer_class": "Bug Catcher",
             "name": "",
             "before_dialouge": "Hey! You have Pokémon! Come on! Let's battle'em!",
@@ -20,6 +34,7 @@
     ],
     "viridian-forest-w": [
         {
+            "type": "trainer",
             "trainer_class": "Bug Catcher",
             "name": "",
             "before_dialouge": "Yo! You can't jam out if you're a Pokémon trainer!",
@@ -43,6 +58,7 @@
     ],
     "viridian-forest-n": [
         {
+            "type": "trainer",
             "trainer_class": "Bug Catcher",
             "name": "",
             "before_dialouge": "Hey, wait up! What's the hurry?",

@@ -934,25 +934,76 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 def display_trainers(loc) -> list:
 	if loc not in trainers: return [] # type: ignore
 
-	valid_options = [i+1 for i in range(len(trainers[loc]))] # type: ignore
+	possible_trainers = []
+	for trainer in trainers[loc]: # type: ignore
+		if not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']): # type: ignore
+			possible_trainers.append(trainer)
+
+	if possible_trainers == []: return []
+	
+	valid_options = [i+1 for i in range(len(possible_trainers))] # type: ignore
 	for i in valid_options:
-		sp(f'[{i}] - Speak to {trainers[loc][i-1]["trainer_class"]}') # type: ignore
+		trainer = possible_trainers[i-1] # type: ignore
+		if trainer['type'] == 'trainer':
+			sp(f'[{i}] - Speak to {trainer["trainer_class"]}') # TODO: change to name
+		elif trainer['type'] == 'character' and not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']): # type: ignore
+			sp(f'[{i}] - Speak to {trainer["name"]}')
 	sp("")
 	return [str(i) for i in valid_options]
 
-def trainer_battle(loc, option) -> None:
-	trainer = trainers[loc][int(option)-1] # type: ignore
+def trainer_interaction(loc, option) -> None:
+	possible_trainers = []
+	for trainer in trainers[loc]: # type: ignore
+		if not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']): # type: ignore
+			possible_trainers.append(trainer)
 	
-	if trainer in save['flag']['trainer_fought']:
-		sg(f'\n{trainer["trainer_class"]}: {trainer["after_battling_dialouge"]}') # TODO: change to trainer["name"] instead of trainer["trainer_class"]
-		return
+	trainer = possible_trainers[int(option)-1]
+	
+	if trainer['type'] == "trainer":
+		if trainer in save['flag']['trainer_fought']:
+			sg(f'\n{trainer["trainer_class"]}: {trainer["after_battling_dialouge"]}') # TODO: change to trainer["name"] instead of trainer["trainer_class"]
+			return
 
-	battle(
-		opponent_party=[Pokemon(pokemon['species'], pokemon['level'], ivs={ 'atk': 9, 'hp': 8, 'def': 8, 'spa': 8, 'spd': 8, 'spe': 8 }) for pokemon in trainer['pokemon']],
-		battle_type="trainer", title=trainer['trainer_class'], start_diagloue=trainer['before_dialouge'], end_dialouge=trainer['win_dialouge']
-	) # TODO: add names to battle
+		battle(
+			opponent_party=[Pokemon(pokemon['species'], pokemon['level'], ivs={ 'atk': 9, 'hp': 8, 'def': 8, 'spa': 8, 'spd': 8, 'spe': 8 }) for pokemon in trainer['pokemon']],
+			battle_type="trainer", title=trainer['trainer_class'], start_diagloue=trainer['before_dialouge'], end_dialouge=trainer['win_dialouge']
+		) # TODO: add names to battle
 
-	save['flag']['trainer_fought'].append(trainer)
+		save['flag']['trainer_fought'].append(trainer)
+	
+	elif trainer['type'] == 'character':
+
+		if trainer in save['flag']['characters_spoken']:
+			sp("")
+			for line in trainer['after_text']:
+				if line.startswith('`') and line.endswith('`'):
+					item = line[1:-1].split(':')[0]
+					amount = int(line[1:-1].split(':')[1])
+					if item in save['bag']:
+						save['bag'][item] += amount
+					else:
+						save['bag'][item] = amount
+					sg(f'{save["name"]} recieved {amount} {item}(s)')
+					continue
+				else:
+					sg(line)
+
+		else:
+			sp("")
+			for line in trainer['text']:
+				if line.startswith('`') and line.endswith('`'):
+					item = line[1:-1].split(':')[0]
+					amount = int(line[1:-1].split(':')[1])
+					if item in save['bag']:
+						save['bag'][item] += amount
+					else:
+						save['bag'][item] = amount
+					sg(f'{save["name"]} recieved {amount} {item}(s)')
+					continue
+				else:
+					sg(line)
+
+			save['flag']['characters_spoken'].append(trainer)
 
 # display title screen
 cls() # type: ignore
@@ -1374,7 +1425,7 @@ while not exit:
 		elif option == 'm':
 			menu_open = True
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		else:
 			sp('\nInvalid answer!')
 
@@ -1393,7 +1444,7 @@ while not exit:
 		elif option == 'm':
 			menu_open = True
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		else:
 			sp('\nInvalid answer!')
 
@@ -1459,7 +1510,7 @@ while not exit:
 				sg('\nThere is a tree in the way')
 				sg('\nMaybe a Pokémon could cut it down?')
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
@@ -1481,7 +1532,7 @@ while not exit:
 			encounter = get_encounter('viridian-forest-e', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
@@ -1503,7 +1554,7 @@ while not exit:
 			encounter = get_encounter('viridian-forest-e', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
@@ -1525,7 +1576,7 @@ while not exit:
 			encounter = get_encounter('viridian-forest-w', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
@@ -1547,7 +1598,7 @@ while not exit:
 			encounter = get_encounter('viridian-forest-e', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
@@ -1563,7 +1614,7 @@ while not exit:
 			encounter = get_encounter('viridian-forest-n', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option in trainer_options:
-			trainer_battle(save['location'], option)
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
