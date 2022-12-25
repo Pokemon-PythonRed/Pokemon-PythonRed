@@ -14,6 +14,7 @@
 		"pokemon_seen": 0,
 		"pokemon_uncaught": 0,
 		"trainer_fought": [],
+		"characters_spoken": [],
 		"type": {},
 		"won_first_battle": null
 	},
