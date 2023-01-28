@@ -327,9 +327,9 @@ class Pokemon:
 	# evolve pokemon
 	def evolve(self):
 		sp(f'\nWhat? {self.name} is evolving!')
-		input = getch()
+		input_cancel = getch()
 		# for _ in range(3):
-		if input in ['e','b']:
+		if input_cancel in ['e','b']:
 			sg(f'{self.name} didn\'t evolve')
 			return
 
