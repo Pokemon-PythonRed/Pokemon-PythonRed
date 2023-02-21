@@ -517,7 +517,7 @@ def find_moves(name, level) -> list:
 # switch pokemon in battle
 def switch_pokemon(party_length: int) -> Union[int, str]:
 	sp(f'''\nWhich Pokémon should you switch to?\n\n{
-				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
+				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]}) - Level {save["party"][i].level} ({colours[save["party"][i].type.upper()]}{save["party"][i].type}{colours["NORMAL"]})' for i in range(party_length))
 			}''')
 	sp('[e] - Back\n')
 	switch_choice = ''
