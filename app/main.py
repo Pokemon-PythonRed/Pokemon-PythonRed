@@ -341,9 +341,9 @@ class Pokemon:
 	# evolve pokemon
 	def evolve(self):
 		sp(f'\nWhat? {self.name} is evolving!')
-		input = getch()
+		input_cancel = getch()
 		# for _ in range(3):
-		if input in ['e','b']:
+		if input_cancel in ['e','b']:
 			sg(f'{self.name} didn\'t evolve')
 			return
 
@@ -404,7 +404,7 @@ class Pokemon:
 			self.moves.append({"name": move['name'], "pp": list(filter(lambda mv, move=move: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
 
 	# raw level up
-	def level_up(self, pokemon): # sourcery skip: low-code-quality
+	def level_up(self, pokemon):
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sg(f'{pokemon.name} grew to level {pokemon.level}!')
@@ -427,11 +427,13 @@ class Pokemon:
 		# find Poke Ball type
 		if ball == "Great Ball":
 			ball_modifier = 201
+		elif ball == "Master Ball":
+			pass # guaranteed catch
 		elif ball == "Poke Ball":
 			ball_modifier = 256
 		elif ball == "Ultra Ball":
 			ball_modifier = 151
-		elif ball != "Master Ball":
+		else:
 			abort(f'Invalid ball: {ball}')
 
 		# decide whether caught
@@ -452,28 +454,30 @@ class Pokemon:
 					self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4))
 					) >= randint(0, 255)
 
-		# catch Pokemon process
 		if catch:
-			location = 'party' if len(save['party']) < 6 else 'box'
-			save[location].append(self)
-			save['dex'][self.species] = {'seen': True, 'caught': True}
-			save['flag']['type'][self.type] = {'seen': True, 'caught': True}
-			sg(f'\nYou caught {self.name}!')
-			sg(f'\n{self.name} (`{self.type}`-type) was added to your {location}.')
-			return True
-		else:
-			wobble_chance = ((C * 100) // ball_modifier * min(255, self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4)))) // 255 + status # type: ignore
-			debug(wobble_chance)
+			return self.add_caught_pokemon(save)
+		wobble_chance = ((C * 100) // ball_modifier * min(255, self.stats['hp'] * 255 // (8 if ball == "Great Ball" else 12) // max(1, floor(self.stats['chp'] / 4)))) // 255 + status # type: ignore
+		debug(wobble_chance)
 
-			if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
-				sp('The ball missed the Pokémon!')
-			elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
-				sp('Darn! The Pokémon broke free!')
-			elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
-				sp('Aww! It appeared to be caught!')
-			elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
-				sp('Shoot! It was so close too!')
-			return False
+		if wobble_chance >= 0 and wobble_chance < 10: # No wobbles
+			sp('The ball missed the Pokémon!')
+		elif wobble_chance >= 10 and wobble_chance < 30: # 1 wobble
+			sp('Darn! The Pokémon broke free!')
+		elif wobble_chance >= 30 and wobble_chance < 70: # 2 wobbles
+			sp('Aww! It appeared to be caught!')
+		elif wobble_chance >= 70 and wobble_chance <= 100: # 3 wobbles
+			sp('Shoot! It was so close too!')
+		return False
+
+	# once pokemon is caught, add to party or box
+	def add_caught_pokemon(self, save):
+		location = 'party' if len(save['party']) < 6 else 'box'
+		save[location].append(self)
+		save['dex'][self.species] = {'seen': True, 'caught': True}
+		save['flag']['type'][self.type] = {'seen': True, 'caught': True}
+		sg(f'\nYou caught {self.name}!')
+		sg(f'\n{self.name} (`{self.type}`-type) was added to your {location}.')
+		return True
 
 # check if party is alive
 def is_alive(self) -> bool:
@@ -528,7 +532,7 @@ def find_moves(name, level) -> list:
 # switch pokemon in battle
 def switch_pokemon(party_length: int) -> Union[int, str]:
 	sp(f'''\nWhich Pokémon should you switch to?\n\n{
-				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]})' for i in range(party_length))
+				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]}) - Level {save["party"][i].level} ({colours[save["party"][i].type.upper()]}{save["party"][i].type}{colours["NORMAL"]})' for i in range(party_length))
 			}''')
 	sp('[e] - Back\n')
 	switch_choice = ''
