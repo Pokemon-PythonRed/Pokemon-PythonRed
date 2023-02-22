@@ -123,7 +123,7 @@ if not (path.isfile(path.join(syspath[0], i)) for i in [
 	'data/moves.json',
 	'data/map.json',
 	'data/pokemart.json',
-	'data/trainers.json'
+	'data/trainers.json',
 	'build_to_exe.py'
 ]):
 	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link["installation"]}]\nfor more information.\n\nPress Enter to exit.\n')
@@ -517,7 +517,7 @@ def type_effectiveness(move, defender) -> float:
 
 # calculate prize money
 def prize_money(party=None, type='Pokémon Trainer') -> int:
-	return floor(trainer_types[type] * max(i.level for i in (save['party'] if party is None else party))) # type: ignore
+	return floor(trainer_types[type] * max(i.level for i in (party or save['party']))) # type: ignore
 
 # find moves of a wild pokemon
 def find_moves(name, level) -> list:
@@ -741,10 +741,9 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 		# give XP when opponent faints
 		if opponent_party[opponent_current].check_fainted() and earn_xp == True: # type: ignore
 			opponent_party[opponent_current].give_xp(participating_pokemon, battle_type) # type: ignore
-			if battle_type == "trainer":
-				if is_alive(opponent_party):
-					opponent_current += 1
-					sp(f'\n{name if name else title} sent out {opponent_party[opponent_current].name}!') # type: ignore
+			if battle_type == "trainer" and is_alive(opponent_party):
+				opponent_current += 1
+				sp(f'\n{name if name else title} sent out {opponent_party[opponent_current].name}!') # type: ignore
 
 		# end battle if player wins or loses
 		if is_alive(save['party']) and not is_alive(opponent_party) or not is_alive(save['party']):
