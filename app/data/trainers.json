@@ -1,0 +1,75 @@
+{
+    "route1-n": [
+        {
+            "type": "character",
+            "name": "Pokémart Clerk",
+            "leave_after_speaking": true,
+            "text": [
+                "Hi! I work at a Pokémon Mart. It's a convenient shop, so please visit us in VIRIDIAN CITY.",
+                "I know, I'll give you a sample! Here you go!",
+                "`Potion:1`",
+                "We also carry Poke Balls for catching Pokémon!"
+            ]
+        }
+    ],
+    "viridian-forest-s": [
+        {
+            "type": "trainer",
+            "trainer_class": "Bug Catcher",
+            "name": "",
+            "before_dialouge": "Hey! You have Pokémon! Come on! Let's battle'em!",
+            "win_dialouge": "No! CATERPIE can't cut it!",
+            "after_battling_dialouge": "Ssh! You'll scare the bugs away!",
+            "pokemon": [
+                {
+                    "species": "WEEDLE",
+                    "level": 6
+                },
+                {
+                    "species": "CATERPIE",
+                    "level": 6
+                }
+            ]
+        }
+    ],
+    "viridian-forest-w": [
+        {
+            "type": "trainer",
+            "trainer_class": "Bug Catcher",
+            "name": "",
+            "before_dialouge": "Yo! You can't jam out if you're a Pokémon trainer!",
+            "win_dialouge": "Huh? I ran out of Pokémon!",
+            "after_battling_dialouge": "Darn! I'm going to catch some stronger ones!",
+            "pokemon": [
+                {
+                    "species": "WEEDLE",
+                    "level": 7
+                },
+                {
+                    "species": "KAKUNA",
+                    "level": 7
+                },
+                {
+                    "species": "WEEDLE",
+                    "level": 7
+                }
+            ]
+        }
+    ],
+    "viridian-forest-n": [
+        {
+            "type": "trainer",
+            "trainer_class": "Bug Catcher",
+            "name": "",
+            "before_dialouge": "Hey, wait up! What's the hurry?",
+            "win_dialouge": "I give! You're good at this!",
+            "after_battling_dialouge": "Sometimes, you can find stuff on the ground! I'm looking for the stuff I dropped!",
+            "pokemon": [
+                {
+                    "species": "WEEDLE",
+                    "level": 9
+                }
+            ]
+        }
+    ]
+}

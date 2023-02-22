@@ -118,11 +118,12 @@ link = {
 if not (path.isfile(path.join(syspath[0], i)) for i in [
 	'data/dex.json',
 	'data/level.json',
-	'data/trainer.json',
+	'data/trainer_types.json',
 	'data/types.json',
 	'data/moves.json',
 	'data/map.json',
 	'data/pokemart.json',
+	'data/trainers.json'
 	'build_to_exe.py'
 ]):
 	sp(f'\nOne or more required files are not found.\n\nPlease see\n[{link["installation"]}]\nfor more information.\n\nPress Enter to exit.\n')
@@ -250,12 +251,13 @@ class Pokemon:
 			if self.fainted:
 				self.stats['chp'] = 0
 
-	# check levels for entire party
-	def check_level_up(self, party) -> None:
-		for i in party:
-			while self.current_xp >= xp['next'][self.level_type][str(self.level)] and self.level < 100: # type: ignore
-				i.current_xp -= xp['next'][self.level_type][str(self.level)] # type: ignore
-				self.level_up(i)
+	def check_level_up(self) -> None:
+		while self.current_xp >= xp['next'][self.level_type][str(self.level)]: # type: ignore
+			self.current_xp -= xp['next'][self.level_type][str(self.level)] # type: ignore
+			self.level_up(self)
+			if self.level == 100:
+				sp(f'\nCongratulations, {self.name} has reached level 100!')
+				break
 
 	# check if pokemon is fainted
 	def check_fainted(self) -> bool:
@@ -312,16 +314,29 @@ class Pokemon:
 	def calculate_xp(self, battle_type='wild') -> int:
 		return ceil((self.total_xp * self.level * (1 if battle_type == 'wild' else 1.5)) / 7) # type: ignore
 
-	# level up pokemon in context of battle
-	def give_xp(self, battle_type='wild') -> None:
-		self.current_xp += self.calculate_xp(battle_type)
-		sg(f'\n{self.name} gained {self.calculate_xp(battle_type)} XP!')
-		while self.current_xp >= xp['next'][self.level_type][self.level]: # type: ignore
-			self.current_xp -= xp['next'][self.level_type][self.level] # type: ignore
-			self.level_up(self)
-			if self.level == 100:
-				sp(f'\nCongratulations, {self.name} has reached level 100!')
-				break
+	# give xp from opponent pokemon to party in battle
+	def give_xp(self, participating_pokemon, type="wild"):
+		total_xp = self.calculate_xp(type) # type: ignore
+		debug(f'total xp: {total_xp}')
+		if 'EXP. ALL' in save['bag']:
+			for p in participating_pokemon:
+				save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
+				sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} XP!')
+				save['party'][p].check_level_up()
+
+			other_pokemon = [pokemon for pokemon in save['party'] if pokemon not in participating_pokemon]
+			for o in other_pokemon:
+				save['party'][o].current_xp += floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))
+				sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} XP!')
+				save['party'][o].check_level_up()
+
+		else:
+			for p in participating_pokemon:
+				save['party'][p].current_xp += floor(total_xp / len(participating_pokemon))
+				sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} XP!')
+				save['party'][p].check_level_up()
+			sp("")
+		sleep(0.5)
 
 	# evolve pokemon
 	def evolve(self):
@@ -386,14 +401,14 @@ class Pokemon:
 							move_forgotten = True
 		else:
 			sg(f'{self.name} learned {move["name"].upper()}')
-			pokemon.moves.append({"name": move['name'], "pp": list(filter(lambda mv, move=move: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
+			self.moves.append({"name": move['name'], "pp": list(filter(lambda mv, move=move: mv['name'] == move['name'], moves))[0]['pp']}) # type: ignore
 
 	# raw level up
 	def level_up(self, pokemon):
 		pokemon.level += 1
 		pokemon.reset_stats()
 		sg(f'{pokemon.name} grew to level {pokemon.level}!')
-		if ('evolution' in dex[pokemon.species] and pokemon.level >= dex[pokemon.species]['evolution']): # type: ignore
+		if ('evolution' in dex[pokemon.species]	and pokemon.level >= dex[pokemon.species]['evolution']): # type: ignore
 			pokemon.evolve()
 		for m in dex[pokemon.species]['moves']: # type: ignore
 			if m['level'] == pokemon.level:
@@ -501,8 +516,8 @@ def type_effectiveness(move, defender) -> float:
 	return types[move['type'].upper()][defender.type] # type: ignore
 
 # calculate prize money
-def prize_money(self=None, type='Pokémon Trainer') -> int:
-	return floor(trainer[type] * max(i.level for i in (save['party'] if self is None else self))) # type: ignore
+def prize_money(party=None, type='Pokémon Trainer') -> int:
+	return floor(trainer_types[type] * max(i.level for i in (save['party'] if party is None else party))) # type: ignore
 
 # find moves of a wild pokemon
 def find_moves(name, level) -> list:
@@ -554,17 +569,16 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 	# battle intro
 	if battle_type == 'trainer':
-		sp(f'\n{name}: {start_diagloue}')
-		sp(f'\n{title} {name} wants to fight!')
+		sg(f'\n{name if name else title}: {start_diagloue}')
+		sg(f'\n{title} {name+" " if name else ""}wants to fight!')
 	elif battle_type == 'wild':
 		sp(f'\nA wild {opponent_party[opponent_current].name} appeared!') # type: ignore
 	else:
 		abort('\nInvalid battle type: neither trainer nor wild.')
-	sleep(0.5)
 	sp(f'\nGo, {save["party"][current].name}!')
 	sleep(0.5)
 	if battle_type == 'trainer':
-		sp(f'\n{name} sent out {opponent_party[opponent_current].name}!') # type: ignore
+		sp(f'\n{name if name else title} sent out {opponent_party[opponent_current].name}!') # type: ignore
 
 	# battle variables
 	escaped_from_battle = False
@@ -711,12 +725,12 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 			escape_attempts = 0
 
 		# opponent attack
-		if is_alive(save['party']) and is_alive(opponent_party):
+		if not save['party'][current].check_fainted() and not opponent_party[opponent_current].check_fainted(): # type: ignore
 			save['party'][current].deal_damage(opponent_party[opponent_current], choice(opponent_party[opponent_current].moves)) # type: ignore
 			opponent_attacked_this_turn = True
 
 		# player attack if player speed is lower
-		if is_alive(save['party']) and is_alive(opponent_party) and not player_attacked_this_turn and escape_attempts == 0 and not catch_attempt and not switched:
+		if save['party'][current].check_fainted() and opponent_party[opponent_current].check_fainted() and not player_attacked_this_turn and escape_attempts == 0 and not catch_attempt and not switched: # type: ignore
 			damage = opponent_party[opponent_current].deal_damage(save['party'][current], chosen_move) # type: ignore
 			if chosen_move["name"] == "struggle": # type: ignore
 				save['party'][current].deal_struggle_damage(damage)
@@ -724,15 +738,19 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 				save["party"][current].moves[int(move_choice)-1]['pp'] -= 1 # type: ignore
 			player_attacked_this_turn = True
 
-		# end battle if player wins
-		elif is_alive(save['party']) and not is_alive(opponent_party):
+		# give XP when opponent faints
+		if opponent_party[opponent_current].check_fainted() and earn_xp == True: # type: ignore
+			opponent_party[opponent_current].give_xp(participating_pokemon, battle_type) # type: ignore
+			if battle_type == "trainer":
+				if is_alive(opponent_party):
+					opponent_current += 1
+					sp(f'\n{name if name else title} sent out {opponent_party[opponent_current].name}!') # type: ignore
+
+		# end battle if player wins or loses
+		if is_alive(save['party']) and not is_alive(opponent_party) or not is_alive(save['party']):
 			break
 
-		# end battle if player loses
-		elif not is_alive(save['party']):
-			break
-
-		elif save['party'][current].check_fainted():
+		if save['party'][current].check_fainted():
 			participating_pokemon = list(filter(lambda p, current=current: save['party'][p].name != save['party'][current].name, participating_pokemon))
 			switch_choice = switch_pokemon(party_length)
 			current = int(switch_choice)-1
@@ -749,43 +767,17 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 
 	# upon catching
 	elif caught:
+		# TODO: earn xp
 		pass # type: ignore
 
 	# upon winning
 	elif is_alive(save['party']) and not is_alive(opponent_party):
 		if save['flag']['been_to_route_1']:
 			if battle_type == 'trainer':
-				sg(f'\n{save["party"][current].name} won the battle!')
-				save['money'] += prize_money()
-				sg(f'You recieved ¥{str(prize_money())} as prize money.')
-			if earn_xp == True:
-				total_xp = ceil(opponent_party[opponent_current].calculate_xp()) # type: ignore
-				debug(f'total xp: {total_xp}')
-				if 'EXP. All' in save['bag']:
-					for p in participating_pokemon:
-						save['party'][p].current_xp += floor(total_xp / (len(participating_pokemon) + 1))
-						sg(f'{save["party"][p].name} gained {floor(total_xp / (len(participating_pokemon) + 1))} XP!')
-						save['party'][p].check_level_up(save['party'])
-
-					other_pokemon = []
-					for i in save['party']:
-						if i not in participating_pokemon: other_pokemon.append(i)
-					for o in other_pokemon:
-						save['party'][o].current_xp += floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))
-						sg(f'{save["party"][o].name} gained {floor((total_xp / (len(participating_pokemon) + 1)) / len(other_pokemon))} XP!')
-						save['party'][o].check_level_up(save['party'])
-
-				else:
-					for p in participating_pokemon:
-						save['party'][p].current_xp += floor(total_xp / len(participating_pokemon))
-						sg(f'{save["party"][p].name} gained {floor(total_xp / len(participating_pokemon))} XP!')
-						save['party'][p].check_level_up(save['party'])
-					sp("")
-				sleep(0.5)
-			if battle_type == 'trainer':
-				sp(f'\n{name}: {end_dialouge}')
-				save['money'] += trainer[title] # type: ignore
-				sp(f'You got ¥{trainer[title]}') # type: ignore
+				sg(f'\n{save["name"]} won the battle!')
+				save['money'] += prize_money(opponent_party, title) # type: ignore
+				sg(f'You recieved ¥{prize_money(opponent_party, title)} as prize money.') # type: ignore
+				sg(f'\n{name if name else title}: {end_dialouge}')
 		else:
 			save['flag']['won_first_battle'] = True
 
@@ -793,7 +785,6 @@ def battle(opponent_party=None, battle_type='wild', name=None, title=None, start
 	elif is_alive(opponent_party) and (not is_alive(save['party'])):
 		if battle_type == 'trainer':
 			if save['flag']['been_to_route_1']:
-				save['money'] -= prize_money()
 				sg('You lost the battle!')
 				sg(f'You gave ¥{round(save["money"] / 2)} as prize money.')
 			else:
@@ -944,6 +935,80 @@ def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 						sp(f'\n{save["name"]} obtained {amount} {pokemart[loc][int(choice)-1]}(s)') # type: ignore
 						choice = ''
 
+def display_trainers(loc) -> list:
+	if loc not in trainers: return [] # type: ignore
+
+	possible_trainers = []
+	for trainer in trainers[loc]: # type: ignore
+		if not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']): # type: ignore
+			possible_trainers.append(trainer)
+
+	if possible_trainers == []: return []
+	
+	valid_options = [i+1 for i in range(len(possible_trainers))] # type: ignore
+	for i in valid_options:
+		trainer = possible_trainers[i-1] # type: ignore
+		if trainer['type'] == 'trainer':
+			sp(f'[{i}] - Speak to {trainer["trainer_class"]}') # TODO: change to name
+		elif trainer['type'] == 'character' and not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']): # type: ignore
+			sp(f'[{i}] - Speak to {trainer["name"]}')
+	sp("")
+	return [str(i) for i in valid_options]
+
+def trainer_interaction(loc, option) -> None:
+	possible_trainers = []
+	for trainer in trainers[loc]: # type: ignore
+		if not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']): # type: ignore
+			possible_trainers.append(trainer)
+	
+	trainer = possible_trainers[int(option)-1]
+	
+	if trainer['type'] == "trainer":
+		if trainer in save['flag']['trainer_fought']:
+			sg(f'\n{trainer["trainer_class"]}: {trainer["after_battling_dialouge"]}') # TODO: change to trainer["name"] instead of trainer["trainer_class"]
+			return
+
+		battle(
+			opponent_party=[Pokemon(pokemon['species'], pokemon['level'], ivs={ 'atk': 9, 'hp': 8, 'def': 8, 'spa': 8, 'spd': 8, 'spe': 8 }) for pokemon in trainer['pokemon']],
+			battle_type="trainer", title=trainer['trainer_class'], start_diagloue=trainer['before_dialouge'], end_dialouge=trainer['win_dialouge']
+		) # TODO: add names to battle
+
+		save['flag']['trainer_fought'].append(trainer)
+	
+	elif trainer['type'] == 'character':
+
+		if trainer in save['flag']['characters_spoken']:
+			sp("")
+			for line in trainer['after_text']:
+				if line.startswith('`') and line.endswith('`'):
+					item = line[1:-1].split(':')[0]
+					amount = int(line[1:-1].split(':')[1])
+					if item in save['bag']:
+						save['bag'][item] += amount
+					else:
+						save['bag'][item] = amount
+					sg(f'{save["name"]} recieved {amount} {item}(s)')
+					continue
+				else:
+					sg(line)
+
+		else:
+			sp("")
+			for line in trainer['text']:
+				if line.startswith('`') and line.endswith('`'):
+					item = line[1:-1].split(':')[0]
+					amount = int(line[1:-1].split(':')[1])
+					if item in save['bag']:
+						save['bag'][item] += amount
+					else:
+						save['bag'][item] = amount
+					sg(f'{save["name"]} recieved {amount} {item}(s)')
+					continue
+				else:
+					sg(line)
+
+			save['flag']['characters_spoken'].append(trainer)
+
 # display title screen
 cls() # type: ignore
 title = ['''\n                                  ,'\\\n    _.----.        ____         ,'  _\   ___    ___     ____\n_,-'       `.     |    |  /`.   \,-'    |   \  /   |   |    \  |`.\n\      __    \    '-.  | /   `.  ___    |    \/    |   '-.   \ |  |\n \.    \ \   |  __  |  |/    ,','_  `.  |          | __  |    \|  |\n   \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |\n    \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |\n     \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |\n      \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |\n       \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |\n        \_.-'       |__|    `-._ |              '-.|     '-.| |   |\n                                `'                            '-._|\n''', '                          PythonRed Version\n', '                       Press any key to begin!'] # type: ignore
@@ -1004,10 +1069,11 @@ for i in [
 	['moves', 'moves.json'],
 	['rates', 'map.json'],
 	['save_template', 'save_template.json'],
-	['trainer', 'trainer.json'],
+	['trainer_types', 'trainer_types.json'],
 	['types', 'types.json'],
 	['xp', 'level.json'],
-	['pokemart', 'pokemart.json']
+	['pokemart', 'pokemart.json'],
+	['trainers', 'trainers.json']
 ]:
 	try:
 		exec(f'{i[0]} = loads(open(path.join(syspath[0], "data", "{i[1]}"), encoding="utf8").read())\nopen(path.join(syspath[0], "data", "{i[1]}")).close()')
@@ -1237,7 +1303,7 @@ while not exit:
 					while not option and option not in ['1', '2', '3']:
 						option = get()
 					if option in ['1', '2', '3']:
-						sp(f'\nDo you want the {["GRASS", "FIRE", "WATER"][int(option)-1]}-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
+						sp(f'\nDo you want the `{["GRASS", "FIRE", "WATER"][int(option)-1]}`-type Pokémon, {["Bulbasaur", "Charmander", "Squirtle"][int(option)-1]}? (Y/N)\n')
 						confirm = ''
 						while confirm not in yn:
 							confirm = get()
@@ -1351,6 +1417,7 @@ while not exit:
 	elif save['location'] == 'route1-s':
 		if not save['flag']['been_to_route_1']: save['flag']['been_to_route_1'] = True
 		sp('Current Location: Route 1 (South)\n\n[w] - Go to Route 1 (North)\n[s] - Go to Pallet Town\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1361,12 +1428,15 @@ while not exit:
 			save['location'] = 'pallet'
 		elif option == 'm':
 			menu_open = True
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		else:
 			sp('\nInvalid answer!')
 
 	# route 1 - north
 	elif save['location'] == 'route1-n':
 		sp('Current Location: Route 1 (North)\n\n[w] - Go to Viridian City\n[s] - Go to Route 1 (South)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1377,6 +1447,8 @@ while not exit:
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
 		elif option == 'm':
 			menu_open = True
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		else:
 			sp('\nInvalid answer!')
 
@@ -1426,6 +1498,7 @@ while not exit:
 
 	elif save['location'] == 'route2-s':
 		sp('Current Location: Route 2 (South)\n\n[w] - Go to Viridian Forest (South)\n[s] - Go to Viridian City\n[d] - Go to Route 2 (North)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1440,11 +1513,14 @@ while not exit:
 			else:
 				sg('\nThere is a tree in the way')
 				sg('\nMaybe a Pokémon could cut it down?')
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-s':
 		sp('Current Location: Viridian Forest (South)\n\n[a] - Go to Viridian Forest (West)\n[s] - Go to Route 2 (South)\n[d] - Go to Viridian Forest (East)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 's':
@@ -1459,11 +1535,14 @@ while not exit:
 			save['location'] = 'viridian-forest-e'
 			encounter = get_encounter('viridian-forest-e', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-w':
 		sp('Current Location: Viridian Forest (West)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[d] - Go to Viridian Forest (East)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 's':
@@ -1478,11 +1557,14 @@ while not exit:
 			save['location'] = 'viridian-forest-e'
 			encounter = get_encounter('viridian-forest-e', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-e':
 		sp('Current Location: Viridian Forest (East)\n\n[w] - Go to Viridian Forest (North)\n[s] - Go to Viridian Forest (South)\n[a] - Go to Viridian Forest (West)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 's':
@@ -1497,11 +1579,14 @@ while not exit:
 			save['location'] = 'viridian-forest-w'
 			encounter = get_encounter('viridian-forest-w', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
 	elif save['location'] == 'viridian-forest-n':
 		sp('Current Location: Viridian Forest (North)\n\n[w] - Go to Route 2 (North)\n[a] - Go to Viridian Forest (West)\n[d] - Go to Viridian Forest (East)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1516,11 +1601,14 @@ while not exit:
 			save['location'] = 'viridian-forest-e'
 			encounter = get_encounter('viridian-forest-e', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
 	elif save['location'] == "route2-n":
 		sp('Current Location: Route 2 (North)\n\n[w] - Go to Pewter City\n[s] - Go to Viridian Forest (North)\n')
+		trainer_options = display_trainers(save['location'])
 		while option == '':
 			option = get()
 		if option == 'w':
@@ -1529,6 +1617,8 @@ while not exit:
 			save['location'] = 'viridian-forest-n'
 			encounter = get_encounter('viridian-forest-n', 'tall-grass')
 			battle([Pokemon(encounter['pokemon'], encounter['level'], 'random')])
+		elif option in trainer_options:
+			trainer_interaction(save['location'], option)
 		elif option == 'm':
 			menu_open = True
 
