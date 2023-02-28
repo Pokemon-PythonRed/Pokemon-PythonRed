@@ -12,7 +12,7 @@ from math import ceil, floor, sqrt
 from os import path, system, remove
 from platform import system as platform
 from random import choice, choices, randint
-# TODO: from string import ...
+from string import Formatter
 from sys import exit as sysexit, path as syspath, stdout
 from time import sleep, time
 from typing import Optional, Union
@@ -20,7 +20,7 @@ from webbrowser import open as webopen
 
 # import installed modules
 from jsons import dump, load
-# TODO: from pygame import ...
+from pygame.mixer import music
 
 # abort function to be used before functions that require libraries
 def abort_early() -> None:
@@ -28,12 +28,13 @@ def abort_early() -> None:
 	system.exit()
 
 # import getch according to system
-if platform() == 'Windows':
-	from msvcrt import getch # type: ignore
-elif platform() == 'Linux':
-	from getch import getch # type: ignore
-else:
-	abort_early()
+try:
+	from msvcrt import getch, getche # type: ignore
+except ImportError:
+	try:
+		from getch import getch, getche # type: ignore
+	except ImportError:
+		abort_early()
 
 # type colours
 colours = {
