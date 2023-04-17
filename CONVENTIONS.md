@@ -23,14 +23,14 @@ When contributing code to *Pokémon PythonRed*, please follow these conventions.
 - Indent with tab characters, not spaces.
 - Use `snake_case` for variable names and `PascalCase` for class names.
 - Use single quotes for strings, and three single quotes for docstrings. Textual apostrophes should be backslash-escaped.
-- Use the `#` character for comments. "Todo" comments should be formatted as `# TODO: <comment>`.
+- Use the `#` character for comments. "Todo" comments should be formatted as `# \TODO: <comment>` (without the backslash).
 
 Example code:
 
 ```python
 def return_a_string():
 	'''This is a docstring.'''
-	return 'Apostrophes (\') should be escaped.' # TODO: This is a todo comment.
+	return 'Apostrophes (\') should be escaped.' # \TODO: This is a todo comment.
 ```
 
 ## JSON

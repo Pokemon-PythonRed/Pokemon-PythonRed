@@ -28,10 +28,6 @@
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/releases"><img src="https://shields.io/github/downloads/Pokemon-PythonRed/Pokemon-PythonRed/total?color=inactive"></a> <!--Downloads-->
 </p>
 
----
-
-<h6><a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions/59">Project Status Updates</a></h6>
-
 </div>
 
 ---
@@ -43,7 +39,7 @@
 - This project ([@Pokemon-PythonRed](https://github.com/Pokemon-PythonRed "Pokémon PythonRed Homepage") and anything found within) is not endorsed by Nintendo, GAME FREAK, Creatures Inc., or The Pokémon Company. This is an independent, fan-made game.
 - This game's plot is a work of fiction! Any references to real people or events are completely coincidental.
 - Pokémon PythonRed is a work-in-progress and is intended to be a long-term project. The owners feel no rush to meet community deadlines or expectations. Please be considerate.
-- Any problems with the game can be reported in [issues](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
+- Any problems with the game can be reported as [issues](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues "Pokémon PythonRed Issues").
 
 ---
 
@@ -62,12 +58,9 @@ For more information on various topics regarding this project, please visit the 
 - [Code Of Conduct](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CODE_OF_CONDUCT.md "Pokémon PythonRed Code Of Conduct")
 - [Contributing Guidelines](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/CONTRIBUTING.md "Pokémon PythonRed Contributing Guidelines")
 - [Contributors List](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#contributors "Pokémon PythonRed Contributors")
-- ~~[Current Tasks](https://github.com/orgs/Pokemon-PythonRed/projects/1 "Pokémon PythonRed Current Tasks")~~ (closed)
 - [Discussions](https://github.com/orgs/Pokemon-PythonRed/discussions "Pokémon PythonRed Discussions")
-- [Installation Guide](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation "Pokémon PythonRed Installation")
-- [Issue Management](https://github.com/orgs/Pokemon-PythonRed/projects/2 "Pokémon PythonRed Issue Management")
-- [License](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License")
-- [Project Status Updates](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions/59)
+- [Installation Guide](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed#installation "Pokémon PythonRed Installation Guide")
+- [License (`MIT`)](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/LICENSE "Pokémon PythonRed License (MIT)")
 - [Security Policy](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/blob/master/SECURITY.md "Pokémon PythonRed Security Policy")
 
 ---
@@ -137,13 +130,12 @@ Bot command template:
   - Windows or Linux OS
   - Python 3 (aka CPython 3.x)
 - Follow [this link](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/archive/refs/heads/master.zip) to download a `.zip` file of this repository. Once it downloads, unzip and open it.
-- You will need to open a command line in the folder, then run the following command to install dependencies:
+- From the folder, run these commands:
 
 ```sh
-python -m pip install -r requirements.txt
+$ python -m pip install -r requirements.txt
+$ python app/main.py
 ```
-
-- Finally, open `main.py` in the `app` folder.
 
 - If you encounter any problems when opening the game, feel free to [create an issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new "Pokémon PythonRed Issues").
 
@@ -151,7 +143,7 @@ python -m pip install -r requirements.txt
 
 ### Controls
 
-- When `>` is shown, press <kbd>⏎ Enter</kbd> to continue. You may need to input text first.
+- When `>` is shown, press a key to continue.
 - When text bullets are shown, you need to enter the character next to the option you choose.
 - In the overworld, navigation bullets are <kbd>WASD</kbd> for directional movement, then lettered for interactions. Other commands might also be available.
   - Enter the <kbd>M</kbd> command from the overworld to open the menu.
@@ -160,15 +152,13 @@ python -m pip install -r requirements.txt
 
 #### Examples
 
-No text needed, just press <kbd>⏎ Enter</kbd>:
+Press any key:
 
 ```console
-Press Enter to continue.
-
->_
+Press any key to continue._
 ```
 
-Type text from a bullet point (e.g. <kbd>1</kbd> or <kbd>2</kbd>), then press <kbd>⏎ Enter</kbd>:
+Press a key corresponding to a bullet point (e.g. <kbd>1</kbd> or <kbd>2</kbd>):
 
 ```console
 Choose an option.
@@ -179,7 +169,7 @@ Choose an option.
 >_
 ```
 
-Type any variant of `yes`, `y`, `no`, or `n`, then press <kbd>⏎ Enter</kbd>:
+Press <kbd>Y</kbd> or <kbd>N</kbd>:
 
 ```console
 Would you like to save? Y/N
@@ -187,129 +177,4 @@ Would you like to save? Y/N
 >_
 ```
 
-Press any key:
-
-```console
-OAK: Hello there! Welcome to the world of POKéMON!
-_
-```
-
 ---
-
-## Extras
-
-Here's some extra information that isn't required to play the game, but might still be interesting.
-
-<details><summary>Technicalities</summary>
-
----
-
-### Technicalities
-
-Since this is a Python game, some elements will have to be changed from the original version. Here are some examples of challenging changes.
-
-#### Save data and saving
-
-The game has to keep track of the many variables that make up a Save File. These include:
-
-- Trainer info
-- Party / Box info
-- If a place has been visited, for Fly locations (each city separately)
-- If cutscenes have been triggered
-- Event flags
-- Pokédex
-- Game mechanic settings for accessibility
-
-These are stored in a Python `dictionary` variable, which is then saved to the external file `.ppr-save` via Python's `json` module.
-
-#### Game data
-
-Not to be confused with save data, game data is composed of the numbers and calculations that the game uses. These include:
-
-- Pokémon info
-- Trainer battle info
-- Save file templates
-
-Large sets of data may be stored as `.json` files in the project folder. This is done to keep the program files concise. These files may be added, removed, or changed at any time.
-
-Save file templates contain all the things the game must keep track of between sessions. On each save or load, the player's file is automatically updated with the latest data, in case an update was performed. This means that when the game is updated, the player can copy their `.ppr-save` file into the new version, and the save file will automatically be updated with the latest data.
-
-#### Menus
-
-Pokémon Red is full of menus that look like the following:
-
-```
-Would you like to save your progress?
-> Save
-  Don't Save
-```
-
-This has been changed to be more suitable for a text-adventure game:
-
-```console
-Would you like to save your progress? Y/N
-
->_
-```
-
-This is done with code similar to the following:
-
-```python
-import json
-save = {
-  # Save Data
-}
-print('Would you like to save your progress? Y/N')
-  saveOption = ' '
-  while saveOption.lower()[0] not in ['y', 'n']:
-    saveOption = input('>') + ' '
-  if saveOption.lower()[0] in ['y']:
-    open('.ppr-save', 'w').write(json.dumps(save))
-    print('Game saved successfully!')
-```
-
-#### Save management
-
-The user can use multiple save files by moving or backing up their `.ppr-save` file to a different directory on their device. This has been implemented in the interest of user-friendliness and safety. Save files can easily be backed up, reset, or shared.
-
----
-
-</details>
-
-<details><summary>Mystery Gifts</summary>
-
----
-
-### Mystery Gifts
-
-Pokémon games use Mystery Gifts to bring communities together and incentivise players to take part in events, and Pokémon PythonRed is no different. Codes can be given out in planned giveaway events to specific people, left online to be found by anyone, or even given in-person to specific people. Most of them are online, so you should try looking in places [@TurnipGuy30](https://github.com/TurnipGuy30) has been.
-
-#### Technical information
-
-As of the time of writing, Mystery Gifts have not yet been implemented into the game. The base game will have to be completed first. For now, keep track of any codes you find.
-
-#### Formatting
-
-Pokémon PythonRed Mystery Gift codes are easy to identify because they will always be given in the following format:
-
-```
-Pokémon PythonRed Mystery Gift #20: "POKEMONPYTHONRED"
-```
-
-(Yes, this is a valid code. Consider it a free trial. You're welcome.)
-
-#### Possible rewards
-
-Redeemed codes will reward a player with in-game items or Pokémon.
-
-#### Recipient responsibilities
-
-Any person or group who finds or receives a code has no responsibility to keep it to themselves unless otherwise stated by the giver of the code.
-
-#### Summary
-
-Mystery Gifts are meant to unite the community and provide a fun way to interact with the game.
-
----
-
-</details>
