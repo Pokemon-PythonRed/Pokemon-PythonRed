@@ -61,10 +61,9 @@ representative at an online or offline event.
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement:
 
-- For private or personal complaints, please email [@TurnipGuy30](https://github.com/TurnipGuy30) at [johnsdieckmann@gmail.com](mailto:johnsdieckmann@gmail.com).
+- For private or personal complaints, please contact [@silvncr](https://github.com/silvncr).
 - To target all maintainers, please create a [new `Community Complaint` Issue](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/issues/new?assignees=TurnipGuy30&labels=community&template=community-report.md&title=Community%20Complaint).
-- To target the community itself, please create a [new Discussion](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions/new?labels=community).
-  - Choose the `Community` category, and make sure to add the `community` label.
+- To target the community itself, please create a [new Community Discussion](https://github.com/Pokemon-PythonRed/Pokemon-PythonRed/discussions/new?category=Community&labels=community).
 
 All complaints will be reviewed and investigated promptly and fairly.
 
