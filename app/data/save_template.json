@@ -3,7 +3,7 @@
 	"bag": {},
 	"box": [],
 	"dex": {},
-	"flag": {
+	"flags": {
 		"been_to_route_1": false,
 		"chosen_starter": false,
 		"delivered_package": false,
@@ -35,6 +35,6 @@
 		"textSpeed": null
 	},
 	"party": [],
-	"recent_center": "playerHouseUp",
+	"recent_center": "playerhouse-up",
 	"user": []
 }

@@ -30,6 +30,15 @@ try:
 		)
 	)
 
+	# locations
+	locations = load(
+		open(
+			path.join(
+				syspath[0], 'data', 'locations.json'
+			), encoding='utf8'
+		)
+	)
+
 	# moves
 	moves = load(
 		open(

@@ -1,0 +1,22 @@
+{
+	"pallet": {
+		"directions": {
+			"w": "route1s",
+			"a": "playerhouseup",
+			"s": "route21n",
+			"d": "oaklab"
+		},
+		"has_center": false,
+		"title": "Pallet Town",
+		"title_full": "Pallet Town - \"Shades of your journey await!\""
+	},
+	"playerhouse_up": {
+		"arrival": "",
+		"directions": {
+			"s": "playerhousedown",
+			"1": [null, "playerhouseup_computer"]
+		},
+		"title": "{save['name']}'s Room",
+		"title_full": "{save['name']}'s Room (Upstairs)"
+	}
+}

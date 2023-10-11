@@ -6,8 +6,9 @@ from typing import Optional, Union
 from data_opener import dex, items, moves, pokemart, rates, trainer_types, trainers, types, xp
 from handling import abort, debug
 from input import get, getch
-from output import colours, sg, sp
-from saving import backup
+from output import colours, sp
+
+save = {}
 
 '''
 File contains sections:
@@ -22,7 +23,7 @@ types = ['NORMAL', 'FIRE', 'WATER', 'GRASS', 'ELECTRIC', 'ICE', 'FIGHTING', 'POI
 badges = ['Boulder', 'Cascade', 'Thunder', 'Rainbow', 'Soul', 'Marsh', 'Volcano', 'Earth']
 
 # get trainers by location
-def display_trainers(save: dict, loc) -> list:
+def display_trainers(loc) -> list:
 	if loc not in trainers: return [] 
 
 	possible_trainers = [
@@ -39,14 +40,14 @@ def display_trainers(save: dict, loc) -> list:
 	for i in valid_options:
 		trainer = possible_trainers[i-1]
 		if trainer['type'] == 'trainer':
-			sp(f'[{i}] - Speak to {trainer["trainer_class"]}') # TODO: change to name
+			sp([(f'[{i}] - Speak to {trainer["trainer_class"]}', False)])
 		elif trainer['type'] == 'character' and not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']):
-			sp(f'[{i}] - Speak to {trainer["name"]}')
-	sp("")
+			sp([(f'[{i}] - Speak to {trainer["name"]}', False)])
+	sp([('')])
 	return [str(i) for i in valid_options]
 
 # interact with trainer
-def trainer_interaction(save: dict, loc, option) -> None: # sourcery skip: low-code-quality
+def trainer_interaction(loc, option) -> None: # sourcery skip: low-code-quality
 	possible_trainers = []
 	for trainer in trainers[loc]:
 		if not (trainer in save['flag']['characters_spoken'] and trainer['leave_after_speaking']):
@@ -56,12 +57,11 @@ def trainer_interaction(save: dict, loc, option) -> None: # sourcery skip: low-c
 	
 	if trainer['type'] == "trainer":
 		if trainer in save['flag']['trainer_fought']:
-			sg(f'\n{trainer["trainer_class"]}: {trainer["after_battling_dialouge"]}') # TODO: change to trainer["name"] instead of trainer["trainer_class"]
+			sp([(f'\n{trainer["trainer_class"]}: {trainer["after_battling_dialouge"]}', True)]) # TODO: change to trainer["name"] instead of trainer["trainer_class"]
 			return
 
 		battle(
-			save,
-			opponent_party=[Pokemon(save, pokemon['species'], pokemon['level'], ivs={ 'atk': 9, 'hp': 8, 'def': 8, 'spa': 8, 'spd': 8, 'spe': 8 }) for pokemon in trainer['pokemon']],
+			opponent_party=[Pokemon(pokemon['species'], pokemon['level'], ivs={ 'atk': 9, 'hp': 8, 'def': 8, 'spa': 8, 'spd': 8, 'spe': 8 }) for pokemon in trainer['pokemon']],
 			battle_type="trainer", title=trainer['trainer_class'], start_diagloue=trainer['before_dialouge'], end_dialouge=trainer['win_dialouge']
 		) # TODO: add names to battle
 
@@ -84,7 +84,7 @@ def trainer_interaction(save: dict, loc, option) -> None: # sourcery skip: low-c
 					sg(line)
 
 		else:
-			sp("")
+			sp([('', False)])
 			for line in trainer['text']:
 				if line.startswith('`') and line.endswith('`'):
 					item = line[1:-1].split(':')[0]
@@ -93,14 +93,14 @@ def trainer_interaction(save: dict, loc, option) -> None: # sourcery skip: low-c
 						save['bag'][item] += amount
 					else:
 						save['bag'][item] = amount
-					sg(f'{save["name"]} recieved {amount} {item}(s)')
+					sp([(f'{save["name"]} recieved {amount} {item}(s)', True)])
 				else:
-					sg(line)
+					sp([(line, True)])
 
 			save['flag']['characters_spoken'].append(trainer)
 
 # pokemart location
-def display_pokemart(save: dict, loc) -> None: # sourcery skip: low-code-quality
+def display_pokemart(loc) -> None: # sourcery skip: low-code-quality
 	choice = ''
 	action_choice = ''
 	pokemart_exit = False
@@ -210,7 +210,7 @@ def display_pokemart(save: dict, loc) -> None: # sourcery skip: low-code-quality
 						choice = ''
 
 # use item from bag
-def use_item(save: dict, battle=False) -> Optional[str]:
+def use_item(battle=False) -> Optional[str]:
 	item_used = False
 	sp('\nPlease choose an item to use.')
 	if battle:
@@ -233,7 +233,7 @@ def use_item(save: dict, battle=False) -> Optional[str]:
 				sp('You have none of that item!')
 
 # pokemon center heal
-def heal(save: dict, pokemon=None, party: Optional[list]=None, type='party') -> None:
+def heal(pokemon=None, party: Optional[list]=None, type='party') -> None:
 	if party is None:
 		party = []
 	if type == 'party':
@@ -249,13 +249,13 @@ def heal(save: dict, pokemon=None, party: Optional[list]=None, type='party') -> 
 			sp(f'{i.name} was healed to max health.')
 
 	if type == 'party':
-		backup(save, pokemon_centre=True)
+		backup(pokemon_centre=True)
 
 # pokemon class
 class Pokemon:
 
 	# set internals
-	def __init__(self, save: dict, species: str, level: int, ivs: dict, moves=None, chp=None, current_xp=0, fainted=False, player_pokemon = False) -> None:
+	def __init__(self, species: str, level: int, ivs: dict, moves=None, chp=None, current_xp=0, fainted=False, player_pokemon = False) -> None:
 		if ivs is None:
 			ivs = {}
 		self.species = species
@@ -331,19 +331,19 @@ class Pokemon:
 		return False
 
 	# lower chp when pokemon is attacked
-	def deal_damage(self, save: dict, attacker, move) -> Optional[int]:
+	def deal_damage(self, attacker, move) -> Optional[int]:
 		move_entry = list(filter(lambda m: m['name'] == move['name'], moves))[0]
 		sp(f'\n{attacker.name} used {move["name"].upper()}!')
 		if move_entry['damage_class'] == 'status':
-			# TODO: Implement status conditions
+			# TODO: implement status conditions
 			sp(f'(Note: {move["name"].upper()} is a status move)')
 		else:
 			if randint(1,100) <= move_entry["accuracy"]:
-				return self.damage_calc(save, move_entry, attacker)
+				return self.damage_calc(move_entry, attacker)
 			sp(f'{attacker.name} missed!')
 			return 0
 
-	def damage_calc(self, save: dict, move_entry, attacker):
+	def damage_calc(self, move_entry, attacker):
 		is_critical = critical()
 		attack_defense = ('atk', 'def') if move_entry['damage_class'] == 'physical' else ('spa', 'spd')
 		result = floor((((((2 * attacker.level * (2 if is_critical else 1) / 5) + 2) * move_entry['power'] * attacker.stats[attack_defense[0]] / self.stats[attack_defense[1]]) / 50) + 2) * (1.5 if move_entry['type'] == attacker.type else 1) * randint(217, 255) / 255 * (type_effectiveness(move_entry, self) if save['flag']['been_to_route_1'] else 1))
@@ -401,7 +401,7 @@ class Pokemon:
 		sleep(0.5)
 
 	# evolve pokemon
-	def evolve(self, save: dict):
+	def evolve(self):
 		sp(f'\nWhat? {self.name} is evolving!')
 		input_cancel = getch()
 		# for _ in range(3):
@@ -425,7 +425,7 @@ class Pokemon:
 		save['dex'][self.species] = {'seen': True, 'caught': True}
 		save['flag']['type'][self.type] = {'seen': True, 'caught': True}
 		for move in dex[self.species]['moves']:
-			# TODO: Possibly keep track of moves that were forgotten too and not reprompt to learn as well?
+			# TODO: possibly keep track of moves that were forgotten too and not reprompt to learn as well?
 			if move['level'] <= self.level and move['name'] not in (m['name'] for m in self.moves):
 				self.learn_move(move)
 
@@ -477,7 +477,7 @@ class Pokemon:
 				pokemon.learn_move(m)
 
 	# catch Pokemon
-	def catch(self, save: dict, ball: str) -> bool: # sourcery skip: low-code-quality
+	def catch(self, ball: str) -> bool: # sourcery skip: low-code-quality
 		if max(bool(self.status[i]) for i in ['freeze', 'sleep']):
 			status = 25
 		elif max(bool(self.status[i]) for i in ['burn', 'poison', 'paralysis']):
@@ -588,7 +588,7 @@ def find_moves(name, level) -> list:
 		return list(map(lambda m: {"name": m['name'], "pp": m["pp"]}, learned_moves))
 
 # switch pokemon in battle
-def switch_pokemon(save: dict, party_length: int) -> Union[int, str]:
+def switch_pokemon(party_length: int) -> Union[int, str]:
 	sp(f'''\nWhich Pokémon should you switch to?\n\n{
 				chr(10).join(f'{f"[{i+1}]" if not save["party"][i].check_fainted() else "FAINTED"} - {save["party"][i].name} ({save["party"][i].stats["chp"]}/{save["party"][i].stats["hp"]}) - Level {save["party"][i].level} ({colours[save["party"][i].type.upper()]}{save["party"][i].type}{colours["NORMAL"]})' for i in range(party_length))
 			}''')
@@ -612,7 +612,7 @@ def switch_pokemon(save: dict, party_length: int) -> Union[int, str]:
 	return int(switch_choice)
 
 # create battle process
-def battle(save: dict, opponent_party: list=[], battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
+def battle(opponent_party: list=[], battle_type='wild', name=None, title=None, start_diagloue=None, end_dialouge=None, earn_xp=True) -> None:
 	debug('Entered battle!')
 	debug(f'Party: {[i.name for i in save["party"]]}')
 	party_length = len(save['party'])
@@ -732,7 +732,7 @@ def battle(save: dict, opponent_party: list=[], battle_type='wild', name=None, t
 
 		# choose switch
 		elif user_choice == '2':
-			switch_choice = switch_pokemon(save, party_length)
+			switch_choice = switch_pokemon(party_length)
 
 			if switch_choice == "exit":
 				continue
@@ -747,7 +747,7 @@ def battle(save: dict, opponent_party: list=[], battle_type='wild', name=None, t
 
 		# choose item
 		elif user_choice == '3':
-			item = use_item(save, battle=True)
+			item = use_item(battle=True)
 			if item == "exit":
 				continue
 			if (item == 'Poke Ball' or item == 'Great Ball' or item == 'Ultra Ball' or item == 'Master Ball') and battle_type == 'trainer':
@@ -812,7 +812,7 @@ def battle(save: dict, opponent_party: list=[], battle_type='wild', name=None, t
 
 		if save['party'][current].check_fainted():
 			participating_pokemon = list(filter(lambda p, current=current: save['party'][p].name != save['party'][current].name, participating_pokemon))
-			switch_choice = switch_pokemon(save, party_length)
+			switch_choice = switch_pokemon(party_length)
 			current = int(switch_choice)-1
 			switched = True
 			if int(switch_choice)-1 not in participating_pokemon:
