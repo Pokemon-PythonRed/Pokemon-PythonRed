@@ -147,8 +147,5 @@ dmypy.json
 # Ignore code-workspaces
 *.code-workspace
 
-# Pokémon PythonRed save files
+# PPR save files
 */.ppr-save
-
-# Windows dummy files to appease Pylance
-app/getch.py
