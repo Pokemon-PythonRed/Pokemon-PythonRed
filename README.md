@@ -1,7 +1,14 @@
+Please see [#158](https://github.com/orgs/Pokemon-PythonRed/discussions/158) for why this project is closing.
+
+Thanks to everyone who was part of this.
+
+---
+
 <div align="center">
 
-![Pokémon](https://raw.githubusercontent.com/Pokemon-PythonRed/%2Egithub/main/images/pokemon.png "Pokémon Logo (Read as 'Pokémon')")
-<h1>PythonRed Version</h1>
+<h1>Pokémon PythonRed Version</h1>
+<p>(a fangame)</p>
+<hr>
 <p>
   <a href="https://github.com/Pokemon-PythonRed/Pokemon-PythonRed"><img src="https://gpvc.arturio.dev/Pokemon-PythonRed"></a> <!--Views-->
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
